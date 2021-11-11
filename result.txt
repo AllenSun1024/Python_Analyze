@@ -1,0 +1,53 @@
+/Users/abnerallen/Documents/API_Misuse/TensorFlow_PJ/tf_models/models/research/efficient-hrl/run_eval.py
+function-1
+tf.logging.set_verbosity(tf.logging.INFO)
+
+
+/Users/abnerallen/Documents/API_Misuse/TensorFlow_PJ/tf_models/models/research/efficient-hrl/cond_fn.py
+function-1
+tf.logical_not(transition_type)
+
+function-2
+tf.identity(transition_type)
+
+function-3
+tf.equal(tf.mod(environment_steps, n), 0)
+
+function-4
+tf.logical_or((state[2] < 0.2), (state[2] > 1.0))
+tf.logical_and(tf.logical_or(ant_fell, tf.equal(tf.mod((num_episodes + 1), n), 0)), tf.equal(tf.mod(environment_steps, steps_per_episode), 0))
+
+function-5
+tf.sqrt((tf.reduce_sum(tf.squared_difference(state, reset_state)) + epsilon))
+tf.logical_and(tf.greater(dist, tf.constant(max_dist)), tf.equal(tf.mod(environment_steps, steps_per_episode), 0))
+
+function-6
+tf.stack(state[:(- 1)], tf.constant([0], dtype=tf.float))
+tf.greater(tf.constant(q_min), qval)
+
+function-7
+tf.constant(True, dtype=tf.bool)
+
+function-8
+tf.constant(False, dtype=tf.bool)
+
+
+/Users/abnerallen/Documents/API_Misuse/TensorFlow_PJ/tf_models/models/research/efficient-hrl/train_utils.py
+function-1
+tf.logging.info('Training for %d max_number_of_steps', self.max_number_of_steps)
+
+function-2
+tf.logging.info('global step %d: loss = %.4f (%.3f sec/step) (%d steps/sec)', global_step_val, total_loss, time_elapsed, (1 / time_elapsed))
+
+function-3
+tf.name_scope('Counters/')
+tf.summary.scalar(name, counter)
+
+function-4
+tf.name_scope('batch')
+tf.summary.histogram(('states_%d' % s), states[:, s])
+tf.summary.histogram(('next_states_%d' % s), next_states[:, s])
+tf.summary.histogram(('actions_%d' % a), actions[:, a])
+tf.summary.histogram('rewards', rewards)
+
+
