@@ -1,0 +1,12 @@
+get_padding_mask:
+tensorflow.less
+tensorflow.cond
+tensorflow.zeros
+tensorflow.ones
+tensorflow.map_fn
+tensorflow.map_fn
+tensorflow.map_fn
+
+main:
+numpy.random.randint
+tensorflow.constant
