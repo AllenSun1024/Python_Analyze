@@ -1,11 +1,11 @@
 import ast
 from pprint import pprint
 
-class ImportFilter(ast.NodeVisitor):
-    '''
+class ImportExtractor(ast.NodeVisitor):
+    """
     import tensorflow as XXX
     from tensorflow import YYY, ZZZ as y, z
-    '''
+    """
     def __init__(self):
         self.package = "tensorflow"
         self.as_name_import = []  # XXX

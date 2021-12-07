@@ -1,7 +1,7 @@
 import ast
 import astunparse
 
-class FunctionDefFinder(ast.NodeVisitor):
+class FuncDefExtractor(ast.NodeVisitor):
     def __init__(self):
         self.callNodes = []
         self.eachFunc = []
