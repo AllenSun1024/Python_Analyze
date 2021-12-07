@@ -2,28 +2,54 @@ import ast
 from pprint import pprint
 
 class ImportExtractor(ast.NodeVisitor):
-    """
-    import tensorflow as XXX
-    from tensorflow import YYY, ZZZ as y, z
-    """
     def __init__(self):
-        self.package = "tensorflow"
-        self.as_name_import = []  # XXX
-        self.name_import_from = []  # YYY, ZZZ
-        self.as_name_import_from = []  # y, z
+        self.filter = ["tensorflow", "numpy", "pandas", "sklearn", "pickle", "cv2", "keras"]
+        self.stats = {
+            "module": [],
+            "source": [],
+            "target": []
+        }
+        self.valid = {
+            "module": [],
+            "source": [],
+            "target": []
+        }
 
     def visit_Import(self, node):
-        for curNode in node.names:
-            if curNode.name == self.package:
-                self.as_name_import.append(curNode.asname)
+        for alias in node.names:
+            self.stats["module"].append(None)
+            self.stats["source"].append(alias.name)
+            if alias.asname is None:
+                self.stats["target"].append(None)
+            else:
+                self.stats["target"].append(alias.asname)
 
     def visit_ImportFrom(self, node):
-        if node.module == "tensorflow":
-            for curNode in node.names:
-                self.name_import_from.append(curNode.name)
-                self.as_name_import_from.append(curNode.asname)
+        for alias in node.names:
+            self.stats["module"].append(node.module)
+            self.stats["source"].append(alias.name)
+            if alias.asname is None:
+                self.stats["target"].append(None)
+            else:
+                self.stats["target"].append(alias.asname)
 
     def report(self):
-        pprint(self.as_name_import)
-        pprint(self.name_import_from)
-        pprint(self.as_name_import_from)
+        pprint(self.valid)
+
+    def getWanted(self):
+        modules = self.stats["module"]
+        sources = self.stats["source"]
+        targets = self.stats["target"]
+        for i in range(len(modules)):
+            if modules[i] is None:  # Import
+                source = sources[i].split('.')
+                if source[0] in self.filter:
+                    self.valid["module"].append(modules[i])
+                    self.valid["source"].append(sources[i])
+                    self.valid["target"].append(targets[i])
+            else:  # ImportFrom
+                module = modules[i].split('.')
+                if module[0] in self.filter:
+                    self.valid["module"].append(modules[i])
+                    self.valid["source"].append(sources[i])
+                    self.valid["target"].append(targets[i])

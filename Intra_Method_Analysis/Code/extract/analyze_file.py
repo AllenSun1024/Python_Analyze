@@ -7,9 +7,8 @@ from Intra_Method_Analysis.Code.extract.extract_funcDef import FuncDefExtractor
 def parse_tree_script(tree, script):
     import_extractor = ImportExtractor()
     import_extractor.generic_visit(tree)
-    funcDef_extractor = FuncDefExtractor()
-    funcDef_extractor.generic_visit(tree)
-    funcDef_extractor.report()
+    import_extractor.getWanted()
+    import_extractor.report()
 
 
 def extract_one_repo(project_path):
