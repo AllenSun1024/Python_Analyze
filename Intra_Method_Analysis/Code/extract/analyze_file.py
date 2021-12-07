@@ -8,8 +8,10 @@ def parse_tree_script(tree, script):
     import_extractor = ImportExtractor()
     import_extractor.generic_visit(tree)
     import_extractor.getWanted()
-    import_extractor.report()
-
+    # import_extractor.report()
+    function_extractor = FuncDefExtractor()
+    function_extractor.generic_visit(tree)
+    function_extractor.report()
 
 def extract_one_repo(project_path):
     project = jedi.Project(path=project_path)

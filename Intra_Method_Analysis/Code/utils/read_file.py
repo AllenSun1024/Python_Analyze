@@ -27,6 +27,10 @@ class GetProject:
 
 def scan_one_file(path, project):  # scan some python file in the project
     print("[Scanning] %s" % str(path))
+    with open('result.txt', 'a') as f:
+        f.write(str(path))
+        f.write(': ->\n')
+        f.close()
     file_data = GetProject(path, project)
     tree = file_data.tree
     script = file_data.script
