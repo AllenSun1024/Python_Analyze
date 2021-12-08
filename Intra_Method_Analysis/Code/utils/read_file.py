@@ -9,7 +9,7 @@ class GetProject:
                 data = f.read()
             self.tree = ast.parse(data, path)
             self.script = jedi.Script(data, path=path, project=project)
-        except Exception as e:  # convert py2 to py3
+        except Exception as e:  # 将python2转换成python3
             print(e)
             print("[Futurizing] %s" % path)
             try:
@@ -25,7 +25,7 @@ class GetProject:
                 self.script = None
 
 
-def scan_one_file(path, project):  # scan some python file in the project
+def scan_one_file(path, project):  # 扫描项目中的某一个代码文件
     print("[Scanning] %s" % str(path))
     with open('result.txt', 'a') as f:
         f.write(str(path))

@@ -1,26 +1,25 @@
 import ast
-import astunparse
-from pprint import pprint
 
 class FuncDefExtractor(ast.NodeVisitor):
-    def __init__(self):
+    def __init__(self, script):
         self.funcStats = {
-            "name": [],
-            "args": [],
-            "callNodes": [],
-            "APIs": []
+            "name": [],  # 当前文件内定义的函数名列表, [name1, name2, ...]
+            "args": [],  # 函数参数, [[1's arg], [2's arg], ...]
+            "APIs": [],  # 函数中调用的API列表, [[f1_api_1, f1_api_2, ...], ...]
+            "lineNo": []  # 每个被调用API的行号, [[f1_line_1, f1_line_2, ...], ...]
         }
-        self.callNodes = []
         self.APIs = []
+        self.lines = []
         self.isInFunc = False
+        self.script = script
 
     def visit_FunctionDef(self, node):
         self.isInFunc = True
         self.generic_visit(node)
-        self.funcStats["callNodes"].append(self.callNodes)
-        self.callNodes = []
         self.funcStats["APIs"].append(self.APIs)
         self.APIs = []
+        self.funcStats["lineNo"].append(self.lines)
+        self.lines = []
         self.funcStats["name"].append(node.name)
         args = []
         if node.args.posonlyargs is not None:
@@ -41,30 +40,33 @@ class FuncDefExtractor(ast.NodeVisitor):
 
     def visit_Call(self, node):
         if self.isInFunc:
-            self.callNodes.append(astunparse.unparse(node))
             self.generic_visit(node)
             name = self.get_Call_Name(node, '')
             if name != '' and name is not None:
-                self.APIs.append(name)
+                self.APIs.append(name[:-1])
+                self.lines.append(node.lineno)
 
     def get_Call_Name(self, node, name):
+        """
+        递归解析, 得到被调用函数完整的名字
+        """
         if isinstance(node, ast.Call):
-            if isinstance(node.func, ast.Name):
+            if isinstance(node.func, ast.Name):  # 递归出口1
                 return node.func.id + '.' + name
             elif isinstance(node.func, ast.Attribute):
                 name = node.func.attr + '.' + name
-                if isinstance(node.func.value, ast.Name):
+                if isinstance(node.func.value, ast.Name):  # 递归出口2
                     return node.func.value.id + '.' + name
                 else:
                     return self.get_Call_Name(node.func.value, name)
         elif isinstance(node, ast.Attribute):
             name = node.attr + '.' + name
-            if isinstance(node.value, ast.Name):
+            if isinstance(node.value, ast.Name):  # 递归出口3
                 return node.value.id + '.' + name
             else:
                 return self.get_Call_Name(node.value, name)
         elif isinstance(node, ast.Subscript):
-            if isinstance(node.value, ast.Name):
+            if isinstance(node.value, ast.Name):  # 递归出口4
                 return node.value.id + '.' + name
             else:
                 return self.get_Call_Name(node.value, name)
@@ -73,15 +75,14 @@ class FuncDefExtractor(ast.NodeVisitor):
 
     def report(self):
         with open('result.txt', 'a') as f:
-            for i in range(len(self.funcStats["name"])):
-                f.write(self.funcStats["name"][i])
+            for i in range(len(self.funcStats["name"])):  # 一个源文件中可能定义多个函数
+                f.write(self.funcStats["name"][i])  # 第i个函数的名字
                 f.write(':\n')
-                for item in self.funcStats["APIs"][i]:
-                    f.write(item)
-                    f.write('\n')
+                for subs in range(len(self.funcStats["APIs"][i])):  # 第i个函数中有若干API调用
+                    if self.funcStats["APIs"][i][subs] is not None:
+                        f.write(self.funcStats["APIs"][i][subs])
+                        f.write(' ')
+                        f.write(str(self.funcStats["lineNo"][i][subs]))
+                        f.write('\n')
                 f.write('\n')
-                pprint(self.funcStats["name"][i])
-                pprint(self.funcStats["APIs"][i])
-                print('\n')
             f.write('--------------------------------------------\n\n')
-            print('\n\n')
