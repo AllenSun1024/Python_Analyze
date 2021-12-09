@@ -3,6 +3,7 @@ from pathlib import Path
 from Intra_Method_Analysis.Code.utils.read_file import scan_one_file
 from Intra_Method_Analysis.Code.extract.extract_import import ImportExtractor
 from Intra_Method_Analysis.Code.extract.extract_funcDef import FuncDefExtractor
+from Intra_Method_Analysis.Code.extract.jedi_search import get_references_by_lineno
 
 def parse_tree_script(tree, script):
     import_extractor = ImportExtractor()
@@ -19,7 +20,8 @@ def parse_tree_script(tree, script):
     function_extractor = FuncDefExtractor(script=script)
     function_extractor.generic_visit(tree)
     funcStats = function_extractor.funcStats
-    function_extractor.funcStats = revert_import_name(validPackages, funcStats)
+    # get_references_by_lineno(funcStats=funcStats, script=script)
+    # function_extractor.funcStats = revert_import_name(validPackages, funcStats)
     function_extractor.report()
 
 def revert_import_name(validPackages, funcStats):

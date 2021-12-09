@@ -6,20 +6,32 @@ class FuncDefExtractor(ast.NodeVisitor):
             "name": [],  # 当前文件内定义的函数名列表, [name1, name2, ...]
             "args": [],  # 函数参数, [[1's arg], [2's arg], ...]
             "APIs": [],  # 函数中调用的API列表, [[f1_api_1, f1_api_2, ...], ...]
-            "lineNo": []  # 每个被调用API的行号, [[f1_line_1, f1_line_2, ...], ...]
+            "lineNo": [],  # 每个被调用API的起始行号, [[f1_line_1, f1_line_2, ...], ...]
+            "end_lineNo": [],  # 每个被调用API的结束行号，用于应对API跨行的Case
+            "variables": []
         }
         self.APIs = []
         self.lines = []
+        self.end_lines = []
+        self.variables = []  # 记录每个函数中被定义的变量
         self.isInFunc = False
         self.script = script
 
     def visit_FunctionDef(self, node):
+        """
+        解析函数定义
+        我们做的是函数内解析，所以这算是解析入口
+        """
         self.isInFunc = True
         self.generic_visit(node)
         self.funcStats["APIs"].append(self.APIs)
         self.APIs = []
         self.funcStats["lineNo"].append(self.lines)
         self.lines = []
+        self.funcStats["end_lineNo"].append(self.end_lines)
+        self.end_lines = []
+        self.funcStats["variables"].append(self.variables)
+        self.variables = []
         self.funcStats["name"].append(node.name)
         args = []
         if node.args.posonlyargs is not None:
@@ -45,6 +57,24 @@ class FuncDefExtractor(ast.NodeVisitor):
             if name != '' and name is not None:
                 self.APIs.append(name[:-1])
                 self.lines.append(node.lineno)
+                self.end_lines.append(node.end_lineno)
+
+    def visit_Assign(self, node):
+        if self.isInFunc:
+            self.generic_visit(node)
+            name = self.get_Call_Name(node.value, '')
+            if name != '' and name is not None:
+                variables = []
+                for target in node.targets:
+                    variable = []
+                    name = self.get_Call_Name(target, '')
+                    variable.append(name)  # name除了为正常变量名字符串外，可能为空串，也可能为None
+                    variable.append(target.lineno)
+                    variable.append(target.end_lineno)
+                    variable.append(target.col_offset)
+                    variable.append(target.end_col_offset)
+                    variables.append(variable)
+                self.variables.append(variables)
 
     def get_Call_Name(self, node, name):
         """
@@ -83,6 +113,8 @@ class FuncDefExtractor(ast.NodeVisitor):
                         f.write(self.funcStats["APIs"][i][subs])
                         f.write(' ')
                         f.write(str(self.funcStats["lineNo"][i][subs]))
+                        f.write(' ')
+                        f.write(str(self.funcStats["end_lineNo"][i][subs]))
                         f.write('\n')
                 f.write('\n')
             f.write('--------------------------------------------\n\n')
