@@ -39,8 +39,8 @@ np.random.random 15 15
 np.random.random 16 16
 tf.data.Dataset.from_tensor_slices 18 18
 dataset.repeat 19 19
-dataset.repeat.shuffle 19 19
-dataset.repeat.shuffle.batch 19 19
+dataset.shuffle 19 19
+dataset.batch 19 19
 model.compile 20 20
 range 25 25
 range 26 26
@@ -64,9 +64,9 @@ print 25 25
 tf.random.normal 32 32
 tf.random.normal 33 33
 tf.data.Dataset.from_tensor_slices 34 34
-tf.data.Dataset.from_tensor_slices.batch 34 34
+tf.data.Dataset.batch 34 34
 tf.data.Dataset.from_tensor_slices 35 35
-tf.data.Dataset.from_tensor_slices.batch 35 35
+tf.data.Dataset.batch 35 35
 tf.data.Dataset.zip 36 36
 Input 38 38
 Conv2D 40 40

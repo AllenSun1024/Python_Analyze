@@ -67,53 +67,65 @@ class FuncDefExtractor(ast.NodeVisitor):
         """
         pass
 
-    def visit_Assign(self, node):
-        if self.isInFunc:
-            self.generic_visit(node)
-            for target in node.targets:
-                if isinstance(node.value, ast.Call):
-                    nodeName = self.get_Call_Name(node.value, '')
-                    if isinstance(target, ast.Name):
-                        print(target.id, nodeName, node.value)
-                    elif isinstance(target, ast.Tuple):
-                        print(target, nodeName, node.value)
-                    else:
-                        continue
-                else:
-                    continue
-            print()
+    # def visit_Assign(self, node):
+    #     if self.isInFunc:
+    #         self.generic_visit(node)
+    #         for target in node.targets:
+    #             if isinstance(node.value, ast.Call):
+    #                 nodeName = self.get_Call_Name(node.value, '')
+    #                 if isinstance(target, ast.Name):
+    #                     print(target.id, nodeName, node.value)
+    #                 elif isinstance(target, ast.Tuple):
+    #                     print(target, nodeName, node.value)
+    #                 else:
+    #                     continue
+    #             else:
+    #                 continue
+    #         print()
 
+
+    def go_back(self, node):  # node is ast.Call
+        """
+        根据调用链的语法结构特点，回溯找到切割点
+        调用链语法结构特点如下：
+
+        Case 1：
+        tf.A().B()即
+        () -> ast.Call
+        B -> ast.Attribute
+        () -> ast.Call
+        A -> ast.Attribute
+        tf -> ast.Name
+
+        Case 2：
+        tf.data.A().B()即
+        () -> ast.Call
+        B -> ast.Attribute
+        () -> ast.Call
+        A -> ast.Attribute
+        data -> ast.Attribute
+        tf -> ast.Name
+        """
+        if isinstance(node.func, ast.Attribute):
+            if isinstance(node.func.value, ast.Name):
+                return node.func.value
+            elif isinstance(node.func.value, ast.Call):
+                return self.go_back(node.func.value)
+            elif isinstance(node.func.value, ast.Attribute):
+                return node.func.value
+            else:
+                return node.func
+        else:
+            return node.func
 
     def get_Call_Name(self, node, name):
-        """
-        递归解析, 得到被调用函数完整的名字
-        """
-        # if isinstance(node, ast.Call):
-        #     if isinstance(node.func, ast.Name):  # 递归出口1
-        #         return node.func.id + '.' + name
-        #     elif isinstance(node.func, ast.Attribute):
-        #         name = node.func.attr + '.' + name
-        #         if isinstance(node.func.value, ast.Name):  # 递归出口2
-        #             return node.func.value.id + '.' + name
-        #         else:
-        #             return self.get_Call_Name(node.func.value, name)
-        #     elif isinstance(node.func, ast.Call):
-        #         return self.get_Call_Name(node.func.func, name)
-        # elif isinstance(node, ast.Attribute):
-        #     name = node.attr + '.' + name  # ...???
-        #     if isinstance(node.value, ast.Name):  # 递归出口3
-        #         return node.value.id + '.' + name
-        #     else:
-        #         return self.get_Call_Name(node.value, name)
-        # elif isinstance(node, ast.Subscript):
-        #     if isinstance(node.value, ast.Name):  # 递归出口4
-        #         return node.value.id + '.' + name
-        #     else:
-        #         return self.get_Call_Name(node.value, name)
-        # else:
-        #     return None
         if isinstance(node, ast.Call):
-            return self.get_Call_Name(node.func, name)
+            if isinstance(node.func, ast.Attribute) and isinstance(node.func.value, ast.Call):
+                if self.go_back(node.func.value) != node.func.value.func:
+                    name = node.func.attr + '.' + name
+                return self.get_Call_Name(self.go_back(node.func.value), name)
+            else:
+                return self.get_Call_Name(node.func, name)
         elif isinstance(node, ast.Attribute):
             name = node.attr + '.' + name
             return self.get_Call_Name(node.value, name)
