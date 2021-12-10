@@ -100,7 +100,7 @@ class FuncDefExtractor(ast.NodeVisitor):
             elif isinstance(node.func, ast.Call):
                 return self.get_Call_Name(node.func.func, name)
         elif isinstance(node, ast.Attribute):
-            name = node.attr + '.' + name
+            name = node.attr + '.' + name  # ...???
             if isinstance(node.value, ast.Name):  # 递归出口3
                 return node.value.id + '.' + name
             else:
