@@ -6,6 +6,15 @@ from Intra_Method_Analysis.Code.extract.extract_funcDef import FuncDefExtractor
 from Intra_Method_Analysis.Code.extract.jedi_search import get_references_by_lineno
 
 def parse_tree_script(tree, script):
+    """
+    方法内API解析
+    :param tree: Python AST
+    :param script: Jedi Script
+    import_extractor: 抽取并过滤import信息
+    function_extractor: 抽取方法内API
+    """
+
+
     import_extractor = ImportExtractor()
     import_extractor.generic_visit(tree)
     import_extractor.getWanted()
@@ -17,9 +26,11 @@ def parse_tree_script(tree, script):
     例子：{'module': [None, 'tensorflow.keras.layers'], 'source': ['tensorflow', 'Flatten'], 'target': ['tf', None]}
     """
     validPackages = import_extractor.valid
+
+
     function_extractor = FuncDefExtractor(script=script)
     function_extractor.generic_visit(tree)
-    funcStats = function_extractor.funcStats
+    # funcStats = function_extractor.funcStats
     # get_references_by_lineno(funcStats=funcStats, script=script)
     # function_extractor.funcStats = revert_import_name(validPackages, funcStats)
     function_extractor.report()

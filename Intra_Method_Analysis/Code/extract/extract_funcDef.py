@@ -1,4 +1,5 @@
 import ast
+from pprint import pprint
 
 class FuncDefExtractor(ast.NodeVisitor):
     def __init__(self, script):
@@ -59,22 +60,29 @@ class FuncDefExtractor(ast.NodeVisitor):
                 self.lines.append(node.lineno)
                 self.end_lines.append(node.end_lineno)
 
+    def visit_Lambda(self, node):
+        pass
+
     def visit_Assign(self, node):
         if self.isInFunc:
             self.generic_visit(node)
-            name = self.get_Call_Name(node.value, '')
-            if name != '' and name is not None:
-                variables = []
-                for target in node.targets:
-                    variable = []
-                    name = self.get_Call_Name(target, '')
-                    variable.append(name)  # name除了为正常变量名字符串外，可能为空串，也可能为None
-                    variable.append(target.lineno)
-                    variable.append(target.end_lineno)
-                    variable.append(target.col_offset)
-                    variable.append(target.end_col_offset)
-                    variables.append(variable)
-                self.variables.append(variables)
+            # if isinstance(node, ast.Name):
+            #     print(node.id)
+            print(node)
+            # name = self.get_Var_name(node, '')
+            # print(name)
+            # if name != '' and name is not None:
+            #     variables = []
+            #     for target in node.targets:
+            #         variable = []
+            #         name = self.get_Call_Name(target, '')
+            #         variable.append(name)  # name除了为正常变量名字符串外，可能为空串，也可能为None
+            #         variable.append(target.lineno)
+            #         variable.append(target.end_lineno)
+            #         variable.append(target.col_offset)
+            #         variable.append(target.end_col_offset)
+            #         variables.append(variable)
+            #     self.variables.append(variables)
 
     def get_Call_Name(self, node, name):
         """
@@ -103,9 +111,23 @@ class FuncDefExtractor(ast.NodeVisitor):
         else:
             return None
 
+    # def get_Var_name(self, node, name):
+    #     if isinstance(node, ast.Name):
+    #         return node.id + name
+    #     # elif isinstance(node, ast.Attribute):
+    #     #     name = node.attr + '.' + name
+    #     #     if isinstance(node.value, ast.Name):
+    #     #         return node.value.id + '.' + name
+    #     #     else:
+    #     #         return self.get_Var_name(node.value, name)
+    #     else:
+    #         return None
+
     def report(self):
         with open('result.txt', 'a') as f:
             for i in range(len(self.funcStats["name"])):  # 一个源文件中可能定义多个函数
+                # for j in range(len(self.funcStats["variables"][i])):
+                #     pprint(self.funcStats["variables"][i][j])
                 f.write(self.funcStats["name"][i])  # 第i个函数的名字
                 f.write(':\n')
                 for subs in range(len(self.funcStats["APIs"][i])):  # 第i个函数中有若干API调用
