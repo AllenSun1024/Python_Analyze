@@ -88,28 +88,37 @@ class FuncDefExtractor(ast.NodeVisitor):
         """
         递归解析, 得到被调用函数完整的名字
         """
+        # if isinstance(node, ast.Call):
+        #     if isinstance(node.func, ast.Name):  # 递归出口1
+        #         return node.func.id + '.' + name
+        #     elif isinstance(node.func, ast.Attribute):
+        #         name = node.func.attr + '.' + name
+        #         if isinstance(node.func.value, ast.Name):  # 递归出口2
+        #             return node.func.value.id + '.' + name
+        #         else:
+        #             return self.get_Call_Name(node.func.value, name)
+        #     elif isinstance(node.func, ast.Call):
+        #         return self.get_Call_Name(node.func.func, name)
+        # elif isinstance(node, ast.Attribute):
+        #     name = node.attr + '.' + name  # ...???
+        #     if isinstance(node.value, ast.Name):  # 递归出口3
+        #         return node.value.id + '.' + name
+        #     else:
+        #         return self.get_Call_Name(node.value, name)
+        # elif isinstance(node, ast.Subscript):
+        #     if isinstance(node.value, ast.Name):  # 递归出口4
+        #         return node.value.id + '.' + name
+        #     else:
+        #         return self.get_Call_Name(node.value, name)
+        # else:
+        #     return None
         if isinstance(node, ast.Call):
-            if isinstance(node.func, ast.Name):  # 递归出口1
-                return node.func.id + '.' + name
-            elif isinstance(node.func, ast.Attribute):
-                name = node.func.attr + '.' + name
-                if isinstance(node.func.value, ast.Name):  # 递归出口2
-                    return node.func.value.id + '.' + name
-                else:
-                    return self.get_Call_Name(node.func.value, name)
-            elif isinstance(node.func, ast.Call):
-                return self.get_Call_Name(node.func.func, name)
+            return self.get_Call_Name(node.func, name)
         elif isinstance(node, ast.Attribute):
-            name = node.attr + '.' + name  # ...???
-            if isinstance(node.value, ast.Name):  # 递归出口3
-                return node.value.id + '.' + name
-            else:
-                return self.get_Call_Name(node.value, name)
-        elif isinstance(node, ast.Subscript):
-            if isinstance(node.value, ast.Name):  # 递归出口4
-                return node.value.id + '.' + name
-            else:
-                return self.get_Call_Name(node.value, name)
+            name = node.attr + '.' + name
+            return self.get_Call_Name(node.value, name)
+        elif isinstance(node, ast.Name):
+            return node.id + '.' + name
         else:
             return None
 
