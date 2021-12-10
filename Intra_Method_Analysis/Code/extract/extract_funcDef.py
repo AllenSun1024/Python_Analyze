@@ -61,28 +61,28 @@ class FuncDefExtractor(ast.NodeVisitor):
                 self.end_lines.append(node.end_lineno)
 
     def visit_Lambda(self, node):
+        """
+        因为lambda表达式执行顺序在运行时才能确定，
+        为了不引入错误，所以不处理lambda表达式
+        """
         pass
 
     def visit_Assign(self, node):
         if self.isInFunc:
             self.generic_visit(node)
-            # if isinstance(node, ast.Name):
-            #     print(node.id)
-            print(node)
-            # name = self.get_Var_name(node, '')
-            # print(name)
-            # if name != '' and name is not None:
-            #     variables = []
-            #     for target in node.targets:
-            #         variable = []
-            #         name = self.get_Call_Name(target, '')
-            #         variable.append(name)  # name除了为正常变量名字符串外，可能为空串，也可能为None
-            #         variable.append(target.lineno)
-            #         variable.append(target.end_lineno)
-            #         variable.append(target.col_offset)
-            #         variable.append(target.end_col_offset)
-            #         variables.append(variable)
-            #     self.variables.append(variables)
+            for target in node.targets:
+                if isinstance(node.value, ast.Call):
+                    nodeName = self.get_Call_Name(node.value, '')
+                    if isinstance(target, ast.Name):
+                        print(target.id, nodeName, node.value)
+                    elif isinstance(target, ast.Tuple):
+                        print(target, nodeName, node.value)
+                    else:
+                        continue
+                else:
+                    continue
+            print()
+
 
     def get_Call_Name(self, node, name):
         """
@@ -97,6 +97,8 @@ class FuncDefExtractor(ast.NodeVisitor):
                     return node.func.value.id + '.' + name
                 else:
                     return self.get_Call_Name(node.func.value, name)
+            elif isinstance(node.func, ast.Call):
+                return self.get_Call_Name(node.func.func, name)
         elif isinstance(node, ast.Attribute):
             name = node.attr + '.' + name
             if isinstance(node.value, ast.Name):  # 递归出口3
@@ -110,18 +112,6 @@ class FuncDefExtractor(ast.NodeVisitor):
                 return self.get_Call_Name(node.value, name)
         else:
             return None
-
-    # def get_Var_name(self, node, name):
-    #     if isinstance(node, ast.Name):
-    #         return node.id + name
-    #     # elif isinstance(node, ast.Attribute):
-    #     #     name = node.attr + '.' + name
-    #     #     if isinstance(node.value, ast.Name):
-    #     #         return node.value.id + '.' + name
-    #     #     else:
-    #     #         return self.get_Var_name(node.value, name)
-    #     else:
-    #         return None
 
     def report(self):
         with open('result.txt', 'a') as f:
