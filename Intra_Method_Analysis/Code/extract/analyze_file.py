@@ -28,9 +28,9 @@ def parse_tree_script(tree, script):
 
     function_extractor = FuncDefExtractor(script=script)
     function_extractor.generic_visit(tree)
-    # funcStats = function_extractor.funcStats
-    # get_references_by_lineno(funcStats=funcStats, script=script)
-    # function_extractor.funcStats = revert_import_name(validPackages, funcStats)
+    funcStats = function_extractor.funcStats
+    funcStats = get_references_by_lineno(funcStats=funcStats, script=script)
+    function_extractor.funcStats = revert_import_name(validPackages, funcStats)
     function_extractor.report()
 
 def revert_import_name(validPackages, funcStats):
