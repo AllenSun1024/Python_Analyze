@@ -67,21 +67,21 @@ class FuncDefExtractor(ast.NodeVisitor):
         """
         pass
 
-    # def visit_Assign(self, node):
-    #     if self.isInFunc:
-    #         self.generic_visit(node)
-    #         for target in node.targets:
-    #             if isinstance(node.value, ast.Call):
-    #                 nodeName = self.get_Call_Name(node.value, '')
-    #                 if isinstance(target, ast.Name):
-    #                     print(target.id, nodeName, node.value)
-    #                 elif isinstance(target, ast.Tuple):
-    #                     print(target, nodeName, node.value)
-    #                 else:
-    #                     continue
-    #             else:
-    #                 continue
-    #         print()
+    def visit_Assign(self, node):
+        if self.isInFunc:
+            self.generic_visit(node)
+            for target in node.targets:
+                if isinstance(node.value, ast.Call):
+                    nodeName = self.get_Call_Name(node.value, '')
+                    if isinstance(target, ast.Name):
+                        print(target.id, nodeName, node.value)
+                    elif isinstance(target, ast.Tuple):
+                        print(target, nodeName, node.value)
+                    else:
+                        continue
+                else:
+                    continue
+            print()
 
 
     def go_back(self, node):  # node is ast.Call
@@ -119,6 +119,9 @@ class FuncDefExtractor(ast.NodeVisitor):
             return node.func
 
     def get_Call_Name(self, node, name):
+        """
+        递归拼接出API完整、合理的名字
+        """
         if isinstance(node, ast.Call):
             if isinstance(node.func, ast.Attribute) and isinstance(node.func.value, ast.Call):
                 if self.go_back(node.func.value) != node.func.value.func:

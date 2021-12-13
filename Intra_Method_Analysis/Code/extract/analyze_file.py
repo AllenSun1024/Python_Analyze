@@ -14,7 +14,6 @@ def parse_tree_script(tree, script):
     function_extractor: 抽取方法内API
     """
 
-
     import_extractor = ImportExtractor()
     import_extractor.generic_visit(tree)
     import_extractor.getWanted()
@@ -26,7 +25,6 @@ def parse_tree_script(tree, script):
     例子：{'module': [None, 'tensorflow.keras.layers'], 'source': ['tensorflow', 'Flatten'], 'target': ['tf', None]}
     """
     validPackages = import_extractor.valid
-
 
     function_extractor = FuncDefExtractor(script=script)
     function_extractor.generic_visit(tree)
@@ -74,7 +72,7 @@ def revert_import_name(validPackages, funcStats):
     """
     过滤掉没有被选中的包
     过滤方式：将对应的API置为None，在extract_funcDef的report函数中输出最终结果时判断是否为None即可
-    注意事项：问题1没有解决时就进行这一步，会导致API的遗漏
+    注意事项：<调用链追踪问题>没有解决时就进行这一步，会导致API的遗漏
     """
     modules = []
     sources = []
@@ -90,7 +88,11 @@ def revert_import_name(validPackages, funcStats):
                 funcStats["APIs"][func_id][api_id] = None
     return funcStats
 
-def extract_one_repo(project_path):  # 解析一个项目
+def extract_one_repo(project_path):
+    """
+    解析一个项目
+    :param project_path: 当前项目路径
+    """
     project = jedi.Project(path=project_path)
     for f in Path(project_path).glob("./**/*.py"):
         tree, script = scan_one_file(f, project)
