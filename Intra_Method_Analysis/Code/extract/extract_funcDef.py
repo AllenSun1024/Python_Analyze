@@ -146,6 +146,8 @@ class FuncDefExtractor(ast.NodeVisitor):
             return self.get_Call_Name(node.value, name)
         elif isinstance(node, ast.Name):
             return node.id + '.' + name
+        elif isinstance(node, ast.Subscript):
+            return self.get_Call_Name(node.value, name)
         else:
             return None
 
