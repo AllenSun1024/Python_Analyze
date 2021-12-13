@@ -1,5 +1,4 @@
 import ast
-from pprint import pprint
 
 class FuncDefExtractor(ast.NodeVisitor):
     def __init__(self, script):

@@ -17,7 +17,6 @@ def parse_tree_script(tree, script):
     import_extractor = ImportExtractor()
     import_extractor.generic_visit(tree)
     import_extractor.getWanted()
-    # import_extractor.report()
     """
     validPackages:
     作用：存储当前文件被过滤后的import信息，用于包名还原

@@ -34,6 +34,9 @@ class ImportExtractor(ast.NodeVisitor):
                 self.stats["target"].append(alias.asname)
 
     def report(self):
+        """
+        debug可以用
+        """
         pprint(self.valid)
 
     def getWanted(self):
@@ -47,9 +50,13 @@ class ImportExtractor(ast.NodeVisitor):
                     self.valid["module"].append(modules[i])
                     self.valid["source"].append(sources[i])
                     self.valid["target"].append(targets[i])
+                else:
+                    continue
             else:  # ImportFrom
                 module = modules[i].split('.')
                 if module[0] in self.filter:
                     self.valid["module"].append(modules[i])
                     self.valid["source"].append(sources[i])
                     self.valid["target"].append(targets[i])
+                else:
+                    continue
