@@ -63,13 +63,13 @@ class FuncDefExtractor(ast.NodeVisitor):
                 self.lines.append(node.lineno)
                 self.end_lines.append(node.end_lineno)
 
-    def visit_Subscript(self, node):
-        if self.isInFunc:
-            name = self.get_Call_Name(node, '')
-            if name != '' and name is not None:
-                self.APIs.append(name[:-1])
-                self.lines.append(node.lineno)
-                self.end_lines.append(node.end_lineno)
+    # def visit_Subscript(self, node):
+    #     if self.isInFunc:
+    #         name = self.get_Call_Name(node, '')
+    #         if name != '' and name is not None:
+    #             self.APIs.append(name[:-1])
+    #             self.lines.append(node.lineno)
+    #             self.end_lines.append(node.end_lineno)
 
     def visit_Lambda(self, node):
         """
@@ -120,18 +120,18 @@ class FuncDefExtractor(ast.NodeVisitor):
         else:
             return node.func
 
-    def back4Subscript(self, node):  # node is ast.Subscript
-        if isinstance(node.value, ast.Attribute):
-            if isinstance(node.value.value, ast.Name):
-                return node.value.value
-            elif isinstance(node.value.value, ast.Attribute):
-                return node.value.value
-            elif isinstance(node.value.value, ast.Subscript):
-                return self.back4Subscript(node.value.value)
-            elif isinstance(node.value.value, ast.Call):
-                return self.back4Subscript(node.value.value)
-        else:
-            return node.value
+    # def back4Subscript(self, node):  # node is ast.Subscript
+    #     if isinstance(node.value, ast.Attribute):
+    #         if isinstance(node.value.value, ast.Name):
+    #             return node.value.value
+    #         elif isinstance(node.value.value, ast.Attribute):
+    #             return node.value.value
+    #         elif isinstance(node.value.value, ast.Subscript):
+    #             return self.back4Subscript(node.value.value)
+    #         elif isinstance(node.value.value, ast.Call):
+    #             return self.back4Subscript(node.value.value)
+    #     else:
+    #         return node.value
 
     def get_Call_Name(self, node, name):
         """
@@ -142,10 +142,10 @@ class FuncDefExtractor(ast.NodeVisitor):
                 if self.go_back(node.func.value) != node.func.value.func:
                     name = node.func.attr + '.' + name
                 return self.get_Call_Name(self.go_back(node.func.value), name)
-            elif isinstance(node.func, ast.Attribute) and isinstance(node.func.value, ast.Subscript):
-                if self.back4Subscript(node.func.value) != node.func.value.value:
-                    name = node.func.attr + '.' + name
-                return self.get_Call_Name(self.back4Subscript(node.func.value), name)
+            # elif isinstance(node.func, ast.Attribute) and isinstance(node.func.value, ast.Subscript):
+            #     if self.back4Subscript(node.func.value) != node.func.value.value:
+            #         name = node.func.attr + '.' + name
+            #     return self.get_Call_Name(self.back4Subscript(node.func.value), name)
             else:
                 return self.get_Call_Name(node.func, name)
         elif isinstance(node, ast.Attribute):
