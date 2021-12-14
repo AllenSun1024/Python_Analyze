@@ -4,6 +4,7 @@ from Intra_Method_Analysis.Code.utils.read_file import scan_one_file
 from Intra_Method_Analysis.Code.extract.extract_import import ImportExtractor
 from Intra_Method_Analysis.Code.extract.extract_funcDef import FuncDefExtractor
 from Intra_Method_Analysis.Code.extract.jedi_search import get_references_by_lineno
+import json
 
 def parse_tree_script(tree, script):
     """
@@ -66,8 +67,18 @@ def revert_import_name(validPackages, funcStats):
                 elif api_head == B:
                     if A is not None:  # from A import B
                         funcStats["APIs"][func_id][api_id] = A + '.' + funcStats["APIs"][func_id][api_id]
+                    else:
+                        pass
                 else:
-                    pass
+                    if A is not None:
+                        with open('/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/Resource/module_check.json') as json_file:
+                            module_check_table = json.load(json_file)
+                        if A in module_check_table.keys() and api_head in module_check_table[A]:
+                            funcStats["APIs"][func_id][api_id] = A + '.' + funcStats["APIs"][func_id][api_id]
+                        else:
+                            pass
+                    else:
+                        pass
     """
     过滤掉没有被选中的包
     过滤方式：将对应的API置为None，在extract_funcDef的report函数中输出最终结果时判断是否为None即可
@@ -83,7 +94,7 @@ def revert_import_name(validPackages, funcStats):
     for func_id in range(len(funcStats["name"])):
         for api_id in range(len(funcStats["APIs"][func_id])):
             head = funcStats["APIs"][func_id][api_id].split('.')[0]
-            if head not in modules and head not in sources and head not in validPackages["module"] and head not in validPackages["source"] and '*' not in validPackages["source"]:
+            if head not in modules and head not in sources and head not in validPackages["module"] and head not in validPackages["source"]:
                 funcStats["APIs"][func_id][api_id] = None
     return funcStats
 

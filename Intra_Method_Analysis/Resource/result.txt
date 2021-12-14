@@ -47,15 +47,11 @@ tensorflow.keras.Model.fit 28 28
 
 /Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case9/source.py: ->
 main:
-GPUtil.getGPUs 10 10
-len 12 12
-range 12 12
 tensorflow.compat.v1.ConfigProto 16 16
 tensorflow.compat.v1.InteractiveSession 19 19
 tensorflow.config.experimental.list_physical_devices 20 20
 tensorflow.config.experimental.VirtualDeviceConfiguration 23 23
 tensorflow.config.experimental.set_virtual_device_configuration 23 23
-print 25 25
 tensorflow.random.normal 32 32
 tensorflow.random.normal 33 33
 tensorflow.data.Dataset.from_tensor_slices 34 34
@@ -63,40 +59,42 @@ tensorflow.data.Dataset.batch 34 34
 tensorflow.data.Dataset.from_tensor_slices 35 35
 tensorflow.data.Dataset.batch 35 35
 tensorflow.data.Dataset.zip 36 36
-Input 38 38
-Conv2D 40 40
-TimeDistributed 40 40
-TimeDistributed 40 40
-MaxPooling2D 42 42
-TimeDistributed 42 42
-TimeDistributed 42 42
-Conv2D 44 44
-TimeDistributed 44 44
-TimeDistributed 44 44
-Flatten 46 46
-TimeDistributed 46 46
-TimeDistributed 46 46
-Dense 48 48
-TimeDistributed 48 48
-TimeDistributed 48 48
-Dropout 50 50
-TimeDistributed 50 50
-TimeDistributed 50 50
-LSTM 52 52
-LSTM 52 52
-Dense 54 54
-Dense 54 54
-Dense 56 56
-Dense 56 56
-Model 58 58
-optimizers.Adam 60 60
-Model.compile 62 62
-Model.fit 64 64
+tensorflow.keras.layers.Input 38 38
+tensorflow.keras.layers.Conv2D 40 40
+tensorflow.keras.layers.TimeDistributed 40 40
+tensorflow.keras.layers.TimeDistributed 40 40
+tensorflow.keras.layers.MaxPooling2D 42 42
+tensorflow.keras.layers.TimeDistributed 42 42
+tensorflow.keras.layers.TimeDistributed 42 42
+tensorflow.keras.layers.Conv2D 44 44
+tensorflow.keras.layers.TimeDistributed 44 44
+tensorflow.keras.layers.TimeDistributed 44 44
+tensorflow.keras.layers.Flatten 46 46
+tensorflow.keras.layers.TimeDistributed 46 46
+tensorflow.keras.layers.TimeDistributed 46 46
+tensorflow.keras.layers.Dense 48 48
+tensorflow.keras.layers.TimeDistributed 48 48
+tensorflow.keras.layers.TimeDistributed 48 48
+tensorflow.keras.layers.Dropout 50 50
+tensorflow.keras.layers.TimeDistributed 50 50
+tensorflow.keras.layers.TimeDistributed 50 50
+tensorflow.keras.layers.LSTM 52 52
+tensorflow.keras.layers.LSTM 52 52
+tensorflow.keras.layers.Dense 54 54
+tensorflow.keras.layers.Dense 54 54
+tensorflow.keras.layers.Dense 56 56
+tensorflow.keras.layers.Dense 56 56
+tensorflow.keras.Model 58 58
+tensorflow.keras.optimizers.Adam 60 60
+tensorflow.keras.Model.compile 62 62
+tensorflow.keras.Model.fit 64 64
 
 --------------------------------------------
 
 /Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case7/source.py: ->
 contrastive_loss:
+tensorflow.range 12 12
+tensorflow.range 16 16
 tensorflow.cast 20 20
 tensorflow.abs 20 20
 tensorflow.minimum 20 20

@@ -159,7 +159,7 @@ class FuncDefExtractor(ast.NodeVisitor):
             return None
 
     def report(self):
-        with open('result.txt', 'a') as f:
+        with open('/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/Resource/result.txt', 'a') as f:
             for i in range(len(self.funcStats["name"])):  # 一个源文件中可能定义多个函数
                 f.write(self.funcStats["name"][i])  # 第i个函数的名字
                 f.write(':\n')

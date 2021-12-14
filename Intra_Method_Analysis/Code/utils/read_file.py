@@ -37,7 +37,7 @@ def scan_one_file(path, project):
     :return script: jedi.Script
     """
     print("[Scanning] %s" % str(path))
-    with open('result.txt', 'a') as f:
+    with open('/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/Resource/result.txt', 'a') as f:
         f.write(str(path))
         f.write(': ->\n')
         f.close()
