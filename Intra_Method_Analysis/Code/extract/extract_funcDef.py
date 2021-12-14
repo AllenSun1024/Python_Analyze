@@ -63,6 +63,14 @@ class FuncDefExtractor(ast.NodeVisitor):
                 self.lines.append(node.lineno)
                 self.end_lines.append(node.end_lineno)
 
+    def visit_Subscript(self, node):
+        if self.isInFunc:
+            name = self.get_Call_Name(node, '')
+            if name != '' and name is not None:
+                self.APIs.append(name[:-1])
+                self.lines.append(node.lineno)
+                self.end_lines.append(node.end_lineno)
+
     def visit_Lambda(self, node):
         """
         因为lambda表达式执行顺序在运行时才能确定，
@@ -99,24 +107,6 @@ class FuncDefExtractor(ast.NodeVisitor):
     def go_back(self, node):  # node is ast.Call
         """
         根据调用链的语法结构特点，回溯找到切割点
-        调用链语法结构特点如下：
-
-        Case 1：
-        tf.A().B()即
-        () -> ast.Call
-        B -> ast.Attribute
-        () -> ast.Call
-        A -> ast.Attribute
-        tf -> ast.Name
-
-        Case 2：
-        tf.data.A().B()即
-        () -> ast.Call
-        B -> ast.Attribute
-        () -> ast.Call
-        A -> ast.Attribute
-        data -> ast.Attribute
-        tf -> ast.Name
         """
         if isinstance(node.func, ast.Attribute):
             if isinstance(node.func.value, ast.Name):
@@ -130,6 +120,19 @@ class FuncDefExtractor(ast.NodeVisitor):
         else:
             return node.func
 
+    def back4Subscript(self, node):  # node is ast.Subscript
+        if isinstance(node.value, ast.Attribute):
+            if isinstance(node.value.value, ast.Name):
+                return node.value.value
+            elif isinstance(node.value.value, ast.Attribute):
+                return node.value.value
+            elif isinstance(node.value.value, ast.Subscript):
+                return self.back4Subscript(node.value.value)
+            elif isinstance(node.value.value, ast.Call):
+                return self.back4Subscript(node.value.value)
+        else:
+            return node.value
+
     def get_Call_Name(self, node, name):
         """
         递归拼接出API完整、合理的名字
@@ -139,13 +142,17 @@ class FuncDefExtractor(ast.NodeVisitor):
                 if self.go_back(node.func.value) != node.func.value.func:
                     name = node.func.attr + '.' + name
                 return self.get_Call_Name(self.go_back(node.func.value), name)
+            elif isinstance(node.func, ast.Attribute) and isinstance(node.func.value, ast.Subscript):
+                if self.back4Subscript(node.func.value) != node.func.value.value:
+                    name = node.func.attr + '.' + name
+                return self.get_Call_Name(self.back4Subscript(node.func.value), name)
             else:
                 return self.get_Call_Name(node.func, name)
         elif isinstance(node, ast.Attribute):
             name = node.attr + '.' + name
             return self.get_Call_Name(node.value, name)
         elif isinstance(node, ast.Name):
-            return node.id + '.' + name
+            return node.id + '.' + name  # 递归出口
         elif isinstance(node, ast.Subscript):
             return self.get_Call_Name(node.value, name)
         else:

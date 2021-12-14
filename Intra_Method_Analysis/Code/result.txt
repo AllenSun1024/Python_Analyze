@@ -50,9 +50,11 @@ main:
 GPUtil.getGPUs 10 10
 len 12 12
 range 12 12
+GPUtil.getGPUs 13 13
 tensorflow.compat.v1.ConfigProto 16 16
 tensorflow.compat.v1.InteractiveSession 19 19
 tensorflow.config.experimental.list_physical_devices 20 20
+tensorflow.config.experimental.list_physical_devices 23 23
 tensorflow.config.experimental.VirtualDeviceConfiguration 23 23
 tensorflow.config.experimental.set_virtual_device_configuration 23 23
 print 25 25
@@ -157,6 +159,7 @@ tensorflow.data.TFRecordDataset.as_numpy_iterator 7 7
 /Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case2/source.py: ->
 main:
 tensorflow.random.uniform 9 9
+tensorflow.random.uniform 13 13
 keras.backend.sum 13 13
 tensorflow.convert_to_tensor 14 14
 keras.backend.stack 16 16
@@ -176,7 +179,9 @@ tensorflow.keras.layers.Dense 9 9
 tensorflow.keras.layers.Dense 10 10
 tensorflow.keras.layers.Dense 10 10
 tensorflow.keras.Model 11 11
+tensorflow.keras.Model.layers.output_shape 14 14
 tensorflow.keras.Input 14 14
+tensorflow.keras.Model.layers.output_shape 15 15
 tensorflow.keras.Input 15 15
 tensorflow.keras.layers.subtract 16 16
 tensorflow.keras.layers.Dense 17 17
@@ -193,7 +198,8 @@ tensorflow.keras.Model 27 27
 tensorflow.keras.Model.compile 28 28
 numpy.random.random 31 31
 tensorflow.keras.Model.predict 33 33
-numpy.mgrid.reshape 34 34
+numpy.mgrid 34 34
+numpy.reshape 34 34
 tensorflow.keras.Model.predict 35 35
 
 --------------------------------------------
