@@ -93,8 +93,6 @@ tensorflow.keras.Model.fit 64 64
 
 /Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case7/source.py: ->
 contrastive_loss:
-tensorflow.range 12 12
-tensorflow.range 16 16
 tensorflow.cast 20 20
 tensorflow.abs 20 20
 tensorflow.minimum 20 20
