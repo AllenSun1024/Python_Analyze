@@ -4,6 +4,7 @@ import json
 def revert_import_name(validPackages, funcStats):
     """
     根据import信息，将抽取出来的API名称完整还原
+    e.g., tf.data.from_tensor_slices -> tensorflow.data.from_tensor_slices
     :param validPackages: 过滤后的import信息
     :param funcStats: 当前文件中，所有函数的API信息
     :return: 具有完整名称的API信息

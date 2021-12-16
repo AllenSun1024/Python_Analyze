@@ -1,4 +1,6 @@
 import ast
+from Intra_Method_Analysis.Code.extract.submodule.get_nodeNames import get_Call_Name
+from Intra_Method_Analysis.Code.extract.submodule.get_funcArgs import parse_function_arguments
 
 class FuncDefExtractor(ast.NodeVisitor):
     def __init__(self, script):
@@ -37,31 +39,22 @@ class FuncDefExtractor(ast.NodeVisitor):
         self.funcStats["check_table"].append(self.check_table)
         self.check_table = []
         self.funcStats["name"].append(node.name)
-        args = []
-        if node.args.posonlyargs is not None:
-            for arg in node.args.posonlyargs:
-                args.append(arg.arg)
-        if node.args.args is not None:
-            for arg in node.args.args:
-                args.append(arg.arg)
-        if node.args.kwonlyargs:
-            for arg in node.args.kwonlyargs:
-                args.append(arg.arg)
-        if node.args.vararg is not None:
-            args.append(node.args.vararg.arg)
-        if node.args.kwarg is not None:
-            args.append(node.args.kwarg.arg)
+        args = parse_function_arguments(node)  # 解析获取函数的参数信息
         self.funcStats["args"].append(args)
         self.isInFunc = False
 
     def visit_Call(self, node):
         if self.isInFunc:
             self.generic_visit(node)
-            name = self.get_Call_Name(node, '')
+            name = get_Call_Name(node, '')
             if name != '' and name is not None:
                 self.APIs.append(name[:-1])
                 self.lines.append(node.lineno)
                 self.end_lines.append(node.end_lineno)
+            else:
+                pass
+        else:
+            pass
 
     def visit_Lambda(self, node):
         """
@@ -79,10 +72,12 @@ class FuncDefExtractor(ast.NodeVisitor):
             for target in node.targets:
                 if isinstance(node.value, ast.Call):
                     if isinstance(target, ast.Name):
-                        nodeName = self.get_Call_Name(node.value, '')
+                        nodeName = get_Call_Name(node.value, '')
                         if nodeName is not None:
                             self.check_table.append([target.id, nodeName[:-1], target.lineno])  # target.id是nodeName的别名
-                            self.variables.append([target.lineno, target.end_lineno, target.col_offset, target.end_col_offset, target.id, self.get_Call_Name(node.value, '')])
+                            self.variables.append([target.lineno, target.end_lineno, target.col_offset, target.end_col_offset, target.id, get_Call_Name(node.value, '')])
+                        else:
+                            continue
                     elif isinstance(target, ast.Tuple):
                         # print('Tuple:', target.lineno, target.end_lineno)
                         continue
@@ -92,46 +87,13 @@ class FuncDefExtractor(ast.NodeVisitor):
                     if isinstance(node.value.left, ast.Call) or isinstance(node.value.right, ast.Call):
                         # print('BinOp:', target.lineno, target.end_lineno)
                         continue
+                    else:
+                        continue
                 else:
                     continue
-
-
-    def go_back(self, node):  # node is ast.Call
-        """
-        根据调用链的语法结构特点，回溯找到切割点
-        """
-        if isinstance(node.func, ast.Attribute):
-            if isinstance(node.func.value, ast.Name):
-                return node.func.value
-            elif isinstance(node.func.value, ast.Call):
-                return self.go_back(node.func.value)
-            elif isinstance(node.func.value, ast.Attribute):
-                return node.func.value
-            else:
-                return node.func
         else:
-            return node.func
+            pass
 
-    def get_Call_Name(self, node, name):
-        """
-        递归拼接出API完整、合理的名字
-        """
-        if isinstance(node, ast.Call):
-            if isinstance(node.func, ast.Attribute) and isinstance(node.func.value, ast.Call):
-                if self.go_back(node.func.value) != node.func.value.func:
-                    name = node.func.attr + '.' + name
-                return self.get_Call_Name(self.go_back(node.func.value), name)
-            else:
-                return self.get_Call_Name(node.func, name)
-        elif isinstance(node, ast.Attribute):
-            name = node.attr + '.' + name
-            return self.get_Call_Name(node.value, name)
-        elif isinstance(node, ast.Name):
-            return node.id + '.' + name  # 递归出口
-        elif isinstance(node, ast.Subscript):
-            return self.get_Call_Name(node.value, name)
-        else:
-            return None
 
     def report(self):
         with open('/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/Resource/result.txt', 'a') as f:
@@ -146,5 +108,7 @@ class FuncDefExtractor(ast.NodeVisitor):
                         f.write(' ')
                         f.write(str(self.funcStats["end_lineNo"][i][subs]))
                         f.write('\n')
+                    else:
+                        continue
                 f.write('\n')
             f.write('--------------------------------------------\n\n')
