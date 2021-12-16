@@ -1,21 +1,24 @@
 import ast
 
 
-def go_back(node):  # node is ast.Call
+def go_back(node):
     """
     回溯找到切割点
     """
-    if isinstance(node.func, ast.Attribute):
-        if isinstance(node.func.value, ast.Name):
-            return node.func.value
-        elif isinstance(node.func.value, ast.Call):
-            return go_back(node.func.value)
-        elif isinstance(node.func.value, ast.Attribute):
-            return node.func.value
+    if isinstance(node, ast.Call):  # 确保就是Call结点
+        if isinstance(node.func, ast.Attribute):
+            if isinstance(node.func.value, ast.Name):
+                return node.func.value
+            elif isinstance(node.func.value, ast.Call):
+                return go_back(node.func.value)
+            elif isinstance(node.func.value, ast.Attribute):
+                return node.func.value
+            else:
+                return node.func
         else:
-            return node.func
+            return node.func  # 为了程序的鲁棒，调用者拿到返回值后应该判断node.func的类型
     else:
-        return node.func
+        return None
 
 
 def get_Call_Name(node, name):
@@ -24,9 +27,20 @@ def get_Call_Name(node, name):
     """
     if isinstance(node, ast.Call):
         if isinstance(node.func, ast.Attribute) and isinstance(node.func.value, ast.Call):
-            if go_back(node.func.value) != node.func.value.func:
-                name = node.func.attr + '.' + name
-            return get_Call_Name(go_back(node.func.value), name)
+            call_breakpoint = go_back(node.func.value)
+            if call_breakpoint is None:
+                # 遇到尚未考虑到的特殊语法结构，就停止递归，返回可能不完整的API名称，我们选择直接抛弃
+                # 此处会导致风险，但不会使程序崩溃
+                return None
+            else:
+                if call_breakpoint != node.func.value.func:
+                    name = node.func.attr + '.' + name
+                else:
+                    pass
+                if isinstance(call_breakpoint, ast.Name) or isinstance(call_breakpoint, ast.Attribute):
+                    return get_Call_Name(call_breakpoint, name)
+                else:
+                    return None
         else:
             return get_Call_Name(node.func, name)
     elif isinstance(node, ast.Attribute):
@@ -34,7 +48,5 @@ def get_Call_Name(node, name):
         return get_Call_Name(node.value, name)
     elif isinstance(node, ast.Name):
         return node.id + '.' + name  # 递归出口
-    elif isinstance(node, ast.Subscript):
-        return get_Call_Name(node.value, name)
     else:
         return None

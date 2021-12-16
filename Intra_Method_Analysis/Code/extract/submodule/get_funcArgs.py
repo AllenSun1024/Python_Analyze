@@ -10,22 +10,27 @@ def parse_function_arguments(node):
             args.append(arg.arg)
     else:
         pass
+
     if node.args.args is not None:
         for arg in node.args.args:
             args.append(arg.arg)
     else:
         pass
+
     if node.args.kwonlyargs:
         for arg in node.args.kwonlyargs:
             args.append(arg.arg)
     else:
         pass
+
     if node.args.vararg is not None:
         args.append(node.args.vararg.arg)
     else:
         pass
+
     if node.args.kwarg is not None:
         args.append(node.args.kwarg.arg)
     else:
         pass
+
     return args

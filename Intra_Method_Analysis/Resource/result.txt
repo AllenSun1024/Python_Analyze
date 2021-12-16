@@ -141,6 +141,110 @@ tensorflow.keras.Sequential.evaluate 37 37
 
 --------------------------------------------
 
+/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case11/nn_block.py: ->
+__init__:
+tensorflow.keras.backend.image_data_format 67 67
+
+build:
+tensorflow.keras.layers.Conv2D 82 87
+
+get_config:
+
+call:
+
+__init__:
+tensorflow.keras.backend.image_data_format 165 165
+
+build:
+tensorflow.keras.layers.Conv2D 182 189
+tensorflow.keras.layers.Conv2D 195 198
+tensorflow.keras.layers.Conv2D 204 207
+
+get_config:
+
+call:
+
+--------------------------------------------
+
+/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case11/vggish_train_demo.py: ->
+_get_examples_batch:
+numpy.arange 52 52
+numpy.random.uniform 54 54
+numpy.sin 55 55
+numpy.random.uniform 57 57
+numpy.random.normal 60 60
+numpy.array 65 65
+numpy.array 67 67
+numpy.array 69 69
+numpy.concatenate 72 72
+numpy.concatenate 73 73
+
+main:
+tensorflow.compat.v1.Graph 84 84
+tensorflow.compat.v1.as_default 84 84
+tensorflow.compat.v1.Session 84 84
+tensorflow.compat.v1.variable_scope 90 90
+tensorflow.compat.v1.nn.relu 94 94
+tensorflow.compat.v1.sigmoid 100 100
+tensorflow.compat.v1.variable_scope 103 103
+tensorflow.compat.v1.train.create_global_step 104 104
+tensorflow.compat.v1.placeholder 108 109
+tensorflow.compat.v1.nn.sigmoid_cross_entropy_with_logits 112 113
+tensorflow.compat.v1.reduce_mean 114 114
+tensorflow.compat.v1.summary.scalar 115 115
+tensorflow.compat.v1.train.AdamOptimizer 118 120
+tensorflow.compat.v1.train.AdamOptimizer.minimize 121 121
+tensorflow.compat.v1.global_variables_initializer 125 125
+
+--------------------------------------------
+
+/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case11/yamnet.py: ->
+_bn_layer:
+tensorflow.keras.layers.BatchNormalization 14 18
+tensorflow.keras.layers.BatchNormalization 14 18
+
+_batch_norm:
+
+_conv_layer:
+tensorflow.keras.layers.Conv2D 24 30
+tensorflow.keras.layers.Conv2D 24 30
+tensorflow.keras.layers.ReLU 32 32
+tensorflow.keras.layers.ReLU 32 32
+
+_conv:
+
+_separable_conv_layer:
+tensorflow.keras.layers.DepthwiseConv2D 39 45
+tensorflow.keras.layers.DepthwiseConv2D 39 45
+tensorflow.keras.layers.ReLU 47 47
+tensorflow.keras.layers.ReLU 47 47
+tensorflow.keras.layers.Conv2D 48 54
+tensorflow.keras.layers.Conv2D 48 54
+tensorflow.keras.layers.ReLU 56 56
+tensorflow.keras.layers.ReLU 56 56
+
+_separable_conv:
+
+yamnet:
+tensorflow.keras.layers.Reshape 82 84
+tensorflow.keras.layers.Reshape 82 84
+tensorflow.keras.layers.GlobalAveragePooling2D 87 87
+tensorflow.keras.layers.GlobalAveragePooling2D 87 87
+tensorflow.keras.layers.Dense 88 88
+tensorflow.keras.layers.Dense 88 88
+tensorflow.keras.layers.Activation 89 89
+tensorflow.keras.layers.Activation 89 89
+
+yamnet_frames_model:
+tensorflow.keras.layers.Input 105 105
+tensorflow.keras.Model 110 112
+
+class_names:
+tensorflow.is_tensor 118 118
+numpy.array 123 123
+
+--------------------------------------------
+
 /Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case5/source.py: ->
 main:
 tensorflow.data.TFRecordDataset 4 4
@@ -189,7 +293,6 @@ tensorflow.keras.Model 27 27
 tensorflow.keras.Model.compile 28 28
 numpy.random.random 31 31
 tensorflow.keras.Model.predict 33 33
-numpy.mgrid.reshape 34 34
 tensorflow.keras.Model.predict 35 35
 
 --------------------------------------------
