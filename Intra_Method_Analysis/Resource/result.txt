@@ -1,4 +1,14 @@
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case1/source.py: ->
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case2/source.py: ->
+main:
+tensorflow.random.uniform 9 9
+keras.backend.sum 13 13
+tensorflow.convert_to_tensor 14 14
+keras.backend.stack 16 16
+keras.backend.reshape 17 17
+
+--------------------------------------------
+
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case1/source.py: ->
 main:
 tensorflow.convert_to_tensor 13 13
 tensorflow.equal 14 14
@@ -10,17 +20,7 @@ tensorflow.cast 18 18
 
 --------------------------------------------
 
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case6/source.py: ->
-get_padding_mask:
-tensorflow.map_fn 5 14
-
-main:
-numpy.random.randint 18 18
-tensorflow.constant 18 18
-
---------------------------------------------
-
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case8/source.py: ->
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case8/source.py: ->
 main:
 tensorflow.keras.Input 5 5
 tensorflow.keras.layers.Dense 6 6
@@ -45,79 +45,7 @@ tensorflow.keras.Model.fit 28 28
 
 --------------------------------------------
 
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case9/source.py: ->
-main:
-tensorflow.compat.v1.ConfigProto 16 16
-tensorflow.compat.v1.InteractiveSession 19 19
-tensorflow.config.experimental.list_physical_devices 20 20
-tensorflow.config.experimental.VirtualDeviceConfiguration 23 23
-tensorflow.config.experimental.set_virtual_device_configuration 23 23
-tensorflow.random.normal 32 32
-tensorflow.random.normal 33 33
-tensorflow.data.Dataset.from_tensor_slices 34 34
-tensorflow.data.Dataset.batch 34 34
-tensorflow.data.Dataset.from_tensor_slices 35 35
-tensorflow.data.Dataset.batch 35 35
-tensorflow.data.Dataset.zip 36 36
-tensorflow.keras.layers.Input 38 38
-tensorflow.keras.layers.Conv2D 40 40
-tensorflow.keras.layers.TimeDistributed 40 40
-tensorflow.keras.layers.TimeDistributed 40 40
-tensorflow.keras.layers.MaxPooling2D 42 42
-tensorflow.keras.layers.TimeDistributed 42 42
-tensorflow.keras.layers.TimeDistributed 42 42
-tensorflow.keras.layers.Conv2D 44 44
-tensorflow.keras.layers.TimeDistributed 44 44
-tensorflow.keras.layers.TimeDistributed 44 44
-tensorflow.keras.layers.Flatten 46 46
-tensorflow.keras.layers.TimeDistributed 46 46
-tensorflow.keras.layers.TimeDistributed 46 46
-tensorflow.keras.layers.Dense 48 48
-tensorflow.keras.layers.TimeDistributed 48 48
-tensorflow.keras.layers.TimeDistributed 48 48
-tensorflow.keras.layers.Dropout 50 50
-tensorflow.keras.layers.TimeDistributed 50 50
-tensorflow.keras.layers.TimeDistributed 50 50
-tensorflow.keras.layers.LSTM 52 52
-tensorflow.keras.layers.LSTM 52 52
-tensorflow.keras.layers.Dense 54 54
-tensorflow.keras.layers.Dense 54 54
-tensorflow.keras.layers.Dense 56 56
-tensorflow.keras.layers.Dense 56 56
-tensorflow.keras.Model 58 58
-tensorflow.keras.optimizers.Adam 60 60
-tensorflow.keras.Model.compile 62 62
-tensorflow.keras.Model.fit 64 64
-
---------------------------------------------
-
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case7/source.py: ->
-contrastive_loss:
-tensorflow.cast 20 20
-tensorflow.abs 20 20
-tensorflow.minimum 20 20
-tensorflow.norm 21 21
-tensorflow.maximum 22 22
-
-main:
-tensorflow.keras.datasets.mnist.load_data 28 28
-tensorflow.keras.backend.clear_session 37 37
-tensorflow.keras.Sequential 40 40
-tensorflow.keras.layers.Flatten 41 41
-tensorflow.keras.Sequential.add 41 41
-tensorflow.keras.layers.Dense 42 42
-tensorflow.keras.Sequential.add 42 42
-tensorflow.keras.layers.Dense 43 43
-tensorflow.keras.Sequential.add 43 43
-tensorflow.keras.layers.Dense 44 44
-tensorflow.keras.Sequential.add 44 44
-tensorflow.keras.optimizers.Adam 46 46
-tensorflow.keras.Sequential.compile 46 46
-tensorflow.keras.Sequential.fit 47 47
-
---------------------------------------------
-
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case10/source.py: ->
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case10/source.py: ->
 main:
 tensorflow.compat.v1.ConfigProto 17 17
 tensorflow.compat.v1.InteractiveSession 20 20
@@ -141,64 +69,7 @@ tensorflow.keras.Sequential.evaluate 37 37
 
 --------------------------------------------
 
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case11/nn_block.py: ->
-__init__:
-tensorflow.keras.backend.image_data_format 67 67
-
-build:
-tensorflow.keras.layers.Conv2D 82 87
-
-get_config:
-
-call:
-
-__init__:
-tensorflow.keras.backend.image_data_format 165 165
-
-build:
-tensorflow.keras.layers.Conv2D 182 189
-tensorflow.keras.layers.Conv2D 195 198
-tensorflow.keras.layers.Conv2D 204 207
-
-get_config:
-
-call:
-
---------------------------------------------
-
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case11/vggish_train_demo.py: ->
-_get_examples_batch:
-numpy.arange 52 52
-numpy.random.uniform 54 54
-numpy.sin 55 55
-numpy.random.uniform 57 57
-numpy.random.normal 60 60
-numpy.array 65 65
-numpy.array 67 67
-numpy.array 69 69
-numpy.concatenate 72 72
-numpy.concatenate 73 73
-
-main:
-tensorflow.compat.v1.Graph 84 84
-tensorflow.compat.v1.as_default 84 84
-tensorflow.compat.v1.Session 84 84
-tensorflow.compat.v1.variable_scope 90 90
-tensorflow.compat.v1.nn.relu 94 94
-tensorflow.compat.v1.sigmoid 100 100
-tensorflow.compat.v1.variable_scope 103 103
-tensorflow.compat.v1.train.create_global_step 104 104
-tensorflow.compat.v1.placeholder 108 109
-tensorflow.compat.v1.nn.sigmoid_cross_entropy_with_logits 112 113
-tensorflow.compat.v1.reduce_mean 114 114
-tensorflow.compat.v1.summary.scalar 115 115
-tensorflow.compat.v1.train.AdamOptimizer 118 120
-tensorflow.compat.v1.train.AdamOptimizer.minimize 121 121
-tensorflow.compat.v1.global_variables_initializer 125 125
-
---------------------------------------------
-
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case11/yamnet.py: ->
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case11/yamnet.py: ->
 _bn_layer:
 tensorflow.keras.layers.BatchNormalization 14 18
 tensorflow.keras.layers.BatchNormalization 14 18
@@ -245,26 +116,146 @@ numpy.array 123 123
 
 --------------------------------------------
 
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case5/source.py: ->
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case11/vggish_train_demo.py: ->
+_get_examples_batch:
+numpy.arange 52 52
+numpy.random.uniform 54 54
+numpy.sin 55 55
+numpy.random.uniform 57 57
+numpy.random.normal 60 60
+numpy.array 65 65
+numpy.array 67 67
+numpy.array 69 69
+numpy.concatenate 72 72
+numpy.concatenate 73 73
+
 main:
-tensorflow.data.TFRecordDataset 4 4
-tensorflow.data.TFRecordDataset.repeat 5 5
-tensorflow.data.TFRecordDataset.batch 6 6
-tensorflow.data.TFRecordDataset.as_numpy_iterator 7 7
+tensorflow.compat.v1.Graph 84 84
+tensorflow.compat.v1.as_default 84 84
+tensorflow.compat.v1.Session 84 84
+tensorflow.compat.v1.variable_scope 90 90
+tensorflow.compat.v1.nn.relu 94 94
+tensorflow.compat.v1.sigmoid 100 100
+tensorflow.compat.v1.variable_scope 103 103
+tensorflow.compat.v1.train.create_global_step 104 104
+tensorflow.compat.v1.placeholder 108 109
+tensorflow.compat.v1.nn.sigmoid_cross_entropy_with_logits 112 113
+tensorflow.compat.v1.reduce_mean 114 114
+tensorflow.compat.v1.summary.scalar 115 115
+tensorflow.compat.v1.train.AdamOptimizer 118 120
+tensorflow.compat.v1.train.AdamOptimizer.minimize 121 121
+tensorflow.compat.v1.global_variables_initializer 125 125
 
 --------------------------------------------
 
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case2/source.py: ->
-main:
-tensorflow.random.uniform 9 9
-keras.backend.sum 13 13
-tensorflow.convert_to_tensor 14 14
-keras.backend.stack 16 16
-keras.backend.reshape 17 17
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case11/nn_block.py: ->
+__init__:
+tensorflow.keras.backend.image_data_format 67 67
+
+build:
+tensorflow.keras.layers.Conv2D 82 87
+
+get_config:
+
+call:
+
+__init__:
+tensorflow.keras.backend.image_data_format 165 165
+
+build:
+tensorflow.keras.layers.Conv2D 182 189
+tensorflow.keras.layers.Conv2D 195 198
+tensorflow.keras.layers.Conv2D 204 207
+
+get_config:
+
+call:
 
 --------------------------------------------
 
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case3/source.py: ->
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case9/source.py: ->
+main:
+tensorflow.compat.v1.ConfigProto 16 16
+tensorflow.compat.v1.InteractiveSession 19 19
+tensorflow.config.experimental.list_physical_devices 20 20
+tensorflow.config.experimental.VirtualDeviceConfiguration 23 23
+tensorflow.config.experimental.set_virtual_device_configuration 23 23
+tensorflow.random.normal 32 32
+tensorflow.random.normal 33 33
+tensorflow.data.Dataset.from_tensor_slices 34 34
+tensorflow.data.Dataset.batch 34 34
+tensorflow.data.Dataset.from_tensor_slices 35 35
+tensorflow.data.Dataset.batch 35 35
+tensorflow.data.Dataset.zip 36 36
+tensorflow.keras.layers.Input 38 38
+tensorflow.keras.layers.Conv2D 40 40
+tensorflow.keras.layers.TimeDistributed 40 40
+tensorflow.keras.layers.TimeDistributed 40 40
+tensorflow.keras.layers.MaxPooling2D 42 42
+tensorflow.keras.layers.TimeDistributed 42 42
+tensorflow.keras.layers.TimeDistributed 42 42
+tensorflow.keras.layers.Conv2D 44 44
+tensorflow.keras.layers.TimeDistributed 44 44
+tensorflow.keras.layers.TimeDistributed 44 44
+tensorflow.keras.layers.Flatten 46 46
+tensorflow.keras.layers.TimeDistributed 46 46
+tensorflow.keras.layers.TimeDistributed 46 46
+tensorflow.keras.layers.Dense 48 48
+tensorflow.keras.layers.TimeDistributed 48 48
+tensorflow.keras.layers.TimeDistributed 48 48
+tensorflow.keras.layers.Dropout 50 50
+tensorflow.keras.layers.TimeDistributed 50 50
+tensorflow.keras.layers.TimeDistributed 50 50
+tensorflow.keras.layers.LSTM 52 52
+tensorflow.keras.layers.LSTM 52 52
+tensorflow.keras.layers.Dense 54 54
+tensorflow.keras.layers.Dense 54 54
+tensorflow.keras.layers.Dense 56 56
+tensorflow.keras.layers.Dense 56 56
+tensorflow.keras.Model 58 58
+tensorflow.keras.optimizers.Adam 60 60
+tensorflow.keras.Model.compile 62 62
+tensorflow.keras.Model.fit 64 64
+
+--------------------------------------------
+
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case6/source.py: ->
+get_padding_mask:
+tensorflow.map_fn 5 14
+
+main:
+numpy.random.randint 18 18
+tensorflow.constant 18 18
+
+--------------------------------------------
+
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case7/source.py: ->
+contrastive_loss:
+tensorflow.cast 20 20
+tensorflow.abs 20 20
+tensorflow.minimum 20 20
+tensorflow.norm 21 21
+tensorflow.maximum 22 22
+
+main:
+tensorflow.keras.datasets.mnist.load_data 28 28
+tensorflow.keras.backend.clear_session 37 37
+tensorflow.keras.Sequential 40 40
+tensorflow.keras.layers.Flatten 41 41
+tensorflow.keras.Sequential.add 41 41
+tensorflow.keras.layers.Dense 42 42
+tensorflow.keras.Sequential.add 42 42
+tensorflow.keras.layers.Dense 43 43
+tensorflow.keras.Sequential.add 43 43
+tensorflow.keras.layers.Dense 44 44
+tensorflow.keras.Sequential.add 44 44
+tensorflow.keras.optimizers.Adam 46 46
+tensorflow.keras.Sequential.compile 46 46
+tensorflow.keras.Sequential.fit 47 47
+
+--------------------------------------------
+
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case3/source.py: ->
 main:
 tensorflow.keras.Input 6 6
 tensorflow.keras.layers.Flatten 7 7
@@ -297,7 +288,16 @@ tensorflow.keras.Model.predict 35 35
 
 --------------------------------------------
 
-/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case4/source.py: ->
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case5/source.py: ->
+main:
+tensorflow.data.TFRecordDataset 4 4
+tensorflow.data.TFRecordDataset.repeat 5 5
+tensorflow.data.TFRecordDataset.batch 6 6
+tensorflow.data.TFRecordDataset.as_numpy_iterator 7 7
+
+--------------------------------------------
+
+/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/TestCaseSet/Case4/source.py: ->
 limit_memory:
 
 convert_image_to_array:

@@ -6,6 +6,7 @@ from Intra_Method_Analysis.Code.extract.extract_funcDef import FuncDefExtractor
 from Intra_Method_Analysis.Code.extract.submodule.search_variableReference import get_references_by_lineno
 from Intra_Method_Analysis.Code.extract.submodule.revert_apiName import revert_import_name
 
+
 def parse_tree_script(tree, script):
     """
     方法内API解析

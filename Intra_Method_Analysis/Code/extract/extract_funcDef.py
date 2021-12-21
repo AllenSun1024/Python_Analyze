@@ -76,7 +76,9 @@ class FuncDefExtractor(ast.NodeVisitor):
                         nodeName = get_Call_Name(node.value, '')
                         if nodeName is not None:
                             self.check_table.append([target.id, nodeName[:-1], target.lineno])  # target.id是nodeName的别名
-                            self.variables.append([target.lineno, target.end_lineno, target.col_offset, target.end_col_offset, target.id, get_Call_Name(node.value, '')])
+                            self.variables.append(
+                                [target.lineno, target.end_lineno, target.col_offset, target.end_col_offset, target.id,
+                                 get_Call_Name(node.value, '')])
                         else:
                             continue
                     elif isinstance(target, ast.Tuple):
@@ -95,9 +97,10 @@ class FuncDefExtractor(ast.NodeVisitor):
         else:
             pass
 
-
     def report(self):
-        with open('/Users/abnerallen/Documents/API_Misuse/python_mine/Python_Analyze/Intra_Method_Analysis/Resource/result.txt', 'a') as f:
+        with open(
+                '/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/result.txt',
+                'a') as f:
             for i in range(len(self.funcStats["name"])):  # 一个源文件中可能定义多个函数
                 f.write(self.funcStats["name"][i])  # 第i个函数的名字
                 f.write(':\n')
