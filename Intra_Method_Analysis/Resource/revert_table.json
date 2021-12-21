@@ -1,0 +1,1 @@
+{"tensorflow.data.TFRecordDataset": "tf.data.Dataset", "tensorflow.data.Dataset.from_tensor_slices": "tf.data.Dataset"}

@@ -43,6 +43,8 @@ def get_references_by_lineno(funcStats, script):
                                     new_name += '.'
                                     new_name += name_seg
                                 new_name = node_name + new_name
+                                if check_item[1] == new_name:
+                                    new_name = new_name + '.__call__'
                                 funcStats["APIs"][i][api_sub] = new_name
                             else:
                                 continue

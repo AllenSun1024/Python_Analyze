@@ -5,6 +5,7 @@ from Intra_Method_Analysis.Code.extract.extract_import import ImportExtractor
 from Intra_Method_Analysis.Code.extract.extract_funcDef import FuncDefExtractor
 from Intra_Method_Analysis.Code.extract.submodule.search_variableReference import get_references_by_lineno
 from Intra_Method_Analysis.Code.extract.submodule.revert_apiName import revert_import_name
+from Intra_Method_Analysis.Code.extract.submodule.revert_apiName import revert_return_value
 
 
 def parse_tree_script(tree, script):
@@ -32,6 +33,7 @@ def parse_tree_script(tree, script):
     funcStats = function_extractor.funcStats
     funcStats = get_references_by_lineno(funcStats=funcStats, script=script)
     function_extractor.funcStats = revert_import_name(validPackages, funcStats)
+    function_extractor.funcStats = revert_return_value(function_extractor.funcStats)
     function_extractor.report()
 
 

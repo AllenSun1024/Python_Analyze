@@ -76,3 +76,16 @@ def revert_import_name(validPackages, funcStats):
             else:
                 continue
     return funcStats
+
+
+def revert_return_value(funcStats):
+    with open("/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/revert_table.json") as json_file:
+        return_value_revert_table = json.load(json_file)
+        for func_id in range(len(funcStats["name"])):
+            for api_id in range(len(funcStats["APIs"][func_id])):
+                for key, value in return_value_revert_table.items():
+                    if funcStats["APIs"][func_id][api_id] is not None and funcStats["APIs"][func_id][api_id].startswith(key) and len(funcStats["APIs"][func_id][api_id]) > len(key):
+                        funcStats["APIs"][func_id][api_id] = value + funcStats["APIs"][func_id][api_id][len(key):]
+                    else:
+                        continue
+        return funcStats

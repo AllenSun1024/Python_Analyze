@@ -41,6 +41,10 @@ def get_Call_Name(node, name):
                     return get_Call_Name(call_breakpoint, name)
                 else:
                     return None
+        elif isinstance(node.func, ast.Call):
+            # TODO: only able to handle A()() correctly, need APIs' return values to be more precise
+            name = name + '__call__'
+            return get_Call_Name(node.func, name)
         else:
             return get_Call_Name(node.func, name)
     elif isinstance(node, ast.Attribute):
