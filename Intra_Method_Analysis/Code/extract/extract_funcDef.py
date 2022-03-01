@@ -1,6 +1,6 @@
 import ast
-from Intra_Method_Analysis.Code.extract.submodule.get_nodeNames import get_Call_Name
-from Intra_Method_Analysis.Code.extract.submodule.get_funcArgs import parse_function_arguments
+from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.get_nodeNames import get_Call_Name
+from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.get_funcArgs import parse_function_arguments
 
 
 class FuncDefExtractor(ast.NodeVisitor):

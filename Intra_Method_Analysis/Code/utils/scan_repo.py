@@ -1,5 +1,6 @@
 import os
-from Intra_Method_Analysis.Code.extract.analyze_file import extract_one_repo
+
+from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.analyze_file import extract_one_repo
 
 
 def scan_several_repos(root_path):

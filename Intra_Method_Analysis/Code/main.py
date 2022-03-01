@@ -1,4 +1,4 @@
-from Intra_Method_Analysis.Code.utils.scan_repo import scan_several_repos
+from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.utils.scan_repo import scan_several_repos
 
 
 def main():
