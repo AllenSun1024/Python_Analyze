@@ -35,6 +35,10 @@ def get_references_by_lineno(funcStats, script):
                         else:
                             continue
                     if node_name is not None:
+                        """
+                        `reference.name = node_name(...)`
+                        The variable 'reference.name' is defined and the corresponding call 'node_name' is assigned to it
+                        """
                         for api_sub in range(len(APIs_inFunc)):
                             if reference.name == APIs_inFunc[api_sub].split('.')[0]:
                                 tmp = APIs_inFunc[api_sub].split('.')[1:]

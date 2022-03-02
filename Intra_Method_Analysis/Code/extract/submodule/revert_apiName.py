@@ -45,7 +45,7 @@ def revert_import_name(validPackages, funcStats):
                     else:
                         continue
                 else:
-                    if A is not None and B == '*':
+                    if A is not None and B == '*':  # from A import *
                         with open('/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/module_check.json') as json_file:
                             module_check_table = json.load(json_file)
                         if A in module_check_table.keys() and api_head in module_check_table[A]:

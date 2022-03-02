@@ -8,8 +8,8 @@ class FuncDefExtractor(ast.NodeVisitor):
         self.funcStats = {
             "name": [],  # 当前文件内定义的函数名列表, [name1, name2, ...]
             "args": [],  # 函数参数, [[1's arg], [2's arg], ...]
-            "APIs": [],  # 函数中调用的API列表, [[f1_api_1, f1_api_2, ...], ...]
-            "lineNo": [],  # 每个被调用API的起始行号, [[f1_line_1, f1_line_2, ...], ...]
+            "APIs": [],  # 函数中调用的API列表, [[f1_api_1, f1_api_2, ...], [f2_api_1, f2_api_2, ...], ...]
+            "lineNo": [],  # 每个被调用API的起始行号, [[f1_line_1, f1_line_2, ...], [f2_line_1, f2_line_2, ...], ...]
             "end_lineNo": [],  # 每个被调用API的结束行号，用于应对API跨行的Case
             "variables": [],
             "check_table": []
@@ -18,8 +18,8 @@ class FuncDefExtractor(ast.NodeVisitor):
         self.lines = []
         self.end_lines = []
         self.variables = []  # 记录每个函数中被定义的变量
-        self.check_table = []
-        self.isInFunc = False
+        self.check_table = []  # variable's name + its corresponding Call + lineno
+        self.isInFunc = False  # True: current syntax node is AST.FunctionDef
         self.script = script
 
     def visit_FunctionDef(self, node):
@@ -76,9 +76,12 @@ class FuncDefExtractor(ast.NodeVisitor):
                         nodeName = get_Call_Name(node.value, '')
                         if nodeName is not None:
                             self.check_table.append([target.id, nodeName[:-1], target.lineno])  # target.id是nodeName的别名
+                            # self.variables.append(
+                            #     [target.lineno, target.end_lineno, target.col_offset, target.end_col_offset, target.id,
+                            #      get_Call_Name(node.value, '')])
                             self.variables.append(
                                 [target.lineno, target.end_lineno, target.col_offset, target.end_col_offset, target.id,
-                                 get_Call_Name(node.value, '')])
+                                 nodeName])
                         else:
                             continue
                     elif isinstance(target, ast.Tuple):
