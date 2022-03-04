@@ -43,7 +43,7 @@ def get_Call_Name(node, name):
                     return None
         elif isinstance(node.func, ast.Call):
             # TODO: only able to handle A()() correctly, need APIs' return values to be more precise
-            name = name + '__call__'
+            name = name + '__call__.'
             return get_Call_Name(node.func, name)
         else:
             return get_Call_Name(node.func, name)
@@ -54,3 +54,4 @@ def get_Call_Name(node, name):
         return node.id + '.' + name  # 递归出口
     else:
         return None
+
