@@ -78,6 +78,3 @@ def revert_import_name(validPackages, funcStats):
                 continue
     return funcStats
 
-
-def revert_return_value(funcStats):
-    pass

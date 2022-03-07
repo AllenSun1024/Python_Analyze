@@ -33,9 +33,6 @@ tensorflow.keras.layers.Concatenate.__call__ 9 9
 tensorflow.keras.layers.Dense 10 10
 tensorflow.keras.layers.Dense.__call__ 10 10
 tensorflow.keras.Model 11 11
-numpy.random.random 14 14
-numpy.random.random 15 15
-numpy.random.random 16 16
 tensorflow.data.Dataset.from_tensor_slices 18 18
 tensorflow.data.Dataset.repeat 19 19
 tensorflow.data.Dataset.shuffle 19 19
@@ -49,10 +46,6 @@ tensorflow.keras.Model.fit 28 28
 main:
 tensorflow.compat.v1.ConfigProto 17 17
 tensorflow.compat.v1.InteractiveSession 20 20
-sklearn.datasets.fetch_openml 22 22
-sklearn.utils.shuffle 22 22
-numpy.asarray 24 24
-numpy.asarray 24 24
 tensorflow.keras.Sequential 25 25
 tensorflow.keras.Input 26 26
 tensorflow.keras.Sequential.add 26 26
@@ -63,7 +56,6 @@ tensorflow.keras.Sequential.add 28 28
 tensorflow.keras.losses.SparseCategoricalCrossentropy 29 29
 tensorflow.keras.Sequential.compile 29 29
 tensorflow.keras.Sequential.get_weights 34 34
-numpy.random.normal 35 35
 tensorflow.keras.Sequential.set_weights 36 36
 tensorflow.keras.Sequential.evaluate 37 37
 
@@ -120,7 +112,6 @@ get_padding_mask:
 tensorflow.map_fn 5 14
 
 main:
-numpy.random.randint 18 18
 tensorflow.constant 18 18
 
 --------------------------------------------
@@ -178,7 +169,6 @@ tensorflow.keras.Model 25 25
 tensorflow.keras.Model 26 26
 tensorflow.keras.Model 27 27
 tensorflow.keras.Model.compile 28 28
-numpy.random.random 31 31
 tensorflow.keras.Model.predict 33 33
 tensorflow.keras.Model.predict 35 35
 
@@ -197,16 +187,9 @@ tensorflow.data.TFRecordDataset.as_numpy_iterator 7 7
 limit_memory:
 
 convert_image_to_array:
-cv2.imread 25 25
-cv2.resize 27 27
 keras.preprocessing.image.img_to_array 28 28
-numpy.array 30 30
 
 main:
-sklearn.preprocessing.LabelBinarizer 80 80
-sklearn.preprocessing.LabelBinarizer.fit_transform 81 81
-pickle.dump 83 83
-numpy.array 87 87
 keras.preprocessing.image.ImageDataGenerator 92 96
 keras.models.Sequential 98 98
 keras.backend.image_data_format 101 101
