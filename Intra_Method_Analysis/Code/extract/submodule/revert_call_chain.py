@@ -6,6 +6,9 @@ def chain_def_use(funcStats):
     Case 1:
         ds = tf.data.Dataset.from_tensor_slices()
         ds = ds.repeat().shuffle().batch()
+
+    Case 2:
+        X = tf.data.Dataset.from_tensor_slices().batch()
     """
     revert_table = open('/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/call_return.json', 'r+')
     revert_table = json.load(revert_table)
@@ -52,11 +55,3 @@ def chain_def_use(funcStats):
                 continue
     return funcStats
 
-
-def chain_sequence():
-    """
-    Case 2:
-        X = tf.data.Dataset.from_tensor_slices().batch()
-    """
-    # TODO: complement it here or other place
-    pass
