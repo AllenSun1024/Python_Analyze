@@ -37,11 +37,11 @@ numpy.random.random 14 14
 numpy.random.random 15 15
 numpy.random.random 16 16
 tensorflow.data.Dataset.from_tensor_slices 18 18
-tensorflow.data.Dataset.from_tensor_slices.repeat 19 19
-tensorflow.data.Dataset.from_tensor_slices.shuffle 19 19
-tensorflow.data.Dataset.from_tensor_slices.batch 19 19
+tensorflow.data.Dataset.repeat 19 19
+tensorflow.data.Dataset.shuffle 19 19
+tensorflow.data.Dataset.batch 19 19
 tensorflow.keras.Model.compile 20 20
-tensorflow.keras.Model.fit_generator 28 28
+tensorflow.keras.Model.fit 28 28
 
 --------------------------------------------
 
@@ -111,7 +111,7 @@ tensorflow.keras.layers.Dense.__call__ 56 56
 tensorflow.keras.Model 58 58
 tensorflow.keras.optimizers.Adam 60 60
 tensorflow.keras.Model.compile 62 62
-tensorflow.keras.Model.fit_generator 64 64
+tensorflow.keras.Model.fit 64 64
 
 --------------------------------------------
 
@@ -179,8 +179,8 @@ tensorflow.keras.Model 26 26
 tensorflow.keras.Model 27 27
 tensorflow.keras.Model.compile 28 28
 numpy.random.random 31 31
-tensorflow.keras.Model.predict_generator 33 33
-tensorflow.keras.Model.predict_generator 35 35
+tensorflow.keras.Model.predict 33 33
+tensorflow.keras.Model.predict 35 35
 
 --------------------------------------------
 

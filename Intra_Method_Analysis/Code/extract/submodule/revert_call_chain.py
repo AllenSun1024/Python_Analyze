@@ -16,10 +16,8 @@ def chain_def_use(funcStats):
 
                 head = cur_API.split('#')[0][:-1]  # `API` or `API + Inner Func`
                 rear = cur_API.split('#')[1][1:]
-                possibleInnerFromHead = head.split('.')[-2]
-                possibleAPIFromHead = '.'.join(head.split('.')[:-2])
-                if possibleAPIFromHead[-1] == '.':
-                    possibleAPIFromHead = possibleAPIFromHead[:-1]
+                possibleInnerFromHead = head.split('.')[-1]
+                possibleAPIFromHead = '.'.join(head.split('.')[:-1])
 
                 areYouOK = False
 
@@ -30,15 +28,15 @@ def chain_def_use(funcStats):
                     callee_Inner_Func = value[1].split(',')[1][11:]
                     if head == caller_User_API and rear == caller_Inner_Func:
                         result = callee_User_API
-                        if callee_Inner_Func != '':
-                            result += ('.' + callee_Inner_Func)
+                        if rear != '':
+                            result += ('.' + rear)
                         funcStats['APIs'][i][j] = result
                         areYouOK = True
                         break
                     elif possibleAPIFromHead == caller_User_API and possibleInnerFromHead == caller_Inner_Func:
                         result = callee_User_API
-                        if callee_Inner_Func != '':
-                            result += ('.' + callee_Inner_Func)
+                        if rear != '':
+                            result += ('.' + rear)
                         funcStats['APIs'][i][j] = result
                         areYouOK = True
                         break
