@@ -25,7 +25,7 @@ def chain_def_use(funcStats):
                     caller_User_API = value[0].split(',')[0][9:]
                     caller_Inner_Func = value[0].split(',')[1][11:]
                     callee_User_API = value[1].split(',')[0][9:]
-                    callee_Inner_Func = value[1].split(',')[1][11:]
+                    # callee_Inner_Func = value[1].split(',')[1][11:]
                     if head == caller_User_API and rear == caller_Inner_Func:
                         result = callee_User_API
                         if rear != '':
