@@ -28,6 +28,7 @@ def revert_import_name(validPackages, funcStats):
             拿到第func_id个函数，去拼接它的API
             """
             for api_id in range(len(funcStats["APIs"][func_id])):
+
                 api_head = funcStats["APIs"][func_id][api_id].split('.')[0]
                 if api_head == C:  # from A import B as C / import B as C
                     tmp = funcStats["APIs"][func_id][api_id].split('.')[1:]

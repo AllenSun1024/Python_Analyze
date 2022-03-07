@@ -9,8 +9,8 @@ class ImportExtractor(ast.NodeVisitor):
         :param: self.stats，记录当前文件中的全部import信息
         :param: self.valid，self.stats经过self.filter包名过滤后的结果
         """
-        # self.filter = ["tensorflow", "numpy", "pandas", "sklearn", "pickle", "cv2", "keras"]
-        self.filter = ["tensorflow", "keras", "sklearn", "numpy"]
+        self.filter = ["tensorflow", "numpy", "pandas", "sklearn", "pickle", "cv2", "keras"]
+        # self.filter = ["tensorflow", "keras", "sklearn", "numpy"]
         """
         from module import source as target
         e.g., "from tensorflow import keras as k": module->tensorflow, source->keras, target->k

@@ -46,14 +46,14 @@ def get_references_by_lineno(funcStats, script):
                                 for name_seg in tmp:
                                     new_name += '.'
                                     new_name += name_seg
-                                new_name = node_name + new_name
+                                new_name = node_name + '.#' + new_name
                                 if check_item[1] == new_name:
                                     new_name = new_name + '.__call__'
                                 funcStats["APIs"][i][api_sub] = new_name
                             else:
                                 continue
-                    else:
+                    else:  # None of call nodes can match current variable
                         continue
-                else:
+                else:  # skip the definition of variable, what we need only is the references of variable defined
                     continue
     return funcStats

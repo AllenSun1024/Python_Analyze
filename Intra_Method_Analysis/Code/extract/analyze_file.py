@@ -5,7 +5,7 @@ from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.extract_i
 from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.extract_funcDef import FuncDefExtractor
 from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.search_variableReference import get_references_by_lineno
 from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.revert_apiName import revert_import_name
-from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.revert_apiName import revert_return_value
+from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.revert_call_chain import chain_def_use
 
 
 def parse_tree_script(tree, script):
@@ -33,6 +33,8 @@ def parse_tree_script(tree, script):
     funcStats = function_extractor.funcStats
     funcStats = get_references_by_lineno(funcStats=funcStats, script=script)
     function_extractor.funcStats = revert_import_name(validPackages, funcStats)
+    # TODO: revert call chain here
+    function_extractor.funcStats = chain_def_use(funcStats=function_extractor.funcStats)
     function_extractor.report()
 
 

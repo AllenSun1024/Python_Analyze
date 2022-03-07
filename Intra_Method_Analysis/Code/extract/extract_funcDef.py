@@ -76,9 +76,6 @@ class FuncDefExtractor(ast.NodeVisitor):
                         nodeName = get_Call_Name(node.value, '')
                         if nodeName is not None:
                             self.check_table.append([target.id, nodeName[:-1], target.lineno])  # target.id是nodeName的别名
-                            # self.variables.append(
-                            #     [target.lineno, target.end_lineno, target.col_offset, target.end_col_offset, target.id,
-                            #      get_Call_Name(node.value, '')])
                             self.variables.append(
                                 [target.lineno, target.end_lineno, target.col_offset, target.end_col_offset, target.id,
                                  nodeName])
