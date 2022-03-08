@@ -1,0 +1,9 @@
+main:
+tensorflow.convert_to_tensor 13 13
+tensorflow.equal 14 14
+keras.backend.cast 14 14
+keras.backend.ones_like 15 15
+keras.backend.sum 15 15
+keras.backend.sum 16 16
+tensorflow.cast 18 18
+

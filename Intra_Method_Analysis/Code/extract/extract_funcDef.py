@@ -4,7 +4,7 @@ from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule
 
 
 class FuncDefExtractor(ast.NodeVisitor):
-    def __init__(self, script):
+    def __init__(self, script, resultPath):
         self.funcStats = {
             "name": [],  # 当前文件内定义的函数名列表, [name1, name2, ...]
             "args": [],  # 函数参数, [[1's arg], [2's arg], ...]
@@ -21,6 +21,7 @@ class FuncDefExtractor(ast.NodeVisitor):
         self.check_table = []  # variable's name + its corresponding Call + lineno
         self.isInFunc = False  # True: current syntax node is AST.FunctionDef
         self.script = script
+        self.resultPath = resultPath
 
     def visit_FunctionDef(self, node):
         """
@@ -28,7 +29,15 @@ class FuncDefExtractor(ast.NodeVisitor):
         我们做的是函数内解析，所以这算是解析入口
         """
         self.isInFunc = True
-        self.generic_visit(node)
+        funcAsserted = []
+        funcNormal = []
+        for entity in node.body:
+            if isinstance(entity, ast.FunctionDef):
+                funcAsserted.append(entity)
+            else:
+                funcNormal.append(entity)
+        for func in funcNormal:
+            self.visit(func)  # visit node's children who are not FunctionDef
         self.funcStats["APIs"].append(self.APIs)
         self.APIs = []
         self.funcStats["lineNo"].append(self.lines)
@@ -42,7 +51,9 @@ class FuncDefExtractor(ast.NodeVisitor):
         self.funcStats["name"].append(node.name)
         args = parse_function_arguments(node)  # 解析获取函数的参数信息
         self.funcStats["args"].append(args)
-        self.isInFunc = False
+
+        for func in funcAsserted:  # visit node's children who are FunctionDef
+            self.visit(func)
 
     def visit_Call(self, node):
         if self.isInFunc:
@@ -97,10 +108,14 @@ class FuncDefExtractor(ast.NodeVisitor):
         else:
             pass
 
+    def visit_Return(self, node):
+        if self.isInFunc:
+            self.generic_visit(node)
+        else:
+            pass
+
     def report(self):
-        with open(
-                '/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/result.txt',
-                'a') as f:
+        with open(self.resultPath, 'w') as f:
             for i in range(len(self.funcStats["name"])):  # 一个源文件中可能定义多个函数
                 f.write(self.funcStats["name"][i])  # 第i个函数的名字
                 f.write(':\n')
@@ -115,4 +130,3 @@ class FuncDefExtractor(ast.NodeVisitor):
                     else:
                         continue
                 f.write('\n')
-            f.write('--------------------------------------------\n\n')

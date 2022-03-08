@@ -8,11 +8,12 @@ from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule
 from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.revert_call_chain import chain_def_use
 
 
-def parse_tree_script(tree, script):
+def parse_tree_script(tree, script, resultPath):
     """
     方法内API解析
     :param tree: Python AST
     :param script: Jedi Script
+    :param resultPath: Path to record current Python file's result
     import_extractor: 抽取并过滤import信息
     function_extractor: 抽取方法内API
     """
@@ -28,7 +29,7 @@ def parse_tree_script(tree, script):
     """
     validPackages = import_extractor.valid
 
-    function_extractor = FuncDefExtractor(script=script)
+    function_extractor = FuncDefExtractor(script=script, resultPath=resultPath)
     function_extractor.generic_visit(tree)
     funcStats = function_extractor.funcStats
     funcStats = get_references_by_lineno(funcStats=funcStats, script=script)
@@ -44,9 +45,9 @@ def extract_one_repo(project_path):
     """
     project = jedi.Project(path=project_path)
     for f in Path(project_path).glob("./**/*.py"):
-        tree, script = scan_one_file(f, project)
+        tree, script, resultPath = scan_one_file(f, project)
         if not tree or not script:
             print("[Error] Failed to parse file: %s" % str(f))
             continue
         else:
-            parse_tree_script(tree, script)
+            parse_tree_script(tree, script, resultPath)

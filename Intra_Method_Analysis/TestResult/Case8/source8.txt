@@ -1,0 +1,19 @@
+main:
+tensorflow.keras.Input 5 5
+tensorflow.keras.layers.Dense 6 6
+tensorflow.keras.layers.Dense.__call__ 6 6
+tensorflow.keras.Input 7 7
+tensorflow.keras.layers.Dense 8 8
+tensorflow.keras.layers.Dense.__call__ 8 8
+tensorflow.keras.layers.Concatenate 9 9
+tensorflow.keras.layers.Concatenate.__call__ 9 9
+tensorflow.keras.layers.Dense 10 10
+tensorflow.keras.layers.Dense.__call__ 10 10
+tensorflow.keras.Model 11 11
+tensorflow.data.Dataset.from_tensor_slices 18 18
+tensorflow.data.Dataset.repeat 19 19
+tensorflow.data.Dataset.shuffle 19 19
+tensorflow.data.Dataset.batch 19 19
+tensorflow.keras.Model.compile 20 20
+tensorflow.keras.Model.fit 28 28
+

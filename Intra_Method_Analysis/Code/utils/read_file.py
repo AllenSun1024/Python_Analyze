@@ -38,11 +38,8 @@ def scan_one_file(path, project):
     :return script: jedi.Script
     """
     print("[Scanning] %s" % str(path))
-    with open('/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/result.txt', 'a') as f:
-        f.write(str(path))
-        f.write(': ->\n')
-        f.close()
+    resultPath = '/' + '/'.join(((str(path)).split('/'))[1:-3]) + '/TestResult/' + ((str(path)).split('/'))[-2] + '/' + ((((str(path)).split('/'))[-1]).split('.'))[0] + '.txt'
     file_data = GetProject(path, project)
     tree = file_data.tree
     script = file_data.script
-    return tree, script
+    return tree, script, resultPath

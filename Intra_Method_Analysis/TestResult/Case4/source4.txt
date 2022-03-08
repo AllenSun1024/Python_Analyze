@@ -1,0 +1,69 @@
+limit_memory:
+
+convert_image_to_array:
+keras.preprocessing.image.img_to_array 28 28
+
+main:
+keras.preprocessing.image.ImageDataGenerator 92 96
+keras.models.Sequential 98 98
+keras.backend.image_data_format 101 101
+keras.layers.convolutional.Conv2D 105 105
+keras.models.Sequential.add 105 105
+keras.layers.core.Activation 106 106
+keras.models.Sequential.add 106 106
+keras.layers.normalization.BatchNormalization 107 107
+keras.models.Sequential.add 107 107
+keras.layers.convolutional.MaxPooling2D 108 108
+keras.models.Sequential.add 108 108
+keras.layers.core.Dropout 109 109
+keras.models.Sequential.add 109 109
+keras.layers.convolutional.Conv2D 110 110
+keras.models.Sequential.add 110 110
+keras.layers.core.Activation 111 111
+keras.models.Sequential.add 111 111
+keras.layers.normalization.BatchNormalization 112 112
+keras.models.Sequential.add 112 112
+keras.layers.convolutional.Conv2D 113 113
+keras.models.Sequential.add 113 113
+keras.layers.core.Activation 114 114
+keras.models.Sequential.add 114 114
+keras.layers.normalization.BatchNormalization 115 115
+keras.models.Sequential.add 115 115
+keras.layers.convolutional.MaxPooling2D 116 116
+keras.models.Sequential.add 116 116
+keras.layers.core.Dropout 117 117
+keras.models.Sequential.add 117 117
+keras.layers.convolutional.Conv2D 118 118
+keras.models.Sequential.add 118 118
+keras.layers.core.Activation 119 119
+keras.models.Sequential.add 119 119
+keras.layers.normalization.BatchNormalization 120 120
+keras.models.Sequential.add 120 120
+keras.layers.convolutional.Conv2D 121 121
+keras.models.Sequential.add 121 121
+keras.layers.core.Activation 122 122
+keras.models.Sequential.add 122 122
+keras.layers.normalization.BatchNormalization 123 123
+keras.models.Sequential.add 123 123
+keras.layers.convolutional.MaxPooling2D 124 124
+keras.models.Sequential.add 124 124
+keras.layers.core.Dropout 125 125
+keras.models.Sequential.add 125 125
+keras.layers.core.Flatten 126 126
+keras.models.Sequential.add 126 126
+keras.layers.core.Dense 128 128
+keras.models.Sequential.add 128 128
+keras.layers.core.Activation 129 129
+keras.models.Sequential.add 129 129
+keras.layers.normalization.BatchNormalization 130 130
+keras.models.Sequential.add 130 130
+keras.layers.core.Dropout 131 131
+keras.models.Sequential.add 131 131
+keras.layers.core.Dense 132 132
+keras.models.Sequential.add 132 132
+keras.layers.core.Activation 133 133
+keras.models.Sequential.add 133 133
+keras.models.Sequential.compile 135 135
+keras.preprocessing.image.ImageDataGenerator.flow 138 138
+keras.models.Sequential.fit_generator 137 142
+

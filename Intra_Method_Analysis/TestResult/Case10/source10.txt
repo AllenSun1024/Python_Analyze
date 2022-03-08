@@ -1,0 +1,16 @@
+main:
+tensorflow.compat.v1.ConfigProto 17 17
+tensorflow.compat.v1.InteractiveSession 20 20
+tensorflow.keras.Sequential 25 25
+tensorflow.keras.Input 26 26
+tensorflow.keras.Sequential.add 26 26
+tensorflow.keras.layers.Dense 27 27
+tensorflow.keras.Sequential.add 27 27
+tensorflow.keras.layers.Dense 28 28
+tensorflow.keras.Sequential.add 28 28
+tensorflow.keras.losses.SparseCategoricalCrossentropy 29 29
+tensorflow.keras.Sequential.compile 29 29
+tensorflow.keras.Sequential.get_weights 34 34
+tensorflow.keras.Sequential.set_weights 36 36
+tensorflow.keras.Sequential.evaluate 37 37
+

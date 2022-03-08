@@ -1,0 +1,23 @@
+contrastive_loss:
+tensorflow.cast 20 20
+tensorflow.abs 20 20
+tensorflow.minimum 20 20
+tensorflow.norm 21 21
+tensorflow.maximum 22 22
+
+main:
+tensorflow.keras.datasets.mnist.load_data 28 28
+tensorflow.keras.backend.clear_session 37 37
+tensorflow.keras.Sequential 40 40
+tensorflow.keras.layers.Flatten 41 41
+tensorflow.keras.Sequential.add 41 41
+tensorflow.keras.layers.Dense 42 42
+tensorflow.keras.Sequential.add 42 42
+tensorflow.keras.layers.Dense 43 43
+tensorflow.keras.Sequential.add 43 43
+tensorflow.keras.layers.Dense 44 44
+tensorflow.keras.Sequential.add 44 44
+tensorflow.keras.optimizers.Adam 46 46
+tensorflow.keras.Sequential.compile 46 46
+tensorflow.keras.Sequential.fit 47 47
+

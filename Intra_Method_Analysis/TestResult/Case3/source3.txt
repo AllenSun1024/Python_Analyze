@@ -1,0 +1,29 @@
+main:
+tensorflow.keras.Input 6 6
+tensorflow.keras.layers.Flatten 7 7
+tensorflow.keras.layers.Flatten.__call__ 7 7
+tensorflow.keras.layers.Dense 8 8
+tensorflow.keras.layers.Dense.__call__ 8 8
+tensorflow.keras.layers.Dense 9 9
+tensorflow.keras.layers.Dense.__call__ 9 9
+tensorflow.keras.layers.Dense 10 10
+tensorflow.keras.layers.Dense.__call__ 10 10
+tensorflow.keras.Model 11 11
+tensorflow.keras.Input 14 14
+tensorflow.keras.Input 15 15
+tensorflow.keras.layers.subtract 16 16
+tensorflow.keras.layers.Dense 17 17
+tensorflow.keras.layers.Dense.__call__ 17 17
+tensorflow.keras.layers.Dense 18 18
+tensorflow.keras.layers.Dense.__call__ 18 18
+tensorflow.keras.Model 19 19
+tensorflow.keras.Input 22 22
+tensorflow.keras.Input 23 23
+tensorflow.keras.Model 24 24
+tensorflow.keras.Model 25 25
+tensorflow.keras.Model 26 26
+tensorflow.keras.Model 27 27
+tensorflow.keras.Model.compile 28 28
+tensorflow.keras.Model.predict 33 33
+tensorflow.keras.Model.predict 35 35
+
