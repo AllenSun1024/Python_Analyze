@@ -1,0 +1,16 @@
+assign_to_gpu:
+
+_assign:
+
+average_grads_and_vars:
+
+average_dense:
+
+average_sparse:
+tensorflow.concat
+tensorflow.concat
+tensorflow.IndexedSlices
+
+load_from_checkpoint:
+tensorflow.get_default_session
+tensorflow.train.get_checkpoint_state
