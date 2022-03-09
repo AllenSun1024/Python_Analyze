@@ -1,0 +1,22 @@
+ResNet:
+tensorflow.keras.layers.Input 74 74
+tensorflow.keras.layers.ZeroPadding2D 77 77
+tensorflow.keras.layers.ZeroPadding2D.__call__ 77 77
+tensorflow.keras.layers.Conv2D 80 86
+tensorflow.keras.layers.Conv2D.__call__ 80 86
+tensorflow.keras.layers.BatchNormalization 87 87
+tensorflow.keras.layers.BatchNormalization.__call__ 87 87
+tensorflow.keras.layers.Activation 88 88
+tensorflow.keras.layers.Activation.__call__ 88 88
+tensorflow.keras.layers.MaxPooling2D 89 89
+tensorflow.keras.layers.MaxPooling2D.__call__ 89 89
+tensorflow.keras.layers.AveragePooling2D 104 104
+tensorflow.keras.layers.AveragePooling2D.__call__ 104 104
+tensorflow.keras.layers.Flatten 107 107
+tensorflow.keras.layers.Flatten.__call__ 107 107
+tensorflow.keras.layers.Dense 108 113
+tensorflow.keras.layers.Dense.__call__ 108 113
+tensorflow.keras.Model 115 115
+
+make_layer:
+

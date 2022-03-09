@@ -1,0 +1,31 @@
+get_train_data:
+tensorflow.data.Dataset.from_generator 64 64
+tensorflow.data.Dataset.map 65 65
+tensorflow.data.Dataset.shuffle 67 67
+tensorflow.data.Dataset.prefetch 68 68
+tensorflow.data.Dataset.batch 69 69
+
+generator_train:
+
+_map_fn_train:
+tensorflow.image.random_crop 58 58
+tensorflow.image.random_flip_left_right 61 61
+tensorflow.image.resize 62 62
+
+train:
+tensorflow.Variable 78 78
+tensorflow.optimizers.Adam 79 79
+tensorflow.optimizers.Adam 80 80
+tensorflow.optimizers.Adam 81 81
+tensorflow.GradientTape 96 96
+tensorflow.optimizers.Adam.apply_gradients 100 100
+tensorflow.GradientTape 113 113
+tensorflow.ones_like 119 119
+tensorflow.zeros_like 120 120
+tensorflow.ones_like 122 122
+tensorflow.optimizers.Adam.apply_gradients 127 127
+tensorflow.optimizers.Adam.apply_gradients 129 129
+tensorflow.Variable.assign 136 136
+
+evaluate:
+
