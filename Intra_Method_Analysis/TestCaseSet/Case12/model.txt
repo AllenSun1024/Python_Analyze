@@ -1,0 +1,7 @@
+get_G:
+tensorflow.random_normal_initializer
+tensorflow.random_normal_initializer
+
+get_D:
+tensorflow.random_normal_initializer
+tensorflow.random_normal_initializer
