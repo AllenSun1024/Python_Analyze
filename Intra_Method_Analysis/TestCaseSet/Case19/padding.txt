@@ -1,0 +1,11 @@
+PadLayer/forward:
+tensorflow.pad
+
+ZeroPad1d/build:
+tensorflow.keras.layers.ZeroPadding1D
+
+ZeroPad2d/build:
+tensorflow.keras.layers.ZeroPadding2D
+
+ZeroPad3d/build:
+tensorflow.keras.layers.ZeroPadding3D
