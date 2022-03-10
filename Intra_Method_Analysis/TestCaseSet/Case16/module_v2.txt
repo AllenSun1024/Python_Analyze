@@ -1,0 +1,6 @@
+resolve:
+
+load:
+tensorflow.io.gfile.exists
+tensorflow.compat.v1.saved_model.load_v2
+tensorflow.compat.v1.saved_model.load_v2
