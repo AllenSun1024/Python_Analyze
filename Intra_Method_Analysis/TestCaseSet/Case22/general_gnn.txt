@@ -1,0 +1,13 @@
+get_act:
+tensorflow.keras.layers.PReLU
+tensorflow.keras.layers.Activation
+
+GeneralGNN/__init__:
+tensorflow.keras.layers.Add
+tensorflow.keras.layers.Concatenate
+
+MLP/__init__:
+tensorflow.keras.Sequential
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.BatchNormalization
+tensorflow.keras.layers.Dropout

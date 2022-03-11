@@ -1,0 +1,11 @@
+APPNPConv/__init__:
+tensorflow.keras.activations.get
+
+APPNPConv/build:
+tensorflow.keras.layers.Dropout
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense
+tensorflow.keras.models.Sequential
+
+APPNPConv/config:
+tensorflow.keras.activations.serialize
