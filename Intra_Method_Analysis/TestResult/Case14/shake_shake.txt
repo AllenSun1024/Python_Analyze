@@ -1,0 +1,29 @@
+_shake_shake_skip_connection:
+tensorflow.nn.avg_pool 33 34
+tensorflow.pad 40 40
+tensorflow.nn.avg_pool 43 44
+tensorflow.concat 48 48
+
+_shake_shake_branch:
+tensorflow.nn.relu 56 56
+tensorflow.nn.relu 59 59
+tensorflow.stop_gradient 63 64
+
+_shake_shake_block:
+tensorflow.shape 72 72
+tensorflow.random_uniform 76 77
+tensorflow.random_uniform 81 82
+tensorflow.add_n 86 86
+tensorflow.add_n 87 87
+tensorflow.variable_scope 94 94
+tensorflow.add_n 99 99
+
+_shake_shake_layer:
+tensorflow.variable_scope 107 107
+
+build_shake_shake_model:
+tensorflow.variable_scope 136 136
+tensorflow.variable_scope 138 138
+tensorflow.variable_scope 140 140
+tensorflow.nn.relu 142 142
+

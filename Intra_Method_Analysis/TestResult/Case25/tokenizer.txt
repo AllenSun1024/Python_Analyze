@@ -1,0 +1,117 @@
+in_graph:
+
+export_assets:
+
+tokenize_stream:
+
+detokenize_stream:
+
+tokenize:
+tensorflow.device 90 90
+
+_tokenize:
+tensorflow.is_tensor 94 94
+tensorflow.compat.as_text 99 99
+
+detokenize:
+tensorflow.device 124 124
+
+_detokenize:
+tensorflow.is_tensor 130 130
+tensorflow.RaggedTensor.from_tensor 139 139
+tensorflow.compat.as_text 146 146
+
+_tokenize_tensor:
+tensorflow.py_function 178 178
+tensorflow.py_function.set_shape 179 179
+tensorflow.py_function 182 184
+tensorflow.RaggedTensor.from_row_lengths 187 187
+
+_python_wrapper:
+tensorflow.compat.as_text 165 165
+tensorflow.constant 167 167
+
+_python_wrapper_batch:
+tensorflow.nest.flatten 172 172
+tensorflow.constant 172 172
+tensorflow.constant 173 173
+
+_detokenize_tensor:
+tensorflow.py_function 212 212
+tensorflow.py_function.set_shape 213 213
+tensorflow.map_fn 216 216
+
+_python_wrapper:
+tensorflow.compat.as_text 206 206
+tensorflow.constant 208 208
+
+_tokenize_string:
+
+_tokenize_string_batch:
+
+_detokenize_string:
+
+make_tokenizer:
+tensorflow.io.gfile.exists 280 280
+tensorflow.io.gfile.GFile 281 281
+
+_process_stream_as_dataset:
+tensorflow.TensorShape 324 324
+tensorflow.data.Dataset.from_generator 321 325
+tensorflow.data.Dataset.batch 326 326
+tensorflow.data.Dataset.map 327 327
+tensorflow.TensorSpec 329 329
+tensorflow.data.Dataset.as_numpy_iterator 336 336
+
+in_graph:
+
+tokenize_stream:
+
+_map_func:
+tensorflow.strings.strip 356 356
+tensorflow.strings.reduce_join 358 360
+
+detokenize_stream:
+
+_map_func:
+tensorflow.strings.strip 371 371
+tensorflow.strings.split 372 372
+
+_tokenize_tensor:
+
+_detokenize_tensor:
+
+_tokenize_string:
+tensorflow.constant 386 386
+
+_detokenize_string:
+tensorflow.constant 390 390
+
+__init__:
+
+in_graph:
+
+_tokenize_tensor:
+tensorflow.strings.split 411 411
+
+_detokenize_tensor:
+tensorflow.strings.reduce_join 414 414
+
+_tokenize_string:
+
+_detokenize_string:
+
+in_graph:
+
+_tokenize_tensor:
+tensorflow.strings.regex_replace 432 432
+tensorflow.strings.unicode_split 433 433
+
+_detokenize_tensor:
+tensorflow.strings.reduce_join 436 436
+tensorflow.strings.regex_replace 437 437
+
+_tokenize_string:
+
+_detokenize_string:
+

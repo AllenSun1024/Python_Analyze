@@ -1,0 +1,51 @@
+__init__:
+
+build:
+
+forward:
+
+__init__:
+
+build:
+
+score:
+tensorflow.expand_dims 78 78
+tensorflow.tile 79 79
+tensorflow.concat 81 81
+tensorflow.cast 82 82
+tensorflow.tensordot 83 83
+tensorflow.nn.tanh 84 84
+tensorflow.tensordot 85 85
+tensorflow.squeeze 86 86
+tensorflow.expand_dims 90 90
+tensorflow.matmul 91 91
+tensorflow.squeeze 92 92
+tensorflow.matmul 95 95
+tensorflow.expand_dims 96 96
+tensorflow.matmul 97 97
+tensorflow.squeeze 98 98
+tensorflow.nn.softmax 100 100
+
+forward:
+tensorflow.expand_dims 110 110
+tensorflow.matmul 111 111
+tensorflow.squeeze 112 112
+tensorflow.concat 113 113
+tensorflow.convert_to_tensor 120 120
+tensorflow.transpose 121 121
+
+__init__:
+
+inference:
+tensorflow.reshape 182 182
+tensorflow.reshape 184 184
+tensorflow.argmax 185 185
+tensorflow.concat 186 186
+
+forward:
+tensorflow.convert_to_tensor 195 195
+tensorflow.transpose 196 196
+tensorflow.convert_to_tensor 197 197
+tensorflow.reshape 204 204
+tensorflow.reshape 206 206
+

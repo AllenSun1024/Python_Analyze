@@ -1,0 +1,26 @@
+normalize_A:
+tensorflow.sqrt 15 15
+tensorflow.keras.backend.epsilon 15 15
+tensorflow.keras.backend.ndim 16 16
+
+degrees:
+tensorflow.keras.backend.is_sparse 29 29
+tensorflow.sparse.reduce_sum 30 30
+tensorflow.reduce_sum 32 32
+
+degree_matrix:
+tensorflow.keras.backend.ndim 49 49
+tensorflow.shape 50 50
+tensorflow.shape 51 51
+tensorflow.range 53 53
+tensorflow.stack 53 53
+tensorflow.tile 53 53
+tensorflow.range 57 57
+tensorflow.ones 57 57
+tensorflow.cast 57 57
+tensorflow.concat 59 59
+tensorflow.linalg.diag 62 62
+tensorflow.cast 67 67
+tensorflow.reshape 68 68
+tensorflow.SparseTensor 69 69
+

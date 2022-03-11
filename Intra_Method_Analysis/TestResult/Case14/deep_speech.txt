@@ -1,0 +1,41 @@
+compute_length_after_conv:
+tensorflow.multiply 65 66
+tensorflow.cast 65 66
+tensorflow.cast 68 68
+tensorflow.math.floordiv 67 68
+tensorflow.cast 67 68
+
+evaluate_model:
+
+model_fn:
+tensorflow.argmax 151 151
+tensorflow.estimator.EstimatorSpec 155 157
+tensorflow.shape 162 162
+tensorflow.shape 162 162
+tensorflow.keras.backend.ctc_batch_cost 164 165
+tensorflow.reduce_mean 164 165
+tensorflow.compat.v1.train.AdamOptimizer 167 167
+tensorflow.compat.v1.train.get_or_create_global_step 168 168
+tensorflow.compat.v1.train.AdamOptimizer.minimize 169 169
+tensorflow.compat.v1.get_collection 170 170
+tensorflow.group 172 172
+tensorflow.estimator.EstimatorSpec 174 177
+
+generate_dataset:
+
+per_device_batch_size:
+
+run_deep_speech:
+tensorflow.compat.v1.set_random_seed 227 227
+tensorflow.estimator.RunConfig 239 240
+tensorflow.estimator.Estimator 242 249
+tensorflow.estimator.Estimator.train 283 283
+
+input_fn_train:
+
+input_fn_eval:
+
+define_deep_speech_flags:
+
+main:
+

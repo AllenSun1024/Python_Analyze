@@ -1,0 +1,42 @@
+transpose:
+tensorflow.keras.backend.is_sparse 14 14
+
+reshape:
+tensorflow.keras.backend.is_sparse 32 32
+
+repeat:
+tensorflow.expand_dims 49 49
+tensorflow.reduce_max 50 50
+tensorflow.tile 52 52
+tensorflow.range 53 53
+tensorflow.expand_dims 53 53
+tensorflow.less 53 53
+tensorflow.boolean_mask 54 54
+tensorflow.reshape 54 54
+
+segment_top_k:
+tensorflow.RaggedTensor.from_value_rowids 69 69
+tensorflow.RaggedTensor.row_lengths 70 70
+tensorflow.RaggedTensor.to_tensor 71 71
+tensorflow.argsort 72 72
+tensorflow.cast 72 72
+tensorflow.RaggedTensor.row_starts 73 73
+tensorflow.cast 73 73
+tensorflow.expand_dims 74 74
+tensorflow.cast 76 76
+tensorflow.math.ceil 76 76
+tensorflow.cast 75 77
+tensorflow.RaggedTensor.from_tensor 78 78
+
+indices_to_mask:
+tensorflow.convert_to_tensor 90 90
+tensorflow.expand_dims 93 93
+tensorflow.TensorShape 95 95
+tensorflow.expand_dims 97 97
+tensorflow.convert_to_tensor.shape.assert_has_rank 99 99
+tensorflow.shape 101 101
+tensorflow.cast 102 102
+tensorflow.cast 103 103
+tensorflow.ones 104 104
+tensorflow.scatter_nd 104 104
+

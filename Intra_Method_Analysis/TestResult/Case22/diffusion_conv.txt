@@ -1,0 +1,24 @@
+__init__:
+
+build:
+
+call:
+tensorflow.unstack 64 64
+tensorflow.math.polyval 64 64
+tensorflow.matmul 68 68
+tensorflow.math.reduce_sum 72 72
+tensorflow.expand_dims 76 76
+
+__init__:
+
+build:
+
+apply_filters:
+tensorflow.concat 163 163
+
+call:
+
+config:
+
+preprocess:
+

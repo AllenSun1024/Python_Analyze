@@ -1,0 +1,82 @@
+assert_no_infs_or_nans:
+tensorflow.name_scope 54 54
+tensorflow.convert_to_tensor 55 55
+tensorflow.debugging.check_numerics 57 58
+tensorflow.control_dependencies 59 59
+tensorflow.identity 60 60
+
+assert_all_above:
+tensorflow.name_scope 90 90
+tensorflow.convert_to_tensor 91 91
+tensorflow.convert_to_tensor 92 92
+tensorflow.debugging.assert_greater 95 95
+tensorflow.debugging.assert_greater_equal 97 97
+tensorflow.control_dependencies 98 98
+tensorflow.identity 99 99
+
+assert_all_below:
+tensorflow.name_scope 129 129
+tensorflow.convert_to_tensor 130 130
+tensorflow.convert_to_tensor 131 131
+tensorflow.debugging.assert_less 134 134
+tensorflow.debugging.assert_less_equal 136 136
+tensorflow.control_dependencies 137 137
+tensorflow.identity 138 138
+
+assert_all_in_range:
+tensorflow.name_scope 175 175
+tensorflow.convert_to_tensor 176 176
+tensorflow.convert_to_tensor 177 177
+tensorflow.convert_to_tensor 178 178
+tensorflow.debugging.assert_less 181 181
+tensorflow.debugging.assert_greater 182 182
+tensorflow.debugging.assert_less_equal 184 184
+tensorflow.debugging.assert_greater_equal 185 185
+tensorflow.control_dependencies 186 186
+tensorflow.identity 187 187
+
+assert_nonzero_norm:
+tensorflow.name_scope 221 221
+tensorflow.convert_to_tensor 222 222
+tensorflow.convert_to_tensor 225 225
+tensorflow.norm 227 227
+tensorflow.debugging.assert_greater 228 228
+tensorflow.control_dependencies 228 228
+tensorflow.identity 229 229
+
+assert_normalized:
+tensorflow.name_scope 261 261
+tensorflow.convert_to_tensor 262 262
+tensorflow.convert_to_tensor 265 265
+tensorflow.norm 267 267
+tensorflow.constant 268 268
+tensorflow.debugging.assert_near 270 270
+tensorflow.control_dependencies 269 270
+tensorflow.identity 271 271
+
+assert_at_least_k_non_zero_entries:
+tensorflow.name_scope 301 301
+tensorflow.convert_to_tensor 302 302
+tensorflow.math.greater 304 304
+tensorflow.cast 304 304
+tensorflow.reduce_sum 305 305
+tensorflow.cast 307 307
+tensorflow.debugging.assert_greater_equal 306 307
+tensorflow.control_dependencies 308 308
+tensorflow.identity 309 309
+
+assert_binary:
+tensorflow.name_scope 332 332
+tensorflow.convert_to_tensor 333 333
+tensorflow.equal 335 335
+tensorflow.equal 335 335
+tensorflow.logical_or 335 335
+tensorflow.reduce_all 334 335
+tensorflow.debugging.Assert 338 338
+tensorflow.control_dependencies 337 338
+tensorflow.identity 339 339
+
+select_eps_for_addition:
+
+select_eps_for_division:
+

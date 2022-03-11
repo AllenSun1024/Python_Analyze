@@ -1,0 +1,95 @@
+make_datasets:
+
+normalize_weights:
+
+_get_output_shapes:
+tensorflow.nest.map_structure 88 88
+
+get_dataset_size:
+tensorflow.constant 118 118
+
+_reduce_func:
+tensorflow.nest.flatten 114 114
+tensorflow.shape 115 115
+tensorflow.cast 116 116
+
+filter_irregular_batches:
+
+_predicate:
+tensorflow.nest.flatten 141 141
+tensorflow.shape 142 142
+tensorflow.equal 143 143
+
+filter_examples_by_length:
+
+_length_constraints:
+tensorflow.greater 185 185
+tensorflow.less_equal 187 187
+
+_predicate:
+tensorflow.reduce_all 202 202
+
+make_cardinality_multiple_of:
+
+_continue_iter:
+tensorflow.math.not_equal 237 237
+tensorflow.math.logical_or 236 238
+
+_retrieve_element:
+
+_transform:
+tensorflow.data.experimental.take_while 261 261
+
+random_shard:
+
+_random_shard:
+tensorflow.data.Dataset.from_tensor_slices 290 290
+tensorflow.data.Dataset.shuffle 291 291
+tensorflow.data.Dataset.flat_map 292 294
+
+shuffle_dataset:
+
+_shuffle:
+tensorflow.get_logger 328 328
+tensorflow.info 328 328
+
+batch_dataset:
+
+batch_sequence_dataset:
+
+_get_bucket_id:
+tensorflow.constant 423 423
+tensorflow.reduce_max 432 432
+
+_key_func:
+tensorflow.reduce_max 446 451
+tensorflow.cast 452 452
+
+_reduce_func:
+
+_window_size_func:
+tensorflow.maximum 464 464
+tensorflow.cast 464 464
+
+_group_by_window:
+tensorflow.data.experimental.group_by_window 471 471
+
+training_pipeline:
+
+_make_weighted_dataset:
+tensorflow.data.Dataset.shard 592 592
+tensorflow.data.Dataset.repeat 594 594
+tensorflow.data.Dataset.sample_from_datasets 597 597
+tensorflow.data.experimental.sample_from_datasets 599 601
+tensorflow.data.Dataset.shuffle 607 607
+
+_make_single_dataset:
+
+_pipeline:
+
+inference_pipeline:
+
+_inject_index:
+
+_pipeline:
+

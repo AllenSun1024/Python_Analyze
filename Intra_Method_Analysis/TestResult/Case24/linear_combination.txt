@@ -1,0 +1,51 @@
+__init__:
+tensorflow.constant 98 98
+tensorflow.constant 99 99
+tensorflow.constant 100 100
+tensorflow.zeros_like 106 106
+tensorflow.not_equal 105 106
+tensorflow.boolean_mask 107 107
+tensorflow.math.logical_not 109 109
+tensorflow.boolean_mask 108 109
+tensorflow.boolean_mask 110 110
+tensorflow.shape 112 112
+tensorflow.gather 111 112
+
+get_gradient_circuits:
+tensorflow.shape 117 117
+tensorflow.gather 117 117
+tensorflow.shape 118 118
+tensorflow.gather 118 118
+tensorflow.cond 124 125
+tensorflow.expand_dims 126 126
+tensorflow.tile 126 126
+tensorflow.identity 129 129
+tensorflow.zeros 132 133
+tensorflow.stack 134 134
+tensorflow.eye 138 138
+tensorflow.gather 137 138
+tensorflow.transpose 139 139
+tensorflow.reshape 140 140
+tensorflow.zeros 141 141
+tensorflow.cond 142 145
+tensorflow.expand_dims 147 147
+tensorflow.tile 147 148
+tensorflow.expand_dims 150 150
+tensorflow.tile 150 151
+tensorflow.expand_dims 155 155
+tensorflow.tile 155 156
+tensorflow.expand_dims 157 157
+tensorflow.tile 157 158
+tensorflow.concat 159 160
+tensorflow.expand_dims 162 162
+tensorflow.tile 162 163
+tensorflow.range 167 167
+tensorflow.reshape 166 168
+tensorflow.cond 169 174
+tensorflow.expand_dims 175 175
+tensorflow.tile 175 176
+
+__init__:
+
+__init__:
+

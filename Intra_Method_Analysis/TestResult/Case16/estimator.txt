@@ -1,0 +1,22 @@
+register_module_for_export:
+tensorflow.compat.v1.get_collection 52 52
+tensorflow.compat.v1.add_to_collection 57 58
+
+__init__:
+
+name:
+
+export:
+tensorflow.compat.v1.get_collection 161 161
+tensorflow.compat.as_bytes 165 165
+tensorflow.compat.v1.gfile.Rename 167 167
+
+_make_estimator_serving_session:
+tensorflow.Graph 195 195
+tensorflow.as_default 195 195
+tensorflow.compat.v1.train.create_global_step 197 197
+tensorflow.compat.v1.set_random_seed 198 198
+tensorflow.compat.v1.Session 211 211
+tensorflow.compat.v1.Session.as_default 214 214
+tensorflow.compat.v1.train.Saver 218 219
+

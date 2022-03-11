@@ -1,0 +1,23 @@
+sparsemax_loss:
+tensorflow.convert_to_tensor 50 50
+tensorflow.convert_to_tensor 51 51
+tensorflow.convert_to_tensor 52 52
+tensorflow.math.is_nan 65 65
+tensorflow.math.logical_or 65 65
+tensorflow.zeros_like 67 67
+tensorflow.where 64 68
+tensorflow.math.equal 79 79
+tensorflow.math.is_inf 79 79
+tensorflow.math.logical_and 79 79
+tensorflow.zeros_like 80 80
+tensorflow.where 78 82
+tensorflow.math.reduce_sum 84 84
+
+sparsemax_loss_from_logits:
+
+__init__:
+
+call:
+
+get_config:
+

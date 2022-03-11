@@ -1,0 +1,39 @@
+prefer_static_shape:
+tensorflow.shape 31 31
+
+prefer_static_value:
+tensorflow.get_static_value 42 42
+
+_get_initial_state:
+tensorflow.Variable 86 86
+tensorflow.Variable 87 87
+tensorflow.Variable 88 88
+tensorflow.Variable 89 89
+tensorflow.Variable 90 90
+tensorflow.Variable 91 91
+tensorflow.Variable 93 93
+
+_rotosolve_one_parameter_once:
+tensorflow.name_scope 154 154
+tensorflow.convert_to_tensor 155 157
+tensorflow.convert_to_tensor 159 161
+tensorflow.convert_to_tensor 162 163
+tensorflow.constant 176 176
+tensorflow.scatter_nd 175 177
+tensorflow.math.atan2 187 187
+tensorflow.scatter_nd 189 191
+tensorflow.math.floormod 195 196
+
+_rotosolve_all_parameters_once:
+tensorflow.while_loop 224 229
+
+_cond_internal:
+
+_cond:
+
+_body:
+tensorflow.abs 248 249
+
+minimize:
+tensorflow.while_loop 260 263
+

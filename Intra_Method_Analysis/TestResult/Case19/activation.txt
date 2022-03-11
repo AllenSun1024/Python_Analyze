@@ -1,0 +1,38 @@
+__init__:
+
+__repr__:
+
+build:
+tensorflow.nn.sigmoid 92 92
+
+forward:
+tensorflow.nn.relu 97 97
+tensorflow.nn.sigmoid 98 98
+tensorflow.nn.relu 99 99
+
+__init__:
+
+__repr__:
+
+build:
+tensorflow.nn.sigmoid 179 179
+
+forward:
+tensorflow.nn.relu 183 183
+tensorflow.nn.relu 184 184
+tensorflow.nn.relu 185 185
+
+__init__:
+
+__repr__:
+
+build:
+tensorflow.nn.sigmoid 269 269
+tensorflow.nn.sigmoid 273 273
+
+forward:
+tensorflow.nn.relu 277 277
+tensorflow.nn.relu 278 278
+tensorflow.nn.relu 278 278
+tensorflow.nn.relu 279 279
+

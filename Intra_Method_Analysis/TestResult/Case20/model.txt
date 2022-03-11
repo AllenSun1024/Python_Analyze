@@ -1,0 +1,114 @@
+__init__:
+
+get_architecture:
+
+root:
+
+config:
+
+full_name:
+
+close:
+
+__enter__:
+
+__exit__:
+
+initialize:
+tensorflow.summary.create_file_writer 280 283
+tensorflow.train.Checkpoint 314 314
+tensorflow.train.CheckpointManager 315 321
+
+core_initialize:
+
+function:
+
+initialize_api:
+tensorflow.summary.trace_on 383 383
+tensorflow.summary.trace_export 386 386
+tensorflow.summary.trace_on 387 387
+tensorflow.summary.trace_export 393 393
+tensorflow.summary.trace_on 394 394
+tensorflow.summary.trace_export 403 405
+tensorflow.summary.trace_on 406 406
+tensorflow.summary.trace_export 412 412
+
+get_savedmodel_trackables:
+
+input_signature:
+
+output_signature:
+
+reset:
+
+independent_act:
+tensorflow.shape 523 523
+tensorflow.math.reduce_any 550 552
+tensorflow.reduce_all 550 552
+tensorflow.debugging.assert_equal 549 554
+tensorflow.control_dependencies 556 556
+tensorflow.expand_dims 558 558
+
+act:
+tensorflow.shape 572 572
+tensorflow.math.reduce_any 595 597
+tensorflow.reduce_all 595 597
+tensorflow.debugging.assert_equal 594 599
+tensorflow.control_dependencies 601 601
+tensorflow.expand_dims 623 623
+tensorflow.gather 621 625
+tensorflow.reduce_all 621 625
+tensorflow.debugging.assert_equal 626 628
+tensorflow.expand_dims 632 632
+tensorflow.tensor_scatter_nd_update 634 634
+tensorflow.control_dependencies 640 640
+tensorflow.control_dependencies 643 643
+
+fn_terminal:
+tensorflow.shape 652 652
+tensorflow.expand_dims 653 653
+tensorflow.expand_dims 653 653
+tensorflow.math.greater 654 654
+tensorflow.math.count_nonzero 671 671
+tensorflow.debugging.assert_less_equal 672 674
+tensorflow.math.greater 677 677
+tensorflow.debugging.assert_equal 676 679
+tensorflow.control_dependencies 681 681
+tensorflow.math.reduce_mean 687 687
+tensorflow.summary.scalar 689 689
+tensorflow.expand_dims 693 693
+tensorflow.tensor_scatter_nd_add 694 696
+tensorflow.math.reduce_sum 700 700
+tensorflow.tensor_scatter_nd_add 701 703
+tensorflow.control_dependencies 714 714
+tensorflow.expand_dims 727 727
+tensorflow.tensor_scatter_nd_update 728 730
+tensorflow.gather 739 739
+tensorflow.summary.scalar 741 741
+tensorflow.gather 743 743
+tensorflow.summary.scalar 745 745
+tensorflow.control_dependencies 749 749
+tensorflow.tensor_scatter_nd_update 751 753
+tensorflow.tensor_scatter_nd_update 758 760
+tensorflow.group 769 769
+
+function:
+
+observe:
+tensorflow.cond 771 771
+tensorflow.control_dependencies 773 773
+
+core_act:
+
+core_observe:
+
+initial_internals:
+
+save:
+tensorflow.train.Checkpoint 823 825
+tensorflow.saved_model.save 837 837
+tensorflow.train.Checkpoint 845 845
+
+restore:
+tensorflow.train.latest_checkpoint 922 922
+

@@ -1,0 +1,66 @@
+catch_empty_inputs:
+
+new_diff:
+tensorflow.size 37 37
+tensorflow.equal 37 37
+tensorflow.size 38 38
+tensorflow.equal 38 38
+tensorflow.size 39 39
+tensorflow.equal 39 39
+tensorflow.logical_or 41 41
+tensorflow.logical_or 42 42
+tensorflow.cond 43 44
+
+generate_differentiable_op:
+
+op_wrapper_analytic:
+
+gradient:
+
+op_wrapper_sampled:
+
+gradient:
+
+_differentiate_ana:
+
+_differentiate_sam:
+
+refresh:
+
+get_gradient_circuits:
+
+differentiate_analytic:
+tensorflow.shape 370 370
+tensorflow.expand_dims 371 371
+tensorflow.tile 371 371
+tensorflow.shape 372 372
+tensorflow.reduce_prod 372 372
+tensorflow.shape 373 373
+tensorflow.shape 374 374
+tensorflow.reshape 376 376
+tensorflow.reshape 377 377
+tensorflow.reshape 378 378
+tensorflow.shape 380 380
+tensorflow.reshape 379 380
+tensorflow.map_fn 383 386
+tensorflow.einsum 389 389
+
+differentiate_sampled:
+tensorflow.shape 437 437
+tensorflow.expand_dims 438 438
+tensorflow.tile 438 438
+tensorflow.expand_dims 439 439
+tensorflow.tile 439 439
+tensorflow.shape 440 440
+tensorflow.reduce_prod 440 440
+tensorflow.shape 441 441
+tensorflow.shape 442 442
+tensorflow.reshape 444 444
+tensorflow.reshape 445 445
+tensorflow.reshape 446 446
+tensorflow.reshape 447 447
+tensorflow.shape 449 449
+tensorflow.reshape 448 449
+tensorflow.map_fn 452 455
+tensorflow.einsum 458 458
+

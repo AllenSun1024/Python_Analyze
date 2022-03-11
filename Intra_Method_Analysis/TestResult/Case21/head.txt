@@ -1,0 +1,65 @@
+create_ranking_head:
+
+create_multi_ranking_head:
+
+name:
+
+create_estimator_spec:
+
+_get_train_op:
+tensorflow.compat.v1.train.get_global_step 151 151
+
+__init__:
+
+name:
+
+create_loss:
+tensorflow.convert_to_tensor 197 197
+tensorflow.cast 200 200
+tensorflow.cast 202 202
+
+_labels_and_logits_metrics:
+tensorflow.greater_equal 210 210
+tensorflow.reshape 210 210
+tensorflow.reshape 214 214
+tensorflow.boolean_mask 214 214
+tensorflow.compat.v1.metrics.mean 213 214
+
+create_estimator_spec:
+tensorflow.convert_to_tensor 224 224
+tensorflow.compat.v1.name_scope 226 226
+tensorflow.estimator.export.RegressionOutput 233 233
+tensorflow.estimator.export.RegressionOutput 235 235
+tensorflow.estimator.export.PredictOutput 237 237
+tensorflow.estimator.EstimatorSpec 228 238
+tensorflow.add_n 243 243
+tensorflow.add 244 244
+tensorflow.estimator.EstimatorSpec 256 260
+tensorflow.estimator.EstimatorSpec 264 269
+
+_default_export_output:
+
+__init__:
+tensorflow.compat.v1.logging.info 321 322
+
+name:
+
+_check_logits_and_labels:
+
+_merge_predict_export_outputs:
+tensorflow.estimator.export.PredictOutput 391 391
+
+_merge_loss:
+tensorflow.compat.v1.name_scope 412 414
+tensorflow.math.multiply 420 420
+tensorflow.math.add_n 422 422
+tensorflow.math.add_n 423 424
+
+_merge_metrics:
+
+create_estimator_spec:
+tensorflow.compat.v1.name_scope 448 448
+tensorflow.estimator.EstimatorSpec 462 463
+tensorflow.estimator.EstimatorSpec 472 476
+tensorflow.estimator.EstimatorSpec 479 484
+

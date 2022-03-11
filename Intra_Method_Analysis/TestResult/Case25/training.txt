@@ -1,0 +1,143 @@
+__init__:
+tensorflow.summary.create_file_writer 30 30
+tensorflow.summary.create_noop_writer 32 32
+tensorflow.keras.mixed_precision.LossScaleOptimizer 42 42
+
+is_master:
+
+num_replicas:
+
+__call__:
+tensorflow.summary.experimental.set_step 105 105
+tensorflow.get_logger 139 139
+tensorflow.warning 139 141
+
+_save_checkpoint:
+
+_evaluate:
+
+_finalize_dataset:
+tensorflow.distribute.InputContext 206 206
+
+_steps:
+tensorflow.function 244 244
+tensorflow.function 245 245
+tensorflow.function 250 250
+tensorflow.math.is_nan 257 257
+
+_forward:
+
+_step:
+
+_log_model_info:
+tensorflow.get_logger 274 274
+tensorflow.info 274 276
+tensorflow.get_logger 277 277
+tensorflow.info 277 282
+
+_should_record_summaries:
+tensorflow.equal 288 288
+tensorflow.equal 291 291
+tensorflow.logical_and 290 292
+
+_compute_gradients:
+tensorflow.summary.record_if 298 298
+
+_apply_gradients:
+
+_forward:
+
+_step:
+
+_update_moving_average:
+
+_broadcast_variables:
+
+_all_reduce_sum:
+
+__init__:
+
+is_master:
+
+num_replicas:
+
+_finalize_dataset:
+tensorflow.distribute.InputContext 374 378
+
+_apply_gradients:
+
+_broadcast_variables:
+
+_all_reduce_sum:
+
+__init__:
+tensorflow.distribute.MirroredStrategy 408 408
+
+num_replicas:
+
+_finalize_dataset:
+
+_forward:
+
+_step:
+
+_update_moving_average:
+
+_summarize_gradients:
+tensorflow.cond 446 450
+tensorflow.summary.scalar 444 451
+
+__init__:
+tensorflow.get_logger 473 473
+tensorflow.warning 473 478
+tensorflow.train.ExponentialMovingAverage 479 479
+
+update:
+
+shadow_variables:
+
+__init__:
+
+update_on_example:
+
+update_on_step:
+
+get_last_summary:
+
+get_global_summary:
+
+log:
+tensorflow.summary.scalar 614 618
+tensorflow.summary.scalar 623 627
+tensorflow.get_logger 630 630
+tensorflow.info 630 636
+tensorflow.summary.scalar 637 637
+tensorflow.summary.scalar 638 640
+
+log_final:
+tensorflow.get_logger 651 651
+tensorflow.warning 651 657
+tensorflow.get_logger 667 667
+tensorflow.info 667 672
+
+reset_throughput:
+
+_get_learning_rate:
+
+_record_oov_tokens:
+tensorflow.reduce_sum 696 698
+tensorflow.numpy_function 701 701
+
+_record:
+
+_update_words_counter:
+tensorflow.reduce_sum 708 708
+tensorflow.constant 712 712
+tensorflow.Variable 711 716
+tensorflow.cast 718 718
+
+_get_words_counters:
+
+_reset_words_counters:
+tensorflow.constant 739 739
+

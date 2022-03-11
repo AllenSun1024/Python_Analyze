@@ -1,0 +1,106 @@
+configure_tpu:
+tensorflow.contrib.cluster_resolver.TPUClusterResolver 20 21
+tensorflow.contrib.cluster_resolver.TPUClusterResolver.get_master 22 22
+tensorflow.ConfigProto 27 27
+tensorflow.logging.info 33 33
+tensorflow.logging.info 36 36
+tensorflow.contrib.distribute.MirroredStrategy 38 39
+tensorflow.logging.info 40 41
+tensorflow.contrib.tpu.TPUConfig 48 51
+tensorflow.contrib.tpu.RunConfig 44 56
+
+tpu_scaffold:
+tensorflow.global_variables 61 61
+tensorflow.trainable_variables 61 61
+tensorflow.train.latest_checkpoint 67 67
+tensorflow.logging.info 71 71
+tensorflow.train.init_from_checkpoint 77 77
+tensorflow.train.Scaffold 78 78
+
+init_from_checkpoint:
+tensorflow.train.init_from_checkpoint 82 82
+tensorflow.logging.info 85 85
+tensorflow.logging.info 90 91
+
+get_train_op:
+tensorflow.train.get_or_create_global_step 96 96
+tensorflow.cast 100 100
+tensorflow.cast 101 101
+tensorflow.train.polynomial_decay 108 112
+tensorflow.train.cosine_decay 114 118
+tensorflow.where 122 123
+tensorflow.train.AdamOptimizer 131 133
+tensorflow.contrib.tpu.CrossShardOptimizer 142 142
+tensorflow.train.AdamOptimizer.compute_gradients 145 145
+tensorflow.clip_by_global_norm 147 147
+tensorflow.logging.info 161 162
+tensorflow.train.AdamOptimizer.apply_gradients 165 166
+tensorflow.train.get_or_create_global_step.assign 171 171
+tensorflow.group 171 171
+
+clean_ckpt:
+tensorflow.reset_default_graph 180 180
+tensorflow.contrib.framework.list_variables 182 182
+tensorflow.logging.info 187 187
+tensorflow.logging.info 189 189
+tensorflow.logging.info 191 191
+tensorflow.contrib.framework.load_checkpoint 192 192
+tensorflow.contrib.framework.load_checkpoint.get_tensor 194 194
+tensorflow.get_variable_scope 198 198
+tensorflow.variable_scope 198 198
+tensorflow.get_variable 200 200
+tensorflow.placeholder 203 203
+tensorflow.assign 204 204
+tensorflow.Variable 205 206
+tensorflow.all_variables 207 207
+tensorflow.train.Saver 207 207
+tensorflow.gfile.Exists 209 209
+tensorflow.gfile.MakeDirs 210 210
+tensorflow.Session 213 213
+tensorflow.initialize_all_variables 214 214
+tensorflow.train.Saver.save 220 221
+
+avg_checkpoints:
+tensorflow.reset_default_graph 225 225
+tensorflow.train.get_checkpoint_state 227 227
+tensorflow.contrib.framework.list_variables 229 229
+tensorflow.contrib.framework.load_checkpoint 235 235
+tensorflow.contrib.framework.load_checkpoint.get_tensor 237 237
+tensorflow.logging.info 240 240
+tensorflow.get_variable_scope 244 244
+tensorflow.variable_scope 244 244
+tensorflow.get_variable 246 246
+tensorflow.placeholder 249 249
+tensorflow.assign 250 250
+tensorflow.Variable 251 252
+tensorflow.all_variables 253 253
+tensorflow.train.Saver 253 253
+tensorflow.Session 256 256
+tensorflow.initialize_all_variables 257 257
+tensorflow.train.Saver.save 262 263
+
+get_assignment_map_from_checkpoint:
+tensorflow.train.list_variables 279 279
+
+__init__:
+
+apply_gradients:
+tensorflow.zeros_initializer 332 332
+tensorflow.get_variable 327 332
+tensorflow.zeros_initializer 338 338
+tensorflow.get_variable 333 338
+tensorflow.multiply 342 342
+tensorflow.multiply 342 342
+tensorflow.multiply 344 344
+tensorflow.square 345 345
+tensorflow.multiply 344 345
+tensorflow.sqrt 347 347
+tensorflow.get_variable.assign 365 365
+tensorflow.get_variable.assign 366 366
+tensorflow.group 368 368
+
+_do_use_weight_decay:
+tensorflow.logging.info 381 381
+
+_get_variable_name:
+

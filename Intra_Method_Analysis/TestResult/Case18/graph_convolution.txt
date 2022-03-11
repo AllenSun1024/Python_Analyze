@@ -1,0 +1,31 @@
+feature_steered_convolution_layer:
+tensorflow.compat.v1.variable_scope 87 89
+tensorflow.convert_to_tensor 92 92
+tensorflow.compat.dimension_value 94 94
+tensorflow.compat.v1.get_variable 100 104
+tensorflow.compat.v1.get_variable 108 112
+tensorflow.compat.v1.get_variable 113 117
+tensorflow.compat.v1.get_variable 118 122
+tensorflow.compat.v1.get_variable 123 127
+
+__init__:
+tensorflow.keras.initializers.TruncatedNormal 172 172
+
+build:
+tensorflow.TensorShape 178 178
+tensorflow.as_list 178 178
+
+call:
+
+__init__:
+
+build:
+tensorflow.keras.layers.Conv1D 347 360
+
+call:
+
+_edge_convolution:
+tensorflow.concat 417 418
+tensorflow.expand_dims 419 419
+tensorflow.squeeze 421 421
+

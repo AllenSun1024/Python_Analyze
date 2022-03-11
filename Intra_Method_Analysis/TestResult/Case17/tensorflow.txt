@@ -1,0 +1,580 @@
+use_svg_display:
+
+set_figsize:
+
+set_axes:
+
+plot:
+
+has_one_axis:
+
+add_to_class:
+
+wrapper:
+
+save_hyperparameters:
+
+save_hyperparameters:
+
+__init__:
+
+draw:
+
+draw:
+
+__init__:
+
+loss:
+
+forward:
+
+call:
+
+plot:
+
+training_step:
+
+validation_step:
+
+configure_optimizers:
+
+configure_optimizers:
+tensorflow.keras.optimizers.SGD 230 230
+
+__init__:
+
+get_dataloader:
+
+train_dataloader:
+
+val_dataloader:
+
+get_tensorloader:
+tensorflow.data.Dataset.from_tensor_slices 250 250
+tensorflow.data.Dataset.shuffle 250 251
+tensorflow.data.Dataset.batch 250 251
+
+__init__:
+
+prepare_data:
+
+prepare_model:
+
+fit:
+
+fit_epoch:
+
+prepare_batch:
+
+fit_epoch:
+tensorflow.GradientTape 293 293
+
+clip_gradients:
+tensorflow.constant 309 309
+tensorflow.convert_to_tensor 310 310
+tensorflow.reduce_sum 312 312
+tensorflow.math.sqrt 312 312
+tensorflow.greater 313 313
+
+__init__:
+tensorflow.random.normal 326 326
+tensorflow.random.normal 327 327
+
+get_dataloader:
+
+__init__:
+tensorflow.random.normal 340 340
+tensorflow.zeros 341 341
+tensorflow.Variable 342 342
+tensorflow.Variable 343 343
+
+forward:
+
+loss:
+
+configure_optimizers:
+
+__init__:
+
+apply_gradients:
+
+__init__:
+tensorflow.initializers.RandomNormal 375 375
+tensorflow.keras.layers.Dense 376 376
+
+forward:
+
+loss:
+tensorflow.keras.losses.MeanSquaredError 386 386
+tensorflow.keras.losses.MeanSquaredError 387 387
+
+configure_optimizers:
+tensorflow.keras.optimizers.SGD 391 391
+
+get_w_b:
+
+__init__:
+tensorflow.keras.datasets.fashion_mnist.load_data 402 402
+
+text_labels:
+
+get_dataloader:
+tensorflow.data.Dataset.from_tensor_slices 419 419
+tensorflow.data.Dataset.batch 419 420
+tensorflow.data.Dataset.map 419 420
+tensorflow.data.Dataset.shuffle 419 420
+
+visualize:
+
+show_images:
+
+validation_step:
+
+accuracy:
+
+loss:
+tensorflow.keras.losses.SparseCategoricalCrossentropy 455 455
+tensorflow.keras.losses.SparseCategoricalCrossentropy 456 456
+
+layer_summary:
+
+cpu:
+tensorflow.device 467 467
+
+gpu:
+tensorflow.device 471 471
+
+num_gpus:
+tensorflow.config.experimental.list_physical_devices 475 475
+
+try_gpu:
+
+try_all_gpus:
+
+corr2d:
+tensorflow.zeros 494 494
+tensorflow.Variable 494 494
+tensorflow.reduce_sum 497 498
+
+__init__:
+tensorflow.keras.layers.Conv2D 505 506
+tensorflow.keras.layers.Conv2D 507 508
+tensorflow.keras.layers.Conv2D 511 512
+tensorflow.keras.layers.BatchNormalization 513 513
+tensorflow.keras.layers.BatchNormalization 514 514
+
+call:
+tensorflow.keras.activations.relu 517 517
+tensorflow.keras.activations.relu 522 522
+
+_download:
+
+_preprocess:
+
+_tokenize:
+
+build:
+
+__init__:
+
+get_dataloader:
+
+__init__:
+
+__len__:
+
+__getitem__:
+
+to_tokens:
+
+unk:
+
+__init__:
+tensorflow.Variable 601 602
+tensorflow.Variable 603 604
+tensorflow.Variable 605 605
+
+forward:
+
+check_len:
+
+check_shape:
+
+__init__:
+
+init_params:
+tensorflow.Variable 637 638
+tensorflow.Variable 639 639
+
+training_step:
+
+validation_step:
+
+one_hot:
+tensorflow.transpose 653 653
+tensorflow.one_hot 653 653
+
+output_layer:
+
+forward:
+
+predict:
+
+__init__:
+tensorflow.keras.layers.SimpleRNN 686 688
+
+forward:
+
+init_params:
+tensorflow.keras.layers.Dense 697 697
+
+output_layer:
+
+__init__:
+
+__init__:
+tensorflow.keras.layers.GRUCell 723 723
+tensorflow.keras.layers.RNN 725 726
+
+forward:
+
+_download:
+
+_preprocess:
+
+_tokenize:
+
+__init__:
+
+_build_arrays:
+
+_build_one:
+
+get_dataloader:
+
+build:
+
+__init__:
+
+call:
+
+__init__:
+
+init_state:
+
+call:
+
+__init__:
+
+call:
+
+__init__:
+tensorflow.keras.layers.Embedding 841 841
+
+forward:
+
+__init__:
+
+forward:
+
+predict_step:
+
+bleu:
+
+show_heatmaps:
+
+masked_softmax:
+tensorflow.nn.softmax 917 917
+tensorflow.repeat 921 921
+tensorflow.reshape 924 924
+tensorflow.reshape 927 927
+tensorflow.reshape 928 928
+tensorflow.nn.softmax 928 928
+
+__init__:
+tensorflow.keras.layers.Dense 936 936
+tensorflow.keras.layers.Dense 937 937
+tensorflow.keras.layers.Dense 938 938
+tensorflow.keras.layers.Dropout 939 939
+
+call:
+tensorflow.expand_dims 947 947
+tensorflow.expand_dims 947 948
+tensorflow.nn.tanh 949 949
+tensorflow.squeeze 953 953
+tensorflow.matmul 957 958
+
+__init__:
+tensorflow.keras.layers.Dropout 966 966
+
+call:
+tensorflow.matmul 975 975
+tensorflow.cast 976 976
+tensorflow.math.sqrt 975 976
+tensorflow.matmul 978 978
+
+__init__:
+
+attention_weights:
+
+__init__:
+tensorflow.keras.layers.Dense 1000 1000
+tensorflow.keras.layers.Dense 1001 1001
+tensorflow.keras.layers.Dense 1002 1002
+tensorflow.keras.layers.Dense 1003 1003
+
+call:
+tensorflow.repeat 1020 1020
+
+transpose_qkv:
+tensorflow.reshape 1038 1038
+tensorflow.transpose 1043 1043
+tensorflow.reshape 1048 1048
+
+transpose_output:
+tensorflow.reshape 1055 1055
+tensorflow.transpose 1056 1056
+tensorflow.reshape 1057 1057
+
+__init__:
+tensorflow.keras.layers.Dropout 1065 1065
+
+call:
+
+__init__:
+tensorflow.keras.layers.Dense 1084 1084
+tensorflow.keras.layers.ReLU 1085 1085
+tensorflow.keras.layers.Dense 1086 1086
+
+call:
+
+__init__:
+tensorflow.keras.layers.Dropout 1097 1097
+tensorflow.keras.layers.LayerNormalization 1098 1098
+
+call:
+
+__init__:
+
+call:
+
+__init__:
+tensorflow.keras.layers.Embedding 1129 1129
+
+call:
+tensorflow.cast 1141 1141
+tensorflow.math.sqrt 1140 1141
+
+annotate:
+
+train_2d:
+
+show_trace_2d:
+
+__init__:
+
+start:
+
+stop:
+
+avg:
+
+sum:
+
+cumsum:
+
+get_data_ch11:
+
+train_ch11:
+tensorflow.random.normal 1225 1226
+tensorflow.Variable 1225 1226
+tensorflow.zeros 1227 1227
+tensorflow.Variable 1227 1227
+tensorflow.GradientTape 1237 1237
+tensorflow.math.reduce_mean 1238 1238
+tensorflow.data.experimental.cardinality 1246 1246
+tensorflow.data.experimental.numpy 1246 1246
+
+train_concise_ch11:
+tensorflow.keras.Sequential 1256 1256
+tensorflow.random_normal_initializer 1258 1258
+tensorflow.keras.layers.Dense 1257 1258
+tensorflow.keras.Sequential.add 1257 1258
+tensorflow.keras.losses.MeanSquaredError 1260 1260
+tensorflow.GradientTape 1266 1266
+tensorflow.keras.Sequential 1267 1267
+tensorflow.keras.losses.MeanSquaredError 1268 1268
+tensorflow.data.experimental.cardinality 1276 1276
+tensorflow.data.experimental.numpy 1276 1276
+
+__init__:
+
+__enter__:
+
+__exit__:
+
+box_corner_to_center:
+
+box_center_to_corner:
+
+bbox_to_rect:
+
+update_D:
+tensorflow.ones 1337 1337
+tensorflow.zeros 1338 1338
+tensorflow.GradientTape 1341 1341
+tensorflow.squeeze 1345 1345
+tensorflow.squeeze 1346 1346
+
+update_G:
+tensorflow.ones 1356 1356
+tensorflow.GradientTape 1357 1357
+tensorflow.squeeze 1363 1363
+
+load_array:
+tensorflow.data.Dataset.from_tensor_slices 1375 1375
+tensorflow.data.Dataset.shuffle 1377 1377
+tensorflow.data.Dataset.batch 1378 1378
+
+synthetic_data:
+tensorflow.zeros 1385 1385
+tensorflow.random.normal 1386 1386
+tensorflow.reshape 1387 1387
+tensorflow.matmul 1387 1387
+tensorflow.random.normal 1388 1388
+tensorflow.reshape 1389 1389
+
+sgd:
+
+load_data_fashion_mnist:
+tensorflow.keras.datasets.fashion_mnist.load_data 1404 1404
+tensorflow.data.Dataset.from_tensor_slices 1412 1412
+tensorflow.data.Dataset.batch 1412 1413
+tensorflow.data.Dataset.shuffle 1412 1413
+tensorflow.data.Dataset.map 1412 1413
+tensorflow.data.Dataset.from_tensor_slices 1414 1414
+tensorflow.data.Dataset.batch 1414 1415
+tensorflow.data.Dataset.map 1414 1415
+
+__init__:
+
+on_epoch_begin:
+
+on_epoch_end:
+tensorflow.data.experimental.cardinality 1441 1442
+tensorflow.data.experimental.numpy 1441 1442
+
+train_ch6:
+tensorflow.distribute.OneDeviceStrategy 1453 1453
+tensorflow.distribute.OneDeviceStrategy.scope 1454 1454
+tensorflow.keras.optimizers.SGD 1455 1455
+tensorflow.keras.losses.SparseCategoricalCrossentropy 1456 1456
+
+evaluate_accuracy:
+
+linreg:
+
+squared_loss:
+
+get_fashion_mnist_labels:
+
+show_images:
+
+__init__:
+
+add:
+
+__init__:
+
+add:
+
+reset:
+
+__getitem__:
+
+accuracy:
+
+download:
+
+extract:
+
+download_extract:
+
+tokenize:
+
+evaluate_loss:
+
+grad_clipping:
+tensorflow.constant 1657 1657
+tensorflow.convert_to_tensor 1661 1661
+tensorflow.reduce_sum 1664 1664
+tensorflow.numpy 1664 1664
+tensorflow.math.sqrt 1664 1665
+tensorflow.cast 1666 1666
+tensorflow.greater 1667 1667
+
+read_data_nmt:
+
+preprocess_nmt:
+
+no_space:
+
+tokenize_nmt:
+
+show_list_len_pair_hist:
+
+truncate_pad:
+
+build_array_nmt:
+
+load_data_nmt:
+
+bleu:
+
+__init__:
+tensorflow.keras.layers.Embedding 1790 1790
+tensorflow.keras.layers.GRUCell 1792 1792
+tensorflow.keras.layers.StackedRNNCells 1791 1793
+tensorflow.keras.layers.RNN 1791 1794
+
+call:
+
+__init__:
+
+call:
+tensorflow.ones_like 1816 1816
+tensorflow.one_hot 1818 1818
+tensorflow.keras.losses.CategoricalCrossentropy 1819 1820
+tensorflow.keras.losses.CategoricalCrossentropy.__call__ 1819 1820
+tensorflow.reduce_mean 1821 1821
+
+train_seq2seq:
+tensorflow.keras.optimizers.Adam 1828 1828
+tensorflow.constant 1836 1836
+tensorflow.reshape 1836 1837
+tensorflow.concat 1838 1838
+tensorflow.GradientTape 1839 1839
+tensorflow.keras.optimizers.Adam.apply_gradients 1844 1844
+tensorflow.reduce_sum 1845 1845
+tensorflow.numpy 1845 1845
+tensorflow.reduce_sum 1846 1846
+
+sequence_mask:
+tensorflow.range 1857 1857
+tensorflow.cast 1858 1858
+tensorflow.expand_dims 1861 1861
+tensorflow.where 1861 1861
+tensorflow.where 1863 1863
+
+predict_seq2seq:
+tensorflow.constant 1872 1872
+tensorflow.expand_dims 1875 1875
+tensorflow.constant 1879 1879
+tensorflow.expand_dims 1879 1879
+tensorflow.argmax 1885 1885
+tensorflow.squeeze 1886 1886
+tensorflow.squeeze.numpy 1894 1894
+tensorflow.reshape 1895 1895
+tensorflow.numpy 1895 1895
+tensorflow.tolist 1895 1895
+

@@ -1,0 +1,54 @@
+__init__:
+
+get_architecture:
+
+initialize:
+
+parametrize:
+tensorflow.reshape 100 100
+tensorflow.sigmoid 106 106
+tensorflow.math.log 109 109
+tensorflow.math.log 110 110
+
+fn_summary:
+tensorflow.math.reduce_mean 126 126
+
+mode:
+tensorflow.control_dependencies 139 139
+tensorflow.greater_equal 140 140
+
+fn_tracking:
+tensorflow.math.reduce_mean 135 135
+
+fn_summary:
+tensorflow.math.reduce_mean 153 153
+
+sample:
+tensorflow.control_dependencies 184 184
+tensorflow.cond 185 185
+
+fn_tracking:
+tensorflow.math.reduce_mean 162 162
+
+fn_mode:
+tensorflow.greater_equal 171 171
+
+fn_sample:
+tensorflow.math.exp 176 176
+tensorflow.math.exp 177 177
+tensorflow.shape 180 180
+tensorflow.random.uniform 179 181
+tensorflow.greater_equal 182 182
+
+log_probability:
+tensorflow.where 191 191
+
+entropy:
+
+kl_divergence:
+
+action_value:
+tensorflow.where 223 223
+
+state_value:
+

@@ -1,0 +1,78 @@
+__init__:
+
+get_architecture:
+
+initialize:
+
+parametrize:
+tensorflow.reshape 152 152
+tensorflow.shape 156 156
+tensorflow.tile 157 157
+tensorflow.reshape 161 161
+tensorflow.clip_by_value 168 170
+tensorflow.nn.softplus 175 175
+tensorflow.math.log 183 183
+
+fn_summary:
+tensorflow.math.reduce_mean 195 195
+tensorflow.math.reduce_mean 196 196
+
+mode:
+tensorflow.control_dependencies 216 216
+tensorflow.math.tanh 224 224
+tensorflow.clip_by_value 226 226
+tensorflow.maximum 237 237
+tensorflow.minimum 241 241
+
+fn_tracking:
+tensorflow.math.reduce_mean 207 207
+
+fn_tracking:
+tensorflow.math.reduce_mean 212 212
+
+fn_summary:
+tensorflow.math.reduce_mean 253 253
+tensorflow.math.reduce_mean 254 254
+
+sample:
+tensorflow.control_dependencies 283 283
+tensorflow.cond 285 285
+tensorflow.math.tanh 292 292
+tensorflow.clip_by_value 294 294
+tensorflow.maximum 305 305
+tensorflow.minimum 309 309
+
+fn_tracking:
+tensorflow.math.reduce_mean 265 265
+
+fn_tracking:
+tensorflow.math.reduce_mean 270 270
+
+fn_mode:
+
+fn_sample:
+tensorflow.shape 279 279
+tensorflow.random.normal 278 280
+
+log_probability:
+tensorflow.clip_by_value 328 328
+tensorflow.math.atanh 329 329
+tensorflow.square 335 335
+tensorflow.square 336 336
+tensorflow.math.softplus 342 342
+
+entropy:
+
+kl_divergence:
+tensorflow.square 365 365
+tensorflow.square 366 366
+tensorflow.square 367 367
+
+action_value:
+tensorflow.clip_by_value 386 386
+tensorflow.math.atanh 387 387
+tensorflow.square 395 395
+tensorflow.square 396 396
+
+state_value:
+

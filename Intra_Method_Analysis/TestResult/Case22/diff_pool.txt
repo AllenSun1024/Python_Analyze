@@ -1,0 +1,28 @@
+__init__:
+
+build:
+
+call:
+tensorflow.keras.backend.shape 121 121
+tensorflow.keras.backend.is_sparse 127 127
+tensorflow.sparse.eye 128 128
+tensorflow.sparse.add 129 129
+tensorflow.eye 131 131
+tensorflow.keras.backend.dot 136 136
+tensorflow.keras.backend.dot 142 142
+tensorflow.keras.activations.softmax 144 144
+tensorflow.sparse.to_dense 151 151
+tensorflow.keras.backend.is_sparse 152 152
+tensorflow.sparse.add 153 153
+tensorflow.norm 156 156
+tensorflow.keras.backend.mean 158 158
+tensorflow.keras.backend.epsilon 163 163
+tensorflow.keras.backend.log 163 163
+tensorflow.multiply 163 163
+tensorflow.reduce_sum 163 163
+tensorflow.negative 162 164
+tensorflow.keras.backend.mean 165 165
+tensorflow.keras.backend.mean 167 167
+
+config:
+

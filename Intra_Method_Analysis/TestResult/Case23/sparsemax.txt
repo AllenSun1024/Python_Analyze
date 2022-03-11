@@ -1,0 +1,41 @@
+sparsemax:
+tensorflow.convert_to_tensor 51 51
+tensorflow.convert_to_tensor.get_shape 54 54
+tensorflow.rank 67 67
+tensorflow.math.subtract 69 69
+tensorflow.math.subtract 73 73
+
+_swap_axis:
+tensorflow.range 85 85
+tensorflow.range 87 87
+tensorflow.concat 83 91
+tensorflow.transpose 81 93
+
+_compute_2d_sparsemax:
+tensorflow.shape 98 98
+tensorflow.math.reduce_prod 99 99
+tensorflow.reshape 111 111
+tensorflow.nn.top_k 114 114
+tensorflow.math.cumsum 117 117
+tensorflow.cast 118 118
+tensorflow.range 118 118
+tensorflow.cast 122 122
+tensorflow.math.reduce_sum 122 122
+tensorflow.math.maximum 130 130
+tensorflow.range 131 131
+tensorflow.reshape 131 131
+tensorflow.stack 131 131
+tensorflow.gather_nd 132 132
+tensorflow.cast 133 133
+tensorflow.cast 136 136
+tensorflow.expand_dims 136 136
+tensorflow.math.maximum 136 136
+tensorflow.math.equal 140 140
+tensorflow.math.is_nan 140 140
+tensorflow.math.logical_or 140 140
+tensorflow.expand_dims 139 142
+tensorflow.cast 143 143
+tensorflow.fill 143 143
+tensorflow.where 138 145
+tensorflow.reshape 148 148
+

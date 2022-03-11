@@ -1,0 +1,36 @@
+_downsample:
+tensorflow.nn.conv2d 51 52
+
+_binomial_kernel:
+tensorflow.constant 70 70
+tensorflow.eye 70 70
+
+_build_pyramid:
+tensorflow.shape 89 89
+
+_split:
+tensorflow.shape 119 119
+
+_upsample:
+tensorflow.shape 142 142
+tensorflow.nn.conv2d_transpose 145 150
+
+downsample:
+tensorflow.name_scope 173 173
+tensorflow.convert_to_tensor 174 174
+
+merge:
+tensorflow.name_scope 199 199
+tensorflow.convert_to_tensor 200 200
+tensorflow.shape 207 207
+tensorflow.shape 209 209
+
+split:
+tensorflow.name_scope 232 232
+tensorflow.convert_to_tensor 233 233
+tensorflow.shape 237 237
+
+upsample:
+tensorflow.name_scope 267 267
+tensorflow.convert_to_tensor 268 268
+

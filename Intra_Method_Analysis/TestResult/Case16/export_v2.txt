@@ -1,0 +1,31 @@
+parse_line:
+
+load:
+tensorflow.io.gfile.GFile 77 77
+
+write_vocabulary_file:
+tensorflow.io.gfile.GFile 99 99
+
+__init__:
+tensorflow.lookup.TextFileInitializer 125 128
+tensorflow.lookup.StaticVocabularyTable 129 130
+tensorflow.Variable 138 138
+
+_tokenize:
+tensorflow.strings.regex_replace 146 147
+tensorflow.reshape 148 148
+tensorflow.strings.split 149 149
+tensorflow.strings.to_sparse 149 149
+tensorflow.constant 152 152
+tensorflow.sparse.fill_empty_rows 152 152
+tensorflow.sparse.reset_shape 154 154
+
+__call__:
+tensorflow.SparseTensor 165 165
+tensorflow.nn.safe_embedding_lookup_sparse 163 167
+
+export_module_from_file:
+tensorflow.saved_model.save 177 177
+
+main:
+

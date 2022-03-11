@@ -1,0 +1,104 @@
+transformer:
+
+_repeat:
+tensorflow.stack 64 66
+tensorflow.ones 64 66
+tensorflow.expand_dims 64 66
+tensorflow.transpose 64 66
+tensorflow.cast 67 67
+tensorflow.reshape 68 68
+tensorflow.matmul 68 68
+tensorflow.reshape 69 69
+
+_interpolate:
+tensorflow.shape 73 73
+tensorflow.shape 74 74
+tensorflow.shape 75 75
+tensorflow.shape 76 76
+tensorflow.cast 78 78
+tensorflow.cast 79 79
+tensorflow.cast 80 80
+tensorflow.cast 81 81
+tensorflow.zeros 84 84
+tensorflow.shape 85 85
+tensorflow.cast 85 85
+tensorflow.shape 86 86
+tensorflow.cast 86 86
+tensorflow.floor 93 93
+tensorflow.cast 93 93
+tensorflow.floor 95 95
+tensorflow.cast 95 95
+tensorflow.clip_by_value 98 98
+tensorflow.clip_by_value 99 99
+tensorflow.clip_by_value 100 100
+tensorflow.clip_by_value 101 101
+tensorflow.range 104 104
+tensorflow.stack 114 114
+tensorflow.reshape 114 114
+tensorflow.cast 115 115
+tensorflow.gather 116 116
+tensorflow.gather 117 117
+tensorflow.gather 118 118
+tensorflow.gather 119 119
+tensorflow.cast 122 122
+tensorflow.cast 123 123
+tensorflow.cast 124 124
+tensorflow.cast 125 125
+tensorflow.expand_dims 126 126
+tensorflow.expand_dims 127 127
+tensorflow.expand_dims 128 128
+tensorflow.expand_dims 129 129
+tensorflow.add_n 130 130
+
+_meshgrid:
+tensorflow.stack 140 140
+tensorflow.ones 140 140
+tensorflow.linspace 141 141
+tensorflow.expand_dims 141 141
+tensorflow.transpose 141 141
+tensorflow.matmul 139 142
+tensorflow.linspace 143 143
+tensorflow.expand_dims 143 143
+tensorflow.stack 143 143
+tensorflow.ones 143 143
+tensorflow.matmul 143 143
+tensorflow.reshape 145 145
+tensorflow.reshape 146 146
+tensorflow.ones_like 148 148
+tensorflow.concat 149 149
+
+_transform:
+tensorflow.shape 153 153
+tensorflow.shape 154 154
+tensorflow.reshape 155 155
+tensorflow.cast 156 156
+tensorflow.expand_dims 162 162
+tensorflow.reshape 163 163
+tensorflow.stack 164 164
+tensorflow.tile 164 164
+tensorflow.stack 165 165
+tensorflow.reshape 165 165
+tensorflow.matmul 168 168
+tensorflow.slice 169 169
+tensorflow.slice 170 170
+tensorflow.reshape 171 171
+tensorflow.reshape 172 172
+tensorflow.stack 176 176
+tensorflow.reshape 176 176
+
+batch_transformer:
+tensorflow.compat.v1.variable_scope 203 203
+tensorflow.reshape 206 206
+tensorflow.gather 206 206
+
+__init__:
+
+__repr__:
+
+build:
+
+forward:
+tensorflow.matmul 283 283
+tensorflow.nn.tanh 283 283
+tensorflow.reshape 290 290
+
