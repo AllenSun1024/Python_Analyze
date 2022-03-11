@@ -1,0 +1,14 @@
+sparsemax_loss:
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.math.is_nan
+tensorflow.math.logical_or
+tensorflow.zeros_like
+tensorflow.where
+tensorflow.math.equal
+tensorflow.math.is_inf
+tensorflow.math.logical_and
+tensorflow.zeros_like
+tensorflow.where
+tensorflow.math.reduce_sum

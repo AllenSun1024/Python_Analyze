@@ -1,0 +1,14 @@
+_max_unpooling_2d_v2:
+tensorflow.cast
+tensorflow.shape
+tensorflow.ones_like
+tensorflow.concat
+tensorflow.range
+tensorflow.reshape
+tensorflow.range
+tensorflow.size
+tensorflow.stack
+tensorflow.reshape
+tensorflow.transpose
+tensorflow.reshape
+tensorflow.scatter_nd
