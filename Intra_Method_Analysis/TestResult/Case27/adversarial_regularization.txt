@@ -1,0 +1,13 @@
+add_adversarial_regularization:
+
+adv_model_fn:
+tensorflow.compat.v1.get_variable_scope 103 103
+tensorflow.compat.v1.variable_scope 103 105
+tensorflow.compat.v1.summary.scalar 126 127
+tensorflow.compat.v1.summary.scalar 130 130
+tensorflow.compat.v1.train.AdagradOptimizer 136 136
+tensorflow.compat.v1.train.get_global_step 141 141
+tensorflow.compat.v1.train.AdagradOptimizer.minimize 140 141
+tensorflow.compat.v1.get_collection 143 144
+tensorflow.group 146 146
+
