@@ -53,6 +53,8 @@ _group_by_window:
 tensorflow.data.experimental.group_by_window
 
 _make_weighted_dataset:
+tensorflow.data.Dataset.shard
+tensorflow.data.Dataset.repeat
 tensorflow.data.Dataset.sample_from_datasets
 tensorflow.data.experimental.sample_from_datasets
 tensorflow.data.Dataset.shuffle

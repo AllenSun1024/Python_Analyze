@@ -12,3 +12,4 @@ tensorflow.gather
 tensorflow.reshape
 tensorflow.fill
 tensorflow.fill
+tensorflow.fill

@@ -5,6 +5,9 @@ tensorflow.python.feature_column.feature_column_lib.SequenceCategoricalColumn
 
 encode_features:
 tensorflow.python.feature_column.feature_column_lib.is_feature_column_v2
+tensorflow.compat.v1.keras.layers.DenseFeatures
+tensorflow.compat.v1.keras.layers.DenseFeatures
+tensorflow.keras.experimental.SequenceFeatures
 tensorflow.keras.experimental.SequenceFeatures
 tensorflow.compat.v1.feature_column.input_layer
 

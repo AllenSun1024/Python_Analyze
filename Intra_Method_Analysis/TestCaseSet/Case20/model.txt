@@ -25,10 +25,12 @@ Model/act:
 tensorflow.shape
 tensorflow.math.reduce_any
 tensorflow.reduce_all
+tensorflow.debugging.assert_equal
 tensorflow.control_dependencies
 tensorflow.expand_dims
 tensorflow.gather
 tensorflow.reduce_all
+tensorflow.debugging.assert_equal
 tensorflow.expand_dims
 tensorflow.tensor_scatter_nd_update
 tensorflow.control_dependencies

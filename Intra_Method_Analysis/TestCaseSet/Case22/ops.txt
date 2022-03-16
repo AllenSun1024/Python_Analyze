@@ -20,7 +20,7 @@ tensorflow.RaggedTensor.row_lengths
 tensorflow.RaggedTensor.to_tensor
 tensorflow.argsort
 tensorflow.cast
-tensorflow.row_starts
+tensorflow.RaggedTensor.row_starts
 tensorflow.cast
 tensorflow.expand_dims
 tensorflow.cast

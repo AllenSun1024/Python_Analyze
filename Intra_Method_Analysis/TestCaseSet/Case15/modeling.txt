@@ -5,7 +5,7 @@ tensorflow.tanh
 embedding_lookup:
 tensorflow.variable_scope
 tensorflow.get_variable
-tensorflow.ont_hot
+tensorflow.one_hot
 tensorflow.einsum
 tensorflow.einsum
 tensorflow.nn.embedding_lookup

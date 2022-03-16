@@ -2,7 +2,7 @@ DiffuseFeatures/call:
 tensorflow.unstack
 tensorflow.math.polyval
 tensorflow.matmul
-tensorflow.reduce_sum
+tensorflow.math.reduce_sum
 tensorflow.expand_dims
 
 DiffusionConv/apply_filters:

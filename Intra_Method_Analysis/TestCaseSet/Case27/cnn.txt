@@ -1,4 +1,4 @@
-ImageCNNAgreement/_construct_layer:
+ImageCNNAgreement/_construct_layers:
 tensorflow.variable_scope
 tensorflow.truncated_normal_initializer
 tensorflow.get_variable
@@ -22,7 +22,7 @@ tensorflow.nn.max_pool
 tensorflow.variable_scope
 tensorflow.keras.layers.Flatten
 tensorflow.keras.layers.Flatten.__call__
-tensorflow.keras.layers.Flatten.get_shape
+tensorflow.keras.layers.Flatten.__call__.get_shape
 tensorflow.truncated_normal_initializer
 tensorflow.get_variable
 tensorflow.constant_initializer

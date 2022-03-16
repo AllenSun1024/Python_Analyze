@@ -1,4 +1,5 @@
 sigmoid_focal_crossentropy:
+tensorflow.keras.utils.register_keras_serializable
 tensorflow.convert_to_tensor
 tensorflow.cast
 tensorflow.keras.backend.binary_crossentropy

@@ -62,7 +62,7 @@ tensorflow.Session.run
 tensorflow.Session.run
 tensorflow.train.Saver.save
 
-avg_checkpoint:
+avg_checkpoints:
 tensorflow.reset_default_graph
 tensorflow.train.get_checkpoint_state
 tensorflow.contrib.framework.list_variable
@@ -88,16 +88,16 @@ tensorflow.train.list_variables
 
 AdamWeightDecayOptimizer/__init__:
 
-AdamWeightDecayOptimizer/apply_gradient:
+AdamWeightDecayOptimizer/apply_gradients:
 tensorflow.zeros_initializer
 tensorflow.get_variable
 tensorflow.zeros_initializer
 tensorflow.get_variable
-tensorflow.multiply
 tensorflow.multiply
 tensorflow.multiply
 tensorflow.multiply
 tensorflow.square
+tensorflow.multiply
 tensorflow.sqrt
 tensorflow.get_variable.assign
 tensorflow.get_variable.assign

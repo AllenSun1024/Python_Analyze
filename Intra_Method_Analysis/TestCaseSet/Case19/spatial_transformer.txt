@@ -2,10 +2,10 @@ _repeat:
 tensorflow.stack
 tensorflow.ones
 tensorflow.expand_dims
+tensorflow.transpose
 tensorflow.cast
 tensorflow.reshape
 tensorflow.matmul
-tensorflow.transpose
 tensorflow.reshape
 
 _interpolate:

@@ -13,7 +13,7 @@ tensorflow.reshape
 
 regulize_loss:
 tensorflow.keras.regularizers.l2
-tensorflow.keras.regularizers.l2.__call__
+tensorflow.keras.regularizers.l2
 
 resize_NCHW:
 tensorflow.transpose

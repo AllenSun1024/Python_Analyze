@@ -109,7 +109,7 @@ tensorflow.keras.optimizers.SGD
 LinearRegression/get_w_b:
 
 FashionMNIST/__init__:
-tensorflow.keras.dataset.fashion_mnist.load_data
+tensorflow.keras.datasets.fashion_mnist.load_data
 
 FashionMNIST/text_labels:
 
@@ -220,6 +220,8 @@ tensorflow.matmul
 MultiHeadAttention/__init__:
 tensorflow.keras.layers.Dense
 tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense
 
 MultiHeadAttention/call:
 tensorflow.repeat
@@ -268,8 +270,8 @@ tensorflow.keras.layers.Dense
 tensorflow.keras.Sequential.add
 tensorflow.keras.losses.MeanSquaredError
 tensorflow.GradientTape
-tensorflow.keras.Sequential.__call__
-tensorflow.keras.losses.MeanSquaredError.__call__
+tensorflow.keras.Sequential
+tensorflow.keras.losses.MeanSquaredError
 tensorflow.GradientTape.gradient
 tensorflow.data.experimental.cardinality
 tensorflow.data.experimental.numpy
@@ -302,6 +304,7 @@ tensorflow.random.normal
 tensorflow.reshape
 
 load_data_fashion_mnist:
+tensorflow.keras.datasets.fashion_mnist.load_data
 tensorflow.data.Dataset.from_tensor_slices
 tensorflow.data.Dataset.batch
 tensorflow.data.Dataset.shuffle
@@ -327,7 +330,7 @@ tensorflow.greater
 Seq2SeqEncoderOld/__init__:
 tensorflow.keras.layers.Embedding
 tensorflow.keras.layers.GRUCell
-tensorflow.keras.layers.StackRNNCells
+tensorflow.keras.layers.StackedRNNCells
 tensorflow.keras.layers.RNN
 
 MaskedSoftmaxCELoss/call:
@@ -346,7 +349,7 @@ tensorflow.GradientTape
 tensorflow.GradientTape.gradient
 tensorflow.keras.optimizers.Adam.apply_gradients
 tensorflow.reduce_sum
-tensorflow.reduce_sum.numpy
+tensorflow.numpy
 tensorflow.reduce_sum
 
 sequence_mask:
@@ -366,4 +369,4 @@ tensorflow.squeeze
 tensorflow.squeeze.numpy
 tensorflow.reshape
 tensorflow.reshape.numpy
-tensorflow.reshape.tolist
+tensorflow.tolist

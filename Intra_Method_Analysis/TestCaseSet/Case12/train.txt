@@ -19,12 +19,14 @@ tensorflow.optimizers.Adam
 tensorflow.optimizers.Adam
 tensorflow.GradientTape
 tensorflow.GradientTape.gradient
-tensorflow.optimizers.Adam.apply_gradient
+tensorflow.optimizers.Adam.apply_gradients
 tensorflow.GradientTape
 tensorflow.ones_like
 tensorflow.zeros_like
 tensorflow.ones_like
 tensorflow.GradientTape.gradient
 tensorflow.optimizers.Adam.apply_gradients
+tensorflow.optimizers.Adam.apply_gradients
+tensorflow.Variable.assign
 
 evaluate:

@@ -27,14 +27,11 @@ tensorflow.train.CheckpointManager.save
 optimize_step:
 tensorflow.GradientTape
 tensorflow.GradientTape.gradient
-tensorflow.keras.optimizers.Adam.apply_gradients
 
 optimize_step_dmadapt:
 tensorflow.GradientTape
 tensorflow.GradientTape.gradient
-tensorflow.keras.optimizers.Adam.apply_gradients
 tensorflow.GradientTape.gradient
-tensorflow.keras.optimizers.Adam.apply_gradients
 
 parallel_train:
 tensorflow.Variable
@@ -47,19 +44,16 @@ tensorflow.train.CheckpointManager
 tensorflow.train.Checkpoint.restore
 tensorflow.Variable.numpy
 tensorflow.Variable.numpy
-
+tensorflow.keras.optimizers.Adam.variables
+tensorflow.Variable.assign
+tensorflow.Variable.assign
+tensorflow.train.CheckpointManager.save
 
 optimize_step:
 tensorflow.GradientTape
 tensorflow.GradientTape.gradient
-tensorflow.keras.optimizers.Adam.apply_gradients
 
 optimize_step_dmadapt:
 tensorflow.Gradient
 tensorflow.GradientTape.gradient
-tensorflow.keras.optimizers.Adam.apply_gradients
 tensorflow.GradientTape.gradient
-tensorflow.keras.optimizers.Adam.apply_gradients
-tensorflow.Variable.assign
-tensorflow.Variable.assign
-tensorflow.train.CheckpointManager.save
