@@ -1,0 +1,2794 @@
+['Case12', 'train.txt']
+get_train_data:
+tensorflow.data.Dataset.from_generator
+tensorflow.data.Dataset.map
+tensorflow.data.Dataset.shuffle
+tensorflow.data.Dataset.prefetch
+tensorflow.data.Dataset.batch
+
+
+['Case12', 'train.txt']
+_map_fn_train:
+tensorflow.image.random_crop
+tensorflow.image.random_flip_left_right
+tensorflow.image.resize
+
+
+['Case12', 'model.txt']
+get_G:
+tensorflow.random_normal_initializer
+tensorflow.random_normal_initializer
+
+
+['Case12', 'model.txt']
+get_D:
+tensorflow.random_normal_initializer
+tensorflow.random_normal_initializer
+
+
+['Case2', 'source2.txt']
+main:
+tensorflow.random.uniform
+keras.backend.sum
+tensorflow.convert_to_tensor
+keras.backend.stack
+keras.backend.reshape
+
+
+['Case1', 'source1.txt']
+main:
+tensorflow.convert_to_tensor
+tensorflow.equal
+keras.backend.cast
+keras.backend.ones_like
+keras.backend.sum
+keras.backend.sum
+tensorflow.cast
+
+
+['Case8', 'source8.txt']
+main:
+tensorflow.keras.Input
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense.__call__
+tensorflow.keras.Input
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense.__call__
+tensorflow.keras.layers.Concatenate
+tensorflow.keras.layers.Concatenate.__call__
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense.__call__
+tensorflow.keras.Model
+tensorflow.data.Dataset.from_tensor_slices
+tensorflow.data.Dataset.repeat
+tensorflow.data.Dataset.shuffle
+tensorflow.data.Dataset.batch
+tensorflow.keras.Model.compile
+tensorflow.keras.Model.fit
+
+
+['Case13', 'resnet.txt']
+ResNet:
+tensorflow.keras.layers.Input
+tensorflow.keras.layers.ZeroPadding2D
+tensorflow.keras.layers.ZeroPadding2D.__call__
+tensorflow.keras.layers.Conv2D
+tensorflow.keras.layers.Conv2D.__call__
+tensorflow.keras.layers.BatchNormalization
+tensorflow.keras.layers.BatchNormalization.__call__
+tensorflow.keras.layers.Activation
+tensorflow.keras.layers.Activation.__call__
+tensorflow.keras.layers.MaxPooling2D
+tensorflow.keras.layers.MaxPooling2D.__call__
+tensorflow.keras.layers.AveragePooling2D
+tensorflow.keras.layers.AveragePooling2D.__call__
+tensorflow.keras.layers.Flatten
+tensorflow.keras.layers.Flatten.__call__
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense.__call__
+tensorflow.keras.Model
+
+
+['Case17', 'tensorflow.txt']
+get_tensorloader:
+tensorflow.data.Dataset.from_tensor_slices
+tensorflow.data.Dataset.shuffle
+tensorflow.data.Dataset.batch
+
+
+['Case17', 'tensorflow.txt']
+clip_gradients:
+tensorflow.constant
+tensorflow.convert_to_tensor
+tensorflow.reduce_sum
+tensorflow.math.sqrt
+tensorflow.greater
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.random.normal
+tensorflow.random.normal
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.random.normal
+tensorflow.zeros
+tensorflow.Variable
+tensorflow.Variable
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.initializers.RandomNormal
+tensorflow.keras.layers.Dense
+
+
+['Case17', 'tensorflow.txt']
+configure_optimizers:
+tensorflow.keras.optimizers.SGD
+
+
+['Case17', 'tensorflow.txt']
+configure_optimizers:
+tensorflow.keras.optimizers.SGD
+
+
+['Case17', 'tensorflow.txt']
+get_dataloader:
+tensorflow.data.Dataset.from_tensor_slices
+tensorflow.data.Dataset.batch
+tensorflow.data.Dataset.map
+tensorflow.data.Dataset.shuffle
+
+
+['Case17', 'tensorflow.txt']
+cpu:
+tensorflow.device
+
+
+['Case17', 'tensorflow.txt']
+gpu:
+tensorflow.device
+
+
+['Case17', 'tensorflow.txt']
+num_gpus:
+tensorflow.config.experimental.list_physical_devices
+
+
+['Case17', 'tensorflow.txt']
+corr2d:
+tensorflow.zeros
+tensorflow.Variable
+tensorflow.reduce_sum
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.keras.layers.Conv2D
+tensorflow.keras.layers.Conv2D
+tensorflow.keras.layers.Conv2D
+tensorflow.keras.layers.BatchNormalization
+tensorflow.keras.layers.BatchNormalization
+
+
+['Case17', 'tensorflow.txt']
+call:
+tensorflow.keras.activations.relu
+tensorflow.keras.activations.relu
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.Variable
+tensorflow.Variable
+tensorflow.Variable
+
+
+['Case17', 'tensorflow.txt']
+init_params:
+tensorflow.Variable
+tensorflow.Variable
+
+
+['Case17', 'tensorflow.txt']
+one_hot:
+tensorflow.transpose
+tensorflow.one_hot
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.keras.layers.SimpleRNN
+
+
+['Case17', 'tensorflow.txt']
+init_params:
+tensorflow.keras.layers.Dense
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.keras.layers.GRUCell
+tensorflow.keras.layers.RNN
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.keras.layers.Embedding
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.keras.layers.Embedding
+
+
+['Case17', 'tensorflow.txt']
+masked_softmax:
+tensorflow.nn.softmax
+tensorflow.repeat
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.nn.softmax
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dropout
+
+
+['Case17', 'tensorflow.txt']
+call:
+tensorflow.expand_dims
+tensorflow.expand_dims
+tensorflow.nn.tanh
+tensorflow.squeeze
+tensorflow.matmul
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.keras.layers.Dropout
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.keras.layers.Dropout
+
+
+['Case17', 'tensorflow.txt']
+call:
+tensorflow.matmul
+tensorflow.cast
+tensorflow.math.sqrt
+tensorflow.matmul
+
+
+['Case17', 'tensorflow.txt']
+call:
+tensorflow.repeat
+
+
+['Case17', 'tensorflow.txt']
+transpose_qkv:
+tensorflow.reshape
+tensorflow.transpose
+tensorflow.reshape
+
+
+['Case17', 'tensorflow.txt']
+transpose_output:
+tensorflow.reshape
+tensorflow.transpose
+tensorflow.reshape
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.ReLU
+tensorflow.keras.layers.Dense
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.keras.layers.Dropout
+tensorflow.keras.layers.LayerNormalization
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.keras.layers.Embedding
+
+
+['Case17', 'tensorflow.txt']
+__init__:
+tensorflow.keras.layers.Embedding
+
+
+['Case17', 'tensorflow.txt']
+call:
+tensorflow.cast
+tensorflow.math.sqrt
+
+
+['Case17', 'tensorflow.txt']
+load_array:
+tensorflow.data.Dataset.from_tensor_slices
+tensorflow.data.Dataset.shuffle
+tensorflow.data.Dataset.batch
+
+
+['Case17', 'tensorflow.txt']
+synthetic_data:
+tensorflow.zeros
+tensorflow.random.normal
+tensorflow.reshape
+tensorflow.matmul
+tensorflow.random.normal
+tensorflow.reshape
+
+
+['Case17', 'tensorflow.txt']
+train_ch6:
+tensorflow.distribute.OneDeviceStrategy
+tensorflow.distribute.OneDeviceStrategy.scope
+tensorflow.keras.optimizers.SGD
+tensorflow.keras.losses.SparseCategoricalCrossentropy
+
+
+['Case17', 'tensorflow.txt']
+call:
+tensorflow.ones_like
+tensorflow.one_hot
+tensorflow.keras.losses.CategoricalCrossentropy
+tensorflow.keras.losses.CategoricalCrossentropy.__call__
+tensorflow.reduce_mean
+
+
+['Case17', 'tensorflow.txt']
+sequence_mask:
+tensorflow.range
+tensorflow.cast
+tensorflow.expand_dims
+tensorflow.where
+tensorflow.where
+
+
+['Case10', 'source10.txt']
+main:
+tensorflow.compat.v1.ConfigProto
+tensorflow.compat.v1.InteractiveSession
+tensorflow.keras.Sequential
+tensorflow.keras.Input
+tensorflow.keras.Sequential.add
+tensorflow.keras.layers.Dense
+tensorflow.keras.Sequential.add
+tensorflow.keras.layers.Dense
+tensorflow.keras.Sequential.add
+tensorflow.keras.losses.SparseCategoricalCrossentropy
+tensorflow.keras.Sequential.compile
+tensorflow.keras.Sequential.get_weights
+tensorflow.keras.Sequential.set_weights
+tensorflow.keras.Sequential.evaluate
+
+
+['Case25', 'training.txt']
+__init__:
+tensorflow.summary.create_file_writer
+tensorflow.summary.create_noop_writer
+tensorflow.keras.mixed_precision.LossScaleOptimizer
+
+
+['Case25', 'training.txt']
+_finalize_dataset:
+tensorflow.distribute.InputContext
+
+
+['Case25', 'training.txt']
+_finalize_dataset:
+tensorflow.distribute.InputContext
+
+
+['Case25', 'training.txt']
+_should_record_summaries:
+tensorflow.equal
+tensorflow.equal
+tensorflow.logical_and
+
+
+['Case25', 'training.txt']
+_compute_gradients:
+tensorflow.summary.record_if
+
+
+['Case25', 'training.txt']
+_finalize_dataset:
+tensorflow.distribute.InputContext
+
+
+['Case25', 'training.txt']
+_finalize_dataset:
+tensorflow.distribute.InputContext
+
+
+['Case25', 'training.txt']
+__init__:
+tensorflow.distribute.MirroredStrategy
+
+
+['Case25', 'training.txt']
+_summarize_gradients:
+tensorflow.cond
+tensorflow.summary.scalar
+
+
+['Case25', 'training.txt']
+_record_oov_tokens:
+tensorflow.reduce_sum
+tensorflow.numpy_function
+
+
+['Case25', 'training.txt']
+_update_words_counter:
+tensorflow.reduce_sum
+tensorflow.constant
+tensorflow.Variable
+tensorflow.cast
+
+
+['Case25', 'tokenizer.txt']
+tokenize:
+tensorflow.device
+
+
+['Case25', 'tokenizer.txt']
+detokenize:
+tensorflow.device
+
+
+['Case25', 'tokenizer.txt']
+_detokenize:
+tensorflow.is_tensor
+tensorflow.RaggedTensor.from_tensor
+tensorflow.compat.as_text
+
+
+['Case25', 'tokenizer.txt']
+_python_wrapper:
+tensorflow.compat.as_text
+tensorflow.constant
+
+
+['Case25', 'tokenizer.txt']
+_python_wrapper:
+tensorflow.compat.as_text
+tensorflow.constant
+
+
+['Case25', 'tokenizer.txt']
+_python_wrapper_batch:
+tensorflow.nest.flatten
+tensorflow.constant
+tensorflow.constant
+
+
+['Case25', 'tokenizer.txt']
+make_tokenizer:
+tensorflow.io.gfile.exists
+tensorflow.io.gfile.GFile
+
+
+['Case25', 'tokenizer.txt']
+_process_stream_as_dataset:
+tensorflow.TensorShape
+tensorflow.data.Dataset.from_generator
+tensorflow.data.Dataset.batch
+tensorflow.data.Dataset.map
+tensorflow.TensorSpec
+tensorflow.data.Dataset.as_numpy_iterator
+
+
+['Case25', 'tokenizer.txt']
+_map_func:
+tensorflow.strings.strip
+tensorflow.strings.reduce_join
+
+
+['Case25', 'tokenizer.txt']
+_map_func:
+tensorflow.strings.strip
+tensorflow.strings.split
+
+
+['Case25', 'tokenizer.txt']
+_detokenize_string:
+tensorflow.constant
+
+
+['Case25', 'tokenizer.txt']
+_tokenize_tensor:
+tensorflow.strings.split
+
+
+['Case25', 'tokenizer.txt']
+_detokenize_tensor:
+tensorflow.strings.reduce_join
+
+
+['Case25', 'tokenizer.txt']
+_tokenize_tensor:
+tensorflow.strings.regex_replace
+tensorflow.strings.unicode_split
+
+
+['Case25', 'tokenizer.txt']
+_detokenize_tensor:
+tensorflow.strings.reduce_join
+tensorflow.strings.regex_replace
+
+
+['Case25', 'dataset.txt']
+_get_output_shapes:
+tensorflow.nest.map_structure
+
+
+['Case25', 'dataset.txt']
+get_dataset_size:
+tensorflow.constant
+
+
+['Case25', 'dataset.txt']
+_reduce_func:
+tensorflow.nest.flatten
+tensorflow.shape
+tensorflow.cast
+
+
+['Case25', 'dataset.txt']
+_predicate:
+tensorflow.nest.flatten
+tensorflow.shape
+tensorflow.equal
+
+
+['Case25', 'dataset.txt']
+_length_constraints:
+tensorflow.greater
+tensorflow.less_equal
+
+
+['Case25', 'dataset.txt']
+_predicate:
+tensorflow.reduce_all
+
+
+['Case25', 'dataset.txt']
+_continue_iter:
+tensorflow.math.not_equal
+tensorflow.math.logical_or
+
+
+['Case25', 'dataset.txt']
+_transform:
+tensorflow.data.experimental.take_while
+
+
+['Case25', 'dataset.txt']
+_random_shard:
+tensorflow.data.Dataset.from_tensor_slices
+tensorflow.data.Dataset.shuffle
+tensorflow.data.Dataset.flat_map
+
+
+['Case25', 'dataset.txt']
+_get_bucket_id:
+tensorflow.constant
+tensorflow.reduce_max
+
+
+['Case25', 'dataset.txt']
+_key_func:
+tensorflow.reduce_max
+tensorflow.cast
+
+
+['Case25', 'dataset.txt']
+_window_size_func:
+tensorflow.maximum
+tensorflow.cast
+
+
+['Case25', 'dataset.txt']
+_group_by_window:
+tensorflow.data.experimental.group_by_window
+
+
+['Case11', 'optimizers.txt']
+get_optimizer:
+tensorflow.compat.v1.train.get_or_create_global_step
+tensorflow.compat.v1.constant
+tensorflow.compat.v1.train.polynomial_decay
+tensorflow.compat.v1.train.cosine_decay
+tensorflow.compat.v1.cast
+tensorflow.compat.v1.constant
+tensorflow.compat.v1.cast
+tensorflow.compat.v1.cast
+tensorflow.compat.v1.cast
+
+
+['Case11', 'optimizers.txt']
+apply_grad:
+tensorflow.compat.v1.logging.warning
+tensorflow.compat.v1.zeros_initializer
+tensorflow.compat.v1.zeros_initializer
+
+
+['Case11', 'tasks.txt']
+lambada_input:
+tensorflow.data.Dataset.from_tensor_slices
+tensorflow.data.Dataset.map
+tensorflow.data.Dataset.batch
+tensorflow.data.Dataset.repeat
+
+
+['Case11', 'tasks.txt']
+_get_output:
+tensorflow.cast
+tensorflow.range
+tensorflow.gather
+tensorflow.gather
+tensorflow.math.equal
+tensorflow.constant
+tensorflow.where
+tensorflow.reshape
+tensorflow.cast
+tensorflow.reshape
+tensorflow.cast
+
+
+['Case20', 'bernoulli.txt']
+parametrize:
+tensorflow.reshape
+tensorflow.sigmoid
+tensorflow.math.log
+tensorflow.math.log
+
+
+['Case20', 'bernoulli.txt']
+mode:
+tensorflow.control_dependencies
+tensorflow.greater_equal
+
+
+['Case20', 'bernoulli.txt']
+fn_summary:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'bernoulli.txt']
+fn_summary:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'bernoulli.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'bernoulli.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'bernoulli.txt']
+sample:
+tensorflow.control_dependencies
+tensorflow.cond
+
+
+['Case20', 'bernoulli.txt']
+fn_summary:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'bernoulli.txt']
+fn_summary:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'bernoulli.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'bernoulli.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'bernoulli.txt']
+fn_mode:
+tensorflow.greater_equal
+
+
+['Case20', 'bernoulli.txt']
+fn_sample:
+tensorflow.math.exp
+tensorflow.math.exp
+tensorflow.shape
+tensorflow.random.uniform
+tensorflow.greater_equal
+
+
+['Case20', 'bernoulli.txt']
+log_probability:
+tensorflow.where
+
+
+['Case20', 'bernoulli.txt']
+action_value:
+tensorflow.where
+
+
+['Case20', 'gaussian.txt']
+parametrize:
+tensorflow.reshape
+tensorflow.shape
+tensorflow.tile
+tensorflow.reshape
+tensorflow.clip_by_value
+tensorflow.nn.softplus
+tensorflow.math.log
+
+
+['Case20', 'gaussian.txt']
+mode:
+tensorflow.control_dependencies
+tensorflow.math.tanh
+tensorflow.clip_by_value
+tensorflow.maximum
+tensorflow.minimum
+
+
+['Case20', 'gaussian.txt']
+fn_summary:
+tensorflow.math.reduce_mean
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_summary:
+tensorflow.math.reduce_mean
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+sample:
+tensorflow.control_dependencies
+tensorflow.cond
+tensorflow.math.tanh
+tensorflow.clip_by_value
+tensorflow.maximum
+tensorflow.minimum
+
+
+['Case20', 'gaussian.txt']
+fn_summary:
+tensorflow.math.reduce_mean
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_summary:
+tensorflow.math.reduce_mean
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_tracking:
+tensorflow.math.reduce_mean
+
+
+['Case20', 'gaussian.txt']
+fn_sample:
+tensorflow.shape
+tensorflow.random.normal
+
+
+['Case20', 'gaussian.txt']
+log_probability:
+tensorflow.clip_by_value
+tensorflow.math.atanh
+tensorflow.square
+tensorflow.square
+tensorflow.math.softplus
+
+
+['Case20', 'gaussian.txt']
+kl_divergence:
+tensorflow.square
+tensorflow.square
+tensorflow.square
+
+
+['Case20', 'gaussian.txt']
+action_value:
+tensorflow.clip_by_value
+tensorflow.math.atanh
+tensorflow.square
+tensorflow.square
+
+
+['Case20', 'model.txt']
+initialize:
+tensorflow.summary.create_file_writer
+tensorflow.train.Checkpoint
+tensorflow.train.CheckpointManager
+
+
+['Case20', 'model.txt']
+initialize_api:
+tensorflow.summary.trace_on
+tensorflow.summary.trace_export
+tensorflow.summary.trace_on
+tensorflow.summary.trace_export
+tensorflow.summary.trace_on
+tensorflow.summary.trace_export
+tensorflow.summary.trace_on
+tensorflow.summary.trace_export
+
+
+['Case20', 'model.txt']
+independent_act:
+tensorflow.shape
+tensorflow.math.reduce_any
+tensorflow.reduce_all
+tensorflow.debugging.assert_equal
+tensorflow.control_dependencies
+tensorflow.expand_dims
+
+
+['Case20', 'model.txt']
+save:
+tensorflow.train.Checkpoint
+tensorflow.saved_model.save
+tensorflow.train.Checkpoint
+
+
+['Case20', 'model.txt']
+restore:
+tensorflow.train.latest_checkpoint
+
+
+['Case6', 'source6.txt']
+get_padding_mask:
+tensorflow.map_fn
+
+
+['Case6', 'source6.txt']
+main:
+tensorflow.constant
+
+
+['Case7', 'source7.txt']
+contrastive_loss:
+tensorflow.cast
+tensorflow.abs
+tensorflow.minimum
+tensorflow.norm
+tensorflow.maximum
+
+
+['Case7', 'source7.txt']
+main:
+tensorflow.keras.datasets.mnist.load_data
+tensorflow.keras.backend.clear_session
+tensorflow.keras.Sequential
+tensorflow.keras.layers.Flatten
+tensorflow.keras.Sequential.add
+tensorflow.keras.layers.Dense
+tensorflow.keras.Sequential.add
+tensorflow.keras.layers.Dense
+tensorflow.keras.Sequential.add
+tensorflow.keras.layers.Dense
+tensorflow.keras.Sequential.add
+tensorflow.keras.optimizers.Adam
+tensorflow.keras.Sequential.compile
+tensorflow.keras.Sequential.fit
+
+
+['Case16', 'estimator.txt']
+register_module_for_export:
+tensorflow.compat.v1.get_collection
+tensorflow.compat.v1.add_to_collection
+
+
+['Case16', 'estimator.txt']
+export:
+tensorflow.compat.v1.get_collection
+tensorflow.compat.as_bytes
+tensorflow.compat.v1.gfile.Rename
+
+
+['Case16', 'module_v2.txt']
+load:
+tensorflow.io.gfile.exists
+tensorflow.compat.v1.saved_model.load_v2
+tensorflow.compat.v1.saved_model.load_v2
+
+
+['Case16', 'export_v2.txt']
+load:
+tensorflow.io.gfile.GFile
+
+
+['Case16', 'export_v2.txt']
+write_vocabulary_file:
+tensorflow.io.gfile.GFile
+
+
+['Case16', 'export_v2.txt']
+__init__:
+tensorflow.lookup.TextFileInitializer
+tensorflow.lookup.StaticVocabularyTable
+tensorflow.Variable
+
+
+['Case16', 'export_v2.txt']
+_tokenize:
+tensorflow.strings.regex_replace
+tensorflow.reshape
+tensorflow.strings.split
+tensorflow.strings.to_sparse
+tensorflow.constant
+tensorflow.sparse.fill_empty_rows
+tensorflow.sparse.reset_shape
+
+
+['Case16', 'export_v2.txt']
+__call__:
+tensorflow.SparseTensor
+tensorflow.nn.safe_embedding_lookup_sparse
+
+
+['Case16', 'export_v2.txt']
+export_module_from_file:
+tensorflow.saved_model.save
+
+
+['Case15', 'model_utils.txt']
+configure_tpu:
+tensorflow.contrib.cluster_resolver.TPUClusterResolver
+tensorflow.contrib.cluster_resolver.TPUClusterResolver.get_master
+tensorflow.ConfigProto
+tensorflow.logging.info
+tensorflow.logging.info
+tensorflow.contrib.distribute.MirroredStrategy
+tensorflow.logging.info
+tensorflow.contrib.tpu.TPUConfig
+tensorflow.contrib.tpu.RunConfig
+
+
+['Case15', 'model_utils.txt']
+get_train_op:
+tensorflow.train.get_or_create_global_step
+tensorflow.cast
+tensorflow.cast
+tensorflow.train.polynomial_decay
+tensorflow.train.cosine_decay
+tensorflow.where
+tensorflow.train.AdamOptimizer
+tensorflow.contrib.tpu.CrossShardOptimizer
+tensorflow.train.AdamOptimizer.compute_gradients
+tensorflow.clip_by_global_norm
+tensorflow.logging.info
+tensorflow.train.AdamOptimizer.apply_gradients
+tensorflow.train.get_or_create_global_step.assign
+tensorflow.group
+
+
+['Case15', 'model_utils.txt']
+get_assignment_map_from_checkpoint:
+tensorflow.train.list_variables
+
+
+['Case15', 'model_utils.txt']
+_do_use_weight_decay:
+tensorflow.logging.info
+
+
+['Case15', 'modeling.txt']
+gelu:
+tensorflow.pow
+tensorflow.tanh
+
+
+['Case15', 'modeling.txt']
+positional_embedding:
+tensorflow.einsum
+tensorflow.sin
+tensorflow.cos
+tensorflow.concat
+tensorflow.tile
+
+
+['Case15', 'modeling.txt']
+positionwise_ffn:
+tensorflow.variable_scope
+tensorflow.layers.dense
+tensorflow.layers.dropout
+tensorflow.layers.dense
+tensorflow.layers.dropout
+tensorflow.contrib.layers.layer_norm
+
+
+['Case15', 'modeling.txt']
+head_projection:
+tensorflow.get_variable
+tensorflow.einsum
+
+
+['Case15', 'modeling.txt']
+post_attention:
+tensorflow.get_variable
+tensorflow.einsum
+tensorflow.layers.dropout
+tensorflow.contrib.layers.layer_norm
+tensorflow.contrib.layers.layer_norm
+
+
+['Case15', 'modeling.txt']
+abs_attn_core:
+tensorflow.einsum
+tensorflow.nn.softmax
+tensorflow.layers.dropout
+tensorflow.einsum
+
+
+['Case15', 'modeling.txt']
+rel_attn_core:
+tensorflow.einsum
+tensorflow.einsum
+tensorflow.shape
+tensorflow.einsum
+tensorflow.einsum
+tensorflow.nn.softmax
+tensorflow.layers.dropout
+tensorflow.einsum
+
+
+['Case15', 'modeling.txt']
+rel_shift:
+tensorflow.shape
+tensorflow.reshape
+tensorflow.slice
+tensorflow.reshape
+tensorflow.slice
+
+
+['Case15', 'modeling.txt']
+_create_mask:
+tensorflow.ones
+tensorflow.matrix_band_part
+tensorflow.matrix_band_part
+tensorflow.zeros
+tensorflow.concat
+tensorflow.matrix_band_part
+tensorflow.concat
+
+
+['Case15', 'modeling.txt']
+_cache_mem:
+tensorflow.concat
+tensorflow.stop_gradient
+
+
+['Case15', 'modeling.txt']
+relative_positional_encoding:
+tensorflow.range
+tensorflow.cast
+tensorflow.range
+tensorflow.range
+tensorflow.cast
+tensorflow.cast
+tensorflow.clip_by_value
+tensorflow.clip_by_value
+tensorflow.concat
+tensorflow.range
+tensorflow.cast
+tensorflow.clip_by_value
+
+
+['Case15', 'modeling.txt']
+multihead_attn:
+tensorflow.variable_scope
+
+
+['Case15', 'modeling.txt']
+rel_multihead_attn:
+tensorflow.variable_scope
+tensorflow.concat
+
+
+['Case15', 'modeling.txt']
+two_stream_rel_attn:
+tensorflow.variable_scope
+tensorflow.concat
+tensorflow.variable_scope
+tensorflow.einsum
+tensorflow.einsum
+
+
+['Case15', 'modeling.txt']
+transformer_xl:
+tensorflow.logging.info
+tensorflow.logging.info
+tensorflow.variable_scope
+tensorflow.get_variable
+tensorflow.get_variable
+tensorflow.get_variable
+tensorflow.get_variable
+tensorflow.shape
+tensorflow.shape
+tensorflow.shape
+tensorflow.shape
+tensorflow.zeros
+tensorflow.concat
+tensorflow.cast
+tensorflow.eye
+tensorflow.zeros
+tensorflow.concat
+tensorflow.cast
+tensorflow.variable_scope
+tensorflow.get_variable
+tensorflow.shape
+tensorflow.tile
+tensorflow.layers.dropout
+tensorflow.layers.dropout
+tensorflow.get_variable
+tensorflow.get_variable
+tensorflow.get_variable
+tensorflow.zeros
+tensorflow.concat
+tensorflow.equal
+tensorflow.logical_not
+tensorflow.cast
+tensorflow.one_hot
+tensorflow.layers.dropout
+tensorflow.variable_scope
+tensorflow.layers.dropout
+tensorflow.layers.dropout
+
+
+['Case15', 'modeling.txt']
+lm_loss:
+tensorflow.variable_scope
+tensorflow.get_variable
+tensorflow.zeros_initializer
+tensorflow.get_variable
+tensorflow.einsum
+tensorflow.one_hot
+tensorflow.nn.log_softmax
+tensorflow.reduce_sum
+tensorflow.nn.sparse_softmax_cross_entropy_with_logits
+
+
+['Case15', 'modeling.txt']
+summarize_sequence:
+tensorflow.variable_scope
+tensorflow.reduce_mean
+tensorflow.shape
+tensorflow.get_variable
+tensorflow.tile
+tensorflow.layers.dense
+tensorflow.layers.dropout
+
+
+['Case15', 'modeling.txt']
+classification_loss:
+tensorflow.variable_scope
+tensorflow.layers.dense
+tensorflow.one_hot
+tensorflow.nn.log_softmax
+tensorflow.reduce_sum
+
+
+['Case15', 'modeling.txt']
+regression_loss:
+tensorflow.variable_scope
+tensorflow.layers.dense
+tensorflow.squeeze
+tensorflow.square
+
+
+['Case15', 'gpu_utils.txt']
+average_sparse:
+tensorflow.concat
+tensorflow.concat
+tensorflow.IndexedSlices
+
+
+['Case15', 'gpu_utils.txt']
+load_from_checkpoint:
+tensorflow.get_default_session
+tensorflow.train.get_checkpoint_state
+
+
+['Case18', 'safe_ops.txt']
+nonzero_sign:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.ones_like
+tensorflow.greater_equal
+tensorflow.where
+
+
+['Case18', 'safe_ops.txt']
+safe_cospx_div_cosx:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.clip_by_value
+tensorflow.cos
+tensorflow.cos
+
+
+['Case18', 'safe_ops.txt']
+safe_shrink:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+
+
+['Case18', 'safe_ops.txt']
+safe_signed_div:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+
+
+['Case18', 'safe_ops.txt']
+safe_sinpx_div_sinx:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.clip_by_value
+tensorflow.sin
+tensorflow.sin
+
+
+['Case18', 'safe_ops.txt']
+safe_unsigned_div:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+
+
+['Case18', 'pyramid.txt']
+_downsample:
+tensorflow.nn.conv2d
+
+
+['Case18', 'pyramid.txt']
+_binomial_kernel:
+tensorflow.constant
+tensorflow.eye
+
+
+['Case18', 'pyramid.txt']
+_build_pyramid:
+tensorflow.shape
+
+
+['Case18', 'pyramid.txt']
+_split:
+tensorflow.shape
+
+
+['Case18', 'pyramid.txt']
+_upsample:
+tensorflow.shape
+tensorflow.nn.conv2d_transpose
+
+
+['Case18', 'pyramid.txt']
+downsample:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+
+
+['Case18', 'pyramid.txt']
+merge:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.shape
+tensorflow.shape
+
+
+['Case18', 'pyramid.txt']
+split:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.shape
+
+
+['Case18', 'pyramid.txt']
+upsample:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+
+
+['Case18', 'graph_convolution.txt']
+feature_steered_convolution_layer:
+tensorflow.compat.v1.variable_scope
+tensorflow.convert_to_tensor
+tensorflow.compat.dimension_value
+tensorflow.compat.v1.get_variable
+tensorflow.compat.v1.get_variable
+tensorflow.compat.v1.get_variable
+tensorflow.compat.v1.get_variable
+tensorflow.compat.v1.get_variable
+
+
+['Case18', 'graph_convolution.txt']
+__init__:
+tensorflow.keras.initializers.TruncatedNormal
+
+
+['Case18', 'graph_convolution.txt']
+build:
+tensorflow.keras.layers.Conv1D
+
+
+['Case18', 'graph_convolution.txt']
+_edge_convolution:
+tensorflow.concat
+tensorflow.expand_dims
+tensorflow.squeeze
+
+
+['Case18', 'asserts.txt']
+assert_no_infs_or_nans:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.debugging.check_numerics
+tensorflow.control_dependencies
+tensorflow.identity
+
+
+['Case18', 'asserts.txt']
+assert_all_above:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.debugging.assert_greater
+tensorflow.debugging.assert_greater_equal
+tensorflow.control_dependencies
+tensorflow.identity
+
+
+['Case18', 'asserts.txt']
+assert_all_below:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.debugging.assert_less
+tensorflow.debugging.assert_less_equal
+tensorflow.control_dependencies
+tensorflow.identity
+
+
+['Case18', 'asserts.txt']
+assert_all_in_range:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.debugging.assert_less
+tensorflow.debugging.assert_greater
+tensorflow.debugging.assert_less_equal
+tensorflow.debugging.assert_greater_equal
+tensorflow.control_dependencies
+tensorflow.identity
+
+
+['Case18', 'asserts.txt']
+assert_nonzero_norm:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.norm
+tensorflow.debugging.assert_greater
+tensorflow.control_dependencies
+tensorflow.identity
+
+
+['Case18', 'asserts.txt']
+assert_normalized:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.norm
+tensorflow.constant
+tensorflow.debugging.assert_near
+tensorflow.control_dependencies
+tensorflow.identity
+
+
+['Case18', 'asserts.txt']
+assert_at_least_k_non_zero_entries:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.math.greater
+tensorflow.cast
+tensorflow.reduce_sum
+tensorflow.cast
+tensorflow.debugging.assert_greater_equal
+tensorflow.control_dependencies
+tensorflow.identity
+
+
+['Case18', 'asserts.txt']
+assert_binary:
+tensorflow.name_scope
+tensorflow.convert_to_tensor
+tensorflow.equal
+tensorflow.equal
+tensorflow.logical_or
+tensorflow.reduce_all
+tensorflow.debugging.Assert
+tensorflow.control_dependencies
+tensorflow.identity
+
+
+['Case24', 'linear_combination.txt']
+__init__:
+tensorflow.constant
+tensorflow.constant
+tensorflow.constant
+tensorflow.zeros_like
+tensorflow.not_equal
+tensorflow.boolean_mask
+tensorflow.math.logical_not
+tensorflow.boolean_mask
+tensorflow.boolean_mask
+tensorflow.shape
+tensorflow.gather
+
+
+['Case24', 'linear_combination.txt']
+get_gradient_circuits:
+tensorflow.shape
+tensorflow.gather
+tensorflow.shape
+tensorflow.gather
+tensorflow.cond
+tensorflow.expand_dims
+tensorflow.tile
+tensorflow.identity
+tensorflow.zeros
+tensorflow.stack
+tensorflow.eye
+tensorflow.gather
+tensorflow.transpose
+tensorflow.reshape
+tensorflow.zeros
+tensorflow.cond
+tensorflow.expand_dims
+tensorflow.tile
+tensorflow.expand_dims
+tensorflow.tile
+tensorflow.expand_dims
+tensorflow.tile
+tensorflow.expand_dims
+tensorflow.tile
+tensorflow.concat
+tensorflow.expand_dims
+tensorflow.tile
+tensorflow.range
+tensorflow.reshape
+tensorflow.cond
+tensorflow.expand_dims
+tensorflow.tile
+
+
+['Case24', 'differentiator.txt']
+new_diff:
+tensorflow.size
+tensorflow.equal
+tensorflow.size
+tensorflow.equal
+tensorflow.size
+tensorflow.equal
+tensorflow.logical_or
+tensorflow.logical_or
+tensorflow.cond
+
+
+['Case24', 'differentiator.txt']
+differentiate_analytic:
+tensorflow.shape
+tensorflow.expand_dims
+tensorflow.tile
+tensorflow.shape
+tensorflow.reduce_prod
+tensorflow.shape
+tensorflow.shape
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.shape
+tensorflow.reshape
+tensorflow.map_fn
+tensorflow.einsum
+
+
+['Case24', 'differentiator.txt']
+differentiate_sampled:
+tensorflow.shape
+tensorflow.expand_dims
+tensorflow.tile
+tensorflow.expand_dims
+tensorflow.tile
+tensorflow.shape
+tensorflow.reduce_prod
+tensorflow.shape
+tensorflow.shape
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.shape
+tensorflow.reshape
+tensorflow.map_fn
+tensorflow.einsum
+
+
+['Case24', 'rotosolve_minimizer.txt']
+prefer_static_shape:
+tensorflow.shape
+
+
+['Case24', 'rotosolve_minimizer.txt']
+prefer_static_value:
+tensorflow.get_static_value
+
+
+['Case24', 'rotosolve_minimizer.txt']
+_get_initial_state:
+tensorflow.Variable
+tensorflow.Variable
+tensorflow.Variable
+tensorflow.Variable
+tensorflow.Variable
+tensorflow.Variable
+tensorflow.Variable
+
+
+['Case24', 'rotosolve_minimizer.txt']
+_rotosolve_all_parameters_once:
+tensorflow.while_loop
+
+
+['Case22', 'graph.txt']
+normalize_A:
+tensorflow.sqrt
+tensorflow.keras.backend.epsilon
+tensorflow.keras.backend.ndim
+
+
+['Case22', 'graph.txt']
+degrees:
+tensorflow.keras.backend.is_sparse
+tensorflow.sparse.reduce_sum
+tensorflow.reduce_sum
+
+
+['Case22', 'graph.txt']
+degree_matrix:
+tensorflow.keras.backend.ndim
+tensorflow.shape
+tensorflow.shape
+tensorflow.range
+tensorflow.stack
+tensorflow.tile
+tensorflow.range
+tensorflow.ones
+tensorflow.cast
+tensorflow.concat
+tensorflow.linalg.diag
+tensorflow.cast
+tensorflow.reshape
+tensorflow.SparseTensor
+
+
+['Case22', 'ops.txt']
+transpose:
+tensorflow.keras.backend.is_sparse
+
+
+['Case22', 'ops.txt']
+reshape:
+tensorflow.keras.backend.is_sparse
+
+
+['Case22', 'ops.txt']
+repeat:
+tensorflow.expand_dims
+tensorflow.reduce_max
+tensorflow.tile
+tensorflow.range
+tensorflow.expand_dims
+tensorflow.less
+tensorflow.boolean_mask
+tensorflow.reshape
+
+
+['Case22', 'diff_pool.txt']
+call:
+tensorflow.keras.backend.shape
+tensorflow.keras.backend.is_sparse
+tensorflow.sparse.eye
+tensorflow.sparse.add
+tensorflow.eye
+tensorflow.keras.backend.dot
+tensorflow.keras.backend.dot
+tensorflow.keras.activations.softmax
+tensorflow.sparse.to_dense
+tensorflow.keras.backend.is_sparse
+tensorflow.sparse.add
+tensorflow.norm
+tensorflow.keras.backend.mean
+tensorflow.keras.backend.epsilon
+tensorflow.keras.backend.log
+tensorflow.multiply
+tensorflow.reduce_sum
+tensorflow.negative
+tensorflow.keras.backend.mean
+tensorflow.keras.backend.mean
+
+
+['Case22', 'appnp_conv.txt']
+__init__:
+tensorflow.keras.activations.get
+
+
+['Case22', 'appnp_conv.txt']
+build:
+tensorflow.keras.layers.Dropout
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense
+tensorflow.keras.models.Sequential
+
+
+['Case22', 'appnp_conv.txt']
+config:
+tensorflow.keras.activations.serialize
+
+
+['Case22', 'general_gnn.txt']
+get_act:
+tensorflow.keras.layers.PReLU
+tensorflow.keras.layers.Activation
+
+
+['Case22', 'general_gnn.txt']
+__init__:
+tensorflow.keras.layers.Add
+tensorflow.keras.layers.Concatenate
+
+
+['Case22', 'general_gnn.txt']
+__init__:
+tensorflow.keras.Sequential
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.BatchNormalization
+tensorflow.keras.layers.Dropout
+
+
+['Case22', 'diffusion_conv.txt']
+apply_filters:
+tensorflow.concat
+
+
+['Case3', 'source3.txt']
+main:
+tensorflow.keras.Input
+tensorflow.keras.layers.Flatten
+tensorflow.keras.layers.Flatten.__call__
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense.__call__
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense.__call__
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense.__call__
+tensorflow.keras.Model
+tensorflow.keras.Input
+tensorflow.keras.Input
+tensorflow.keras.layers.subtract
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense.__call__
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense.__call__
+tensorflow.keras.Model
+tensorflow.keras.Input
+tensorflow.keras.Input
+tensorflow.keras.Model
+tensorflow.keras.Model
+tensorflow.keras.Model
+tensorflow.keras.Model
+tensorflow.keras.Model.compile
+tensorflow.keras.Model.predict
+tensorflow.keras.Model.predict
+
+
+['Case5', 'source5.txt']
+main:
+tensorflow.data.TFRecordDataset
+tensorflow.data.TFRecordDataset.repeat
+tensorflow.data.TFRecordDataset.batch
+tensorflow.data.TFRecordDataset.as_numpy_iterator
+
+
+['Case4', 'source4.txt']
+convert_image_to_array:
+keras.preprocessing.image.img_to_array
+
+
+['Case4', 'source4.txt']
+main:
+keras.preprocessing.image.ImageDataGenerator
+keras.models.Sequential
+keras.backend.image_data_format
+keras.layers.convolutional.Conv2D
+keras.models.Sequential.add
+keras.layers.core.Activation
+keras.models.Sequential.add
+keras.layers.normalization.BatchNormalization
+keras.models.Sequential.add
+keras.layers.convolutional.MaxPooling2D
+keras.models.Sequential.add
+keras.layers.core.Dropout
+keras.models.Sequential.add
+keras.layers.convolutional.Conv2D
+keras.models.Sequential.add
+keras.layers.core.Activation
+keras.models.Sequential.add
+keras.layers.normalization.BatchNormalization
+keras.models.Sequential.add
+keras.layers.convolutional.Conv2D
+keras.models.Sequential.add
+keras.layers.core.Activation
+keras.models.Sequential.add
+keras.layers.normalization.BatchNormalization
+keras.models.Sequential.add
+keras.layers.convolutional.MaxPooling2D
+keras.models.Sequential.add
+keras.layers.core.Dropout
+keras.models.Sequential.add
+keras.layers.convolutional.Conv2D
+keras.models.Sequential.add
+keras.layers.core.Activation
+keras.models.Sequential.add
+keras.layers.normalization.BatchNormalization
+keras.models.Sequential.add
+keras.layers.convolutional.Conv2D
+keras.models.Sequential.add
+keras.layers.core.Activation
+keras.models.Sequential.add
+keras.layers.normalization.BatchNormalization
+keras.models.Sequential.add
+keras.layers.convolutional.MaxPooling2D
+keras.models.Sequential.add
+keras.layers.core.Dropout
+keras.models.Sequential.add
+keras.layers.core.Flatten
+keras.models.Sequential.add
+keras.layers.core.Dense
+keras.models.Sequential.add
+keras.layers.core.Activation
+keras.models.Sequential.add
+keras.layers.normalization.BatchNormalization
+keras.models.Sequential.add
+keras.layers.core.Dropout
+keras.models.Sequential.add
+keras.layers.core.Dense
+keras.models.Sequential.add
+keras.layers.core.Activation
+keras.models.Sequential.add
+keras.models.Sequential.compile
+keras.preprocessing.image.ImageDataGenerator.flow
+keras.models.Sequential.fit_generator
+
+
+['Case19', 'activation.txt']
+build:
+tensorflow.nn.sigmoid
+
+
+['Case19', 'activation.txt']
+build:
+tensorflow.nn.sigmoid
+
+
+['Case19', 'activation.txt']
+forward:
+tensorflow.nn.relu
+tensorflow.nn.sigmoid
+tensorflow.nn.relu
+
+
+['Case19', 'activation.txt']
+build:
+tensorflow.nn.sigmoid
+
+
+['Case19', 'activation.txt']
+build:
+tensorflow.nn.sigmoid
+
+
+['Case19', 'activation.txt']
+forward:
+tensorflow.nn.relu
+tensorflow.nn.relu
+tensorflow.nn.relu
+
+
+['Case19', 'activation.txt']
+build:
+tensorflow.nn.sigmoid
+tensorflow.nn.sigmoid
+
+
+['Case19', 'activation.txt']
+forward:
+tensorflow.nn.relu
+tensorflow.nn.relu
+tensorflow.nn.relu
+tensorflow.nn.relu
+
+
+['Case19', 'spatial_transformer.txt']
+_interpolate:
+tensorflow.shape
+tensorflow.shape
+tensorflow.shape
+tensorflow.shape
+tensorflow.cast
+tensorflow.cast
+tensorflow.cast
+tensorflow.cast
+tensorflow.zeros
+tensorflow.shape
+tensorflow.cast
+tensorflow.shape
+tensorflow.cast
+tensorflow.floor
+tensorflow.cast
+tensorflow.floor
+tensorflow.cast
+tensorflow.clip_by_value
+tensorflow.clip_by_value
+tensorflow.clip_by_value
+tensorflow.clip_by_value
+tensorflow.range
+tensorflow.stack
+tensorflow.reshape
+tensorflow.cast
+tensorflow.gather
+tensorflow.gather
+tensorflow.gather
+tensorflow.gather
+tensorflow.cast
+tensorflow.cast
+tensorflow.cast
+tensorflow.cast
+tensorflow.expand_dims
+tensorflow.expand_dims
+tensorflow.expand_dims
+tensorflow.expand_dims
+tensorflow.add_n
+
+
+['Case19', 'spatial_transformer.txt']
+_meshgrid:
+tensorflow.stack
+tensorflow.ones
+tensorflow.linspace
+tensorflow.expand_dims
+tensorflow.transpose
+tensorflow.matmul
+tensorflow.linspace
+tensorflow.expand_dims
+tensorflow.stack
+tensorflow.ones
+tensorflow.matmul
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.ones_like
+tensorflow.concat
+
+
+['Case19', 'spatial_transformer.txt']
+_transform:
+tensorflow.shape
+tensorflow.shape
+tensorflow.reshape
+tensorflow.cast
+tensorflow.expand_dims
+tensorflow.reshape
+tensorflow.stack
+tensorflow.tile
+tensorflow.stack
+tensorflow.reshape
+tensorflow.matmul
+tensorflow.slice
+tensorflow.slice
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.stack
+tensorflow.reshape
+
+
+['Case19', 'spatial_transformer.txt']
+batch_transformer:
+tensorflow.compat.v1.variable_scope
+tensorflow.reshape
+tensorflow.gather
+
+
+['Case19', 'spatial_transformer.txt']
+forward:
+tensorflow.matmul
+tensorflow.nn.tanh
+tensorflow.reshape
+
+
+['Case19', 'embedding.txt']
+forward:
+tensorflow.one_hot
+
+
+['Case19', 'embedding.txt']
+build:
+tensorflow.nn.l2_normalize
+
+
+['Case19', 'embedding.txt']
+forward:
+tensorflow.nn.embedding_lookup
+tensorflow.nn.nce_loss
+tensorflow.reduce_mean
+
+
+['Case19', 'embedding.txt']
+forward:
+tensorflow.nn.embedding_lookup
+
+
+['Case19', 'embedding.txt']
+forward:
+tensorflow.nn.embedding_lookup
+tensorflow.not_equal
+tensorflow.expand_dims
+tensorflow.cast
+tensorflow.reduce_sum
+tensorflow.math.count_nonzero
+tensorflow.divide
+
+
+['Case19', 'padding.txt']
+forward:
+tensorflow.pad
+
+
+['Case19', 'padding.txt']
+build:
+tensorflow.keras.layers.ZeroPadding1D
+
+
+['Case19', 'padding.txt']
+build:
+tensorflow.keras.layers.ZeroPadding2D
+
+
+['Case19', 'padding.txt']
+build:
+tensorflow.keras.layers.ZeroPadding3D
+
+
+['Case19', 'recurrent.txt']
+build:
+tensorflow.name_scope
+
+
+['Case19', 'recurrent.txt']
+build:
+tensorflow.name_scope
+
+
+['Case19', 'recurrent.txt']
+forward:
+tensorflow.convert_to_tensor
+tensorflow.gather
+tensorflow.convert_to_tensor
+tensorflow.concat
+tensorflow.reshape
+tensorflow.concat
+tensorflow.reshape
+tensorflow.convert_to_tensor
+tensorflow.gather
+tensorflow.convert_to_tensor
+
+
+['Case19', 'recurrent.txt']
+__init__:
+tensorflow.keras.layers.SimpleRNNCell
+
+
+['Case19', 'recurrent.txt']
+__init__:
+tensorflow.keras.layers.GRUCell
+
+
+['Case19', 'recurrent.txt']
+__init__:
+tensorflow.keras.layers.LSTMCell
+
+
+['Case19', 'recurrent.txt']
+build:
+tensorflow.name_scope
+
+
+['Case19', 'recurrent.txt']
+build:
+tensorflow.name_scope
+
+
+['Case19', 'recurrent.txt']
+forward:
+tensorflow.concat
+tensorflow.reshape
+tensorflow.concat
+tensorflow.reshape
+tensorflow.concat
+tensorflow.reshape
+tensorflow.concat
+tensorflow.reshape
+tensorflow.concat
+
+
+['Case19', 'recurrent.txt']
+retrieve_seq_length_op:
+tensorflow.name_scope
+tensorflow.abs
+tensorflow.reduce_max
+tensorflow.sign
+tensorflow.reduce_sum
+tensorflow.cast
+
+
+['Case19', 'recurrent.txt']
+retrieve_seq_length_op2:
+tensorflow.zeros_like
+tensorflow.greater
+tensorflow.cast
+tensorflow.reduce_sum
+
+
+['Case19', 'recurrent.txt']
+retrieve_seq_length_op3:
+tensorflow.not_equal
+tensorflow.reduce_any
+tensorflow.cast
+tensorflow.reduce_sum
+tensorflow.not_equal
+tensorflow.cast
+tensorflow.reduce_sum
+
+
+['Case19', 'recurrent.txt']
+target_mask_op:
+tensorflow.not_equal
+tensorflow.reduce_any
+tensorflow.cast
+tensorflow.not_equal
+tensorflow.cast
+
+
+['Case19', 'seq2seq_with_attention.txt']
+score:
+tensorflow.expand_dims
+tensorflow.tile
+tensorflow.concat
+tensorflow.cast
+tensorflow.tensordot
+tensorflow.nn.tanh
+tensorflow.tensordot
+tensorflow.squeeze
+tensorflow.expand_dims
+tensorflow.matmul
+tensorflow.squeeze
+tensorflow.matmul
+tensorflow.expand_dims
+tensorflow.matmul
+tensorflow.squeeze
+tensorflow.nn.softmax
+
+
+['Case19', 'seq2seq_with_attention.txt']
+forward:
+tensorflow.expand_dims
+tensorflow.matmul
+tensorflow.squeeze
+tensorflow.concat
+tensorflow.convert_to_tensor
+tensorflow.transpose
+
+
+['Case19', 'seq2seq_with_attention.txt']
+inference:
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.argmax
+tensorflow.concat
+
+
+['Case19', 'seq2seq_with_attention.txt']
+forward:
+tensorflow.convert_to_tensor
+tensorflow.transpose
+tensorflow.convert_to_tensor
+tensorflow.reshape
+tensorflow.reshape
+
+
+['Case21', 'feature.txt']
+encode_listwise_features:
+tensorflow.python.feature_column.feature_column_lib.is_feature_column_v2
+tensorflow.compat.v2.feature_column.make_parse_example_spec
+tensorflow.compat.v1.feature_column.make_parse_example_spec
+tensorflow.shape
+tensorflow.shape
+tensorflow.compat.v1.logging.warn
+
+
+['Case21', 'feature.txt']
+encode_pointwise_features:
+tensorflow.expand_dims
+
+
+['Case21', 'head.txt']
+_get_train_op:
+tensorflow.compat.v1.train.get_global_step
+
+
+['Case21', 'head.txt']
+create_loss:
+tensorflow.convert_to_tensor
+tensorflow.cast
+tensorflow.cast
+
+
+['Case21', 'head.txt']
+_labels_and_logits_metrics:
+tensorflow.greater_equal
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.boolean_mask
+tensorflow.compat.v1.metrics.mean
+
+
+['Case21', 'head.txt']
+create_estimator_spec:
+tensorflow.convert_to_tensor
+tensorflow.compat.v1.name_scope
+tensorflow.estimator.export.RegressionOutput
+tensorflow.estimator.export.RegressionOutput
+tensorflow.estimator.export.PredictOutput
+tensorflow.estimator.EstimatorSpec
+tensorflow.add_n
+tensorflow.add
+tensorflow.estimator.EstimatorSpec
+tensorflow.estimator.EstimatorSpec
+
+
+['Case21', 'head.txt']
+_merge_predict_export_outputs:
+tensorflow.estimator.export.PredictOutput
+
+
+['Case21', 'head.txt']
+_merge_loss:
+tensorflow.compat.v1.name_scope
+tensorflow.math.multiply
+tensorflow.math.add_n
+tensorflow.math.add_n
+
+
+['Case21', 'head.txt']
+create_estimator_spec:
+tensorflow.compat.v1.name_scope
+tensorflow.estimator.EstimatorSpec
+tensorflow.estimator.EstimatorSpec
+tensorflow.estimator.EstimatorSpec
+
+
+['Case21', 'metrics.txt']
+compute_mean:
+tensorflow.reduce_sum
+tensorflow.reduce_sum
+tensorflow.compat.v1.div_no_nan
+
+
+['Case21', 'metrics.txt']
+_get_weights:
+tensorflow.convert_to_tensor
+
+
+['Case21', 'metrics.txt']
+mean_reciprocal_rank:
+tensorflow.compat.v1.name_scope
+tensorflow.compat.v1.metrics.mean
+
+
+['Case21', 'metrics.txt']
+average_relevance_position:
+tensorflow.compat.v1.name_scope
+tensorflow.compat.v1.metrics.mean
+
+
+['Case21', 'metrics.txt']
+precision:
+tensorflow.compat.v1.name_scope
+tensorflow.compat.v1.metrics.mean
+
+
+['Case21', 'metrics.txt']
+recall:
+tensorflow.compat.v1.name_scope
+tensorflow.compat.v1.metrics.mean
+
+
+['Case21', 'metrics.txt']
+mean_average_precision:
+tensorflow.compat.v1.name_scope
+tensorflow.compat.v1.metrics.mean
+
+
+['Case21', 'metrics.txt']
+precision_ia:
+tensorflow.compat.v1.name_scope
+tensorflow.compat.v1.metrics.mean
+
+
+['Case21', 'metrics.txt']
+normalized_discounted_cumulative_gain:
+tensorflow.compat.v1.name_scope
+tensorflow.compat.v1.metrics.mean
+
+
+['Case21', 'metrics.txt']
+discounted_cumulative_gain:
+tensorflow.compat.v1.name_scope
+tensorflow.compat.v1.metrics.mean
+
+
+['Case21', 'metrics.txt']
+alpha_discounted_cumulative_gain:
+tensorflow.compat.v1.name_scope
+tensorflow.compat.v1.metrics.mean
+
+
+['Case21', 'metrics.txt']
+ordered_pair_accuracy:
+tensorflow.compat.v1.name_scope
+tensorflow.compat.v1.metrics.mean
+
+
+['Case21', 'metrics.txt']
+binary_preference:
+tensorflow.compat.v1.name_scope
+tensorflow.compat.v1.metrics.mean
+
+
+['Case14', 'yamnet.txt']
+_conv_layer:
+tensorflow.keras.layers.Conv2D
+tensorflow.keras.layers.Conv2D.__call__
+tensorflow.keras.layers.ReLU
+tensorflow.keras.layers.ReLU.__call__
+
+
+['Case14', 'yamnet.txt']
+_separable_conv_layer:
+tensorflow.keras.layers.DepthwiseConv2D
+tensorflow.keras.layers.DepthwiseConv2D.__call__
+tensorflow.keras.layers.ReLU
+tensorflow.keras.layers.ReLU.__call__
+tensorflow.keras.layers.Conv2D
+tensorflow.keras.layers.Conv2D.__call__
+tensorflow.keras.layers.ReLU
+tensorflow.keras.layers.ReLU.__call__
+
+
+['Case14', 'yamnet.txt']
+yamnet:
+tensorflow.keras.layers.Reshape
+tensorflow.keras.layers.Reshape.__call__
+tensorflow.keras.layers.GlobalAveragePooling2D
+tensorflow.keras.layers.GlobalAveragePooling2D.__call__
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense.__call__
+tensorflow.keras.layers.Activation
+tensorflow.keras.layers.Activation.__call__
+
+
+['Case14', 'yamnet.txt']
+yamnet_frames_model:
+tensorflow.keras.layers.Input
+tensorflow.keras.Model
+
+
+['Case14', 'yamnet.txt']
+class_names:
+tensorflow.is_tensor
+
+
+['Case14', 'deep_speech.txt']
+compute_length_after_conv:
+tensorflow.multiply
+tensorflow.cast
+tensorflow.cast
+tensorflow.math.floordiv
+tensorflow.cast
+
+
+['Case14', 'deep_speech.txt']
+model_fn:
+tensorflow.argmax
+tensorflow.estimator.EstimatorSpec
+tensorflow.shape
+tensorflow.shape
+tensorflow.keras.backend.ctc_batch_cost
+tensorflow.reduce_mean
+tensorflow.compat.v1.train.AdamOptimizer
+tensorflow.compat.v1.train.get_or_create_global_step
+tensorflow.compat.v1.train.AdamOptimizer.minimize
+tensorflow.compat.v1.get_collection
+tensorflow.group
+tensorflow.estimator.EstimatorSpec
+
+
+['Case14', 'deep_speech.txt']
+run_deep_speech:
+tensorflow.compat.v1.set_random_seed
+tensorflow.estimator.RunConfig
+tensorflow.estimator.Estimator
+tensorflow.estimator.Estimator.train
+
+
+['Case14', 'shake_shake.txt']
+_shake_shake_skip_connection:
+tensorflow.nn.avg_pool
+tensorflow.pad
+tensorflow.nn.avg_pool
+tensorflow.concat
+
+
+['Case14', 'shake_shake.txt']
+_shake_shake_branch:
+tensorflow.nn.relu
+tensorflow.nn.relu
+tensorflow.stop_gradient
+
+
+['Case14', 'shake_shake.txt']
+_shake_shake_block:
+tensorflow.shape
+tensorflow.random_uniform
+tensorflow.random_uniform
+tensorflow.add_n
+tensorflow.add_n
+tensorflow.variable_scope
+tensorflow.add_n
+
+
+['Case14', 'shake_shake.txt']
+_shake_shake_layer:
+tensorflow.variable_scope
+
+
+['Case14', 'shake_shake.txt']
+build_shake_shake_model:
+tensorflow.variable_scope
+tensorflow.variable_scope
+tensorflow.variable_scope
+tensorflow.nn.relu
+
+
+['Case26', 'pretrain.txt']
+train_map_fn:
+tensorflow.io.read_file
+tensorflow.image.decode_jpeg
+tensorflow.image.convert_image_dtype
+tensorflow.py_function
+tensorflow.image.random_brightness
+tensorflow.image.random_contrast
+tensorflow.clip_by_value
+
+
+['Case26', 'pretrain.txt']
+val_map_fn:
+tensorflow.io.read_file
+tensorflow.image.decode_jpeg
+tensorflow.image.convert_image_dtype
+tensorflow.py_function
+
+
+['Case26', 'pretrain.txt']
+one_step:
+tensorflow.math.in_top_k
+tensorflow.where
+tensorflow.reduce_sum
+tensorflow.math.in_top_k
+tensorflow.where
+tensorflow.reduce_sum
+
+
+['Case26', 'common.txt']
+load_graph:
+tensorflow.GraphDef
+tensorflow.GraphDef.ParseFromString
+tensorflow.Graph
+tensorflow.Graph.as_default
+tensorflow.import_graph_def
+
+
+['Case26', 'common.txt']
+tf_repeat:
+tensorflow.expand_dims
+tensorflow.tile
+tensorflow.shape
+tensorflow.reshape
+
+
+['Case26', 'common.txt']
+resize_NCHW:
+tensorflow.transpose
+tensorflow.image.resize
+tensorflow.transpose
+
+
+['Case26', 'common.txt']
+NCHW_to_NHWC:
+tensorflow.transpose
+
+
+['Case26', 'common.txt']
+NHWC_to_NCHW:
+tensorflow.transpose
+
+
+['Case26', 'common.txt']
+to_tensor_dict:
+tensorflow.convert_to_tensor
+
+
+['Case26', 'train.txt']
+_map_fn:
+tensorflow.io.read_file
+tensorflow.image.decode_jpeg
+tensorflow.image.convert_image_dtype
+tensorflow.py_function
+tensorflow.image.random_brightness
+tensorflow.image.random_contrast
+tensorflow.clip_by_value
+
+
+['Case26', 'train.txt']
+_dmadapt_map_fn:
+tensorflow.py_function
+
+
+['Case27', 'adversarial_regularization.txt']
+adv_model_fn:
+tensorflow.compat.v1.get_variable_scope
+tensorflow.compat.v1.variable_scope
+tensorflow.compat.v1.summary.scalar
+tensorflow.compat.v1.summary.scalar
+tensorflow.compat.v1.train.AdagradOptimizer
+tensorflow.compat.v1.train.get_global_step
+tensorflow.compat.v1.train.AdagradOptimizer.minimize
+tensorflow.compat.v1.get_collection
+tensorflow.group
+
+
+['Case27', 'cnn.txt']
+get_encoding_and_params:
+tensorflow.variable_scope
+tensorflow.variable_scope
+tensorflow.variable_scope
+tensorflow.variable_scope
+tensorflow.get_default_graph
+tensorflow.get_name_scope
+tensorflow.get_collection
+
+
+['Case27', 'cnn.txt']
+get_predictions_and_params:
+tensorflow.variable_scope
+tensorflow.truncated_normal_initializer
+tensorflow.get_variable
+tensorflow.zeros
+tensorflow.get_variable
+tensorflow.matmul
+tensorflow.add
+tensorflow.get_default_graph
+tensorflow.get_name_scope
+tensorflow.get_collection
+
+
+['Case27', 'cnn.txt']
+get_loss:
+tensorflow.name_scope
+tensorflow.nn.sigmoid_cross_entropy_with_logits
+tensorflow.reduce_sum
+tensorflow.losses.softmax_cross_entropy
+tensorflow.nn.l2_loss
+
+
+['Case27', 'cnn.txt']
+normalize_predictions:
+tensorflow.nn.sigmoid
+tensorflow.nn.softmax
+
+
+['Case27', 'gnn.txt']
+_make_ragged:
+tensorflow.RaggedTensor.from_row_lengths
+
+
+['Case27', 'gnn.txt']
+call:
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.reshape
+tensorflow.cumsum
+tensorflow.nest.map_structure
+
+
+['Case27', 'gnn.txt']
+call:
+tensorflow.split
+tensorflow.math.reduce_sum
+
+
+['Case27', 'gnn.txt']
+graph_call:
+tensorflow.reshape
+tensorflow.math.divide_no_nan
+tensorflow.math.reduce_mean
+
+
+['Case27', 'gnn.txt']
+__init__:
+tensorflow.feature_column.numeric_column
+tensorflow.keras.layers.DenseFeatures
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dropout
+tensorflow.keras.layers.Dense
+tensorflow.keras.Sequential
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dense
+tensorflow.keras.layers.Dropout
+tensorflow.keras.layers.Dense
+tensorflow.keras.Sequential
+
+
+['Case23', 'max_unpooling_2d_v2.txt']
+_max_unpooling_2d_v2:
+tensorflow.cast
+tensorflow.shape
+tensorflow.ones_like
+tensorflow.concat
+tensorflow.range
+tensorflow.reshape
+tensorflow.range
+tensorflow.size
+tensorflow.stack
+tensorflow.reshape
+tensorflow.transpose
+tensorflow.reshape
+tensorflow.scatter_nd
+
+
+['Case23', 'color_ops.txt']
+_scale_channel:
+tensorflow.cast
+tensorflow.histogram_fixed_width
+tensorflow.boolean_mask
+tensorflow.reduce_sum
+tensorflow.cumsum
+tensorflow.clip_by_value
+tensorflow.gather
+tensorflow.cast
+
+
+['Case23', 'color_ops.txt']
+_equalize_image:
+tensorflow.stack
+
+
+['Case23', 'color_ops.txt']
+equalize:
+tensorflow.name_scope
+tensorflow.rank
+tensorflow.map_fn
+
+
+['Case23', 'color_ops.txt']
+_sharpness_image:
+tensorflow.cast
+tensorflow.constant
+tensorflow.tile
+tensorflow.nn.depthwise_conv2d
+tensorflow.cast
+tensorflow.ones_like
+tensorflow.pad
+tensorflow.pad
+tensorflow.equal
+tensorflow.where
+tensorflow.cast
+
+
+['Case23', 'color_ops.txt']
+sharpness:
+tensorflow.name_scope
+tensorflow.rank
+
+
+['Case23', 'sparsemax.txt']
+_swap_axis:
+tensorflow.range
+tensorflow.range
+tensorflow.concat
+tensorflow.transpose
+
+
+['Case23', 'sparsemax.txt']
+_compute_2d_sparsemax:
+tensorflow.shape
+tensorflow.math.reduce_prod
+tensorflow.reshape
+tensorflow.nn.top_k
+tensorflow.math.cumsum
+tensorflow.cast
+tensorflow.range
+tensorflow.cast
+tensorflow.math.reduce_sum
+tensorflow.math.maximum
+tensorflow.range
+tensorflow.reshape
+tensorflow.stack
+tensorflow.gather_nd
+tensorflow.cast
+tensorflow.cast
+tensorflow.expand_dims
+tensorflow.math.maximum
+tensorflow.math.equal
+tensorflow.math.is_nan
+tensorflow.math.logical_or
+tensorflow.expand_dims
+tensorflow.cast
+tensorflow.fill
+tensorflow.where
+tensorflow.reshape
+
+
+['Case23', 'sparsemax_loss.txt']
+sparsemax_loss:
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor
+tensorflow.math.is_nan
+tensorflow.math.logical_or
+tensorflow.zeros_like
+tensorflow.where
+tensorflow.math.equal
+tensorflow.math.is_inf
+tensorflow.math.logical_and
+tensorflow.zeros_like
+tensorflow.where
+tensorflow.math.reduce_sum
+
+

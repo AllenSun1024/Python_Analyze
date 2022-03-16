@@ -32,8 +32,8 @@ def scan_two_sets(source, target):
                     method_counter_2 += 1
             targetDict[str(path)] = text
     counter = 0
-    valid = set()
-    inValid = set()
+    validData = []
+    validPath = []
     for keyS, valueS in sourceDict.items():
         dataS = []
         for i, item in enumerate(valueS):
@@ -82,17 +82,17 @@ def scan_two_sets(source, target):
                     for dT in dataT:
                         if dS == dT:
                             counter += 1
-                            valid.add(dS)
-                for dT in dataT:
-                    if dT not in valid:
-                        inValid.add(dT)
+                            validPath.append(pathS)
+                            validData.append(dS)
     print("Num of Methods: {}".format(method_counter_2))
     print("Equal: {}".format(counter))
-    with open('/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/temp/errorMethods.txt', 'a+') as errorMethod:
-        for item in inValid:
-            errorMethod.write(item)
-            errorMethod.write('\n')
-        errorMethod.close()
+    with open("/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/temp/valid.txt", "a+") as f:
+        for i, item in enumerate(validData):
+            f.write(str(validPath[i]))
+            f.write('\n')
+            f.write(str(validData[i]))
+            f.write('\n\n')
+        f.close()
 
 
 def main():
