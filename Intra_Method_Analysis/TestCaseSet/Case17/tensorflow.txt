@@ -101,7 +101,8 @@ tensorflow.keras.layers.Dense
 LinearRegression/forward:
 
 LinearRegression/loss:
-tensorflow.keras.losses.MeanSquareError
+tensorflow.keras.losses.MeanSquaredError
+tensorflow.keras.losses.MeanSquaredError
 
 LinearRegression/configure_optimizers:
 tensorflow.keras.optimizers.SGD
@@ -128,6 +129,7 @@ Classifier/validation_step:
 Classifier/accuracy:
 
 Classifier/loss:
+tensorflow.keras.losses.SparseCategoricalCrossentropy
 tensorflow.keras.losses.SparseCategoricalCrossentropy
 
 Classifier/layer_summary:

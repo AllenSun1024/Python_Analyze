@@ -114,6 +114,17 @@ class FuncDefExtractor(ast.NodeVisitor):
         else:
             pass
 
+    # def visit_With(self, node):
+    #     if self.isInFunc:
+    #         for item in node.items:  # item -> ast.withitem
+    #             if isinstance(item.context_expr, ast.Call):
+    #                 pass
+    #             else:
+    #                 continue
+    #         self.generic_visit(node)
+    #     else:
+    #         pass
+
     def report(self):
         with open(self.resultPath, 'w') as f:
             for i in range(len(self.funcStats["name"])):  # 一个源文件中可能定义多个函数
