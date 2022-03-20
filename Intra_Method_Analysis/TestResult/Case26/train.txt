@@ -35,9 +35,12 @@ tensorflow.train.CheckpointManager.save 315 315
 
 optimize_step:
 tensorflow.GradientTape 221 221
+tensorflow.GradientTape.gradient 226 226
 
 optimize_step_dmadapt:
 tensorflow.GradientTape 232 232
+tensorflow.GradientTape.gradient 252 252
+tensorflow.GradientTape.gradient 256 256
 
 parallel_train:
 tensorflow.Variable 392 392
@@ -57,7 +60,10 @@ tensorflow.train.CheckpointManager.save 578 578
 
 optimize_step:
 tensorflow.GradientTape 466 466
+tensorflow.GradientTape.gradient 471 471
 
 optimize_step_dmadapt:
 tensorflow.GradientTape 477 477
+tensorflow.GradientTape.gradient 497 497
+tensorflow.GradientTape.gradient 501 501
 

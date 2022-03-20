@@ -18,12 +18,15 @@ tensorflow.optimizers.Adam 79 79
 tensorflow.optimizers.Adam 80 80
 tensorflow.optimizers.Adam 81 81
 tensorflow.GradientTape 96 96
+tensorflow.GradientTape.gradient 99 99
 tensorflow.optimizers.Adam.apply_gradients 100 100
 tensorflow.GradientTape 113 113
 tensorflow.ones_like 119 119
 tensorflow.zeros_like 120 120
 tensorflow.ones_like 122 122
+tensorflow.GradientTape.gradient 126 126
 tensorflow.optimizers.Adam.apply_gradients 127 127
+tensorflow.GradientTape.gradient 128 128
 tensorflow.optimizers.Adam.apply_gradients 129 129
 tensorflow.Variable.assign 136 136
 

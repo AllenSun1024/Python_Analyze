@@ -68,6 +68,7 @@ prepare_batch:
 
 fit_epoch:
 tensorflow.GradientTape 293 293
+tensorflow.GradientTape.gradient 295 295
 
 clip_gradients:
 tensorflow.constant 309 309
@@ -404,6 +405,7 @@ tensorflow.keras.losses.MeanSquaredError 1260 1260
 tensorflow.GradientTape 1266 1266
 tensorflow.keras.Sequential 1267 1267
 tensorflow.keras.losses.MeanSquaredError 1268 1268
+tensorflow.GradientTape.gradient 1270 1270
 tensorflow.data.experimental.cardinality 1276 1276
 tensorflow.data.experimental.numpy 1276 1276
 
@@ -425,11 +427,13 @@ tensorflow.zeros 1338 1338
 tensorflow.GradientTape 1341 1341
 tensorflow.squeeze 1345 1345
 tensorflow.squeeze 1346 1346
+tensorflow.GradientTape.gradient 1347 1347
 
 update_G:
 tensorflow.ones 1356 1356
 tensorflow.GradientTape 1357 1357
 tensorflow.squeeze 1363 1363
+tensorflow.GradientTape.gradient 1364 1364
 
 load_array:
 tensorflow.data.Dataset.from_tensor_slices 1375 1375
@@ -554,6 +558,7 @@ tensorflow.constant 1836 1836
 tensorflow.reshape 1836 1837
 tensorflow.concat 1838 1838
 tensorflow.GradientTape 1839 1839
+tensorflow.GradientTape.gradient 1842 1842
 tensorflow.keras.optimizers.Adam.apply_gradients 1844 1844
 tensorflow.reduce_sum 1845 1845
 tensorflow.numpy 1845 1845

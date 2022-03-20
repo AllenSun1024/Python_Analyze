@@ -1,6 +1,7 @@
 import ast
 from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.get_nodeNames import get_Call_Name
-from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.get_funcArgs import parse_function_arguments
+from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.get_funcArgs import \
+    parse_function_arguments
 
 
 class FuncDefExtractor(ast.NodeVisitor):
@@ -22,6 +23,7 @@ class FuncDefExtractor(ast.NodeVisitor):
         self.isInFunc = False  # True: current syntax node is AST.FunctionDef
         self.script = script
         self.resultPath = resultPath
+        self.withExprVars = {}
 
     def visit_FunctionDef(self, node):
         """
@@ -65,8 +67,6 @@ class FuncDefExtractor(ast.NodeVisitor):
                 self.end_lines.append(node.end_lineno)
             else:
                 pass
-        else:
-            pass
 
     def visit_Lambda(self, node):
         """
@@ -86,20 +86,34 @@ class FuncDefExtractor(ast.NodeVisitor):
                     if isinstance(target, ast.Name):
                         nodeName = get_Call_Name(node.value, '')
                         if nodeName is not None:
-                            self.check_table.append([target.id, nodeName[:-1], target.lineno])  # target.id是nodeName的别名
-                            self.variables.append(
-                                [target.lineno, target.end_lineno, target.col_offset, target.end_col_offset, target.id,
-                                 nodeName])
+                            withName = None
+                            for key, value in self.withExprVars.items():
+                                temp = nodeName.split('.')
+                                if key == temp[0]:
+                                    withName = (value + '.')
+                                    for i in range(1, len(temp) - 1):
+                                        withName += (temp[i] + '.')
+                                    break
+                            if withName is None:
+                                self.check_table.append(
+                                    [target.id, nodeName[:-1], target.lineno])  # target.id是nodeName的别名
+                                self.variables.append(
+                                    [target.lineno, target.end_lineno, target.col_offset, target.end_col_offset,
+                                     target.id,
+                                     nodeName])
+                            else:
+                                # deal with ast.With
+                                self.APIs.append(withName[:-1])
+                                self.lines.append(target.lineno)
+                                self.end_lines.append(target.end_lineno)
                         else:
                             continue
                     elif isinstance(target, ast.Tuple):
-                        # print('Tuple:', target.lineno, target.end_lineno)
                         continue
                     else:
                         continue
                 elif isinstance(node.value, ast.BinOp):
                     if isinstance(node.value.left, ast.Call) or isinstance(node.value.right, ast.Call):
-                        # print('BinOp:', target.lineno, target.end_lineno)
                         continue
                     else:
                         continue
@@ -111,19 +125,20 @@ class FuncDefExtractor(ast.NodeVisitor):
     def visit_Return(self, node):
         if self.isInFunc:
             self.generic_visit(node)
+
+    def visit_With(self, node):
+        if self.isInFunc:
+            for item in node.items:  # item -> ast.withitem
+                if isinstance(item.context_expr, ast.Call):
+                    if isinstance(item.optional_vars, ast.Name):
+                        callName = get_Call_Name(item.context_expr, '')[:-1]
+                        varName = get_Call_Name(item.optional_vars, '')[:-1]
+                        self.withExprVars[varName] = callName
+                else:
+                    continue
+            self.generic_visit(node)
         else:
             pass
-
-    # def visit_With(self, node):
-    #     if self.isInFunc:
-    #         for item in node.items:  # item -> ast.withitem
-    #             if isinstance(item.context_expr, ast.Call):
-    #                 pass
-    #             else:
-    #                 continue
-    #         self.generic_visit(node)
-    #     else:
-    #         pass
 
     def report(self):
         with open(self.resultPath, 'w') as f:
