@@ -1,8 +1,10 @@
 assign_to_gpu:
+tensorflow.NodeDef
 
 _assign:
 
 average_grads_and_vars:
+tensorflow.IndexedSlices
 
 average_dense:
 

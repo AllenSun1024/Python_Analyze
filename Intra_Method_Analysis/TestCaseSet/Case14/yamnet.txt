@@ -35,6 +35,7 @@ tensorflow.keras.layers.Activation
 tensorflow.keras.layers.Activation.__call__
 
 yamnet_frames_model:
+tensorflow.float32
 tensorflow.keras.layers.Input
 tensorflow.keras.Model
 

@@ -1,7 +1,9 @@
 train_map_fn:
 tensorflow.io.read_file
 tensorflow.image.decode_jpeg
+tensorflow.float32
 tensorflow.image.convert_image_dtype
+tensorflow.float32
 tensorflow.py_function
 tensorflow.image.random_brightness
 tensorflow.image.random_contrast
@@ -10,7 +12,9 @@ tensorflow.clip_by_value
 val_map_fn:
 tensorflow.io.read_file
 tensorflow.image.decode_jpeg
+tensorflow.float32
 tensorflow.image.convert_image_dtype
+tensorflow.float32
 tensorflow.py_function
 
 single_pretrain:

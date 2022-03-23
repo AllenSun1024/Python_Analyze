@@ -393,6 +393,7 @@ tensorflow.zeros 1227 1227
 tensorflow.Variable 1227 1227
 tensorflow.GradientTape 1237 1237
 tensorflow.math.reduce_mean 1238 1238
+tensorflow.GradientTape.gradient 1240 1240
 tensorflow.data.experimental.cardinality 1246 1246
 tensorflow.data.experimental.numpy 1246 1246
 

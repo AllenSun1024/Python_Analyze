@@ -7,6 +7,10 @@ write_vocabulary_file:
 tensorflow.io.gfile.GFile
 
 TextEmbeddingModel/__init__:
+tensorflow.string
+tensorflow.lookup.TextFileIndex.WHOLE_LINE
+tensorflow.int64
+tensorflow.lookup.TextFileIndex.LINE_NUMBER
 tensorflow.lookup.TextFileInitializer
 tensorflow.lookup.StaticVocabularyTable
 tensorflow.Variable

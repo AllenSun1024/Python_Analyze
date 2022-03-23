@@ -1,4 +1,5 @@
 get_train_data:
+tensorflow.float32
 tensorflow.data.Dataset.from_generator
 tensorflow.data.Dataset.map
 tensorflow.data.Dataset.shuffle

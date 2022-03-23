@@ -5,6 +5,7 @@ tensorflow.io.gfile.GFile 77 77
 
 write_vocabulary_file:
 tensorflow.io.gfile.GFile 99 99
+tensorflow.io.gfile.GFile.write 101 101
 
 __init__:
 tensorflow.lookup.TextFileInitializer 125 128

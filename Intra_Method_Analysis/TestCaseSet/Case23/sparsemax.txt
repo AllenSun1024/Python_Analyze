@@ -19,6 +19,7 @@ tensorflow.nn.top_k
 tensorflow.math.cumsum
 tensorflow.cast
 tensorflow.range
+tensorflow.int32
 tensorflow.cast
 tensorflow.math.reduce_sum
 tensorflow.math.maximum

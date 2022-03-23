@@ -2,6 +2,7 @@ Decoder_Attention/score:
 tensorflow.expand_dims
 tensorflow.tile
 tensorflow.concat
+tensorflow.float32
 tensorflow.cast
 tensorflow.tensordot
 tensorflow.nn.tanh

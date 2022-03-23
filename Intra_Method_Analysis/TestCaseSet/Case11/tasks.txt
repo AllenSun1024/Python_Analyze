@@ -10,11 +10,13 @@ lambada_get_task_info:
 
 lambada_input:
 tensorflow.data.Dataset.from_tensor_slices
+tensorflow.data.AUTOTUNE
 tensorflow.data.Dataset.map
 tensorflow.data.Dataset.batch
 tensorflow.data.Dataset.repeat
 
 _get_output:
+tensorflow.int32
 tensorflow.cast
 tensorflow.range
 tensorflow.gather
@@ -23,6 +25,8 @@ tensorflow.math.equal
 tensorflow.constant
 tensorflow.where
 tensorflow.reshape
+tensorflow.int32
 tensorflow.cast
 tensorflow.reshape
+tensorflow.int32
 tensorflow.cast

@@ -23,7 +23,8 @@ class FuncDefExtractor(ast.NodeVisitor):
         self.isInFunc = False  # True: current syntax node is AST.FunctionDef
         self.script = script
         self.resultPath = resultPath
-        self.withExprVars = {}
+        self.withExprVars = {}  # ast.With
+        self.withHandled = []  # distinguish With in Call and Assign, cause Call could be in Assign
 
     def visit_FunctionDef(self, node):
         """
@@ -31,6 +32,7 @@ class FuncDefExtractor(ast.NodeVisitor):
         我们做的是函数内解析，所以这算是解析入口
         """
         self.isInFunc = True
+        # self.generic_visit(node)
         funcAsserted = []
         funcNormal = []
         for entity in node.body:
@@ -38,8 +40,10 @@ class FuncDefExtractor(ast.NodeVisitor):
                 funcAsserted.append(entity)
             else:
                 funcNormal.append(entity)
+
         for func in funcNormal:
             self.visit(func)  # visit node's children who are not FunctionDef
+
         self.funcStats["APIs"].append(self.APIs)
         self.APIs = []
         self.funcStats["lineNo"].append(self.lines)
@@ -50,6 +54,9 @@ class FuncDefExtractor(ast.NodeVisitor):
         self.variables = []
         self.funcStats["check_table"].append(self.check_table)
         self.check_table = []
+
+        self.withExprVars = {}
+        self.withHandled = []
         self.funcStats["name"].append(node.name)
         args = parse_function_arguments(node)  # 解析获取函数的参数信息
         self.funcStats["args"].append(args)
@@ -62,9 +69,32 @@ class FuncDefExtractor(ast.NodeVisitor):
             self.generic_visit(node)
             name = get_Call_Name(node, '')
             if name != '' and name is not None:
-                self.APIs.append(name[:-1])
-                self.lines.append(node.lineno)
-                self.end_lines.append(node.end_lineno)
+                withName = None
+                for key, value in self.withExprVars.items():
+                    temp = name.split('.')
+                    if key == temp[0]:
+                        withName = (value + '.')
+                        for i in range(1, len(temp) - 1):
+                            withName += (temp[i] + '.')
+                        break
+                if withName is None:
+                    self.APIs.append(name[:-1])
+                    self.lines.append(node.lineno)
+                    self.end_lines.append(node.end_lineno)
+                else:
+                    if (node.lineno, node.end_lineno, withName[:-1]) in self.withHandled:
+                        pass
+                    else:
+                        self.APIs.append(withName[:-1])
+                        self.lines.append(node.lineno)
+                        self.end_lines.append(node.end_lineno)
+                        self.withHandled.append((node.lineno, node.end_lineno, withName[:-1]))
+
+                # extract name of Constant here
+                if hasattr(node, "args") and node.args != []:
+                    for item in node.args:
+                        if isinstance(item, ast.Constant):
+                            print(item.value)
             else:
                 pass
 
@@ -103,9 +133,13 @@ class FuncDefExtractor(ast.NodeVisitor):
                                      nodeName])
                             else:
                                 # deal with ast.With
-                                self.APIs.append(withName[:-1])
-                                self.lines.append(target.lineno)
-                                self.end_lines.append(target.end_lineno)
+                                if (target.lineno, target.end_lineno, withName[:-1]) in self.withHandled:
+                                    pass
+                                else:
+                                    self.APIs.append(withName[:-1])
+                                    self.lines.append(target.lineno)
+                                    self.end_lines.append(target.end_lineno)
+                                    self.withHandled.append((target.lineno, target.end_lineno, withName[:-1]))
                         else:
                             continue
                     elif isinstance(target, ast.Tuple):

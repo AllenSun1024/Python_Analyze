@@ -58,6 +58,8 @@ tensorflow.gfile.Exists 209 209
 tensorflow.gfile.MakeDirs 210 210
 tensorflow.Session 213 213
 tensorflow.initialize_all_variables 214 214
+tensorflow.Session.run 214 214
+tensorflow.Session.run 217 217
 tensorflow.train.Saver.save 220 221
 
 avg_checkpoints:
@@ -77,6 +79,8 @@ tensorflow.all_variables 253 253
 tensorflow.train.Saver 253 253
 tensorflow.Session 256 256
 tensorflow.initialize_all_variables 257 257
+tensorflow.Session.run 257 257
+tensorflow.Session.run 260 260
 tensorflow.train.Saver.save 262 263
 
 get_assignment_map_from_checkpoint:

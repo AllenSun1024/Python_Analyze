@@ -17,9 +17,11 @@ tensorflow.stack
 tensorflow.tile
 tensorflow.range
 tensorflow.ones
+tensorflow.float32
 tensorflow.cast
 tensorflow.concat
 tensorflow.linalg.diag
+tensorflow.int64
 tensorflow.cast
 tensorflow.reshape
 tensorflow.SparseTensor

@@ -1,4 +1,5 @@
 contrastive_loss:
+tensorflow.float32
 tensorflow.cast
 tensorflow.abs
 tensorflow.minimum

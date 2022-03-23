@@ -2,6 +2,7 @@ _get_output_shapes:
 tensorflow.nest.map_structure
 
 get_dataset_size:
+tensorflow.int64
 tensorflow.constant
 
 _reduce_func:
@@ -38,15 +39,18 @@ tensorflow.get_logger
 tensorflow.compat.v1.logging.info
 
 _get_bucket_id:
+tensorflow.int32
 tensorflow.constant
 tensorflow.reduce_max
 
 _key_func:
 tensorflow.reduce_max
+tensorflow.int64
 tensorflow.cast
 
 _window_size_func:
 tensorflow.maximum
+tensorflow.int64
 tensorflow.cast
 
 _group_by_window:

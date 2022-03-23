@@ -16,7 +16,9 @@ AverageEmbedding/forward:
 tensorflow.nn.embedding_lookup
 tensorflow.not_equal
 tensorflow.expand_dims
+tensorflow.float32
 tensorflow.cast
 tensorflow.reduce_sum
+tensorflow.float32
 tensorflow.math.count_nonzero
 tensorflow.divide

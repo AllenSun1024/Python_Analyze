@@ -2,6 +2,8 @@ RNN/build:
 tensorflow.name_scope
 
 RNN/forward:
+tensorflow.Tensor
+tensorflow.Tensor
 tensorflow.convert_to_tensor
 tensorflow.gather
 tensorflow.convert_to_tensor
@@ -42,26 +44,33 @@ tensorflow.abs
 tensorflow.reduce_max
 tensorflow.sign
 tensorflow.reduce_sum
+tensorflow.int32
 tensorflow.cast
 
 retrieve_seq_length_op2:
 tensorflow.zeros_like
 tensorflow.greater
+tensorflow.int32
 tensorflow.cast
 tensorflow.reduce_sum
 
 retrieve_seq_length_op3:
 tensorflow.not_equal
 tensorflow.reduce_any
+tensorflow.int32
 tensorflow.cast
 tensorflow.reduce_sum
 tensorflow.not_equal
+tensorflow.int32
 tensorflow.cast
 tensorflow.reduce_sum
 
 target_mask_op:
+tensorflow.Tensor
 tensorflow.not_equal
 tensorflow.reduce_any
+tensorflow.int32
 tensorflow.cast
 tensorflow.not_equal
+tensorflow.int32
 tensorflow.cast

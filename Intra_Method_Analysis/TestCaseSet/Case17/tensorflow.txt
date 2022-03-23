@@ -215,6 +215,7 @@ tensorflow.keras.layers.Dropout
 
 DotProductAttention/call:
 tensorflow.matmul
+tensorflow.float32
 tensorflow.cast
 tensorflow.math.sqrt
 tensorflow.matmul
@@ -322,10 +323,13 @@ tensorflow.keras.optimizers.SGD
 tensorflow.keras.losses.SparseCategoricalCrossentropy
 
 grad_clipping:
+tensorflow.float32
 tensorflow.constant
+tensorflow.IndexedSlices
 tensorflow.convert_to_tensor
 tensorflow.reduce_sum
 tensorflow.math.sqrt
+tensorflow.float32
 tensorflow.cast
 tensorflow.greater
 
@@ -336,6 +340,7 @@ tensorflow.keras.layers.StackedRNNCells
 tensorflow.keras.layers.RNN
 
 MaskedSoftmaxCELoss/call:
+tensorflow.float32
 tensorflow.ones_like
 tensorflow.one_hot
 tensorflow.keras.losses.CategoricalCrossentropy
@@ -355,7 +360,9 @@ tensorflow.numpy
 tensorflow.reduce_sum
 
 sequence_mask:
+tensorflow.float32
 tensorflow.range
+tensorflow.float32
 tensorflow.cast
 tensorflow.expand_dims
 tensorflow.where

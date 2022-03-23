@@ -3,7 +3,9 @@ tensorflow.compat.v1.train.get_global_step
 
 _RankingHead/create_loss:
 tensorflow.convert_to_tensor
+tensorflow.float32
 tensorflow.cast
+tensorflow.float32
 tensorflow.cast
 
 _RankingHead/_labels_and_logits_metrics:
