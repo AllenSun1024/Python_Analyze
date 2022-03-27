@@ -1,6 +1,8 @@
 import ast
 
-print(ast.dump(ast.parse('tf.py_function(data_aug, [image], [tf.float32])[0]', mode='eval'), indent=4))
+# print(ast.dump(ast.parse('tf.py_function(data_aug, [image], [tf.float32])[0]', mode='eval'), indent=4))
+
+print(ast.dump(ast.parse("tf.layers.dense(summary,d_model,activation=tf.tanh,kernel_initializer=initializer, name='summary')", mode="eval"), indent=4))
 
 # Elementwise(tf.add)([n, nn])
 

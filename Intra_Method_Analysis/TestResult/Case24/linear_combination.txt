@@ -1,6 +1,8 @@
 __init__:
+tensorflow.float32 98 98
 tensorflow.constant 98 98
 tensorflow.constant 99 99
+tensorflow.float32 100 100
 tensorflow.constant 100 100
 tensorflow.zeros_like 106 106
 tensorflow.not_equal 105 106
@@ -20,8 +22,10 @@ tensorflow.cond 124 125
 tensorflow.expand_dims 126 126
 tensorflow.tile 126 126
 tensorflow.identity 129 129
+tensorflow.float32 133 133
 tensorflow.zeros 132 133
 tensorflow.stack 134 134
+tensorflow.int32 138 138
 tensorflow.eye 138 138
 tensorflow.gather 137 138
 tensorflow.transpose 139 139

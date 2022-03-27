@@ -6,6 +6,8 @@ build:
 tensorflow.name_scope 183 183
 
 forward:
+tensorflow.Tensor 222 222
+tensorflow.Tensor 237 237
 tensorflow.convert_to_tensor 297 297
 tensorflow.gather 298 298
 tensorflow.convert_to_tensor 303 303
@@ -50,27 +52,34 @@ tensorflow.abs 1119 1119
 tensorflow.reduce_max 1119 1119
 tensorflow.sign 1119 1119
 tensorflow.reduce_sum 1120 1120
+tensorflow.int32 1122 1122
 tensorflow.cast 1122 1122
 
 retrieve_seq_length_op2:
 tensorflow.zeros_like 1145 1145
 tensorflow.greater 1145 1145
+tensorflow.int32 1145 1145
 tensorflow.cast 1145 1145
 tensorflow.reduce_sum 1145 1145
 
 retrieve_seq_length_op3:
 tensorflow.not_equal 1194 1194
 tensorflow.reduce_any 1194 1194
+tensorflow.int32 1194 1194
 tensorflow.cast 1194 1194
 tensorflow.reduce_sum 1193 1196
 tensorflow.not_equal 1198 1198
+tensorflow.int32 1198 1198
 tensorflow.cast 1198 1198
 tensorflow.reduce_sum 1198 1198
 
 target_mask_op:
+tensorflow.Tensor 1251 1251
 tensorflow.not_equal 1255 1255
 tensorflow.reduce_any 1255 1255
+tensorflow.int32 1255 1255
 tensorflow.cast 1255 1255
 tensorflow.not_equal 1257 1257
+tensorflow.int32 1257 1257
 tensorflow.cast 1257 1257
 

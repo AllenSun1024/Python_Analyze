@@ -1,8 +1,10 @@
 assign_to_gpu:
 
 _assign:
+tensorflow.NodeDef 10 10
 
 average_grads_and_vars:
+tensorflow.IndexedSlices 45 45
 
 average_dense:
 
@@ -14,4 +16,7 @@ tensorflow.IndexedSlices 39 39
 load_from_checkpoint:
 tensorflow.get_default_session 59 59
 tensorflow.train.get_checkpoint_state 60 60
+tensorflow.train.get_checkpoint_state.model_checkpoint_path 62 62
+tensorflow.train.get_checkpoint_state.model_checkpoint_path 64 64
+tensorflow.train.get_checkpoint_state.model_checkpoint_path 67 67
 

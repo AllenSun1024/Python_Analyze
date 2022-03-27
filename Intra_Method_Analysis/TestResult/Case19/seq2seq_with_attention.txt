@@ -12,6 +12,7 @@ score:
 tensorflow.expand_dims 78 78
 tensorflow.tile 79 79
 tensorflow.concat 81 81
+tensorflow.float32 82 82
 tensorflow.cast 82 82
 tensorflow.tensordot 83 83
 tensorflow.nn.tanh 84 84

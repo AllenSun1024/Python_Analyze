@@ -55,3 +55,16 @@ def get_Call_Name(node, name):
     else:
         return None
 
+
+def get_Attribute_Name(node, name):
+    """
+    node is an Attribute Node in AST
+    """
+    name = '.' + node.attr + name
+    if isinstance(node.value, ast.Name):
+        name = node.value.id + name
+        return name
+    elif isinstance(node.value, ast.Attribute):
+        return get_Attribute_Name(node.value, name)
+    else:
+        pass

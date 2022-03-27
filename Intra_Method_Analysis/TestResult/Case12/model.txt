@@ -1,8 +1,16 @@
 get_G:
 tensorflow.random_normal_initializer 10 10
 tensorflow.random_normal_initializer 11 11
+tensorflow.nn.relu 14 14
+tensorflow.nn.relu 20 20
+tensorflow.add 23 23
+tensorflow.add 28 28
+tensorflow.nn.relu 32 32
+tensorflow.nn.relu 35 35
+tensorflow.nn.tanh 37 37
 
 get_D:
 tensorflow.random_normal_initializer 42 42
 tensorflow.random_normal_initializer 43 43
+tensorflow.add 71 71
 

@@ -29,6 +29,7 @@ split:
 tensorflow.name_scope 232 232
 tensorflow.convert_to_tensor 233 233
 tensorflow.shape 237 237
+tensorflow.convert_to_tensor.dtype 237 237
 
 upsample:
 tensorflow.name_scope 267 267

@@ -2,30 +2,45 @@ _make_ragged:
 tensorflow.RaggedTensor.from_row_lengths 29 29
 
 pack_nodes_and_edges:
+tensorflow.int64 38 38
 tensorflow.ones 38 38
+tensorflow.int64 39 39
 tensorflow.zeros 39 39
+tensorflow.float32 40 40
 tensorflow.zeros 40 40
+tensorflow.int64 41 41
 tensorflow.zeros 41 41
+tensorflow.float32 42 42
 tensorflow.zeros 42 42
 tensorflow.squeeze 48 48
 tensorflow.nest.map_structure 52 53
 tensorflow.ragged.boolean_mask 54 54
+tensorflow.int64 60 60
 tensorflow.range 60 60
 tensorflow.RaggedTensor.from_row_splits 59 60
 tensorflow.concat 57 61
 tensorflow.reshape 65 65
 tensorflow.shape 67 67
+tensorflow.int64 67 67
 tensorflow.range 67 67
 tensorflow.gather 69 70
+tensorflow.float32 73 73
 tensorflow.zeros 73 73
+tensorflow.RaggedTensor 75 75
 
 make_cora_dataset:
+tensorflow.int64 96 96
 tensorflow.constant 95 96
+tensorflow.int64 94 94
 tensorflow.io.FixedLenFeature 93 96
+tensorflow.int64 98 98
 tensorflow.io.FixedLenFeature 98 98
+tensorflow.int64 107 107
 tensorflow.constant 107 107
+tensorflow.int64 106 106
 tensorflow.io.FixedLenFeature 104 107
 tensorflow.constant 110 111
+tensorflow.float32 109 109
 tensorflow.io.FixedLenFeature 108 111
 tensorflow.data.experimental.make_batched_features_dataset 112 119
 tensorflow.data.experimental.make_batched_features_dataset.map 120 122
@@ -50,6 +65,7 @@ tensorflow.math.reduce_sum 160 162
 __init__:
 
 __init__:
+tensorflow.math.unsorted_segment_sum 182 182
 
 graph_call:
 tensorflow.reshape 188 188
@@ -61,9 +77,12 @@ tensorflow.feature_column.numeric_column 216 216
 tensorflow.keras.layers.DenseFeatures 215 217
 tensorflow.keras.layers.Dense 219 219
 tensorflow.keras.layers.Dropout 222 222
+tensorflow.keras.activations.relu 224 224
 tensorflow.keras.layers.Dense 223 224
 tensorflow.keras.Sequential 221 225
+tensorflow.keras.activations.relu 228 228
 tensorflow.keras.layers.Dense 227 228
+tensorflow.keras.activations.relu 230 230
 tensorflow.keras.layers.Dense 229 230
 tensorflow.keras.layers.Dropout 232 232
 tensorflow.keras.layers.Dense 233 233

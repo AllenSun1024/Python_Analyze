@@ -3,7 +3,9 @@ _data_aug:
 train_map_fn:
 tensorflow.io.read_file 21 21
 tensorflow.image.decode_jpeg 22 22
+tensorflow.float32 23 23
 tensorflow.image.convert_image_dtype 23 23
+tensorflow.float32 24 24
 tensorflow.py_function 24 24
 tensorflow.image.random_brightness 26 26
 tensorflow.image.random_contrast 27 27
@@ -12,7 +14,9 @@ tensorflow.clip_by_value 28 28
 val_map_fn:
 tensorflow.io.read_file 33 33
 tensorflow.image.decode_jpeg 34 34
+tensorflow.float32 35 35
 tensorflow.image.convert_image_dtype 35 35
+tensorflow.float32 36 36
 tensorflow.py_function 36 36
 
 single_pretrain:
@@ -21,6 +25,7 @@ tensorflow.Variable 63 63
 tensorflow.keras.optimizers.Adam 64 64
 tensorflow.train.Checkpoint 65 65
 tensorflow.train.CheckpointManager 66 66
+tensorflow.train.CheckpointManager.latest_checkpoint 72 72
 tensorflow.group.restore 72 72
 tensorflow.Variable.numpy 114 114
 tensorflow.Variable.numpy 114 114

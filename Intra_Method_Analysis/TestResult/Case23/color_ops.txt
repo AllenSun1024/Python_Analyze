@@ -1,4 +1,5 @@
 _scale_channel:
+tensorflow.int32 33 33
 tensorflow.cast 33 33
 tensorflow.histogram_fixed_width 36 36
 tensorflow.boolean_mask 39 39
@@ -17,7 +18,9 @@ tensorflow.rank 80 80
 tensorflow.map_fn 83 83
 
 _sharpness_image:
+tensorflow.float32 92 92
 tensorflow.cast 92 92
+tensorflow.float32 97 97
 tensorflow.constant 96 98
 tensorflow.tile 101 101
 tensorflow.nn.depthwise_conv2d 104 106

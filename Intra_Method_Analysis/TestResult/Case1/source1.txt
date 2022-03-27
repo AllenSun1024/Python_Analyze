@@ -1,4 +1,5 @@
 main:
+tensorflow.float32 13 13
 tensorflow.convert_to_tensor 13 13
 tensorflow.equal 14 14
 keras.backend.cast 14 14

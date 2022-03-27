@@ -1,5 +1,5 @@
 import ast
-from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.get_nodeNames import get_Call_Name
+from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.get_nodeNames import get_Call_Name, get_Attribute_Name
 from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.get_funcArgs import \
     parse_function_arguments
 
@@ -67,6 +67,42 @@ class FuncDefExtractor(ast.NodeVisitor):
     def visit_Call(self, node):
         if self.isInFunc:
             self.generic_visit(node)
+
+            # extract name of Constant here
+            if hasattr(node, "args") and node.args != []:
+                for item in node.args:
+                    if isinstance(item, ast.Attribute):
+                        itemName = get_Attribute_Name(item, '')
+                        if itemName is not None:
+                            self.APIs.append(itemName)
+                            self.lines.append(item.lineno)
+                            self.end_lines.append(item.end_lineno)
+                    elif isinstance(item, ast.List):
+                        for elt in item.elts:
+                            if isinstance(elt, ast.Attribute):
+                                eltName = get_Attribute_Name(elt, '')
+                                if eltName is not None:
+                                    self.APIs.append(eltName)
+                                    self.lines.append(elt.lineno)
+                                    self.end_lines.append(elt.end_lineno)
+
+            if hasattr(node, "keywords") and node.keywords != []:
+                for keyword in node.keywords:
+                    if isinstance(keyword.value, ast.Attribute):
+                        keywordName = get_Attribute_Name(keyword.value, '')
+                        if keywordName is not None:
+                            self.APIs.append(keywordName)
+                            self.lines.append(keyword.value.lineno)
+                            self.end_lines.append(keyword.value.end_lineno)
+                    elif isinstance(keyword.value, ast.List):
+                        for elt in keyword.value.elts:
+                            if isinstance(elt, ast.Attribute):
+                                eltName = get_Attribute_Name(elt, '')
+                                if eltName is not None:
+                                    self.APIs.append(eltName)
+                                    self.lines.append(elt.lineno)
+                                    self.end_lines.append(elt.end_lineno)
+
             name = get_Call_Name(node, '')
             if name != '' and name is not None:
                 withName = None
@@ -90,11 +126,6 @@ class FuncDefExtractor(ast.NodeVisitor):
                         self.end_lines.append(node.end_lineno)
                         self.withHandled.append((node.lineno, node.end_lineno, withName[:-1]))
 
-                # extract name of Constant here
-                if hasattr(node, "args") and node.args != []:
-                    for item in node.args:
-                        if isinstance(item, ast.Constant):
-                            print(item.value)
             else:
                 pass
 

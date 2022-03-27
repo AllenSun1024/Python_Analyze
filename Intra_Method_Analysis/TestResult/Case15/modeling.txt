@@ -128,10 +128,12 @@ tensorflow.layers.dropout 537 537
 tensorflow.get_variable 542 543
 tensorflow.get_variable 546 547
 tensorflow.get_variable 549 550
+tensorflow.int32 553 553
 tensorflow.zeros 553 553
 tensorflow.concat 554 554
 tensorflow.equal 558 558
 tensorflow.logical_not 558 558
+tensorflow.int32 559 559
 tensorflow.cast 557 559
 tensorflow.one_hot 560 560
 tensorflow.layers.dropout 568 568
@@ -156,6 +158,7 @@ tensorflow.reduce_mean 705 705
 tensorflow.shape 707 707
 tensorflow.get_variable 709 711
 tensorflow.tile 712 712
+tensorflow.tanh 729 729
 tensorflow.layers.dense 726 731
 tensorflow.layers.dropout 734 736
 

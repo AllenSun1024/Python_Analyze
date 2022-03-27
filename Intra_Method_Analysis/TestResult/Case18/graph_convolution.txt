@@ -2,10 +2,15 @@ feature_steered_convolution_layer:
 tensorflow.compat.v1.variable_scope 87 89
 tensorflow.convert_to_tensor 92 92
 tensorflow.compat.dimension_value 94 94
+tensorflow.convert_to_tensor.dtype 102 102
 tensorflow.compat.v1.get_variable 100 104
+tensorflow.convert_to_tensor.dtype 110 110
 tensorflow.compat.v1.get_variable 108 112
+tensorflow.convert_to_tensor.dtype 115 115
 tensorflow.compat.v1.get_variable 113 117
+tensorflow.convert_to_tensor.dtype 120 120
 tensorflow.compat.v1.get_variable 118 122
+tensorflow.convert_to_tensor.dtype 125 125
 tensorflow.compat.v1.get_variable 123 127
 
 __init__:

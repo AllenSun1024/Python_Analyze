@@ -5,6 +5,7 @@ tensorflow.ConfigProto 27 27
 tensorflow.logging.info 33 33
 tensorflow.logging.info 36 36
 tensorflow.contrib.distribute.MirroredStrategy 38 39
+tensorflow.contrib.distribute.MirroredStrategy.num_replicas_in_sync 41 41
 tensorflow.logging.info 40 41
 tensorflow.contrib.tpu.TPUConfig 48 51
 tensorflow.contrib.tpu.RunConfig 44 56
@@ -24,7 +25,9 @@ tensorflow.logging.info 90 91
 
 get_train_op:
 tensorflow.train.get_or_create_global_step 96 96
+tensorflow.float32 100 100
 tensorflow.cast 100 100
+tensorflow.float32 101 101
 tensorflow.cast 101 101
 tensorflow.train.polynomial_decay 108 112
 tensorflow.train.cosine_decay 114 118
@@ -47,10 +50,12 @@ tensorflow.logging.info 191 191
 tensorflow.contrib.framework.load_checkpoint 192 192
 tensorflow.contrib.framework.load_checkpoint.get_tensor 194 194
 tensorflow.get_variable_scope 198 198
+tensorflow.AUTO_REUSE 198 198
 tensorflow.variable_scope 198 198
 tensorflow.get_variable 200 200
 tensorflow.placeholder 203 203
 tensorflow.assign 204 204
+tensorflow.int64 206 206
 tensorflow.Variable 205 206
 tensorflow.all_variables 207 207
 tensorflow.train.Saver 207 207
@@ -70,10 +75,12 @@ tensorflow.contrib.framework.load_checkpoint 235 235
 tensorflow.contrib.framework.load_checkpoint.get_tensor 237 237
 tensorflow.logging.info 240 240
 tensorflow.get_variable_scope 244 244
+tensorflow.AUTO_REUSE 244 244
 tensorflow.variable_scope 244 244
 tensorflow.get_variable 246 246
 tensorflow.placeholder 249 249
 tensorflow.assign 250 250
+tensorflow.int64 252 252
 tensorflow.Variable 251 252
 tensorflow.all_variables 253 253
 tensorflow.train.Saver 253 253
@@ -90,8 +97,10 @@ __init__:
 
 apply_gradients:
 tensorflow.zeros_initializer 332 332
+tensorflow.float32 330 330
 tensorflow.get_variable 327 332
 tensorflow.zeros_initializer 338 338
+tensorflow.float32 336 336
 tensorflow.get_variable 333 338
 tensorflow.multiply 342 342
 tensorflow.multiply 342 342

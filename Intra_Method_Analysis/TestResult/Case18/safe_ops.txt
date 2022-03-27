@@ -8,7 +8,10 @@ tensorflow.where 45 45
 safe_cospx_div_cosx:
 tensorflow.name_scope 79 79
 tensorflow.convert_to_tensor 80 80
+tensorflow.convert_to_tensor.dtype 81 81
 tensorflow.convert_to_tensor 81 81
+tensorflow.convert_to_tensor.dtype 83 83
+tensorflow.convert_to_tensor.dtype 84 84
 tensorflow.convert_to_tensor 84 84
 tensorflow.clip_by_value 89 89
 tensorflow.cos 92 92
@@ -17,18 +20,25 @@ tensorflow.cos 92 92
 safe_shrink:
 tensorflow.name_scope 141 141
 tensorflow.convert_to_tensor 142 142
+tensorflow.convert_to_tensor.dtype 144 144
+tensorflow.convert_to_tensor.dtype 145 145
 tensorflow.convert_to_tensor 145 145
 
 safe_signed_div:
 tensorflow.name_scope 184 184
 tensorflow.convert_to_tensor 185 185
 tensorflow.convert_to_tensor 186 186
+tensorflow.convert_to_tensor.dtype 188 188
+tensorflow.convert_to_tensor.dtype 189 189
 tensorflow.convert_to_tensor 189 189
 
 safe_sinpx_div_sinx:
 tensorflow.name_scope 225 225
 tensorflow.convert_to_tensor 226 226
+tensorflow.convert_to_tensor.dtype 227 227
 tensorflow.convert_to_tensor 227 227
+tensorflow.convert_to_tensor.dtype 229 229
+tensorflow.convert_to_tensor.dtype 230 230
 tensorflow.convert_to_tensor 230 230
 tensorflow.clip_by_value 235 235
 tensorflow.sin 238 238
@@ -38,5 +48,7 @@ safe_unsigned_div:
 tensorflow.name_scope 267 267
 tensorflow.convert_to_tensor 268 268
 tensorflow.convert_to_tensor 269 269
+tensorflow.convert_to_tensor.dtype 271 271
+tensorflow.convert_to_tensor.dtype 272 272
 tensorflow.convert_to_tensor 272 272
 

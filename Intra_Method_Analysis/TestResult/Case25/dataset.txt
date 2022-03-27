@@ -6,6 +6,7 @@ _get_output_shapes:
 tensorflow.nest.map_structure 88 88
 
 get_dataset_size:
+tensorflow.int64 118 118
 tensorflow.constant 118 118
 
 _reduce_func:
@@ -58,17 +59,20 @@ batch_dataset:
 batch_sequence_dataset:
 
 _get_bucket_id:
+tensorflow.int32 423 423
 tensorflow.constant 423 423
 tensorflow.reduce_max 432 432
 
 _key_func:
 tensorflow.reduce_max 446 451
+tensorflow.int64 452 452
 tensorflow.cast 452 452
 
 _reduce_func:
 
 _window_size_func:
 tensorflow.maximum 464 464
+tensorflow.int64 464 464
 tensorflow.cast 464 464
 
 _group_by_window:

@@ -3,6 +3,9 @@ make_identity_transform_fn:
 _transform_fn:
 
 _is_sequence_column_v2:
+tensorflow.python.feature_column.feature_column_lib.SequenceCategoricalColumn 67 67
+tensorflow.python.feature_column.feature_column_lib.SequenceNumericColumn 69 69
+tensorflow.python.feature_column.feature_column_lib.SequenceCategoricalColumn 73 73
 
 encode_features:
 tensorflow.python.feature_column.feature_column_lib.is_feature_column_v2 106 106

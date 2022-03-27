@@ -1,6 +1,7 @@
 main:
 tensorflow.random.uniform 9 9
 keras.backend.sum 13 13
+tensorflow.float32 14 14
 tensorflow.convert_to_tensor 14 14
 keras.backend.stack 16 16
 keras.backend.reshape 17 17

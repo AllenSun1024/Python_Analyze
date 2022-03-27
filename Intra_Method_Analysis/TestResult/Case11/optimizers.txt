@@ -5,7 +5,9 @@ tensorflow.compat.v1.train.get_or_create_global_step 18 18
 tensorflow.compat.v1.constant 20 20
 tensorflow.compat.v1.train.polynomial_decay 35 41
 tensorflow.compat.v1.train.cosine_decay 43 48
+tensorflow.compat.v1.int32 51 51
 tensorflow.compat.v1.cast 51 51
+tensorflow.compat.v1.int32 52 52
 tensorflow.compat.v1.constant 52 52
 tensorflow.compat.v1.cast 56 56
 tensorflow.compat.v1.cast 57 57
