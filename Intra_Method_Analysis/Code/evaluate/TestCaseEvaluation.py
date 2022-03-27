@@ -90,7 +90,11 @@ def scan_two_sets(source, target):
         pathsEncountered = set()
         for p in validPath:
             pathsEncountered.add((p[0] + '  ' + p[1]))
-        for item in pathsEncountered:
+        temp = []
+        for p in pathsEncountered:
+            temp.append(p)
+        temp.sort()
+        for item in temp:
             f.write(item)
             f.write('\n')
         f.close()
