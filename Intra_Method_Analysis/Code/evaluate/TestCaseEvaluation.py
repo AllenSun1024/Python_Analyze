@@ -86,14 +86,14 @@ def scan_two_sets(source, target):
                             validData.append(dS)
     print("Num of Methods: {}".format(method_counter_2))
     print("Equal: {}".format(counter))
-    # with open("/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/temp/paths.txt", "a+") as f:
-    #     pathsEncountered = set()
-    #     for p in validPath:
-    #         pathsEncountered.add((p[0] + p[1]))
-    #     for item in pathsEncountered:
-    #         f.write(item)
-    #         f.write('\n')
-    #     f.close()
+    with open("/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/temp/paths.txt", "a+") as f:
+        pathsEncountered = set()
+        for p in validPath:
+            pathsEncountered.add((p[0] + '  ' + p[1]))
+        for item in pathsEncountered:
+            f.write(item)
+            f.write('\n')
+        f.close()
 
 
 def main():
