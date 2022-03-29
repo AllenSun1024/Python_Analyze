@@ -41,17 +41,13 @@ tensorflow.keras.losses.BinaryCrossentropy 69 69
 tensorflow.zeros 70 70
 tensorflow.keras.Sequential 70 70
 tensorflow.keras.losses.BinaryCrossentropy 70 70
-tensorflow.keras.Sequential.trainable_weights 73 73
 tensorflow.GradientTape.gradient 73 73
-tensorflow.keras.Sequential.trainable_weights 75 75
 tensorflow.keras.optimizers.Adam.apply_gradients 74 76
 tensorflow.GradientTape 79 79
 tensorflow.keras.Sequential 80 80
 tensorflow.keras.Sequential 81 81
 tensorflow.ones 82 82
 tensorflow.keras.losses.BinaryCrossentropy 82 82
-tensorflow.keras.Sequential.trainable_weights 84 84
 tensorflow.GradientTape.gradient 84 84
-tensorflow.keras.Sequential.trainable_weights 86 86
 tensorflow.keras.optimizers.Adam.apply_gradients 85 87
 

@@ -1,5 +1,4 @@
 get_train_data:
-tensorflow.float32 64 64
 tensorflow.data.Dataset.from_generator 64 64
 tensorflow.data.Dataset.map 65 65
 tensorflow.data.Dataset.shuffle 67 67

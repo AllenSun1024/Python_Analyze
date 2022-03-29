@@ -8,11 +8,7 @@ tensorflow.io.gfile.GFile 99 99
 tensorflow.io.gfile.GFile.write 101 101
 
 __init__:
-tensorflow.string 127 127
-tensorflow.lookup.TextFileIndex.WHOLE_LINE 127 127
-tensorflow.int64 128 128
-tensorflow.lookup.TextFileIndex.LINE_NUMBER 128 128
-tensorflow.lookup.TextFileInitializer 125 128
+tensorflow.lookup.TextFileInitializer$tensorflow.string$tensorflow.lookup.TextFileIndex.WHOLE_LINE$tensorflow.int64$tensorflow.lookup.TextFileIndex.LINE_NUMBER 125 128
 tensorflow.lookup.StaticVocabularyTable 129 130
 tensorflow.Variable 138 138
 
@@ -24,7 +20,6 @@ tensorflow.strings.to_sparse 149 149
 tensorflow.constant 152 152
 tensorflow.sparse.fill_empty_rows 152 152
 tensorflow.sparse.reset_shape 154 154
-tensorflow.strings.to_sparse.values 155 155
 
 __call__:
 tensorflow.SparseTensor 165 165

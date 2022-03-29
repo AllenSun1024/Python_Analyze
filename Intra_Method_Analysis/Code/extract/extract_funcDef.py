@@ -68,40 +68,55 @@ class FuncDefExtractor(ast.NodeVisitor):
         if self.isInFunc:
             self.generic_visit(node)
 
+            constantParaNames = []  # e.g., [tf.float32, a=tf.int32, b=tf.int32`,`tf.float32]
+
             # extract name of Constant here
             if hasattr(node, "args") and node.args != []:
                 for item in node.args:
                     if isinstance(item, ast.Attribute):
                         itemName = get_Attribute_Name(item, '')
                         if itemName is not None:
-                            self.APIs.append(itemName)
-                            self.lines.append(item.lineno)
-                            self.end_lines.append(item.end_lineno)
-                    elif isinstance(item, ast.List):
+                            constantParaNames.append(itemName)
+                            # self.APIs.append(itemName)
+                            # self.lines.append(item.lineno)
+                            # self.end_lines.append(item.end_lineno)
+                    elif isinstance(item, ast.List) or isinstance(item, ast.Tuple):  # TODO: deal with differences between elt.ctx = Store and elt.ctx = Load
                         for elt in item.elts:
                             if isinstance(elt, ast.Attribute):
                                 eltName = get_Attribute_Name(elt, '')
                                 if eltName is not None:
-                                    self.APIs.append(eltName)
-                                    self.lines.append(elt.lineno)
-                                    self.end_lines.append(elt.end_lineno)
+                                    constantParaNames.append(eltName)
+                                    # self.APIs.append(eltName)
+                                    # self.lines.append(elt.lineno)
+                                    # self.end_lines.append(elt.end_lineno)
 
             if hasattr(node, "keywords") and node.keywords != []:
                 for keyword in node.keywords:
                     if isinstance(keyword.value, ast.Attribute):
                         keywordName = get_Attribute_Name(keyword.value, '')
-                        if keywordName is not None:
-                            self.APIs.append(keywordName)
-                            self.lines.append(keyword.value.lineno)
-                            self.end_lines.append(keyword.value.end_lineno)
+                        if keywordName is not None and (hasattr(keyword, "arg") and keyword.arg is not None):
+                            argEqualValue = keyword.arg + '=' + keywordName
+                            constantParaNames.append(argEqualValue)
+                            # self.APIs.append(keywordName)
+                            # self.lines.append(keyword.value.lineno)
+                            # self.end_lines.append(keyword.value.end_lineno)
                     elif isinstance(keyword.value, ast.List):
-                        for elt in keyword.value.elts:
-                            if isinstance(elt, ast.Attribute):
-                                eltName = get_Attribute_Name(elt, '')
-                                if eltName is not None:
-                                    self.APIs.append(eltName)
-                                    self.lines.append(elt.lineno)
-                                    self.end_lines.append(elt.end_lineno)
+                        if hasattr(keyword, "arg") and keyword.arg is not None:
+                            eltNames = []
+                            for elt in keyword.value.elts:
+                                if isinstance(elt, ast.Attribute):
+                                    eltName = get_Attribute_Name(elt, '')
+                                    if eltName is not None:
+                                        eltNames.append(eltName)
+                                        # self.APIs.append(eltName)
+                                        # self.lines.append(elt.lineno)
+                                        # self.end_lines.append(elt.end_lineno)
+                            if eltNames:
+                                argEqualValue = keyword.arg + '='
+                                for i in range(len(eltNames) - 1):
+                                    argEqualValue += (eltNames[i] + ',')
+                                argEqualValue += eltNames[len(eltNames) - 1]
+                                constantParaNames.append(argEqualValue)
 
             name = get_Call_Name(node, '')
             if name != '' and name is not None:
@@ -114,14 +129,24 @@ class FuncDefExtractor(ast.NodeVisitor):
                             withName += (temp[i] + '.')
                         break
                 if withName is None:
-                    self.APIs.append(name[:-1])
+                    finalName = name[:-1]
+                    if constantParaNames:
+                        for i in range(len(constantParaNames)):
+                            finalName += ('$' + constantParaNames[i])
+                    # self.APIs.append(name[:-1])
+                    self.APIs.append(finalName)
                     self.lines.append(node.lineno)
                     self.end_lines.append(node.end_lineno)
                 else:
                     if (node.lineno, node.end_lineno, withName[:-1]) in self.withHandled:
                         pass
                     else:
-                        self.APIs.append(withName[:-1])
+                        finalName = withName[:-1]
+                        if constantParaNames:
+                            for i in range(len(constantParaNames)):
+                                finalName += ('$' + constantParaNames[i])
+                        # self.APIs.append(withName[:-1])
+                        self.APIs.append(finalName)
                         self.lines.append(node.lineno)
                         self.end_lines.append(node.end_lineno)
                         self.withHandled.append((node.lineno, node.end_lineno, withName[:-1]))

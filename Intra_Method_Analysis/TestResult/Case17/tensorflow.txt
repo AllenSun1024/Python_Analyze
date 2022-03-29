@@ -71,9 +71,7 @@ tensorflow.GradientTape 293 293
 tensorflow.GradientTape.gradient 295 295
 
 clip_gradients:
-tensorflow.float32 309 309
 tensorflow.constant 309 309
-tensorflow.IndexedSlices 311 311
 tensorflow.convert_to_tensor 310 310
 tensorflow.reduce_sum 312 312
 tensorflow.math.sqrt 312 312
@@ -288,7 +286,6 @@ show_heatmaps:
 
 masked_softmax:
 tensorflow.nn.softmax 917 917
-tensorflow.repeat.shape 920 920
 tensorflow.repeat 921 921
 tensorflow.reshape 924 924
 tensorflow.reshape 927 927
@@ -313,7 +310,6 @@ tensorflow.keras.layers.Dropout 966 966
 
 call:
 tensorflow.matmul 975 975
-tensorflow.float32 976 976
 tensorflow.cast 976 976
 tensorflow.math.sqrt 975 976
 tensorflow.matmul 978 978
@@ -367,7 +363,6 @@ __init__:
 tensorflow.keras.layers.Embedding 1129 1129
 
 call:
-tensorflow.float32 1141 1141
 tensorflow.cast 1141 1141
 tensorflow.math.sqrt 1140 1141
 
@@ -448,11 +443,9 @@ tensorflow.data.Dataset.batch 1378 1378
 
 synthetic_data:
 tensorflow.zeros 1385 1385
-tensorflow.zeros.shape 1386 1386
 tensorflow.random.normal 1386 1386
 tensorflow.reshape 1387 1387
 tensorflow.matmul 1387 1387
-tensorflow.reshape.shape 1388 1388
 tensorflow.random.normal 1388 1388
 tensorflow.reshape 1389 1389
 
@@ -517,14 +510,11 @@ tokenize:
 evaluate_loss:
 
 grad_clipping:
-tensorflow.float32 1657 1657
 tensorflow.constant 1657 1657
-tensorflow.IndexedSlices 1660 1660
 tensorflow.convert_to_tensor 1661 1661
 tensorflow.reduce_sum 1664 1664
 tensorflow.numpy 1664 1664
 tensorflow.math.sqrt 1664 1665
-tensorflow.float32 1666 1666
 tensorflow.cast 1666 1666
 tensorflow.greater 1667 1667
 
@@ -557,7 +547,6 @@ call:
 __init__:
 
 call:
-tensorflow.float32 1816 1816
 tensorflow.ones_like 1816 1816
 tensorflow.one_hot 1818 1818
 tensorflow.keras.losses.CategoricalCrossentropy 1819 1820
@@ -577,9 +566,7 @@ tensorflow.numpy 1845 1845
 tensorflow.reduce_sum 1846 1846
 
 sequence_mask:
-tensorflow.float32 1857 1857
 tensorflow.range 1857 1857
-tensorflow.float32 1858 1858
 tensorflow.cast 1858 1858
 tensorflow.expand_dims 1861 1861
 tensorflow.where 1861 1861

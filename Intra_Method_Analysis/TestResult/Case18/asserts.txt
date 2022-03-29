@@ -8,7 +8,6 @@ tensorflow.identity 60 60
 assert_all_above:
 tensorflow.name_scope 90 90
 tensorflow.convert_to_tensor 91 91
-tensorflow.convert_to_tensor.dtype 92 92
 tensorflow.convert_to_tensor 92 92
 tensorflow.debugging.assert_greater 95 95
 tensorflow.debugging.assert_greater_equal 97 97
@@ -18,7 +17,6 @@ tensorflow.identity 99 99
 assert_all_below:
 tensorflow.name_scope 129 129
 tensorflow.convert_to_tensor 130 130
-tensorflow.convert_to_tensor.dtype 131 131
 tensorflow.convert_to_tensor 131 131
 tensorflow.debugging.assert_less 134 134
 tensorflow.debugging.assert_less_equal 136 136
@@ -28,9 +26,7 @@ tensorflow.identity 138 138
 assert_all_in_range:
 tensorflow.name_scope 175 175
 tensorflow.convert_to_tensor 176 176
-tensorflow.convert_to_tensor.dtype 177 177
 tensorflow.convert_to_tensor 177 177
-tensorflow.convert_to_tensor.dtype 178 178
 tensorflow.convert_to_tensor 178 178
 tensorflow.debugging.assert_less 181 181
 tensorflow.debugging.assert_greater 182 182
@@ -42,8 +38,6 @@ tensorflow.identity 187 187
 assert_nonzero_norm:
 tensorflow.name_scope 221 221
 tensorflow.convert_to_tensor 222 222
-tensorflow.convert_to_tensor.dtype 224 224
-tensorflow.convert_to_tensor.dtype 225 225
 tensorflow.convert_to_tensor 225 225
 tensorflow.norm 227 227
 tensorflow.debugging.assert_greater 228 228
@@ -53,11 +47,8 @@ tensorflow.identity 229 229
 assert_normalized:
 tensorflow.name_scope 261 261
 tensorflow.convert_to_tensor 262 262
-tensorflow.convert_to_tensor.dtype 264 264
-tensorflow.convert_to_tensor.dtype 265 265
 tensorflow.convert_to_tensor 265 265
 tensorflow.norm 267 267
-tensorflow.norm.dtype 268 268
 tensorflow.constant 268 268
 tensorflow.debugging.assert_near 270 270
 tensorflow.control_dependencies 269 270
@@ -67,10 +58,8 @@ assert_at_least_k_non_zero_entries:
 tensorflow.name_scope 301 301
 tensorflow.convert_to_tensor 302 302
 tensorflow.math.greater 304 304
-tensorflow.convert_to_tensor.dtype 304 304
 tensorflow.cast 304 304
 tensorflow.reduce_sum 305 305
-tensorflow.convert_to_tensor.dtype 307 307
 tensorflow.cast 307 307
 tensorflow.debugging.assert_greater_equal 306 307
 tensorflow.control_dependencies 308 308

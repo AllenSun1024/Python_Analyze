@@ -42,7 +42,6 @@ tensorflow.reshape 377 377
 tensorflow.reshape 378 378
 tensorflow.shape 380 380
 tensorflow.reshape 379 380
-tensorflow.float32 386 386
 tensorflow.map_fn 383 386
 tensorflow.einsum 389 389
 
@@ -62,7 +61,6 @@ tensorflow.reshape 446 446
 tensorflow.reshape 447 447
 tensorflow.shape 449 449
 tensorflow.reshape 448 449
-tensorflow.float32 455 455
 tensorflow.map_fn 452 455
 tensorflow.einsum 458 458
 

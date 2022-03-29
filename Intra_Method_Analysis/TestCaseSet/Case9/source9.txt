@@ -11,7 +11,7 @@ tensorflow.data.Dataset.batch
 tensorflow.data.Dataset.from_tensor_slices
 tensorflow.data.Dataset.batch
 tensorflow.data.Dataset.zip
-tensorflow.keras.Input
+tensorflow.keras.layers.Input
 tensorflow.keras.layers.Conv2D
 tensorflow.keras.layers.TimeDistributed
 tensorflow.keras.layers.TimeDistributed.__call__

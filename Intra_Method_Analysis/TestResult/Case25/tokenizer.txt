@@ -17,37 +17,28 @@ detokenize:
 tensorflow.device 124 124
 
 _detokenize:
-tensorflow.RaggedTensor 128 128
 tensorflow.is_tensor 130 130
-tensorflow.RaggedTensor.shape 131 131
 tensorflow.RaggedTensor.from_tensor 139 139
 tensorflow.compat.as_text 146 146
 
 _tokenize_tensor:
-tensorflow.string 178 178
-tensorflow.py_function 178 178
+tensorflow.py_function$tensorflow.string 178 178
 tensorflow.py_function.set_shape 179 179
-tensorflow.py_function 182 184
+tensorflow.py_function$tensorflow.string$tensorflow.int32 182 184
 tensorflow.RaggedTensor.from_row_lengths 187 187
 
 _python_wrapper:
 tensorflow.compat.as_text 165 165
-tensorflow.string 167 167
 tensorflow.constant 167 167
 
 _python_wrapper_batch:
-tensorflow.compat.as_text 170 170
 tensorflow.nest.flatten 172 172
-tensorflow.string 172 172
 tensorflow.constant 172 172
-tensorflow.int32 173 173
 tensorflow.constant 173 173
 
 _detokenize_tensor:
-tensorflow.string 212 212
-tensorflow.py_function 212 212
+tensorflow.py_function$tensorflow.string 212 212
 tensorflow.py_function.set_shape 213 213
-tensorflow.string 216 216
 tensorflow.map_fn 216 216
 
 _python_wrapper:
@@ -66,11 +57,9 @@ tensorflow.io.gfile.GFile 281 281
 
 _process_stream_as_dataset:
 tensorflow.TensorShape 324 324
-tensorflow.string 323 323
 tensorflow.data.Dataset.from_generator 321 325
 tensorflow.data.Dataset.batch 326 326
 tensorflow.data.Dataset.map 327 327
-tensorflow.string 329 329
 tensorflow.TensorSpec 329 329
 tensorflow.data.Dataset.as_numpy_iterator 336 336
 
@@ -93,11 +82,9 @@ _tokenize_tensor:
 _detokenize_tensor:
 
 _tokenize_string:
-tensorflow.string 386 386
 tensorflow.constant 386 386
 
 _detokenize_string:
-tensorflow.string 390 390
 tensorflow.constant 390 390
 
 __init__:

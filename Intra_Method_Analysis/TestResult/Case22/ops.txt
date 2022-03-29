@@ -19,31 +19,24 @@ tensorflow.RaggedTensor.from_value_rowids 69 69
 tensorflow.RaggedTensor.row_lengths 70 70
 tensorflow.RaggedTensor.to_tensor 71 71
 tensorflow.argsort 72 72
-tensorflow.int64 72 72
-tensorflow.cast 72 72
+tensorflow.cast$tensorflow.int64 72 72
 tensorflow.RaggedTensor.row_starts 73 73
-tensorflow.int64 73 73
-tensorflow.cast 73 73
+tensorflow.cast$tensorflow.int64 73 73
 tensorflow.expand_dims 74 74
-tensorflow.float32 76 76
-tensorflow.cast 76 76
+tensorflow.cast$tensorflow.float32 76 76
 tensorflow.math.ceil 76 76
-tensorflow.int32 76 76
-tensorflow.cast 75 77
+tensorflow.cast$tensorflow.int32 75 77
 tensorflow.RaggedTensor.from_tensor 78 78
 
 indices_to_mask:
-tensorflow.int64 90 90
 tensorflow.convert_to_tensor 90 90
 tensorflow.expand_dims 93 93
 tensorflow.TensorShape 95 95
 tensorflow.expand_dims 97 97
 tensorflow.convert_to_tensor.shape.assert_has_rank 99 99
 tensorflow.shape 101 101
-tensorflow.int64 102 102
-tensorflow.cast 102 102
-tensorflow.int64 103 103
-tensorflow.cast 103 103
+tensorflow.cast$tensorflow.int64 102 102
+tensorflow.cast$tensorflow.int64 103 103
 tensorflow.ones 104 104
 tensorflow.scatter_nd 104 104
 

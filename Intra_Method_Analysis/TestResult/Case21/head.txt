@@ -15,9 +15,7 @@ name:
 
 create_loss:
 tensorflow.convert_to_tensor 197 197
-tensorflow.float32 200 200
 tensorflow.cast 200 200
-tensorflow.float32 202 202
 tensorflow.cast 202 202
 
 _labels_and_logits_metrics:
@@ -49,7 +47,6 @@ name:
 _check_logits_and_labels:
 
 _merge_predict_export_outputs:
-tensorflow.estimator.export.PredictOutput 387 387
 tensorflow.estimator.export.PredictOutput 391 391
 
 _merge_loss:

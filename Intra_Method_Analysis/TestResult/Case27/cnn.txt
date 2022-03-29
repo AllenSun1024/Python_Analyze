@@ -2,26 +2,20 @@ __init__:
 
 _construct_layers:
 tensorflow.variable_scope 89 89
-tensorflow.float32 94 94
 tensorflow.truncated_normal_initializer 93 94
-tensorflow.float32 95 95
 tensorflow.get_variable 90 95
 tensorflow.nn.conv2d 96 96
 tensorflow.constant_initializer 100 100
-tensorflow.float32 101 101
 tensorflow.get_variable 97 101
 tensorflow.nn.bias_add 102 102
 tensorflow.nn.relu 103 103
 tensorflow.nn.max_pool 106 107
 tensorflow.nn.lrn 109 110
 tensorflow.variable_scope 112 112
-tensorflow.float32 117 117
 tensorflow.truncated_normal_initializer 116 117
-tensorflow.float32 118 118
 tensorflow.get_variable 113 118
 tensorflow.nn.conv2d 119 119
 tensorflow.constant_initializer 123 123
-tensorflow.float32 124 124
 tensorflow.get_variable 120 124
 tensorflow.nn.bias_add 125 125
 tensorflow.nn.relu 126 126
@@ -31,22 +25,16 @@ tensorflow.variable_scope 136 136
 tensorflow.keras.layers.Flatten 138 138
 tensorflow.keras.layers.Flatten.__call__ 138 138
 tensorflow.keras.layers.Flatten.__call__.get_shape 139 139
-tensorflow.float32 144 144
 tensorflow.truncated_normal_initializer 143 144
-tensorflow.float32 145 145
 tensorflow.get_variable 140 145
 tensorflow.constant_initializer 149 149
-tensorflow.float32 150 150
 tensorflow.get_variable 147 150
 tensorflow.matmul 151 151
 tensorflow.nn.relu 151 151
 tensorflow.variable_scope 154 154
-tensorflow.float32 159 159
 tensorflow.truncated_normal_initializer 158 159
-tensorflow.float32 160 160
 tensorflow.get_variable 155 160
 tensorflow.constant_initializer 164 164
-tensorflow.float32 165 165
 tensorflow.get_variable 162 165
 tensorflow.matmul 166 166
 tensorflow.nn.relu 166 166
@@ -58,23 +46,19 @@ tensorflow.variable_scope 199 199
 tensorflow.variable_scope 203 203
 tensorflow.get_default_graph 209 209
 tensorflow.get_name_scope 209 209
-tensorflow.GraphKeys.GLOBAL_VARIABLES 208 208
-tensorflow.get_collection 207 209
+tensorflow.get_collection$tensorflow.GraphKeys.GLOBAL_VARIABLES 207 209
 
 get_predictions_and_params:
 tensorflow.variable_scope 239 239
-tensorflow.float32 249 249
 tensorflow.truncated_normal_initializer 248 249
 tensorflow.get_variable 245 249
-tensorflow.float32 252 252
 tensorflow.zeros 252 252
 tensorflow.get_variable 250 252
 tensorflow.matmul 254 254
 tensorflow.add 253 254
 tensorflow.get_default_graph 262 262
 tensorflow.get_name_scope 262 262
-tensorflow.GraphKeys.GLOBAL_VARIABLES 261 261
-tensorflow.get_collection 260 262
+tensorflow.get_collection$tensorflow.GraphKeys.GLOBAL_VARIABLES 260 262
 
 get_loss:
 tensorflow.name_scope 301 301

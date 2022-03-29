@@ -11,9 +11,7 @@ tensorflow.stop_gradient 63 64
 
 _shake_shake_block:
 tensorflow.shape 72 72
-tensorflow.float32 77 77
 tensorflow.random_uniform 76 77
-tensorflow.float32 82 82
 tensorflow.random_uniform 81 82
 tensorflow.add_n 86 86
 tensorflow.add_n 87 87

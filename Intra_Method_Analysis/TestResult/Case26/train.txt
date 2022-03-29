@@ -3,12 +3,8 @@ _data_aug_fn:
 _map_fn:
 tensorflow.io.read_file 57 57
 tensorflow.image.decode_jpeg 58 58
-tensorflow.float32 59 59
 tensorflow.image.convert_image_dtype 59 59
-tensorflow.float32 63 63
-tensorflow.float32 63 63
-tensorflow.string 63 63
-tensorflow.py_function 62 63
+tensorflow.py_function$tensorflow.float32$tensorflow.float32$tensorflow.string 62 63
 tensorflow.image.random_brightness 66 66
 tensorflow.image.random_contrast 67 67
 tensorflow.clip_by_value 68 68
@@ -18,8 +14,7 @@ get_paramed_map_fn:
 _dmadapt_data_aug_fn:
 
 _dmadapt_map_fn:
-tensorflow.float32 85 85
-tensorflow.py_function 85 85
+tensorflow.py_function$tensorflow.float32 85 85
 
 get_paramed_dmadapt_map_fn:
 
@@ -31,7 +26,6 @@ tensorflow.train.Checkpoint 161 161
 tensorflow.keras.optimizers.Adam 171 171
 tensorflow.train.Checkpoint 172 172
 tensorflow.train.CheckpointManager 184 184
-tensorflow.train.CheckpointManager.latest_checkpoint 187 187
 tensorflow.group.restore 187 187
 tensorflow.Variable.numpy 211 211
 tensorflow.Variable.numpy 212 212
@@ -56,7 +50,6 @@ tensorflow.train.Checkpoint 400 400
 tensorflow.keras.optimizers.Adam 410 410
 tensorflow.train.Checkpoint 411 411
 tensorflow.train.CheckpointManager 423 423
-tensorflow.train.CheckpointManager.latest_checkpoint 426 426
 tensorflow.group.restore 426 426
 tensorflow.Variable.numpy 450 450
 tensorflow.Variable.numpy 451 451

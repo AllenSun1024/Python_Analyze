@@ -95,7 +95,6 @@ tensorflow.group 769 769
 function:
 
 observe:
-tensorflow.no_op 771 771
 tensorflow.cond 771 771
 tensorflow.control_dependencies 773 773
 
