@@ -28,7 +28,9 @@ def revert_import_name(validPackages, funcStats):
             拿到第func_id个函数，去拼接它的API
             """
             for api_id in range(len(funcStats["APIs"][func_id])):
-                pureAPI = funcStats["APIs"][func_id][api_id].split('$')[0]  # API without Paras
+                pureAPI = ''
+                if funcStats["APIs"][func_id][api_id] is not None:
+                    pureAPI = funcStats["APIs"][func_id][api_id].split('$')[0]  # API without Paras
                 api_head = pureAPI.split('.')[0]
                 if api_head == C:  # from A import B as C / import B as C
                     tmp = pureAPI.split('.')[1:]
@@ -95,7 +97,9 @@ def revert_import_name(validPackages, funcStats):
         sources.append(source.split('.')[0])
     for func_id in range(len(funcStats["name"])):
         for api_id in range(len(funcStats["APIs"][func_id])):
-            head = funcStats["APIs"][func_id][api_id].split('.')[0]
+            head = ''
+            if funcStats["APIs"][func_id][api_id] is not None:
+                head = funcStats["APIs"][func_id][api_id].split('.')[0]
             if head not in modules and head not in sources and head not in validPackages["module"] and head not in \
                     validPackages["source"]:
                 funcStats["APIs"][func_id][api_id] = None

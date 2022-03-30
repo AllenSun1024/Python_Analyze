@@ -215,6 +215,12 @@ class FuncDefExtractor(ast.NodeVisitor):
     def visit_Return(self, node):
         if self.isInFunc:
             self.generic_visit(node)
+            if isinstance(node.value, ast.Attribute):
+                name = get_Attribute_Name(node.value, '')
+                if name is not None:
+                    self.APIs.append(name)
+                    self.lines.append(node.lineno)
+                    self.end_lines.append(node.end_lineno)
 
     def visit_With(self, node):
         if self.isInFunc:
@@ -229,6 +235,38 @@ class FuncDefExtractor(ast.NodeVisitor):
             self.generic_visit(node)
         else:
             pass
+
+    def visit_BinOp(self, node):
+        if self.isInFunc:
+            self.generic_visit(node)
+            if isinstance(node.left, ast.Attribute):
+                leftName = get_Attribute_Name(node.left, '')
+                self.APIs.append(leftName)
+                self.lines.append(node.left.lineno)
+                self.end_lines.append(node.left.end_lineno)
+            elif isinstance(node.left, ast.Tuple) or isinstance(node.left, ast.List):
+                for elt in node.left.elts:
+                    if isinstance(elt, ast.Attribute):
+                        eltName = get_Attribute_Name(elt, '')
+                        self.APIs.append(eltName)
+                        self.lines.append(elt.lineno)
+                        self.end_lines.append(elt.end_lineno)
+                    else:
+                        continue
+            if isinstance(node.right, ast.Attribute):
+                rightName = get_Attribute_Name(node.right, '')
+                self.APIs.append(rightName)
+                self.lines.append(node.right.lineno)
+                self.end_lines.append(node.right.end_lineno)
+            elif isinstance(node.right, ast.Tuple) or isinstance(node.right, ast.List):
+                for elt in node.right.elts:
+                    if isinstance(elt, ast.Attribute):
+                        eltName = get_Attribute_Name(elt, '')
+                        self.APIs.append(eltName)
+                        self.lines.append(elt.lineno)
+                        self.end_lines.append(elt.end_lineno)
+                    else:
+                        continue
 
     def report(self):
         with open(self.resultPath, 'w') as f:

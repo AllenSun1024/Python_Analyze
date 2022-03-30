@@ -42,6 +42,9 @@ pad_image_shape:
 scale_image:
 
 get_optim:
+tensorflow.keras.optimizers.Adam 206 206
+tensorflow.keras.optimizers.RMSprop 209 209
+tensorflow.keras.optimizers.SGD 212 212
 
 regulize_loss:
 tensorflow.keras.regularizers.l2 218 218

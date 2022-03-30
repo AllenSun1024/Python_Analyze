@@ -2,6 +2,7 @@ resolve:
 
 load:
 tensorflow.io.gfile.exists 93 94
+tensorflow.__version__ 101 101
 tensorflow.compat.v1.saved_model.load_v2 103 104
 tensorflow.compat.v1.saved_model.load_v2 106 106
 

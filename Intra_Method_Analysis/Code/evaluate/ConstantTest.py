@@ -1,6 +1,6 @@
 import ast
 
-print(ast.dump(ast.parse('tf.py_function(data_aug, [image], [tf.float32])[0]', mode='eval'), indent=4))
+print(ast.dump(ast.parse('NotImplementedError("options are not supported for TF < 2.3.x, Current version: %s" % tf.__version__)'), indent=4))
 
 # print(ast.dump(ast.parse("SubpixelConv2d(scale.out, n_out_channels=None, act=tf.nn.relu)(n)", mode="eval"), indent=4))
 

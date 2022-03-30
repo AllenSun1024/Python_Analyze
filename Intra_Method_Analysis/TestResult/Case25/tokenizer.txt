@@ -61,6 +61,7 @@ tensorflow.data.Dataset.from_generator 321 325
 tensorflow.data.Dataset.batch 326 326
 tensorflow.data.Dataset.map 327 327
 tensorflow.TensorSpec 329 329
+tensorflow.data.Dataset.element_spec 333 333
 tensorflow.data.Dataset.as_numpy_iterator 336 336
 
 in_graph:
