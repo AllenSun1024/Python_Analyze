@@ -66,7 +66,7 @@ tensorflow.GradientTape
 tensorflow.GradientTape.gradient
 
 Trainer/clip_gradients:
-tensorflow.constant
+tensorflow.constant$dtype=tensorflow.float32
 tensorflow.convert_to_tensor
 tensorflow.reduce_sum
 tensorflow.math.sqrt
@@ -215,8 +215,7 @@ tensorflow.keras.layers.Dropout
 
 DotProductAttention/call:
 tensorflow.matmul
-tensorflow.float32
-tensorflow.cast
+tensorflow.cast$dtype=tensorflow.float32
 tensorflow.math.sqrt
 tensorflow.matmul
 
@@ -252,7 +251,7 @@ TransformerEncoder/__init__:
 tensorflow.keras.layers.Embedding
 
 TransformerEncoder/call:
-tensorflow.cast
+tensorflow.cast$dtype=tensorflow.float32
 tensorflow.math.sqrt
 
 train_ch11:
@@ -323,14 +322,11 @@ tensorflow.keras.optimizers.SGD
 tensorflow.keras.losses.SparseCategoricalCrossentropy
 
 grad_clipping:
-tensorflow.float32
-tensorflow.constant
-tensorflow.IndexedSlices
+tensorflow.constant$dtype=tensorflow.float32
 tensorflow.convert_to_tensor
 tensorflow.reduce_sum
 tensorflow.math.sqrt
-tensorflow.float32
-tensorflow.cast
+tensorflow.cast$tensorflow.float32
 tensorflow.greater
 
 Seq2SeqEncoderOld/__init__:
@@ -340,8 +336,7 @@ tensorflow.keras.layers.StackedRNNCells
 tensorflow.keras.layers.RNN
 
 MaskedSoftmaxCELoss/call:
-tensorflow.float32
-tensorflow.ones_like
+tensorflow.ones_like$dtype=tensorflow.float32
 tensorflow.one_hot
 tensorflow.keras.losses.CategoricalCrossentropy
 tensorflow.keras.losses.CategoricalCrossentropy.__call__
@@ -360,10 +355,8 @@ tensorflow.numpy
 tensorflow.reduce_sum
 
 sequence_mask:
-tensorflow.float32
-tensorflow.range
-tensorflow.float32
-tensorflow.cast
+tensorflow.range$dtype=tensorflow.float32
+tensorflow.cast$dtype=tensorflow.float32
 tensorflow.expand_dims
 tensorflow.where
 tensorflow.where

@@ -1,43 +1,60 @@
 _batch_norm:
 
 _bn_layer:
-tensorflow.keras.layers.BatchNormalization 29 33
-tensorflow.keras.layers.BatchNormalization.__call__ 29 33
+layers.BatchNormalization$center=params.batchnorm_center$scale=params.batchnorm_scale$epsilon=params.batchnorm_epsilon 29 33
+layers.BatchNormalization.__call__ 29 33
 
 _conv:
 
 _conv_layer:
-tensorflow.keras.layers.Conv2D 39 45
-tensorflow.keras.layers.Conv2D.__call__ 39 45
-tensorflow.keras.layers.ReLU 47 47
-tensorflow.keras.layers.ReLU.__call__ 47 47
+layers.Conv2D$padding=params.conv_padding 39 45
+layers.Conv2D.__call__ 39 45
+_batch_norm 46 46
+_batch_norm.__call__ 46 46
+layers.ReLU 47 47
+layers.ReLU.__call__ 47 47
 
 _separable_conv:
 
 _separable_conv_layer:
-tensorflow.keras.layers.DepthwiseConv2D 54 60
-tensorflow.keras.layers.DepthwiseConv2D.__call__ 54 60
-tensorflow.keras.layers.ReLU 62 62
-tensorflow.keras.layers.ReLU.__call__ 62 62
-tensorflow.keras.layers.Conv2D 63 69
-tensorflow.keras.layers.Conv2D.__call__ 63 69
-tensorflow.keras.layers.ReLU 71 71
-tensorflow.keras.layers.ReLU.__call__ 71 71
+layers.DepthwiseConv2D$padding=params.conv_padding 54 60
+layers.DepthwiseConv2D.__call__ 54 60
+_batch_norm 61 61
+_batch_norm.__call__ 61 61
+layers.ReLU 62 62
+layers.ReLU.__call__ 62 62
+layers.Conv2D$padding=params.conv_padding 63 69
+layers.Conv2D.__call__ 63 69
+_batch_norm 70 70
+_batch_norm.__call__ 70 70
+layers.ReLU 71 71
+layers.ReLU.__call__ 71 71
 
 yamnet:
-tensorflow.keras.layers.Reshape 97 99
-tensorflow.keras.layers.Reshape.__call__ 97 99
-tensorflow.keras.layers.GlobalAveragePooling2D 102 102
-tensorflow.keras.layers.GlobalAveragePooling2D.__call__ 102 102
-tensorflow.keras.layers.Dense 103 103
-tensorflow.keras.layers.Dense.__call__ 103 103
-tensorflow.keras.layers.Activation 104 104
-tensorflow.keras.layers.Activation.__call__ 104 104
+layers.Reshape$params.patch_frames$params.patch_bands 97 99
+layers.Reshape.__call__ 97 99
+enumerate 100 100
+layer_fun 101 101
+layer_fun.__call__ 101 101
+layers.GlobalAveragePooling2D 102 102
+layers.GlobalAveragePooling2D.__call__ 102 102
+layers.Dense$units=params.num_classes 103 103
+layers.Dense.__call__ 103 103
+layers.Activation$activation=params.classifier_activation 104 104
+layers.Activation.__call__ 104 104
 
 yamnet_frames_model:
-tensorflow.keras.layers.Input 120 120
-tensorflow.keras.Model 125 127
+layers.Input$dtype=tf.float32 120 120
+features_lib.pad_waveform 121 121
+features_lib.waveform_to_log_mel_spectrogram_patches 122 123
+yamnet 124 124
+Model 125 127
 
 class_names:
-tensorflow.is_tensor 133 133
+tf.is_tensor 133 133
+class_map_csv.numpy.#.numpy.#.numpy 134 134
+open 135 135
+csv.reader 136 136
+next 137 137
+np.array 138 138
 

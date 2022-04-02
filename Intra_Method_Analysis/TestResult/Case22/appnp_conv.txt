@@ -1,16 +1,29 @@
 __init__:
-tensorflow.keras.activations.get 94 94
+super 78 78
+super 78 89
+activations.get 94 94
 
 build:
-tensorflow.keras.layers.Dropout 112 112
-tensorflow.keras.layers.Dense 113 113
-tensorflow.keras.layers.Dense 116 116
-tensorflow.keras.models.Sequential 117 117
+len 98 98
+dict$kernel_initializer=self.kernel_initializer$bias_initializer=self.bias_initializer$kernel_regularizer=self.kernel_regularizer$bias_regularizer=self.bias_regularizer$kernel_constraint=self.kernel_constraint$bias_constraint=self.bias_constraint$dtype=self.dtype 99 107
+Dropout$self.dropout_rate 112 112
+Dense$self.mlp_activation 113 113
+mlp_layers.extend 110 115
+Dense$self.channels 116 116
+mlp_layers.append 116 116
+Sequential 117 117
 
 call:
+self.mlp 123 123
+range$self.propagations 125 125
+self.alpha 126 126
+ops.modal_dot 126 126
+self.alpha 126 126
+self.activation 130 130
 
 config:
-tensorflow.keras.activations.serialize 141 141
+activations.serialize$self.mlp_activation 141 141
 
 preprocess:
+gcn_filter 147 147
 

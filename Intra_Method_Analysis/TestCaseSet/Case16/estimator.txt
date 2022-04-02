@@ -14,6 +14,7 @@ tensorflow.compat.v1.gfile.Rename
 _make_estimator_serving_session:
 tensorflow.Graph
 tensorflow.Graph.as_default
+tensorflow.compat.v1.estimator.ModeKeys.PREDICT
 tensorflow.compat.v1.train.create_global_step
 tensorflow.compat.v1.set_random_seed
 tensorflow.compat.v1.Session

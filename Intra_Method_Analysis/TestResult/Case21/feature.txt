@@ -1,25 +1,54 @@
 make_identity_transform_fn:
 
 _transform_fn:
+six.iteritems 50 50
+six.iteritems 56 56
 
 _is_sequence_column_v2:
+isinstance$feature_column_lib.SequenceCategoricalColumn 67 67
+isinstance$feature_column_lib.SequenceNumericColumn 69 69
+hasattr 71 71
+isinstance$feature_column.categorical_column$feature_column_lib.SequenceCategoricalColumn 71 73
 
 encode_features:
-tensorflow.python.feature_column.feature_column_lib.is_feature_column_v2 106 106
-tensorflow.compat.v1.keras.layers.DenseFeatures 115 118
-tensorflow.compat.v1.keras.layers.DenseFeatures 119 119
-tensorflow.keras.experimental.SequenceFeatures 122 122
-tensorflow.keras.experimental.SequenceFeatures 123 123
-tensorflow.compat.v1.feature_column.input_layer 126 130
+hasattr 105 106
+feature_column_lib.is_feature_column_v2 106 106
+_is_sequence_column_v2 108 108
+_is_sequence_column_v2 111 111
+tf.compat.v1.keras.layers.DenseFeatures 115 118
+tf.compat.v1.keras.layers.DenseFeatures.# 119 119
+tf.keras.experimental.SequenceFeatures 122 122
+tf.keras.experimental.SequenceFeatures.# 123 123
+tf.compat.v1.feature_column.input_layer 126 130
 
 encode_listwise_features:
-tensorflow.python.feature_column.feature_column_lib.is_feature_column_v2 183 184
-tensorflow.compat.v2.feature_column.make_parse_example_spec 185 186
-tensorflow.compat.v1.feature_column.make_parse_example_spec 188 189
-tensorflow.shape 191 191
-tensorflow.shape 193 193
-tensorflow.compat.v1.logging.warn 199 199
+context_feature_columns.values 171 171
+encode_features 170 171
+six.iteritems 174 174
+example_feature_columns.values 184 184
+feature_column_lib.is_feature_column_v2 183 184
+example_feature_columns.values 186 186
+tf.compat.v2.feature_column.make_parse_example_spec 185 186
+example_feature_columns.values 189 189
+tf.compat.v1.feature_column.make_parse_example_spec 188 189
+six.iterkeys 190 190
+next 190 190
+tf.shape 191 191
+tf.shape 193 193
+tf.compat.v1.logging.warn 199 199
+utils.reshape_first_ndims 202 203
+ValueError 205 208
+example_feature_columns.values 212 212
+encode_features 210 214
+utils.reshape_first_ndims 216 217
+six.iteritems 218 218
 
 encode_pointwise_features:
-tensorflow.expand_dims 261 261
+context_feature_columns.values 249 249
+encode_features 248 249
+six.iteritems 252 252
+example_feature_columns.values 259 259
+encode_features 258 259
+tf.expand_dims 261 261
+six.iteritems 262 262
 

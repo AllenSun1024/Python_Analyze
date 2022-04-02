@@ -11,6 +11,11 @@ tensorflow.tile
 tensorflow.shape
 tensorflow.reshape
 
+get_optim:
+tensorflow.keras.optimizers.Adam
+tensorflow.keras.optimizers.RMSprop
+tensorflow.keras.optimizers.SGD
+
 regulize_loss:
 tensorflow.keras.regularizers.l2
 tensorflow.keras.regularizers.l2

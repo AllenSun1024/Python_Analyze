@@ -2,5 +2,4 @@ get_padding_mask:
 tensorflow.map_fn
 
 main:
-tensorflow.int32
-tensorflow.constant
+tensorflow.constant$dtype=tensorflow.int32

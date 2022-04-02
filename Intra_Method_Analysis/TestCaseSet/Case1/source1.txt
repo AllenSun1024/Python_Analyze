@@ -1,6 +1,5 @@
 main:
-tensorflow.float32
-tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor$dtype=tensorflow.float32
 tensorflow.equal
 keras.backend.cast
 keras.backend.ones_like

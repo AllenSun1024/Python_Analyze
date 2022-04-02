@@ -44,33 +44,27 @@ tensorflow.abs
 tensorflow.reduce_max
 tensorflow.sign
 tensorflow.reduce_sum
-tensorflow.int32
-tensorflow.cast
+tensorflow.cast$tensorflow.int32
 
 retrieve_seq_length_op2:
 tensorflow.zeros_like
 tensorflow.greater
-tensorflow.int32
-tensorflow.cast
+tensorflow.cast$tensorflow.int32
 tensorflow.reduce_sum
 
 retrieve_seq_length_op3:
 tensorflow.not_equal
 tensorflow.reduce_any
-tensorflow.int32
-tensorflow.cast
+tensorflow.cast$dtype=tensorflow.int32
 tensorflow.reduce_sum
 tensorflow.not_equal
-tensorflow.int32
-tensorflow.cast
+tensorflow.cast$dtype=tensorflow.int32
 tensorflow.reduce_sum
 
 target_mask_op:
 tensorflow.Tensor
 tensorflow.not_equal
 tensorflow.reduce_any
-tensorflow.int32
-tensorflow.cast
+tensorflow.cast$dtype=tensorflow.int32
 tensorflow.not_equal
-tensorflow.int32
-tensorflow.cast
+tensorflow.cast$dtype=tensorflow.int32

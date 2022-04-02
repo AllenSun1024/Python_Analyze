@@ -3,10 +3,8 @@ tensorflow.compat.v1.train.get_global_step
 
 _RankingHead/create_loss:
 tensorflow.convert_to_tensor
-tensorflow.float32
-tensorflow.cast
-tensorflow.float32
-tensorflow.cast
+tensorflow.cast$dtype=tensorflow.float32
+tensorflow.cast$dtype=tensorflow.float32
 
 _RankingHead/_labels_and_logits_metrics:
 tensorflow.greater_equal
@@ -18,13 +16,16 @@ tensorflow.compat.v1.metrics.mean
 _RankingHead/create_estimator_spec:
 tensorflow.convert_to_tensor
 tensorflow.compat.v1.name_scope
+tensorflow.estimator.ModeKeys.PREDICT
 tensorflow.estimator.export.RegressionOutput
 tensorflow.estimator.export.RegressionOutput
 tensorflow.estimator.export.PredictOutput
 tensorflow.estimator.EstimatorSpec
 tensorflow.add_n
 tensorflow.add
+tensorflow.estimator.ModeKeys.EVAL
 tensorflow.estimator.EstimatorSpec
+tensorflow.estimator.ModeKeys.TRAIN
 tensorflow.estimator.EstimatorSpec
 
 _MultiRankingHead/_merge_predict_export_outputs:
@@ -38,6 +39,9 @@ tensorflow.math.add_n
 
 _MultiRankingHead/create_estimator_spec:
 tensorflow.compat.v1.name_scope
+tensorflow.estimator.ModeKeys.PREDICT
 tensorflow.estimator.EstimatorSpec
+tensorflow.estimator.ModeKeys.EVAL
 tensorflow.estimator.EstimatorSpec
+tensorflow.estimator.ModeKeys.TRAIN
 tensorflow.estimator.EstimatorSpec

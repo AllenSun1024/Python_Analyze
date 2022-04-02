@@ -1,76 +1,181 @@
 __init__:
+super 150 150
+super 150 150
+self.build 158 158
+self.name 161 161
+self.cell.__class__.__name__ 161 161
+self.cell.units 161 161
+logging.info 161 161
 
 __repr__:
+s.format$classname=self.__class__.__name__$cellname=self.cell.__class__.__name__$n_units=self.cell.units 167 170
 
 build:
-tensorflow.name_scope 183 183
+len 180 180
+Exception 181 181
+tf.name_scope$self.name 183 183
+tuple 184 184
+self.cell.build 184 184
+list 187 187
+self._trainable_weights.append 189 189
 
 forward:
-tensorflow.convert_to_tensor 297 297
-tensorflow.gather 298 298
-tensorflow.convert_to_tensor 303 303
-tensorflow.concat 308 308
-tensorflow.reshape 308 308
-tensorflow.concat 312 312
-tensorflow.reshape 312 312
-tensorflow.convert_to_tensor 318 318
-tensorflow.gather 319 319
-tensorflow.convert_to_tensor 323 323
+setattr 213 213
+inputs.get_shape 215 215
+inputs.as_list 215 215
+inputs.get_shape 216 216
+inputs.as_list 216 216
+isinstance 220 220
+isinstance$tf.Tensor 222 222
+isinstance$np.ndarray 224 224
+sequence_length.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist.#.tolist 225 225
+type 229 229
+TypeError 227 230
+len 231 231
+len 234 234
+ValueError 232 235
+type 237 237
+isinstance$tf.Tensor 237 237
+type 240 240
+TypeError 238 241
+ValueError 243 248
+tl.layers.retrieve_seq_length_op3 250 250
+list 267 267
+self.cell.get_initial_state 270 270
+isinstance 271 271
+list 274 274
+self.cell.reset_dropout_mask 277 277
+self.cell.reset_recurrent_dropout_mask 278 278
+range 282 282
+self.cell.call$training=self.is_train 284 284
+list.#.append 285 285
+list.#.append 290 290
+tf.convert_to_tensor 297 297
+tf.gather 298 298
+range 301 301
+outputs_without_padding.append 302 302
+tf.convert_to_tensor 303 303
+tf.concat 308 308
+tf.reshape$self.cell.units 308 308
+tf.concat 312 312
+tf.reshape$self.cell.units 312 312
+tf.convert_to_tensor 318 318
+tf.gather 319 319
+range 322 322
+range 323 323
+tf.convert_to_tensor 323 323
+states.append 323 323
 
 __init__:
-tensorflow.keras.layers.SimpleRNNCell 403 403
+super 402 402
+tf.keras.layers.SimpleRNNCell 403 403
+super 402 405
 
 __init__:
-tensorflow.keras.layers.GRUCell 481 481
+super 480 480
+tf.keras.layers.GRUCell 481 481
+super 480 483
 
 __init__:
-tensorflow.keras.layers.LSTMCell 559 559
+super 558 558
+tf.keras.layers.LSTMCell 559 559
+super 558 561
 
 __init__:
+super 645 645
+super 645 645
+self.build 653 653
+self.name 658 658
+self.fw_cell.__class__.__name__ 658 658
+self.fw_cell.units 658 658
+self.bw_cell.__class__.__name__ 658 658
+self.bw_cell.units 659 659
+logging.info 656 661
 
 __repr__:
+s.format$classname=self.__class__.__name__$fw_cellname=self.fw_cell.__class__.__name__$fw_n_units=self.fw_cell.units$bw_cellname=self.bw_cell.__class__.__name__$bw_n_units=self.bw_cell.units 670 674
 
 build:
-tensorflow.name_scope 687 687
+len 684 684
+Exception 685 685
+tf.name_scope$self.name 687 687
+tuple 688 688
+self.fw_cell.build 688 688
+tuple 689 689
+self.bw_cell.build 689 689
+list 692 692
+self._trainable_weights.append 694 694
+self._trainable_weights.append 696 696
 
 forward:
-tensorflow.concat 750 750
-tensorflow.reshape 750 750
-tensorflow.concat 751 751
-tensorflow.reshape 751 751
-tensorflow.concat 755 755
-tensorflow.reshape 755 755
-tensorflow.concat 756 756
-tensorflow.reshape 756 756
-tensorflow.concat 758 758
+setattr 717 717
+list 719 719
+list 720 720
+self.fw_cell.get_initial_state 722 722
+self.bw_cell.get_initial_state 723 723
+isinstance 725 725
+isinstance 727 727
+inputs.get_shape 730 730
+inputs.as_list 730 730
+self.fw_cell.reset_dropout_mask 732 732
+self.fw_cell.reset_recurrent_dropout_mask 733 733
+self.bw_cell.reset_dropout_mask 734 734
+self.bw_cell.reset_recurrent_dropout_mask 735 735
+range 737 737
+self.fw_cell.call$training=self.is_train 739 739
+self.bw_cell.call$training=self.is_train 740 742
+list.#.append 744 744
+list.#.append 745 745
+tf.concat 750 750
+tf.reshape$self.fw_cell.units 750 750
+tf.concat 751 751
+tf.reshape$self.bw_cell.units 751 751
+tf.concat 755 755
+tf.reshape$self.fw_cell.units 755 755
+tf.concat 756 756
+tf.reshape$self.bw_cell.units 756 756
+tf.concat 758 758
 
 retrieve_seq_length_op:
-tensorflow.name_scope 1118 1118
-tensorflow.abs 1119 1119
-tensorflow.reduce_max 1119 1119
-tensorflow.sign 1119 1119
-tensorflow.reduce_sum 1120 1120
-tensorflow.cast$tensorflow.int32 1122 1122
+tf.name_scope 1118 1118
+tf.abs 1119 1119
+tf.reduce_max 1119 1119
+tf.sign 1119 1119
+tf.reduce_sum 1120 1120
+tf.cast$tf.int32 1122 1122
 
 retrieve_seq_length_op2:
-tensorflow.zeros_like 1145 1145
-tensorflow.greater 1145 1145
-tensorflow.cast$tensorflow.int32 1145 1145
-tensorflow.reduce_sum 1145 1145
+tf.zeros_like 1145 1145
+tf.greater 1145 1145
+tf.cast$tf.int32 1145 1145
+tf.reduce_sum 1145 1145
 
 retrieve_seq_length_op3:
-tensorflow.not_equal 1194 1194
-tensorflow.reduce_any 1194 1194
-tensorflow.cast 1194 1194
-tensorflow.reduce_sum 1193 1196
-tensorflow.not_equal 1198 1198
-tensorflow.cast 1198 1198
-tensorflow.reduce_sum 1198 1198
+data.get_shape 1191 1191
+tf.not_equal 1194 1194
+tf.reduce_any 1194 1194
+tf.cast$dtype=tf.int32 1194 1194
+tf.reduce_sum 1193 1196
+tf.not_equal 1198 1198
+tf.cast$dtype=tf.int32 1198 1198
+tf.reduce_sum 1198 1198
+data.get_shape 1200 1200
+data.as_list 1200 1200
+ValueError 1200 1200
+ValueError 1202 1204
 
 target_mask_op:
-tensorflow.not_equal 1255 1255
-tensorflow.reduce_any 1255 1255
-tensorflow.cast 1255 1255
-tensorflow.not_equal 1257 1257
-tensorflow.cast 1257 1257
+isinstance$tf.Tensor 1251 1251
+type 1252 1252
+AttributeError 1252 1252
+data.get_shape 1253 1253
+tf.not_equal 1255 1255
+tf.reduce_any 1255 1255
+tf.cast$dtype=tf.int32 1255 1255
+tf.not_equal 1257 1257
+tf.cast$dtype=tf.int32 1257 1257
+data.get_shape 1261 1261
+ValueError 1259 1262
+data.get_shape 1266 1266
+ValueError 1264 1267
 

@@ -1,51 +1,106 @@
 __init__:
+super 18 18
+super 18 18
+cell 19 19
+self.build$self.embedding_layer.embedding_size 22 22
 
 build:
+tuple 26 26
+self.cell.build 26 26
+list 29 29
+self._trainable_weights.append 32 32
 
 forward:
+self.cell.get_initial_state 36 36
+list 37 37
+src_seq.get_shape 38 38
+src_seq.as_list 38 38
+range 39 39
+isinstance 40 40
+self.cell.call$training=self.is_train 42 42
+list.#.append 43 43
 
 __init__:
+super 50 50
+super 50 50
+cell 51 51
+self.embedding_layer.embedding_size 55 55
+self.build 55 55
 
 build:
+tuple 59 59
+self.cell.build 59 59
+self.hidden_size 62 62
+self._get_weights 62 62
+self._get_weights 63 63
+self._get_weights 65 65
+list 67 67
+self._trainable_weights.append 70 70
 
 score:
-tensorflow.expand_dims 78 78
-tensorflow.tile 79 79
-tensorflow.concat 81 81
-tensorflow.cast$tensorflow.float32 82 82
-tensorflow.tensordot 83 83
-tensorflow.nn.tanh 84 84
-tensorflow.tensordot 85 85
-tensorflow.squeeze 86 86
-tensorflow.expand_dims 90 90
-tensorflow.matmul 91 91
-tensorflow.squeeze 92 92
-tensorflow.matmul 95 95
-tensorflow.expand_dims 96 96
-tensorflow.matmul 97 97
-tensorflow.squeeze 98 98
-tensorflow.nn.softmax 100 100
+tf.expand_dims 78 78
+tf.tile 79 79
+tf.concat 81 81
+tf.cast$tf.float32 82 82
+tf.tensordot$self.W 83 83
+tf.nn.tanh 84 84
+tf.tensordot$self.V 85 85
+tf.squeeze 86 86
+tf.expand_dims 90 90
+tf.matmul 91 91
+tf.squeeze 92 92
+tf.matmul$self.W 95 95
+tf.expand_dims 96 96
+tf.matmul 97 97
+tf.squeeze 98 98
+tf.nn.softmax 100 100
 
 forward:
-tensorflow.expand_dims 110 110
-tensorflow.matmul 111 111
-tensorflow.squeeze 112 112
-tensorflow.concat 113 113
-tensorflow.convert_to_tensor 120 120
-tensorflow.transpose 121 121
+dec_seq.get_shape 105 105
+dec_seq.as_list 105 105
+list 107 107
+range 108 108
+self.score 109 109
+tf.expand_dims 110 110
+tf.matmul 111 111
+tf.squeeze 112 112
+tf.concat 113 113
+isinstance 114 114
+self.cell.call$training=self.is_train 116 116
+list.#.append 117 117
+tf.convert_to_tensor 120 120
+tf.transpose 121 121
 
 __init__:
+super 150 150
+super 150 150
+Encoder 151 151
+Decoder_Attention 152 152
+tl.layers.Dense$n_units=self.embedding_layer.vocabulary_size 154 154
 
 inference:
-tensorflow.reshape 182 182
-tensorflow.reshape 184 184
-tensorflow.argmax 185 185
-tensorflow.concat 186 186
+range 175 175
+self.embedding_layer 176 176
+range 177 177
+range 178 178
+self.dec_layer$method=self.method 179 181
+tf.reshape 182 182
+self.dense_layer 183 183
+tf.reshape 184 184
+tf.argmax 185 185
+tf.concat 186 186
+self.embedding_layer 187 187
 
 forward:
-tensorflow.convert_to_tensor 195 195
-tensorflow.transpose 196 196
-tensorflow.convert_to_tensor 197 197
-tensorflow.reshape 204 204
-tensorflow.reshape 206 206
+self.embedding_layer 193 193
+self.enc_layer 194 194
+tf.convert_to_tensor 195 195
+tf.transpose 196 196
+tf.convert_to_tensor 197 197
+self.embedding_layer 201 201
+self.dec_layer$method=self.method 202 202
+tf.reshape 204 204
+self.dense_layer 205 205
+tf.reshape 206 206
+self.inference 208 208
 

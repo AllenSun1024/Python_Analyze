@@ -4,6 +4,7 @@ tensorflow.python.feature_column.feature_column_lib.SequenceNumericColumn
 tensorflow.python.feature_column.feature_column_lib.SequenceCategoricalColumn
 
 encode_features:
+tensorflow.estimator.ModeKeys.TRAIN
 tensorflow.python.feature_column.feature_column_lib.is_feature_column_v2
 tensorflow.compat.v1.keras.layers.DenseFeatures
 tensorflow.compat.v1.keras.layers.DenseFeatures

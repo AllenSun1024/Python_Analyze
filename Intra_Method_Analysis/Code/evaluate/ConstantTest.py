@@ -1,8 +1,8 @@
 import ast
 
-print(ast.dump(ast.parse('NotImplementedError("options are not supported for TF < 2.3.x, Current version: %s" % tf.__version__)'), indent=4))
+# print(ast.dump(ast.parse('eval_results={_WER_KEY:total_wer, _CER_KEY:total_cer, tf.compat.v1.GraphKeys.Global_STEP:global_step,}'), indent=4))
 
-# print(ast.dump(ast.parse("SubpixelConv2d(scale.out, n_out_channels=None, act=tf.nn.relu)(n)", mode="eval"), indent=4))
+print(ast.dump(ast.parse("mode == tf.estimator.ModeKeys.TRAIN"), indent=4))
 
 # Elementwise(tf.add)([n, nn])
 
@@ -24,7 +24,7 @@ print(ast.dump(ast.parse('NotImplementedError("options are not supported for TF 
 #           kernel_initializer=initializer,
 #           name='summary')
 
-# mode = tf.compat.v1.estimator.ModeKeys.PREDICT
+# if mode == tf.compat.v1.estimator.ModeKeys.PREDICT
 
 # NotImplementedError("options are not supported for TF < 2.3.x,"
 #                                 " Current version: %s" % tf.__version__)

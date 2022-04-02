@@ -1,9 +1,9 @@
 main:
-tensorflow.convert_to_tensor 13 13
-tensorflow.equal 14 14
-keras.backend.cast 14 14
-keras.backend.ones_like 15 15
-keras.backend.sum 15 15
-keras.backend.sum 16 16
-tensorflow.cast 18 18
+tf.convert_to_tensor$dtype=tf.float32 13 13
+tf.equal 14 14
+K.cast 14 14
+K.ones_like 15 15
+K.sum 15 15
+K.sum 16 16
+tf.cast 18 18
 

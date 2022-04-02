@@ -1,29 +1,57 @@
 _shake_shake_skip_connection:
-tensorflow.nn.avg_pool 33 34
-tensorflow.pad 40 40
-tensorflow.nn.avg_pool 43 44
-tensorflow.concat 48 48
+int 28 28
+ops.stride_arr 31 31
+tf.nn.avg_pool 33 34
+int 35 35
+ops.conv2d 35 35
+tf.pad 40 40
+tf.nn.avg_pool 43 44
+int 45 45
+ops.conv2d 45 45
+tf.concat 48 48
+ops.batch_norm 49 49
 
 _shake_shake_branch:
-tensorflow.nn.relu 56 56
-tensorflow.nn.relu 59 59
-tensorflow.stop_gradient 63 64
+tf.nn.relu 56 56
+ops.conv2d 57 57
+ops.batch_norm 58 58
+tf.nn.relu 59 59
+ops.conv2d 60 60
+ops.batch_norm 61 61
+tf.stop_gradient 63 64
 
 _shake_shake_block:
-tensorflow.shape 72 72
-tensorflow.random_uniform 76 77
-tensorflow.random_uniform 81 82
-tensorflow.add_n 86 86
-tensorflow.add_n 87 87
-tensorflow.variable_scope 94 94
-tensorflow.add_n 99 99
+tf.shape 72 72
+tf.random_uniform$dtype=tf.float32 76 77
+range 78 78
+tf.random_uniform$dtype=tf.float32 81 82
+range 83 83
+tf.add_n 86 86
+tf.add_n 87 87
+zip 90 90
+enumerate 93 93
+tf.variable_scope 94 94
+_shake_shake_branch 95 96
+branches.append 97 97
+_shake_shake_skip_connection 98 98
+tf.add_n 99 99
 
 _shake_shake_layer:
-tensorflow.variable_scope 107 107
+range 105 105
+tf.variable_scope 107 107
+_shake_shake_block 108 109
 
 build_shake_shake_model:
-tensorflow.variable_scope 136 136
-tensorflow.variable_scope 138 138
-tensorflow.variable_scope 140 140
-tensorflow.nn.relu 142 142
+int 131 131
+ops.conv2d 134 134
+ops.batch_norm 135 135
+tf.variable_scope 136 136
+_shake_shake_layer 137 137
+tf.variable_scope 138 138
+_shake_shake_layer 139 139
+tf.variable_scope 140 140
+_shake_shake_layer 141 141
+tf.nn.relu 142 142
+ops.global_avg_pool 143 143
+ops.fc 146 146
 

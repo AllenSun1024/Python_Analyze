@@ -1,7 +1,6 @@
 main:
 tensorflow.random.uniform
 keras.backend.sum
-tensorflow.float32
-tensorflow.convert_to_tensor
+tensorflow.convert_to_tensor$dtype=tensorflow.float32
 keras.backend.stack
 keras.backend.reshape

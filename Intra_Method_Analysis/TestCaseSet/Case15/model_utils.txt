@@ -24,8 +24,8 @@ tensorflow.train.Scaffold
 
 get_train_op:
 tensorflow.train.get_or_create_global_step
-tensorflow.cast
-tensorflow.cast
+tensorflow.cast$tensorflow.float32
+tensorflow.cast$tensorflow.float32
 tensorflow.train.polynomial_decay
 tensorflow.train.cosine_decay
 tensorflow.where
@@ -47,11 +47,11 @@ tensorflow.logging.info
 tensorflow.contrib.framework.load_checkpoint
 tensorflow.contrib.framework.load_checkpoint.get_tensor
 tensorflow.get_variable_scope
-tensorflow.variable_scope
+tensorflow.variable_scope$reuse=tensorflow.AUTO_REUSE
 tensorflow.get_variable
 tensorflow.placeholder
 tensorflow.assign
-tensorflow.Variable
+tensorflow.Variable$dtype=tensorflow.int64
 tensorflow.all_variables
 tensorflow.train.Saver
 tensorflow.gfile.Exists
@@ -70,11 +70,11 @@ tensorflow.contrib.framework.load_checkpoint
 tensorflow.contrib.framework.load_checkpoint.get_tensor
 tensorflow.logging.info
 tensorflow.get_variable_scope
-tensorflow.variable_scope
+tensorflow.variable_scope$reuse=tensorflow.AUTO_REUSE
 tensorflow.get_variable
 tensorflow.placeholder
 tensorflow.assign
-tensorflow.Variable
+tensorflow.Variable$dtype=tensorflow.int64
 tensorflow.all_variables
 tensorflow.train.Saver
 tensorflow.Session
@@ -90,9 +90,9 @@ AdamWeightDecayOptimizer/__init__:
 
 AdamWeightDecayOptimizer/apply_gradients:
 tensorflow.zeros_initializer
-tensorflow.get_variable
+tensorflow.get_variable$dtype=tensorflow.float32
 tensorflow.zeros_initializer
-tensorflow.get_variable
+tensorflow.get_variable$dtype=tensorflow.float32
 tensorflow.multiply
 tensorflow.multiply
 tensorflow.multiply

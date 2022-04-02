@@ -1,95 +1,217 @@
 make_datasets:
+isinstance 23 23
+ValueError 26 26
+misc.is_gzip_file 29 29
+dataset_cls 28 30
+len 33 33
 
 normalize_weights:
+len 55 55
+len 59 59
+len 59 59
+len 60 60
+len 60 60
+len 62 62
+len 62 62
+ValueError 61 63
+get_dataset_size 66 66
+int 66 66
+len 67 67
+len 67 67
+len 68 68
+len 68 68
+ValueError 68 68
+sum 71 71
+zip 72 72
+sum 75 75
 
 _get_output_shapes:
-tensorflow.nest.map_structure 88 88
+tf.nest.map_structure$dataset.element_spec 88 88
 
 get_dataset_size:
-tensorflow.constant 118 118
+dataset.batch.#.batch.#.cardinality 108 108
+dataset.batch.#.batch.#.batch 111 111
+tf.constant$dtype=tf.int64 118 118
+dataset.batch.#.batch.#.reduce 118 118
 
 _reduce_func:
-tensorflow.nest.flatten 114 114
-tensorflow.shape 115 115
-tensorflow.cast 116 116
+tf.nest.flatten 114 114
+tf.shape 115 115
+tf.cast$count.dtype 116 116
 
 filter_irregular_batches:
 
 _predicate:
-tensorflow.nest.flatten 141 141
-tensorflow.shape 142 142
-tensorflow.equal 143 143
+tf.nest.flatten 141 141
+tf.shape 142 142
+tf.equal 143 143
 
 filter_examples_by_length:
 
 _length_constraints:
-tensorflow.greater 185 185
-tensorflow.less_equal 187 187
+isinstance 177 177
+isinstance 179 179
+len 182 182
+len 182 182
+zip 184 184
+tf.greater 185 185
+constraints.append 185 185
+tf.less_equal 187 187
+constraints.append 187 187
 
 _predicate:
-tensorflow.reduce_all 202 202
+features_length_fn 193 193
+labels_length_fn 196 196
+_length_constraints 199 199
+cond.extend 199 199
+_length_constraints 201 201
+cond.extend 201 201
+tf.reduce_all 202 202
 
 make_cardinality_multiple_of:
 
 _continue_iter:
-tensorflow.math.not_equal 237 237
-tensorflow.math.logical_or 236 238
+tf.math.not_equal 237 237
+tf.math.logical_or 236 238
 
 _retrieve_element:
 
 _transform:
-tensorflow.data.experimental.take_while 261 261
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.cardinality 246 246
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.repeat 250 250
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map 251 251
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.repeat.#.map 252 252
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.concatenate 253 253
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.enumerate 256 256
+compat.tf_supports 258 258
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.take_while 259 259
+tf.data.experimental.take_while 261 261
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.apply 261 261
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map 262 262
 
 random_shard:
+np.linspace$dtype=np.int64 285 287
 
 _random_shard:
-tensorflow.data.Dataset.from_tensor_slices 290 290
-tensorflow.data.Dataset.shuffle 291 291
-tensorflow.data.Dataset.flat_map 292 294
+tf.data.Dataset.from_tensor_slices 290 290
+tf.data.Dataset.from_tensor_slices.#.shuffle 291 291
+tf.data.Dataset.from_tensor_slices.#.flat_map 292 294
 
 shuffle_dataset:
 
 _shuffle:
-tensorflow.get_logger 328 328
-tensorflow.info 328 328
+get_dataset_size 327 327
+tf.get_logger 328 328
+tf.info 328 328
+random_shard 332 332
+dataset.apply.#.apply.#.apply.#.apply.#.apply.#.apply.#.apply 332 332
+dataset.apply.#.apply.#.apply.#.apply.#.apply.#.apply.#.shuffle 333 333
 
 batch_dataset:
 
 batch_sequence_dataset:
+ValueError 475 478
+batch_dataset 479 479
+_group_by_window 482 482
+_group_by_window 484 486
+ValueError 488 492
 
 _get_bucket_id:
-tensorflow.constant 423 423
-tensorflow.reduce_max 432 432
+tf.constant$dtype=tf.int32 423 423
+length_fn 426 426
+isinstance 429 429
+tf.reduce_max 432 432
 
 _key_func:
-tensorflow.reduce_max 446 451
-tensorflow.cast$tensorflow.int64 452 452
+isinstance 438 438
+len 440 440
+len 440 440
+len 443 443
+len 443 443
+ValueError 441 444
+_get_bucket_id 448 448
+zip 449 449
+tf.reduce_max 446 451
+tf.cast$tf.int64 452 452
 
 _reduce_func:
+batch_dataset 455 455
+dataset.apply 455 455
 
 _window_size_func:
-tensorflow.maximum 464 464
-tensorflow.cast$tensorflow.int64 464 464
+tf.maximum 464 464
+tf.cast$tf.int64 464 464
 
 _group_by_window:
-tensorflow.data.experimental.group_by_window 471 471
+compat.tf_supports 468 468
+tf.data.experimental.group_by_window 471 471
 
 training_pipeline:
+isinstance 574 574
 
 _make_weighted_dataset:
-tensorflow.data.Dataset.shard 592 592
-tensorflow.data.Dataset.repeat 594 594
-tensorflow.data.Dataset.sample_from_datasets 597 597
-tensorflow.data.experimental.sample_from_datasets 599 601
-tensorflow.data.Dataset.shuffle 607 607
+ValueError 581 583
+ValueError 585 585
+len 586 586
+len 586 586
+len 589 589
+len 589 589
+ValueError 587 590
+tf.data.Dataset.sample_from_datasets.#.shard 592 592
+normalize_weights 593 593
+tf.data.Dataset.sample_from_datasets.#.repeat 594 594
+compat.tf_supports 596 596
+tf.data.Dataset.sample_from_datasets 597 597
+tf.data.experimental.sample_from_datasets 599 601
+ValueError 604 606
+tf.data.Dataset.sample_from_datasets.#.shuffle 607 607
 
 _make_single_dataset:
+dataset.shard.#.shard.#.shard.#.shard.#.shard.#.shard.#.shard 612 612
+shuffle_dataset 615 615
+dataset.shard.#.shard.#.shard.#.shard.#.shard.#.shard.#.apply 614 616
 
 _pipeline:
+isinstance 620 620
+isinstance 624 624
+_make_weighted_dataset 626 626
+_make_single_dataset 628 628
+_make_weighted_dataset.#.map 630 630
+_make_weighted_dataset.#.apply 633 633
+filter_examples_by_length 636 641
+_make_weighted_dataset.#.apply 635 642
+batch_sequence_dataset 644 651
+_make_weighted_dataset.#.apply 643 652
+filter_irregular_batches 653 653
+_make_weighted_dataset.#.apply 653 653
+_make_weighted_dataset.#.repeat 656 656
+make_cardinality_multiple_of 658 658
+_make_weighted_dataset.#.apply 658 658
+_make_weighted_dataset.#.prefetch 659 659
 
 inference_pipeline:
 
 _inject_index:
+isinstance 707 707
 
 _pipeline:
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map 716 716
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.apply 719 719
+ValueError 722 722
+_get_output_shapes 723 723
+isinstance 724 724
+isinstance 726 726
+len 726 726
+len 728 728
+len 731 731
+ValueError 729 732
+isinstance 734 734
+ValueError 735 737
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.enumerate 738 738
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map 739 739
+batch_sequence_dataset 741 746
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.apply 740 747
+batch_dataset 749 749
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.apply 749 749
+dataset.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.map.#.prefetch 750 750
 

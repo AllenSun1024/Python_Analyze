@@ -74,15 +74,18 @@ tensorflow.stop_gradient
 
 relative_positional_encoding:
 tensorflow.range
+tensorflow.float32
 tensorflow.cast
 tensorflow.range
 tensorflow.range
+tensorflow.float32
 tensorflow.cast
 tensorflow.cast
 tensorflow.clip_by_value
 tensorflow.clip_by_value
 tensorflow.concat
 tensorflow.range
+tensorflow.float32
 tensorflow.cast
 tensorflow.clip_by_value
 
@@ -102,6 +105,8 @@ tensorflow.einsum
 
 transformer_xl:
 tensorflow.logging.info
+tensorflow.bfloat16
+tensorflow.float32
 tensorflow.logging.info
 tensorflow.variable_scope
 tensorflow.get_variable
@@ -128,8 +133,7 @@ tensorflow.layers.dropout
 tensorflow.get_variable
 tensorflow.get_variable
 tensorflow.get_variable
-tensorflow.int32
-tensorflow.zeros
+tensorflow.zeros$dtype=tensorflow.int32
 tensorflow.concat
 tensorflow.equal
 tensorflow.logical_not

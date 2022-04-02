@@ -1,39 +1,67 @@
 prefer_static_shape:
-tensorflow.shape 31 31
+tf.shape 31 31
+prefer_static_value 31 31
 
 prefer_static_value:
-tensorflow.get_static_value 42 42
+tf.get_static_value 42 42
 
 _get_initial_state:
-tensorflow.Variable 86 86
-tensorflow.Variable 87 87
-tensorflow.Variable 88 88
-tensorflow.Variable 89 89
-tensorflow.Variable 90 90
-tensorflow.Variable 91 91
-tensorflow.Variable 93 93
+collections.namedtuple 48 80
+tf.Variable 86 86
+tf.Variable 87 87
+tf.Variable 88 88
+tf.Variable 89 89
+tf.Variable 90 90
+tf.Variable 91 91
+tf.Variable 93 93
+collections.namedtuple.# 95 95
 
 _rotosolve_one_parameter_once:
-tensorflow.name_scope 154 154
-tensorflow.convert_to_tensor 155 157
-tensorflow.convert_to_tensor 159 161
-tensorflow.convert_to_tensor 162 163
-tensorflow.constant 176 176
-tensorflow.scatter_nd 175 177
-tensorflow.math.atan2 187 187
-tensorflow.scatter_nd 189 191
-tensorflow.math.floormod 195 196
+tf.name_scope 154 154
+tf.convert_to_tensor 155 157
+tf.convert_to_tensor 159 161
+tf.convert_to_tensor 162 163
+np.pi 176 176
+tf.constant 176 176
+prefer_static_shape$state.position 177 177
+tf.scatter_nd 175 177
+state.position 181 181
+expectation_value_function 180 181
+state.position 183 183
+expectation_value_function 183 183
+tf.math.atan2 187 187
+prefer_static_shape$state.position 191 191
+tf.scatter_nd 189 191
+state.solve_param_i.assign_add 193 193
+state.position 195 195
+np.pi 196 196
+tf.math.floormod 195 196
+state.position.assign 194 196
+state.objective_value_previous_iteration.assign$state.objective_value 198 199
+expectation_value_function$state.position 201 201
+state.objective_value.assign 200 201
 
 _rotosolve_all_parameters_once:
-tensorflow.while_loop 224 229
+state.num_objective_evaluations.assign_add 222 222
+tf.while_loop 224 229
 
 _cond_internal:
+prefer_static_shape$state_cond.position 220 220
 
 _cond:
 
 _body:
-tensorflow.abs 248 249
+state.solve_param_i.assign 242 242
+_rotosolve_all_parameters_once 244 244
+state.num_iterations.assign_add 246 246
+state.objective_value 248 248
+state.objective_value_previous_iteration 249 249
+tf.abs 248 249
+state.converged.assign 247 250
 
 minimize:
-tensorflow.while_loop 260 263
+_get_initial_state 254 255
+expectation_value_function$initial_state.position 258 258
+_get_initial_state.#.objective_value.assign 257 258
+tf.while_loop 260 263
 

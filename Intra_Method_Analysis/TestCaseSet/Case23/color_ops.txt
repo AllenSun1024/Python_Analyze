@@ -1,6 +1,5 @@
 _scale_channel:
-tensorflow.int32
-tensorflow.cast
+tensorflow.cast$tensorflow.int32
 tensorflow.histogram_fixed_width
 tensorflow.boolean_mask
 tensorflow.reduce_sum
@@ -18,10 +17,8 @@ tensorflow.rank
 tensorflow.map_fn
 
 _sharpness_image:
-tensorflow.float32
-tensorflow.cast
-tensorflow.float32
-tensorflow.constant
+tensorflow.cast$tensorflow.float32
+tensorflow.constant$dtype=tensorflow.float32
 tensorflow.tile
 tensorflow.nn.depthwise_conv2d
 tensorflow.cast

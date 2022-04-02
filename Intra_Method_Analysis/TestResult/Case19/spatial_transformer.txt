@@ -1,104 +1,131 @@
 transformer:
+_transform 179 179
 
 _repeat:
-tensorflow.stack 64 66
-tensorflow.ones 64 66
-tensorflow.expand_dims 64 66
-tensorflow.transpose 64 66
-tensorflow.cast 67 67
-tensorflow.reshape 68 68
-tensorflow.matmul 68 68
-tensorflow.reshape 69 69
+tf.stack 64 66
+tf.ones 64 66
+tf.expand_dims 64 66
+tf.transpose 64 66
+tf.cast 67 67
+tf.reshape 68 68
+tf.matmul 68 68
+tf.reshape 69 69
 
 _interpolate:
-tensorflow.shape 73 73
-tensorflow.shape 74 74
-tensorflow.shape 75 75
-tensorflow.shape 76 76
-tensorflow.cast 78 78
-tensorflow.cast 79 79
-tensorflow.cast 80 80
-tensorflow.cast 81 81
-tensorflow.zeros 84 84
-tensorflow.shape 85 85
-tensorflow.cast 85 85
-tensorflow.shape 86 86
-tensorflow.cast 86 86
-tensorflow.floor 93 93
-tensorflow.cast 93 93
-tensorflow.floor 95 95
-tensorflow.cast 95 95
-tensorflow.clip_by_value 98 98
-tensorflow.clip_by_value 99 99
-tensorflow.clip_by_value 100 100
-tensorflow.clip_by_value 101 101
-tensorflow.range 104 104
-tensorflow.stack 114 114
-tensorflow.reshape 114 114
-tensorflow.cast 115 115
-tensorflow.gather 116 116
-tensorflow.gather 117 117
-tensorflow.gather 118 118
-tensorflow.gather 119 119
-tensorflow.cast 122 122
-tensorflow.cast 123 123
-tensorflow.cast 124 124
-tensorflow.cast 125 125
-tensorflow.expand_dims 126 126
-tensorflow.expand_dims 127 127
-tensorflow.expand_dims 128 128
-tensorflow.expand_dims 129 129
-tensorflow.add_n 130 130
+tf.shape 73 73
+tf.shape 74 74
+tf.shape 75 75
+tf.shape 76 76
+tf.cast 78 78
+tf.cast 79 79
+tf.cast 80 80
+tf.cast 81 81
+tf.zeros 84 84
+tf.shape 85 85
+tf.cast 85 85
+tf.shape 86 86
+tf.cast 86 86
+tf.floor 93 93
+tf.cast 93 93
+tf.floor 95 95
+tf.cast 95 95
+tf.clip_by_value 98 98
+tf.clip_by_value 99 99
+tf.clip_by_value 100 100
+tf.clip_by_value 101 101
+tf.range 104 104
+_repeat 104 104
+tf.stack 114 114
+tf.reshape 114 114
+tf.cast 115 115
+tf.gather 116 116
+tf.gather 117 117
+tf.gather 118 118
+tf.gather 119 119
+tf.cast 122 122
+tf.cast 123 123
+tf.cast 124 124
+tf.cast 125 125
+tf.expand_dims 126 126
+tf.expand_dims 127 127
+tf.expand_dims 128 128
+tf.expand_dims 129 129
+tf.add_n 130 130
 
 _meshgrid:
-tensorflow.stack 140 140
-tensorflow.ones 140 140
-tensorflow.linspace 141 141
-tensorflow.expand_dims 141 141
-tensorflow.transpose 141 141
-tensorflow.matmul 139 142
-tensorflow.linspace 143 143
-tensorflow.expand_dims 143 143
-tensorflow.stack 143 143
-tensorflow.ones 143 143
-tensorflow.matmul 143 143
-tensorflow.reshape 145 145
-tensorflow.reshape 146 146
-tensorflow.ones_like 148 148
-tensorflow.concat 149 149
+tf.stack 140 140
+tf.ones 140 140
+tf.linspace 141 141
+tf.expand_dims 141 141
+tf.transpose 141 141
+tf.matmul 139 142
+tf.linspace 143 143
+tf.expand_dims 143 143
+tf.stack 143 143
+tf.ones 143 143
+tf.matmul 143 143
+tf.reshape 145 145
+tf.reshape 146 146
+tf.ones_like 148 148
+tf.concat 149 149
 
 _transform:
-tensorflow.shape 153 153
-tensorflow.shape 154 154
-tensorflow.reshape 155 155
-tensorflow.cast 156 156
-tensorflow.expand_dims 162 162
-tensorflow.reshape 163 163
-tensorflow.stack 164 164
-tensorflow.tile 164 164
-tensorflow.stack 165 165
-tensorflow.reshape 165 165
-tensorflow.matmul 168 168
-tensorflow.slice 169 169
-tensorflow.slice 170 170
-tensorflow.reshape 171 171
-tensorflow.reshape 172 172
-tensorflow.stack 176 176
-tensorflow.reshape 176 176
+tf.shape 153 153
+tf.shape 154 154
+tf.reshape 155 155
+tf.cast 156 156
+_meshgrid 161 161
+tf.expand_dims 162 162
+tf.reshape 163 163
+tf.stack 164 164
+tf.tile 164 164
+tf.stack 165 165
+tf.reshape 165 165
+tf.matmul 168 168
+tf.slice 169 169
+tf.slice 170 170
+tf.reshape 171 171
+tf.reshape 172 172
+_interpolate 174 174
+tf.stack 176 176
+tf.reshape 176 176
 
 batch_transformer:
-tensorflow.compat.v1.variable_scope 203 203
-tensorflow.reshape 206 206
-tensorflow.gather 206 206
+tf.compat.v1.variable_scope 203 203
+thetas.get_shape 204 204
+thetas.as_list 204 204
+map 204 204
+xrange 205 205
+tf.reshape 206 206
+tf.gather 206 206
+transformer 207 207
 
 __init__:
+super 239 239
+super 239 239
+self.build$self.in_channels 245 245
+self.name 248 248
+logging.info 248 248
 
 __repr__:
+s.format$classname=self.__class__.__name__ 257 257
 
 build:
+len 260 260
+AssertionError 261 261
+tuple 269 269
+tl.initializers.Zeros 269 269
+self._get_weights 269 269
+np.array$dtype=np.float32 270 270
+np.reshape 270 270
+tl.initializers.Constant 271 271
+self._get_weights 271 271
 
 forward:
-tensorflow.matmul 283 283
-tensorflow.nn.tanh 283 283
-tensorflow.reshape 290 290
+tf.matmul$self.W 283 283
+self.b 283 283
+tf.nn.tanh 283 283
+transformer$out_size=self.out_size 284 284
+tf.reshape 290 290
+Exception 292 292
 

@@ -1,8 +1,16 @@
 resolve:
+registry.resolver 47 47
 
 load:
-tensorflow.io.gfile.exists 93 94
-tensorflow.__version__ 101 101
-tensorflow.compat.v1.saved_model.load_v2 103 104
-tensorflow.compat.v1.saved_model.load_v2 106 106
+isinstance 90 90
+ValueError 91 91
+resolve 92 92
+native_module.get_module_proto_path 94 94
+tf.io.gfile.exists 93 94
+getattr 99 99
+hasattr 99 99
+tf.__version__ 101 101
+NotImplementedError 100 101
+tf.compat.v1.saved_model.load_v2 103 104
+tf.compat.v1.saved_model.load_v2 106 106
 

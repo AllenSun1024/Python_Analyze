@@ -1,174 +1,218 @@
 gelu:
-tensorflow.pow 21 21
-tensorflow.tanh 20 21
+np.pi 21 21
+np.sqrt 21 21
+tf.pow 21 21
+tf.tanh 20 21
 
 embedding_lookup:
-tensorflow.variable_scope 28 28
-tensorflow.get_variable 29 30
-tensorflow.one_hot 32 32
-tensorflow.einsum 34 34
-tensorflow.einsum 36 36
-tensorflow.nn.embedding_lookup 38 38
+tf.variable_scope 28 28
+tf.get_variable 29 30
+tf.one_hot 32 32
+tf.einsum 34 34
+tf.einsum 36 36
+tf.nn.embedding_lookup 38 38
 
 positional_embedding:
-tensorflow.einsum 42 42
-tensorflow.sin 43 43
-tensorflow.cos 43 43
-tensorflow.concat 43 43
-tensorflow.tile 47 47
+tf.einsum 42 42
+tf.sin 43 43
+tf.cos 43 43
+tf.concat 43 43
+tf.tile 47 47
 
 positionwise_ffn:
-tensorflow.variable_scope 64 64
-tensorflow.layers.dense 65 67
-tensorflow.layers.dropout 68 69
-tensorflow.layers.dense 70 72
-tensorflow.layers.dropout 73 74
-tensorflow.contrib.layers.layer_norm 75 76
+ValueError 61 61
+tf.variable_scope 64 64
+tf.layers.dense 65 67
+tf.layers.dropout 68 69
+tf.layers.dense 70 72
+tf.layers.dropout 73 74
+tf.contrib.layers.layer_norm 75 76
 
 head_projection:
-tensorflow.get_variable 82 84
-tensorflow.einsum 85 85
+tf.get_variable$dtype=h.dtype 82 84
+tf.einsum 85 85
 
 post_attention:
-tensorflow.get_variable 94 95
-tensorflow.einsum 96 96
-tensorflow.layers.dropout 98 98
-tensorflow.contrib.layers.layer_norm 100 101
-tensorflow.contrib.layers.layer_norm 103 104
+tf.get_variable$dtype=h.dtype 94 95
+tf.einsum 96 96
+tf.layers.dropout 98 98
+tf.contrib.layers.layer_norm 100 101
+tf.contrib.layers.layer_norm 103 104
 
 abs_attn_core:
-tensorflow.einsum 113 113
-tensorflow.nn.softmax 119 119
-tensorflow.layers.dropout 120 120
-tensorflow.einsum 123 123
+tf.einsum 113 113
+tf.nn.softmax 119 119
+tf.layers.dropout 120 120
+tf.einsum 123 123
 
 rel_attn_core:
-tensorflow.einsum 134 134
-tensorflow.einsum 137 137
-tensorflow.shape 138 138
-tensorflow.einsum 144 144
-tensorflow.einsum 145 145
-tensorflow.nn.softmax 154 154
-tensorflow.layers.dropout 155 155
-tensorflow.einsum 158 158
+tf.einsum 134 134
+tf.einsum 137 137
+tf.shape 138 138
+rel_shift 138 138
+tf.einsum 144 144
+tf.einsum 145 145
+tf.nn.softmax 154 154
+tf.layers.dropout 155 155
+tf.einsum 158 158
 
 rel_shift:
-tensorflow.shape 165 165
-tensorflow.reshape 167 167
-tensorflow.slice 168 168
-tensorflow.reshape 169 169
-tensorflow.slice 170 170
+tf.shape 165 165
+tf.reshape 167 167
+tf.slice 168 168
+tf.reshape 169 169
+tf.slice 170 170
 
 _create_mask:
-tensorflow.ones 177 177
-tensorflow.matrix_band_part 178 178
-tensorflow.matrix_band_part 179 179
-tensorflow.zeros 180 180
-tensorflow.concat 181 181
-tensorflow.matrix_band_part 183 183
-tensorflow.concat 184 184
+tf.ones 177 177
+tf.matrix_band_part 178 178
+tf.matrix_band_part 179 179
+tf.zeros 180 180
+tf.concat 181 181
+tf.matrix_band_part 183 183
+tf.concat 184 184
 
 _cache_mem:
-tensorflow.concat 200 200
-tensorflow.stop_gradient 202 202
+tf.concat 200 200
+tf.stop_gradient 202 202
 
 relative_positional_encoding:
-tensorflow.range 208 208
-tensorflow.cast 210 210
-tensorflow.range 223 223
-tensorflow.range 224 224
-tensorflow.cast 227 227
-tensorflow.cast 228 228
-tensorflow.clip_by_value 231 231
-tensorflow.clip_by_value 232 232
-tensorflow.concat 243 243
-tensorflow.range 245 245
-tensorflow.cast 247 247
-tensorflow.clip_by_value 249 249
+tf.range 208 208
+tf.cast 210 210
+ValueError 220 220
+tf.range 223 223
+tf.range 224 224
+tf.cast 227 227
+tf.cast 228 228
+tf.clip_by_value 231 231
+tf.clip_by_value 232 232
+positional_embedding 237 237
+positional_embedding 238 238
+positional_embedding 240 240
+positional_embedding 241 241
+tf.concat 243 243
+tf.range 245 245
+tf.cast 247 247
+tf.clip_by_value 249 249
+positional_embedding 250 250
 
 multihead_attn:
-tensorflow.variable_scope 261 261
+tf.variable_scope 261 261
+head_projection 263 264
+head_projection 265 266
+head_projection 267 268
+abs_attn_core 271 272
+post_attention 275 276
 
 rel_multihead_attn:
-tensorflow.variable_scope 289 289
-tensorflow.concat 291 291
+tf.variable_scope 289 289
+tf.concat 291 291
+head_projection 296 297
+head_projection 298 299
+head_projection 300 301
+head_projection 304 305
+rel_attn_core 308 310
+post_attention 313 314
 
 two_stream_rel_attn:
-tensorflow.variable_scope 326 326
-tensorflow.concat 330 330
-tensorflow.variable_scope 360 360
-tensorflow.einsum 368 368
-tensorflow.einsum 372 372
+tf.variable_scope 326 326
+tf.concat 330 330
+head_projection 335 336
+head_projection 339 340
+head_projection 343 344
+head_projection 348 349
+rel_attn_core 352 354
+post_attention 357 358
+tf.variable_scope 360 360
+head_projection 363 364
+tf.einsum 368 368
+rel_attn_core 369 371
+tf.einsum 372 372
+rel_attn_core 374 376
+post_attention 379 380
 
 transformer_xl:
-tensorflow.logging.info 453 453
-tensorflow.logging.info 455 455
-tensorflow.variable_scope 458 458
-tensorflow.get_variable 460 461
-tensorflow.get_variable 462 463
-tensorflow.get_variable 465 466
-tensorflow.get_variable 467 468
-tensorflow.shape 470 470
-tensorflow.shape 471 471
-tensorflow.shape 472 472
-tensorflow.shape 497 497
-tensorflow.zeros 497 498
-tensorflow.concat 499 499
-tensorflow.cast 506 506
-tensorflow.eye 509 509
-tensorflow.zeros 510 510
-tensorflow.concat 510 511
-tensorflow.cast 512 513
-tensorflow.variable_scope 528 528
-tensorflow.get_variable 529 529
-tensorflow.shape 531 531
-tensorflow.tile 531 531
-tensorflow.layers.dropout 535 535
-tensorflow.layers.dropout 537 537
-tensorflow.get_variable 542 543
-tensorflow.get_variable 546 547
-tensorflow.get_variable 549 550
-tensorflow.zeros 553 553
-tensorflow.concat 554 554
-tensorflow.equal 558 558
-tensorflow.logical_not 558 558
-tensorflow.cast$tensorflow.int32 557 559
-tensorflow.one_hot 560 560
-tensorflow.layers.dropout 568 568
-tensorflow.variable_scope 586 586
-tensorflow.layers.dropout 652 652
-tensorflow.layers.dropout 654 654
+tf.logging.info 453 453
+tf.logging.info 455 455
+tf.variable_scope 458 458
+tf.get_variable 460 461
+tf.get_variable 462 463
+tf.get_variable 465 466
+tf.get_variable 467 468
+tf.shape 470 470
+tf.shape 471 471
+tf.shape 472 472
+_create_mask 478 478
+ValueError 483 483
+tf.shape 497 497
+tf.zeros 497 498
+tf.concat 499 499
+tf.cast 506 506
+tf.eye 509 509
+tf.zeros 510 510
+tf.concat 510 511
+tf.cast 512 513
+embedding_lookup 518 525
+tf.variable_scope 528 528
+tf.get_variable 529 529
+tf.shape 531 531
+tf.tile 531 531
+tf.layers.dropout 535 535
+tf.layers.dropout 537 537
+tf.get_variable 542 543
+tf.get_variable 546 547
+tf.get_variable 549 550
+tf.zeros$dtype=tf.int32 553 553
+tf.concat 554 554
+tf.equal 558 558
+tf.logical_not 558 558
+tf.cast$tf.int32 557 559
+tf.one_hot 560 560
+relative_positional_encoding 565 567
+tf.layers.dropout 568 568
+range 574 574
+_cache_mem 576 576
+new_mems.append 576 576
+tf.variable_scope 586 586
+two_stream_rel_attn 588 607
+rel_multihead_attn 612 629
+positionwise_ffn 632 639
+positionwise_ffn 641 649
+tf.layers.dropout 652 652
+tf.layers.dropout 654 654
 
 lm_loss:
-tensorflow.variable_scope 663 663
-tensorflow.get_variable 669 670
-tensorflow.zeros_initializer 673 673
-tensorflow.get_variable 672 673
-tensorflow.einsum 675 675
-tensorflow.one_hot 678 678
-tensorflow.nn.log_softmax 679 679
-tensorflow.reduce_sum 679 679
-tensorflow.nn.sparse_softmax_cross_entropy_with_logits 681 682
+tf.variable_scope 663 663
+tf.get_variable$dtype=hidden.dtype 669 670
+tf.zeros_initializer 673 673
+tf.get_variable$dtype=hidden.dtype 672 673
+tf.einsum 675 675
+tf.one_hot$dtype=logits.dtype 678 678
+tf.nn.log_softmax 679 679
+tf.reduce_sum 679 679
+tf.nn.sparse_softmax_cross_entropy_with_logits 681 682
 
 summarize_sequence:
-tensorflow.variable_scope 699 699
-tensorflow.reduce_mean 705 705
-tensorflow.shape 707 707
-tensorflow.get_variable 709 711
-tensorflow.tile 712 712
-tensorflow.layers.dense 726 731
-tensorflow.layers.dropout 734 736
+tf.variable_scope 699 699
+tf.reduce_mean 705 705
+tf.shape 707 707
+tf.get_variable$dtype=hidden.dtype 709 711
+tf.tile 712 712
+multihead_attn 717 719
+ValueError 722 722
+tf.layers.dense$activation=tf.tanh 726 731
+tf.layers.dropout 734 736
 
 classification_loss:
-tensorflow.variable_scope 751 751
-tensorflow.layers.dense 752 756
-tensorflow.one_hot 758 758
-tensorflow.nn.log_softmax 759 759
-tensorflow.reduce_sum 759 759
+tf.variable_scope 751 751
+tf.layers.dense 752 756
+tf.one_hot$dtype=hidden.dtype 758 758
+tf.nn.log_softmax 759 759
+tf.reduce_sum 759 759
 
 regression_loss:
-tensorflow.variable_scope 769 769
-tensorflow.layers.dense 770 774
-tensorflow.squeeze 776 776
-tensorflow.square 777 777
+tf.variable_scope 769 769
+tf.layers.dense 770 774
+tf.squeeze 776 776
+tf.square 777 777
 

@@ -1,12 +1,11 @@
 adv_model_fn:
-tensorflow.compat.v1.AUTO_REUSE
 tensorflow.compat.v1.get_variable_scope
-tensorflow.compat.v1.variable_scope
+tensorflow.compat.v1.variable_scope$reuse=tensorflow.compat.v1.AUTO_REUSE
+tensorflow.estimator.ModeKeys.TRAIN
 tensorflow.compat.v1.summary.scalar
 tensorflow.compat.v1.summary.scalar
 tensorflow.compat.v1.train.AdagradOptimizer
 tensorflow.compat.v1.train.get_global_step
 tensorflow.compat.v1.train.AdagradOptimizer.minimize
-tensorflow.compat.v1.GraphKeys.UPDATE_OPS
-tensorflow.compat.v1.get_collection
+tensorflow.compat.v1.get_collection$tensorflow.compat.v1.GraphKeys.UPDATE_OPS
 tensorflow.group

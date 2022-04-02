@@ -1,6 +1,7 @@
 main:
-tensorflow.data.TFRecordDataset 4 4
-tensorflow.data.TFRecordDataset.repeat 5 5
-tensorflow.data.TFRecordDataset.batch 6 6
-tensorflow.data.TFRecordDataset.as_numpy_iterator 7 7
+tf.data.TFRecordDataset 4 4
+tf.data.TFRecordDataset.#.repeat 5 5
+tf.data.TFRecordDataset.#.batch 6 6
+tf.data.TFRecordDataset.#.as_numpy_iterator 7 7
+print 11 11
 

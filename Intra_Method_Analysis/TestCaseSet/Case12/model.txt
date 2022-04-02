@@ -1,15 +1,7 @@
 get_G:
 tensorflow.random_normal_initializer
 tensorflow.random_normal_initializer
-tensorflow.nn.relu
-tensorflow.nn.relu
-tensorflow.add
-tensorflow.add
-tensorflow.nn.relu
-tensorflow.nn.relu
-tensorflow.nn.tanh
 
 get_D:
 tensorflow.random_normal_initializer
 tensorflow.random_normal_initializer
-tensorflow.add

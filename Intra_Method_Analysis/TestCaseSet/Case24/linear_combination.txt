@@ -1,9 +1,7 @@
 LinearCombination/__init__:
-tensorflow.float32
+tensorflow.constant$dtype=tensorflow.float32
 tensorflow.constant
-tensorflow.constant
-tensorflow.float32
-tensorflow.constant
+tensorflow.constant$dtype=tensorflow.float32
 tensorflow.zeros_like
 tensorflow.not_equal
 tensorflow.boolean_mask
@@ -22,11 +20,9 @@ tensorflow.cond
 tensorflow.expand_dims
 tensorflow.tile
 tensorflow.identity
-tensorflow.float32
-tensorflow.zeros
+tensorflow.zeros$dtype=tensorflow.float32
 tensorflow.stack
-tensorflow.int32
-tensorflow.eye
+tensorflow.eye$dtype=tensorflow.int32
 tensorflow.gather
 tensorflow.transpose
 tensorflow.reshape

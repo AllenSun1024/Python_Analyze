@@ -2,8 +2,8 @@ _get_output_shapes:
 tensorflow.nest.map_structure
 
 get_dataset_size:
-tensorflow.int64
-tensorflow.constant
+tensorflow.data.INFINITE_CARDINALITY
+tensorflow.constant$dtype=tensorflow.int64
 
 _reduce_func:
 tensorflow.nest.flatten
@@ -27,6 +27,7 @@ tensorflow.math.not_equal
 tensorflow.math.logical_or
 
 _transform:
+tensorflow.data.INFINITE_CARDINALITY
 tensorflow.data.experimental.take_while
 
 _random_shard:
@@ -39,19 +40,16 @@ tensorflow.get_logger
 tensorflow.compat.v1.logging.info
 
 _get_bucket_id:
-tensorflow.int32
-tensorflow.constant
+tensorflow.constant$dtype=tensorflow.int32
 tensorflow.reduce_max
 
 _key_func:
 tensorflow.reduce_max
-tensorflow.int64
-tensorflow.cast
+tensorflow.cast$tensorflow.int64
 
 _window_size_func:
 tensorflow.maximum
-tensorflow.int64
-tensorflow.cast
+tensorflow.cast$tensorflow.int64
 
 _group_by_window:
 tensorflow.data.experimental.group_by_window

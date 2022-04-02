@@ -1,22 +1,60 @@
 clip_by_global_norm:
+mtf.square 11 11
+mtf.reduce_sum 11 11
+mtf.add_n 11 11
+mtf.sqrt 11 11
+mtf.maximum 12 12
 
 get_optimizer:
-tensorflow.compat.v1.train.get_or_create_global_step 18 18
-tensorflow.compat.v1.constant 20 20
-tensorflow.compat.v1.train.polynomial_decay 35 41
-tensorflow.compat.v1.train.cosine_decay 43 48
-tensorflow.compat.v1.cast$tensorflow.compat.v1.int32 51 51
-tensorflow.compat.v1.constant 52 52
-tensorflow.compat.v1.cast 56 56
-tensorflow.compat.v1.cast 57 57
-tensorflow.compat.v1.cast 62 62
+tf.train.get_or_create_global_step 18 18
+tf.constant$dtype=variable_dtype.slice_dtype 20 20
+mtf.constant$dtype=variable_dtype.slice_dtype 21 21
+mtf.gradients 24 24
+mtf.cast$variable_dtype.slice_dtype 29 29
+params.get 32 32
+tf.train.polynomial_decay 35 41
+tf.train.cosine_decay 43 48
+tf.cast$tf.int32 51 51
+tf.constant$dtype=tf.int32 52 52
+tf.cast 56 56
+tf.cast 57 57
+tf.cast 62 62
+mtf.Shape 66 66
+mtf.import_fully_replicated 66 66
+mtf.scalar_summary 67 67
+AdamWeightDecayOptimizer 70 78
+mtf.optimize.AdafactorOptimizer 80 86
+clip_by_global_norm 89 89
+AdamWeightDecayOptimizer.#.apply_grads$mesh.graph.trainable_variables 91 91
 
 __init__:
 
 apply_grad:
-tensorflow.compat.v1.logging.warning 119 119
-tensorflow.compat.v1.zeros_initializer 128 128
-tensorflow.compat.v1.zeros_initializer 136 136
+var.name 119 119
+tf.logging.warning 119 119
+mtf.to_float 122 122
+var.name 127 127
+tf.zeros_initializer 128 128
+mtf.get_variable$var.mesh$var.shape 126 132
+var.name 135 135
+tf.zeros_initializer 136 136
+mtf.get_variable$var.mesh$var.shape 134 140
+self.beta_1 143 143
+self.beta_1 143 143
+self.beta_2 144 144
+self.beta_2 144 144
+mtf.square 144 144
+mtf.sqrt 146 146
+self.epsilon 146 146
+self._do_use_weight_decay$var.name 155 155
+mtf.to_float$var.value 156 156
+self.weight_decay_rate 156 156
+self.learning_rate 158 158
+mtf.assign_sub 160 160
+mtf.assign 164 164
+mtf.assign 165 165
+assignments.extend 162 165
 
 _do_use_weight_decay:
+re.search 174 174
 

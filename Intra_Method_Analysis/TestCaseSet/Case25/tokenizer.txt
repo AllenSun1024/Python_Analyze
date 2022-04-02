@@ -14,33 +14,25 @@ tensorflow.RaggedTensor.from_tensor
 tensorflow.compat.as_text
 
 Tokenizer/_tokenize_tensor:
-tensorflow.string
-tensorflow.py_function
+tensorflow.py_function$tensorflow.string
 tensorflow.Tensor.set_shape
-tensorflow.string
-tensorflow.int32
-tensorflow.py_function
+tensorflow.py_function$tensorflow.string$tensorflow.int32
 tensorflow.RaggedTensor.from_row_lengths
 
 Tokenizer/_python_wrapper:
 tensorflow.compat.as_text
-tensorflow.string
-tensorflow.constant
+tensorflow.constant$dtype=tensorflow.string
 
 Tokenizer/_python_wrapper_batch:
 tensorflow.compat.as_text
 tensorflow.nest.flatten
-tensorflow.string
-tensorflow.constant
-tensorflow.int32
-tensorflow.constant
+tensorflow.constant$dtype=tensorflow.string
+tensorflow.constant$dtype=tensorflow.int32
 
 Tokenizer/_detokenize_tensor:
-tensorflow.string
-tensorflow.py_function
+tensorflow.py_function$tensorflow.string
 tensorflow.Tensor.set_shape
-tensorflow.string
-tensorflow.map_fn
+tensorflow.map_fn$dtype=tensorflow.string
 
 make_tokenizer:
 tensorflow.io.gfile.exists
@@ -52,8 +44,7 @@ tensorflow.TensorShape
 tensorflow.data.Dataset.from_generator
 tensorflow.data.Dataset.batch
 tensorflow.data.Dataset.map
-tensorflow.string
-tensorflow.TensorSpec
+tensorflow.TensorSpec$dtype=tensorflow.string
 tensorflow.data.Dataset.as_numpy_iterator
 
 TensorFlowTokenizer/_map_func:
@@ -65,12 +56,10 @@ tensorflow.strings.strip
 tensorflow.strings.split
 
 TensorFlowTokenizer/_tokenize_string:
-tensorflow.string
-tensorflow.constant
+tensorflow.constant$dtype=tensorflow.string
 
 TensorFlowTokenizer/_detokenize_string:
-tensorflow.string
-tensorflow.constant
+tensorflow.constant$dtype=tensorflow.string
 
 SpaceTokenizer/_tokenize_tensor:
 tensorflow.strings.split

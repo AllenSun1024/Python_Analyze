@@ -1,78 +1,197 @@
 __init__:
+TensorSpec$shape=action_spec.shape 50 50
+TensorSpec$shape=action_spec.shape 51 51
+TensorSpec$shape=action_spec.shape 52 52
+TensorsSpec 49 53
+TensorsSpec 54 54
+super 56 56
+super 56 59
+TensorforceError.value 66 69
+TensorforceError.value 73 76
+self.submodule$size=self.action_spec.size$input_spec=self.input_spec 83 86
+self.submodule$size=self.action_spec.size$input_spec=self.input_spec 88 92
+TensorforceError.value$value=self.embedding_shape 97 100
+TensorforceError.value$value=self.input_spec.shape 106 109
+self.submodule$input_spec=self.input_spec 110 113
+self.submodule$input_spec=self.input_spec 115 118
 
 get_architecture:
+self.mean.get_architecture 121 121
+self.stddev.get_architecture 123 123
 
 initialize:
+super 127 127
+super 127 127
+self.action_spec.shape 130 130
+TensorSpec 130 130
+self.variable 131 133
+self.name 135 135
+self.register_summary 137 137
+self.register_tracking 140 140
+self.register_tracking 141 141
 
 parametrize:
-tensorflow.reshape 152 152
-tensorflow.shape 156 156
-tensorflow.tile 157 157
-tensorflow.reshape 161 161
-tensorflow.clip_by_value 168 170
-tensorflow.nn.softplus 175 175
-tensorflow.math.log 183 183
+tf_util.constant$value=util.epsilon 145 145
+np.log$util.epsilon 146 146
+tf_util.constant 146 146
+self.mean.apply 149 149
+self.action_spec.shape 151 151
+tf.reshape 152 152
+tf.shape 156 156
+range$self.action_spec.rank 156 156
+tuple 156 156
+tf.tile$input=self.stddev 157 157
+self.stddev.apply 159 159
+tf.reshape 161 161
+tf.clip_by_value 168 170
+tf_util.constant 173 173
+np.log 174 174
+tf_util.constant 174 174
+tf.nn.softplus 175 175
+tf_util.constant 180 180
+tf.math.log 183 183
+TensorDict 185 185
 
 fn_summary:
-tensorflow.math.reduce_mean 195 195
-tensorflow.math.reduce_mean 196 196
+parameters.get 189 189
+list 192 192
+self.action_spec.rank 195 195
+range 195 195
+tf.math.reduce_mean 195 195
+self.action_spec.rank 196 196
+range 196 196
+tf.math.reduce_mean 196 196
 
 mode:
-tensorflow.control_dependencies 216 216
-tensorflow.math.tanh 224 224
-tensorflow.clip_by_value 226 226
-tensorflow.maximum 237 237
-tensorflow.minimum 241 241
+self.name 199 199
+self.summary 201 203
+dependencies.extend 201 203
+self.track 209 209
+dependencies.extend 209 209
+self.track 214 214
+dependencies.extend 214 214
+tf.control_dependencies 216 216
+tf_util.constant 221 221
+tf.math.tanh 224 224
+tf.clip_by_value 226 226
+tf_util.constant 230 230
+tf_util.constant$value=self.action_spec.min_value 231 231
+tf_util.constant$value=self.action_spec.max_value 232 232
+tf_util.constant$value=self.action_spec.min_value 236 236
+tf.maximum 237 237
+tf_util.constant$value=self.action_spec.max_value 240 240
+tf.minimum 241 241
 
 fn_tracking:
-tensorflow.math.reduce_mean 207 207
+tf.math.reduce_mean 207 207
 
 fn_tracking:
-tensorflow.math.reduce_mean 212 212
+tf.math.reduce_mean 212 212
 
 fn_summary:
-tensorflow.math.reduce_mean 253 253
-tensorflow.math.reduce_mean 254 254
+parameters.get 247 247
+list 250 250
+self.action_spec.rank 253 253
+range 253 253
+tf.math.reduce_mean 253 253
+self.action_spec.rank 254 254
+range 254 254
+tf.math.reduce_mean 254 254
 
 sample:
-tensorflow.control_dependencies 283 283
-tensorflow.cond 285 285
-tensorflow.math.tanh 292 292
-tensorflow.clip_by_value 294 294
-tensorflow.maximum 305 305
-tensorflow.minimum 309 309
+self.name 257 257
+self.summary 259 261
+dependencies.extend 259 261
+self.track 267 267
+dependencies.extend 267 267
+self.track 272 272
+dependencies.extend 272 272
+tf.control_dependencies 283 283
+tf_util.constant$value=util.epsilon 284 284
+tf.cond 285 285
+tf_util.constant 289 289
+tf.math.tanh 292 292
+tf.clip_by_value 294 294
+tf_util.constant 298 298
+tf_util.constant$value=self.action_spec.min_value 299 299
+tf_util.constant$value=self.action_spec.max_value 300 300
+tf_util.constant$value=self.action_spec.min_value 304 304
+tf.maximum 305 305
+tf_util.constant$value=self.action_spec.max_value 308 308
+tf.minimum 309 309
 
 fn_tracking:
-tensorflow.math.reduce_mean 265 265
+tf.math.reduce_mean 265 265
 
 fn_tracking:
-tensorflow.math.reduce_mean 270 270
+tf.math.reduce_mean 270 270
 
 fn_mode:
 
 fn_sample:
-tensorflow.shape 279 279
-tensorflow.random.normal 278 280
+tf.shape 279 279
+tf_util.get_dtype 279 279
+tf.random.normal 278 280
 
 log_probability:
-tensorflow.clip_by_value 328 328
-tensorflow.math.atanh 329 329
-tensorflow.square 335 335
-tensorflow.square 336 336
-tensorflow.math.softplus 342 342
+parameters.get 315 315
+tf_util.constant 320 320
+tf_util.constant 321 321
+tf_util.constant$value=self.action_spec.min_value 322 322
+tf_util.constant$value=self.action_spec.max_value 323 323
+util.epsilon 327 327
+tf_util.constant 327 327
+tf.clip_by_value 328 328
+tf_util.float32 329 329
+tf.math.atanh 329 329
+tf_util.cast 329 329
+tf_util.constant$value=util.epsilon 331 331
+tf_util.constant 332 332
+np.pi 333 333
+np.log 333 333
+tf_util.constant 333 333
+tf.square 335 335
+tf.square 336 336
+np.log 341 341
+tf_util.constant 341 341
+tf.math.softplus 342 342
 
 entropy:
+np.pi 350 350
+np.e 350 350
+np.log 350 350
+tf_util.constant 350 350
 
 kl_divergence:
-tensorflow.square 365 365
-tensorflow.square 366 366
-tensorflow.square 367 367
+parameters1.get 358 358
+parameters2.get 359 359
+tf_util.constant 361 361
+tf_util.constant$value=util.epsilon 362 362
+tf.square 365 365
+tf.square 366 366
+tf.square 367 367
 
 action_value:
-tensorflow.clip_by_value 386 386
-tensorflow.math.atanh 387 387
-tensorflow.square 395 395
-tensorflow.square 396 396
+parameters.get 373 373
+tf_util.constant 378 378
+tf_util.constant 379 379
+tf_util.constant$value=self.action_spec.min_value 380 380
+tf_util.constant$value=self.action_spec.max_value 381 381
+util.epsilon 385 385
+tf_util.constant 385 385
+tf.clip_by_value 386 386
+tf.math.atanh 387 387
+tf_util.constant 389 389
+tf_util.constant 390 390
+tf_util.constant$value=util.epsilon 391 391
+np.pi 392 392
+np.log 392 392
+tf_util.constant 392 392
+tf.square 395 395
+tf.square 396 396
 
 state_value:
+np.pi 411 411
+np.log 411 411
+tf_util.constant 411 411
 

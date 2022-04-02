@@ -69,17 +69,9 @@ tensorflow.numpy_function
 
 TrainingStats/_update_words_counter:
 tensorflow.reduce_sum
-tensorflow.int64
-tensorflow.constant
-tensorflow.VariableSynchronization.ON_READ
-tensorflow.VariableAggregation.SUM
-tensorflow.Variable
-tensorflow.int64
-tensorflow.cast
+tensorflow.constant$dtype=tensorflow.int64
+tensorflow.Variable$tensorflow.VariableSynchronization.ON_READ$tensorflow.VariableAggregation.SUM
+tensorflow.cast$tensorflow.int64
 
 TrainingStats/_reset_words_counters:
-tensorflow.int64
-tensorflow.constant
-
-TrainingStats/_get_learning_rate:
-tensorflow.optimizers.schedules.LearningRateSchedule
+tensorflow.constant$dtype=tensorflow.int64

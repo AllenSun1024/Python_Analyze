@@ -1,17 +1,15 @@
 compute_length_after_conv:
 tensorflow.multiply
-tensorflow.float32
-tensorflow.cast
-tensorflow.float32
-tensorflow.cast
+tensorflow.cast$dtype=tensorflow.float32
+tensorflow.cast$dtype=tensorflow.float32
 tensorflow.math.floordiv
-tensorflow.int32
-tensorflow.cast
+tensorflow.cast$dtype=tensorflow.int32
 
 evaluate_model:
 tensorflow.compat.v1.GraphKeys.GLOBAL_STEP
 
 model_fn:
+tensorflow.estimator.ModeKeys.PREDICT
 tensorflow.argmax
 tensorflow.estimator.EstimatorSpec
 tensorflow.shape
@@ -21,8 +19,7 @@ tensorflow.reduce_mean
 tensorflow.compat.v1.train.AdamOptimizer
 tensorflow.compat.v1.train.get_or_create_global_step
 tensorflow.compat.v1.train.AdamOptimizer.minimize
-tensorflow.compat.v1.GraphKeys.UPDATE_OPS
-tensorflow.compat.v1.get_collection
+tensorflow.compat.v1.get_collection$tensorflow.compat.v1.GraphKeys.UPDATE_OPS
 tensorflow.group
 tensorflow.estimator.EstimatorSpec
 
