@@ -40,6 +40,8 @@ tf.gather 117 117
 tf.shape 118 118
 tf.gather 118 118
 self.n_non_zero_perturbations 123 123
+self.n_non_zero_perturbations 124 124
+self.n_perturbations 124 124
 tf.cond 124 125
 tf.expand_dims 126 126
 tf.tile 126 126
@@ -51,6 +53,8 @@ tf.gather 137 138
 tf.transpose 139 139
 tf.reshape 140 140
 tf.zeros 141 141
+self.n_non_zero_perturbations 143 143
+self.n_perturbations 143 143
 tf.cond 142 145
 tf.expand_dims 147 147
 tf.tile 147 148
@@ -66,6 +70,8 @@ tf.tile 162 163
 self.n_non_zero_perturbations 167 167
 tf.range 167 167
 tf.reshape$self.n_non_zero_perturbations 166 168
+self.n_non_zero_perturbations 170 170
+self.n_perturbations 170 170
 tf.cond 169 174
 tf.expand_dims 175 175
 tf.tile 175 176

@@ -7,6 +7,7 @@ self.build$self.embedding_layer.embedding_size 22 22
 build:
 tuple 26 26
 self.cell.build 26 26
+self._trainable_weights 28 28
 list 29 29
 self._trainable_weights.append 32 32
 
@@ -30,10 +31,13 @@ self.build 55 55
 build:
 tuple 59 59
 self.cell.build 59 59
+self.method 61 61
 self.hidden_size 62 62
 self._get_weights 62 62
 self._get_weights 63 63
+self.method 64 64
 self._get_weights 65 65
+self._trainable_weights 66 66
 list 67 67
 self._trainable_weights.append 70 70
 

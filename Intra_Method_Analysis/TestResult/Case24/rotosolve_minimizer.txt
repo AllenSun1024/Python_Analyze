@@ -47,8 +47,10 @@ tf.while_loop 224 229
 
 _cond_internal:
 prefer_static_shape$state_cond.position 220 220
+state_cond.solve_param_i 219 219
 
 _cond:
+state.num_iterations 236 236
 
 _body:
 state.solve_param_i.assign 242 242

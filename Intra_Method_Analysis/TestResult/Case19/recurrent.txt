@@ -16,6 +16,7 @@ Exception 181 181
 tf.name_scope$self.name 183 183
 tuple 184 184
 self.cell.build 184 184
+self._trainable_weights 186 186
 list 187 187
 self._trainable_weights.append 189 189
 
@@ -103,6 +104,7 @@ tuple 688 688
 self.fw_cell.build 688 688
 tuple 689 689
 self.bw_cell.build 689 689
+self._trainable_weights 691 691
 list 692 692
 self._trainable_weights.append 694 694
 self._trainable_weights.append 696 696

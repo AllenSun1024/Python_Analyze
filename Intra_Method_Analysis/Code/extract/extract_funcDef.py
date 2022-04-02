@@ -222,6 +222,24 @@ class FuncDefExtractor(ast.NodeVisitor):
                     self.lines.append(node.lineno)
                     self.end_lines.append(node.end_lineno)
 
+    def visit_Compare(self, node):
+        if self.isInFunc:
+            self.generic_visit(node)
+            # left + comparators
+            if isinstance(node.left, ast.Attribute):
+                leftName = get_Attribute_Name(node.left, '')
+                if leftName is not None:
+                    self.APIs.append(leftName)
+                    self.lines.append(node.left.lineno)
+                    self.end_lines.append(node.left.end_lineno)
+                for comparator in node.comparators:
+                    if isinstance(comparator, ast.Attribute):
+                        compName = get_Attribute_Name(comparator, '')
+                        if compName is not None:
+                            self.APIs.append(compName)
+                            self.lines.append(comparator.lineno)
+                            self.end_lines.append(comparator.end_lineno)
+
     def visit_With(self, node):
         if self.isInFunc:
             for item in node.items:  # item -> ast.withitem

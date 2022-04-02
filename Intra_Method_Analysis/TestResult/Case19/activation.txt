@@ -2,6 +2,7 @@ __init__:
 super 64 64
 super 64 64
 self.build 70 70
+self.in_channels 72 72
 self.build$self.in_channels 73 73
 self.name 76 76
 self.channel_shared 76 76
@@ -23,6 +24,7 @@ __init__:
 super 151 151
 super 151 151
 self.build 157 157
+self.in_channels 159 159
 self.build$self.in_channels 160 160
 self.name 163 163
 self.channel_shared 163 163

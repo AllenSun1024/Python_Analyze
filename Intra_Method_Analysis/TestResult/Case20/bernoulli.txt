@@ -1,4 +1,5 @@
 __init__:
+action_spec.type 35 35
 TensorSpec$shape=action_spec.shape 38 38
 TensorSpec$shape=action_spec.shape 39 39
 TensorSpec$shape=action_spec.shape 40 40
@@ -7,8 +8,11 @@ TensorsSpec 37 42
 TensorsSpec 43 43
 super 45 45
 super 45 48
+self.input_spec.rank 50 50
 util.product$xs=self.action_spec.shape 52 52
 self.submodule$input_spec=self.input_spec 53 56
+self.input_spec.rank 60 60
+self.input_spec.rank 60 60
 TensorforceError.value$value=self.input_spec.shape 61 64
 TensorforceError.value$value=self.input_spec.shape 70 73
 self.submodule$input_spec=self.input_spec 74 77
@@ -28,6 +32,7 @@ tf_util.constant 93 93
 tf_util.constant$value=util.epsilon 94 94
 self.action_spec.shape 95 95
 self.logit.apply 98 98
+self.input_spec.rank 99 99
 tf.reshape 100 100
 tf.sigmoid 106 106
 tf.math.log 109 109

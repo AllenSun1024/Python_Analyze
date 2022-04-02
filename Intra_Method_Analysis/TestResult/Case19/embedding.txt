@@ -5,10 +5,15 @@ self.name 63 63
 logging.info 63 63
 tuple 66 66
 self.build 66 66
+self.depth 69 69
 self.__class__.__name__ 70 70
 RuntimeError 70 70
 
 __repr__:
+self.on_value 74 74
+self.off_value 76 76
+self.axis 78 78
+self.name 80 80
 s.format$classname=self.__class__.__name__ 83 83
 
 build:

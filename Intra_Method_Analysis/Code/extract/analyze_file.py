@@ -33,8 +33,8 @@ def parse_tree_script(tree, script, resultPath):
     function_extractor.generic_visit(tree)
     funcStats = function_extractor.funcStats
     funcStats = get_references_by_lineno(funcStats=funcStats, script=script)
-    print(funcStats)
-    # function_extractor.funcStats = revert_import_name(validPackages, funcStats)
+    # TODO: repair to revert paras' name
+    function_extractor.funcStats = revert_import_name(validPackages, funcStats)
     # function_extractor.funcStats = chain_def_use(funcStats=function_extractor.funcStats)
     function_extractor.report()
 

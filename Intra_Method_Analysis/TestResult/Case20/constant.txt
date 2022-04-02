@@ -5,7 +5,11 @@ dict 37 37
 self.actions_spec.items 39 39
 spec.py_type 42 42
 spec.py_type.__call__ 42 42
+spec.type 43 43
+spec.min_value 43 43
 TensorforceError.value 44 47
+spec.type 48 48
+spec.max_value 48 48
 TensorforceError.value 49 52
 
 core_act:
@@ -17,8 +21,11 @@ self.actions_spec.items 61 61
 tf_util.cast 63 63
 tf_util.constant$value=spec.shape 64 64
 tf.concat 62 65
+self.action_values 67 67
 tf_util.constant$dtype=spec.type 69 69
 tf.fill 70 70
+spec.type 72 72
+spec.num_values 73 73
 range$spec.num_values 77 77
 list 77 77
 tuple 78 78
@@ -35,6 +42,9 @@ tf.reshape 86 86
 tf.math.cumsum 87 87
 tf.gather 88 88
 tf.reshape 89 89
+spec.type 91 91
+spec.min_value 91 91
+spec.max_value 92 92
 spec.max_value 94 94
 spec.min_value 94 94
 spec.min_value 94 94
@@ -42,6 +52,8 @@ tf_util.constant$dtype=spec.type 95 95
 tf.fill 96 96
 tf_util.constant$value=spec.min_value$dtype=spec.type 100 100
 tf.fill 101 101
+spec.type 103 103
+spec.max_value 103 103
 tf_util.constant$value=spec.max_value$dtype=spec.type 105 105
 tf.fill 106 106
 tf_util.zeros$dtype=spec.type 110 110

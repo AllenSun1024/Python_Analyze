@@ -2,7 +2,7 @@ import ast
 
 # print(ast.dump(ast.parse('eval_results={_WER_KEY:total_wer, _CER_KEY:total_cer, tf.compat.v1.GraphKeys.Global_STEP:global_step,}'), indent=4))
 
-print(ast.dump(ast.parse("mode == tf.estimator.ModeKeys.TRAIN"), indent=4))
+print(ast.dump(ast.parse("tf.py_function(data_aug, [image], [tf.float32])[0]"), indent=4))
 
 # Elementwise(tf.add)([n, nn])
 

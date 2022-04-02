@@ -7,6 +7,7 @@ Module._MODULE_STACK.clear 44 44
 Module._MODULE_STACK.append$self.__class__ 45 45
 super 47 47
 super$device=self._config.device$name=self._config.name 47 49
+self.l2_regularization 51 51
 set 56 56
 TensorSpec 59 59
 self.value_names.add 60 60
@@ -17,10 +18,13 @@ self.value_names.add 68 68
 TensorSpec 71 71
 self.value_names.add 72 72
 self.states_spec.items 76 76
+spec.type 78 78
+spec.min_value 80 80
 logging.warning 81 81
 np.isinf$spec.min_value 82 82
 np.any 82 82
 logging.warning 83 83
+spec.max_value 84 84
 logging.warning 85 85
 np.isinf$spec.max_value 86 86
 np.any 86 86
@@ -31,10 +35,13 @@ self.value_names.add 93 93
 TensorforceError.exists 97 97
 self.value_names.add 98 98
 self.actions_spec.items 102 102
+spec.type 104 104
+spec.min_value 106 106
 logging.warning 107 107
 np.isinf$spec.min_value 108 108
 np.any 108 108
 TensorforceError 109 109
+spec.max_value 110 110
 logging.warning 111 111
 np.isinf$spec.max_value 112 112
 np.any 112 112
@@ -48,6 +55,8 @@ TensorsSpec 127 127
 ArrayDict 128 128
 TensorsSpec 131 131
 self.actions_spec.items 132 132
+spec.type 133 133
+spec.num_values 134 134
 spec.shape 136 136
 spec.num_values 136 136
 TensorSpec 135 137
@@ -87,12 +96,15 @@ full_name:
 self.name 213 213
 
 close:
+self.saver 216 216
 self.save 217 217
+self.summarizer 218 218
 self.summarizer.close 219 219
 delattr 220 220
 delattr 221 221
 
 __enter__:
+self.is_initialized 224 224
 Module._MODULE_STACK.append 226 226
 len$Module._MODULE_STACK 229 229
 self.device.__enter__ 230 230
@@ -102,9 +114,12 @@ __exit__:
 self.name_scope.__exit__ 235 235
 self.device.__exit__ 236 236
 Module._MODULE_STACK.pop 237 237
+self.is_initialized 239 239
 len$Module._MODULE_STACK 241 241
 
 initialize:
+self.is_initialized 244 244
+self.summarizer 249 249
 os.path.isdir 251 251
 os.listdir 253 253
 os.path.join 254 254
@@ -130,7 +145,9 @@ super 288 288
 super 288 288
 self.core_initialize 290 290
 dict$timesteps=self.timesteps$episodes=self.episodes$updates=self.updates 293 295
+self.saver 298 298
 self.saver.get 300 300
+self.saver_filename 301 301
 self.saver.get 303 303
 self.saver.get 304 304
 self.saver.get 307 307
@@ -138,9 +155,11 @@ self.saver.get 310 310
 tf.train.Checkpoint 314 314
 self.saver.get 318 318
 tf.train.CheckpointManager$checkpoint=self.checkpoint$directory=self.saver_directory$checkpoint_name=self.saver_filename 315 321
+self.summarizer 325 325
 self.initialize_api 326 326
 self.summarizer.as_default 328 328
 self.initialize_api 329 329
+self.saver 331 331
 self.restore 333 333
 self.save 335 335
 
@@ -276,6 +295,7 @@ list.#.extend 537 540
 self.deterministic_spec.tf_assert 541 544
 list.#.extend 541 544
 self.actions_spec.items 547 547
+spec.type 548 548
 spec.rank 551 551
 tf.math.reduce_any 550 552
 tf.reduce_all 550 552
@@ -299,6 +319,7 @@ self.parallel_spec.tf_assert 585 588
 list.#.extend 585 588
 tf_util.constant 591 591
 self.actions_spec.items 592 592
+spec.type 593 593
 spec.rank 596 596
 tf.math.reduce_any 595 597
 tf.reduce_all 595 597
@@ -312,6 +333,7 @@ list 615 615
 self.actions_spec.tf_assert 617 617
 list.#.extend 617 617
 self.actions_spec.zip_items 619 619
+spec.type 620 620
 spec.rank 623 623
 tf.expand_dims 623 623
 spec.rank 624 624
@@ -358,6 +380,7 @@ tf.debugging.assert_equal 676 679
 list.#.append 676 679
 tf.control_dependencies 681 681
 list 682 682
+self.summaries 685 685
 self.summarizer.as_default 686 686
 tf.math.reduce_mean 687 687
 tf.summary.scalar$step=self.timesteps 689 689
@@ -381,6 +404,7 @@ tf.tensor_scatter_nd_update 728 730
 previous.assign 731 731
 list.#.append 731 731
 list 736 736
+self.summaries 737 737
 self.summarizer.as_default 738 738
 tf.gather$params=self.episode_length 739 739
 tf.summary.scalar$step=self.episodes 741 741
@@ -416,6 +440,7 @@ core_observe:
 tf_util.constant 784 784
 
 initial_internals:
+self.saver 788 788
 TensorforceError.required 789 789
 self.saver.save 794 794
 TensorforceError.required 797 797
@@ -440,6 +465,7 @@ self.input_signature 832 832
 self.to_list 832 832
 independent_act.get_concrete_function 831 833
 tf.saved_model.save 837 837
+self.checkpoint 844 844
 tf.train.Checkpoint 845 845
 os.path.join 850 850
 self.checkpoint.save 850 850
@@ -463,6 +489,7 @@ h5py.File.create_dataset 909 909
 TensorforceError.value 913 913
 
 restore:
+self.saver 918 918
 TensorforceError.required 919 919
 tf.train.latest_checkpoint 922 922
 TensorforceError.exists_not 924 924

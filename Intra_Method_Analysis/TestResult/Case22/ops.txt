@@ -32,7 +32,9 @@ tf.RaggedTensor.from_tensor 78 78
 
 indices_to_mask:
 tf.convert_to_tensor$dtype_hint=tf.int64 90 90
+tf.convert_to_tensor.#.shape.ndims 91 91
 isinstance 92 92
+tf.TensorShape.#.shape.ndims 92 92
 tf.expand_dims 93 93
 isinstance 94 94
 tf.TensorShape 95 95

@@ -2,6 +2,7 @@ _make_ragged:
 tf.RaggedTensor.from_row_lengths 29 29
 
 pack_nodes_and_edges:
+neighbor_config.max_neighbors 36 36
 features.items 37 37
 tf.ones$dtype=tf.int64 38 38
 tf.zeros$dtype=tf.int64 39 39
@@ -15,6 +16,7 @@ tf.squeeze 48 48
 functools.partial.# 48 48
 neighbor_config.max_neighbors 50 50
 ragged_fn.#.flat_values.set_shape 49 50
+ragged_fn.#.flat_values 51 51
 ragged_fn.#.with_flat_values 51 51
 tf.nest.map_structure 52 53
 tf.ragged.boolean_mask 54 54

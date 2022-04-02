@@ -2,6 +2,7 @@ assign_to_gpu:
 
 _assign:
 isinstance$tf.NodeDef 10 10
+node_def.op 11 11
 
 average_grads_and_vars:
 zip 42 42

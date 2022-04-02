@@ -3,6 +3,7 @@ tf.contrib.cluster_resolver.TPUClusterResolver$FLAGS.tpu$zone=FLAGS.tpu_zone$pro
 tf.contrib.cluster_resolver.TPUClusterResolver.#.get_master 22 22
 tf.ConfigProto 27 27
 tf.logging.info 33 33
+FLAGS.num_core_per_host 34 34
 tf.logging.info 36 36
 tf.contrib.distribute.MirroredStrategy$num_gpus=FLAGS.num_core_per_host 38 39
 tf.logging.info$strategy.num_replicas_in_sync 40 41
@@ -14,6 +15,7 @@ tf.contrib.tpu.RunConfig$model_dir=FLAGS.model_dir$keep_checkpoint_max=FLAGS.max
 tpu_scaffold:
 tf.global_variables 61 61
 tf.trainable_variables 61 61
+FLAGS.init_checkpoint 64 64
 FLAGS.init_checkpoint.endswith 65 65
 os.path.dirname$FLAGS.init_checkpoint 66 66
 tf.train.latest_checkpoint 67 67
@@ -25,26 +27,33 @@ tf.train.Scaffold 78 78
 init_from_checkpoint:
 tf.train.init_from_checkpoint 82 82
 tf.logging.info 85 85
+var.name 88 88
 tf.logging.info$var.name$var.shape 90 91
 
 get_train_op:
 tf.train.get_or_create_global_step 96 96
+FLAGS.warmup_steps 99 99
 tf.cast$tf.float32 100 100
 tf.cast$FLAGS.warmup_steps$tf.float32 101 101
 FLAGS.learning_rate 102 102
+FLAGS.decay_method 107 107
 FLAGS.warmup_steps 110 110
 FLAGS.train_steps 111 111
 FLAGS.warmup_steps 111 111
 FLAGS.learning_rate 112 112
 FLAGS.min_lr_ratio 112 112
 tf.train.polynomial_decay$FLAGS.learning_rate 108 112
+FLAGS.decay_method 113 113
 FLAGS.warmup_steps 116 116
 FLAGS.train_steps 117 117
 FLAGS.warmup_steps 117 117
 tf.train.cosine_decay$FLAGS.learning_rate$alpha=FLAGS.min_lr_ratio 114 118
 ValueError$FLAGS.decay_method 120 120
 tf.where 122 123
+FLAGS.weight_decay 125 125
+FLAGS.num_core_per_host 126 126
 ValueError 127 128
+FLAGS.weight_decay 130 130
 tf.train.AdamOptimizer$epsilon=FLAGS.adam_epsilon 131 133
 AdamWeightDecayOptimizer$epsilon=FLAGS.adam_epsilon$weight_decay_rate=FLAGS.weight_decay 135 139
 tf.contrib.tpu.CrossShardOptimizer 142 142
@@ -65,6 +74,7 @@ FLAGS.lr_layer_decay_rate 159 159
 tf.logging.info 161 162
 zip 166 166
 tf.train.AdamOptimizer.#.apply_gradients 165 166
+FLAGS.weight_decay 169 169
 tf.train.get_or_create_global_step.#.assign 171 171
 tf.group 171 171
 

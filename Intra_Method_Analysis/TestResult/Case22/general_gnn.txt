@@ -19,7 +19,9 @@ call:
 len 162 162
 self.pre 169 169
 layer 172 172
+self.connectivity 173 173
 self.connectivity 174 174
+self.pool 178 178
 self.pool 179 179
 self.post 181 181
 

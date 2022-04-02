@@ -17,6 +17,7 @@ tf.keras.initializers.TruncatedNormal 172 172
 build:
 tf.TensorShape 178 178
 tf.as_list 178 178
+self._num_output_channels 179 179
 self.add_weight 187 191
 self.add_weight 195 199
 self.add_weight 200 204

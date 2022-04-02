@@ -32,6 +32,7 @@ set_axes 104 104
 
 has_one_axis:
 hasattr 88 88
+X.ndim 88 88
 isinstance 88 88
 hasattr 89 89
 
@@ -70,6 +71,7 @@ collections.namedtuple.# 156 157
 line.append 156 157
 points.clear 158 158
 d2l.use_svg_display 161 161
+self.fig 162 162
 d2l.plt.figure$figsize=self.figsize 163 163
 self.data.items 165 165
 zip$self.ls$self.colors 165 165
@@ -154,6 +156,7 @@ prepare_data:
 data.train_dataloader 261 261
 data.val_dataloader 262 262
 len$self.train_dataloader 263 263
+self.val_dataloader 265 265
 len$self.val_dataloader 264 264
 
 prepare_model:
@@ -174,9 +177,11 @@ tf.GradientTape 293 293
 self.prepare_batch 294 294
 self.model.training_step 294 294
 tf.GradientTape.gradient$self.model.trainable_variables 295 295
+self.gradient_clip_val 296 296
 self.clip_gradients$self.gradient_clip_val 297 297
 zip$self.model.trainable_variables 298 298
 self.optim.apply_gradients 298 298
+self.val_dataloader 300 300
 self.prepare_batch 304 304
 self.model.validation_step 304 304
 
@@ -343,6 +348,7 @@ self.bn1 517 517
 tf.keras.activations.relu 517 517
 self.conv2 518 518
 self.bn2 518 518
+self.conv3 519 519
 self.conv3 520 520
 tf.keras.activations.relu 522 522
 
@@ -430,6 +436,7 @@ len 622 622
 len 622 622
 
 check_shape:
+a.shape 626 626
 
 __init__:
 super 632 632

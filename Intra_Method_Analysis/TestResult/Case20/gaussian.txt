@@ -1,4 +1,5 @@
 __init__:
+action_spec.type 47 47
 TensorSpec$shape=action_spec.shape 50 50
 TensorSpec$shape=action_spec.shape 51 51
 TensorSpec$shape=action_spec.shape 52 52
@@ -7,21 +8,32 @@ TensorsSpec 54 54
 super 56 56
 super 56 59
 TensorforceError.value 66 69
+self.action_spec.min_value 71 71
+self.action_spec.max_value 71 71
 TensorforceError.value 73 76
+self.action_spec.min_value 77 77
+self.action_spec.max_value 77 77
+self.input_spec.rank 81 81
 self.submodule$size=self.action_spec.size$input_spec=self.input_spec 83 86
+self.stddev_mode 87 87
 self.submodule$size=self.action_spec.size$input_spec=self.input_spec 88 92
+self.input_spec.rank 96 96
+self.input_spec.rank 96 96
 TensorforceError.value$value=self.embedding_shape 97 100
 TensorforceError.value$value=self.input_spec.shape 106 109
 self.submodule$input_spec=self.input_spec 110 113
+self.stddev_mode 114 114
 self.submodule$input_spec=self.input_spec 115 118
 
 get_architecture:
 self.mean.get_architecture 121 121
+self.stddev_mode 122 122
 self.stddev.get_architecture 123 123
 
 initialize:
 super 127 127
 super 127 127
+self.stddev_mode 129 129
 self.action_spec.shape 130 130
 TensorSpec 130 130
 self.variable 131 133
@@ -35,19 +47,24 @@ tf_util.constant$value=util.epsilon 145 145
 np.log$util.epsilon 146 146
 tf_util.constant 146 146
 self.mean.apply 149 149
+self.input_spec.rank 150 150
 self.action_spec.shape 151 151
 tf.reshape 152 152
+self.stddev_mode 155 155
 tf.shape 156 156
 range$self.action_spec.rank 156 156
 tuple 156 156
 tf.tile$input=self.stddev 157 157
 self.stddev.apply 159 159
+self.input_spec.rank 160 160
 tf.reshape 161 161
 tf.clip_by_value 168 170
 tf_util.constant 173 173
 np.log 174 174
 tf_util.constant 174 174
 tf.nn.softplus 175 175
+self.action_spec.min_value 179 179
+self.action_spec.max_value 179 179
 tf_util.constant 180 180
 tf.math.log 183 183
 TensorDict 185 185
@@ -71,14 +88,21 @@ dependencies.extend 209 209
 self.track 214 214
 dependencies.extend 214 214
 tf.control_dependencies 216 216
+self.bounded_transform 220 220
 tf_util.constant 221 221
+self.bounded_transform 223 223
 tf.math.tanh 224 224
+self.bounded_transform 225 225
 tf.clip_by_value 226 226
+self.action_spec.min_value 228 228
+self.action_spec.max_value 229 229
 tf_util.constant 230 230
 tf_util.constant$value=self.action_spec.min_value 231 231
 tf_util.constant$value=self.action_spec.max_value 232 232
+self.action_spec.min_value 235 235
 tf_util.constant$value=self.action_spec.min_value 236 236
 tf.maximum 237 237
+self.action_spec.max_value 239 239
 tf_util.constant$value=self.action_spec.max_value 240 240
 tf.minimum 241 241
 
@@ -109,14 +133,21 @@ dependencies.extend 272 272
 tf.control_dependencies 283 283
 tf_util.constant$value=util.epsilon 284 284
 tf.cond 285 285
+self.bounded_transform 288 288
 tf_util.constant 289 289
+self.bounded_transform 291 291
 tf.math.tanh 292 292
+self.bounded_transform 293 293
 tf.clip_by_value 294 294
+self.action_spec.min_value 296 296
+self.action_spec.max_value 297 297
 tf_util.constant 298 298
 tf_util.constant$value=self.action_spec.min_value 299 299
 tf_util.constant$value=self.action_spec.max_value 300 300
+self.action_spec.min_value 303 303
 tf_util.constant$value=self.action_spec.min_value 304 304
 tf.maximum 305 305
+self.action_spec.max_value 307 307
 tf_util.constant$value=self.action_spec.max_value 308 308
 tf.minimum 309 309
 
@@ -135,10 +166,14 @@ tf.random.normal 278 280
 
 log_probability:
 parameters.get 315 315
+self.bounded_transform 318 318
+self.action_spec.min_value 319 319
+self.action_spec.max_value 319 319
 tf_util.constant 320 320
 tf_util.constant 321 321
 tf_util.constant$value=self.action_spec.min_value 322 322
 tf_util.constant$value=self.action_spec.max_value 323 323
+self.bounded_transform 326 326
 util.epsilon 327 327
 tf_util.constant 327 327
 tf.clip_by_value 328 328
@@ -152,6 +187,7 @@ np.log 333 333
 tf_util.constant 333 333
 tf.square 335 335
 tf.square 336 336
+self.bounded_transform 340 340
 np.log 341 341
 tf_util.constant 341 341
 tf.math.softplus 342 342
@@ -173,10 +209,14 @@ tf.square 367 367
 
 action_value:
 parameters.get 373 373
+self.bounded_transform 376 376
+self.action_spec.min_value 377 377
+self.action_spec.max_value 377 377
 tf_util.constant 378 378
 tf_util.constant 379 379
 tf_util.constant$value=self.action_spec.min_value 380 380
 tf_util.constant$value=self.action_spec.max_value 381 381
+self.bounded_transform 384 384
 util.epsilon 385 385
 tf_util.constant 385 385
 tf.clip_by_value 386 386

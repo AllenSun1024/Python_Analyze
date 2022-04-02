@@ -40,6 +40,7 @@ self._save_checkpoint 158 158
 self._evaluate 159 159
 
 _save_checkpoint:
+self._checkpoint 166 166
 moving_average.shadow_variables 171 171
 contextlib.suppress 173 173
 self._checkpoint.save 176 176
@@ -76,6 +77,7 @@ _step:
 self._step 241 241
 
 _log_model_info:
+self._checkpoint 272 272
 self._model.visualize$self._checkpoint.model_dir 273 273
 tf.get_logger 274 274
 self._model.count_params 275 275
@@ -221,6 +223,8 @@ float 556 556
 self._average_loss 560 560
 self._num_updates 560 560
 self._num_updates 561 561
+self._num_updates 564 564
+self._warmup_steps 564 564
 self.reset_throughput 565 565
 
 get_last_summary:
@@ -296,6 +300,7 @@ self._words_counters.get.#.assign_add 718 718
 _get_words_counters:
 self._words_counters.items 728 728
 counter.read_value.#.read_value.#.read_value.#.read_value.#.read_value.#.read_value.#.read_value 729 729
+self._reduce_fn 730 730
 self._reduce_fn 731 731
 
 _reset_words_counters:

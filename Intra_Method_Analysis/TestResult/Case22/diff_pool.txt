@@ -3,6 +3,7 @@ super 83 83
 super 83 89
 
 build:
+self.channels 97 97
 self.add_weight$initializer=self.kernel_initializer$regularizer=self.kernel_regularizer$constraint=self.kernel_constraint 100 106
 self.add_weight$initializer=self.kernel_initializer$regularizer=self.kernel_regularizer$constraint=self.kernel_constraint 108 114
 super 116 116
@@ -18,6 +19,7 @@ tf.eye$dtype=A.dtype 131 131
 ops.normalize_A 133 133
 K.dot$self.kernel_emb 136 136
 ops.modal_dot 137 137
+self.activation 138 138
 self.activation 139 139
 K.dot$self.kernel_pool 142 142
 ops.modal_dot 143 143

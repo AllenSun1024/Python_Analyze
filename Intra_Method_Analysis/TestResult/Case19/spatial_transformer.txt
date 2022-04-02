@@ -103,14 +103,18 @@ transformer 207 207
 __init__:
 super 239 239
 super 239 239
+self.in_channels 244 244
 self.build$self.in_channels 245 245
 self.name 248 248
 logging.info 248 248
 
 __repr__:
+self.in_channels 252 252
+self.name 254 254
 s.format$classname=self.__class__.__name__ 257 257
 
 build:
+self.in_channels 260 260
 len 260 260
 AssertionError 261 261
 tuple 269 269
@@ -126,6 +130,7 @@ tf.matmul$self.W 283 283
 self.b 283 283
 tf.nn.tanh 283 283
 transformer$out_size=self.out_size 284 284
+self.data_format 289 289
 tf.reshape 290 290
 Exception 292 292
 

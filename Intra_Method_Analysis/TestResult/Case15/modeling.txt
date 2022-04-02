@@ -8,6 +8,7 @@ embedding_lookup:
 tf.variable_scope 28 28
 tf.get_variable 29 30
 tf.one_hot 32 32
+tf.one_hot.#.shape.ndims 33 33
 tf.einsum 34 34
 tf.einsum 36 36
 tf.nn.embedding_lookup 38 38
@@ -106,6 +107,7 @@ post_attention 275 276
 
 rel_multihead_attn:
 tf.variable_scope 289 289
+mems.shape.ndims 290 290
 tf.concat 291 291
 head_projection 296 297
 head_projection 298 299
@@ -116,6 +118,7 @@ post_attention 313 314
 
 two_stream_rel_attn:
 tf.variable_scope 326 326
+mems.shape.ndims 329 329
 tf.concat 330 330
 head_projection 335 336
 head_projection 339 340

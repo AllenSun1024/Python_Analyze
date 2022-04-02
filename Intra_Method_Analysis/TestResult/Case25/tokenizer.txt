@@ -119,6 +119,7 @@ tf.data.Dataset.from_generator$output_types=tf.string 321 325
 tf.data.Dataset.from_generator.#.batch 326 326
 tf.data.Dataset.from_generator.#.map 327 327
 tf.TensorSpec$dtype=tf.string 329 329
+tf.data.Dataset.from_generator.#.element_spec 330 330
 tf.data.Dataset.from_generator.#.element_spec 333 333
 TypeError 331 334
 tf.data.Dataset.from_generator.#.as_numpy_iterator 336 336
