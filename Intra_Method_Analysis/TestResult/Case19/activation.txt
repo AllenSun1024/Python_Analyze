@@ -1,69 +1,38 @@
 __init__:
-super 64 64
-super 64 64
-self.build 70 70
-self.in_channels 72 72
-self.build$self.in_channels 73 73
-self.name 76 76
-self.channel_shared 76 76
-logging.info 76 76
 
 __repr__:
-s.format$classname=self.__class__.__name__ 84 84
 
 build:
-self._get_weights$init=self.a_init 91 91
-tf.nn.sigmoid$self.alpha_var 92 92
+tensorflow.nn.sigmoid 92 92
 
 forward:
-tf.nn.relu 97 97
-tf.nn.sigmoid$self.alpha_var 98 98
-tf.nn.relu 99 99
+tensorflow.nn.relu 97 97
+tensorflow.nn.sigmoid 98 98
+tensorflow.nn.relu 99 99
 
 __init__:
-super 151 151
-super 151 151
-self.build 157 157
-self.in_channels 159 159
-self.build$self.in_channels 160 160
-self.name 163 163
-self.channel_shared 163 163
-logging.info 163 163
 
 __repr__:
-s.format$classname=self.__class__.__name__ 171 171
 
 build:
-self._get_weights$init=self.a_init 178 178
-tf.nn.sigmoid$self.alpha_var 179 179
+tensorflow.nn.sigmoid 179 179
 
 forward:
-tf.nn.relu 183 183
-tf.nn.relu 184 184
-tf.nn.relu 185 185
+tensorflow.nn.relu 183 183
+tensorflow.nn.relu 184 184
+tensorflow.nn.relu 185 185
 
 __init__:
-super 239 239
-super 239 239
-self.build 245 245
-self.build$self.in_channels 248 248
-self.name 251 251
-self.channel_shared 251 251
-logging.info 251 251
 
 __repr__:
-s.format$classname=self.__class__.__name__ 259 259
 
 build:
-self._get_weights$init=self.a_init 268 268
-tf.nn.sigmoid$self.alpha_low 269 269
-self._get_weights$init=self.a_init 272 272
-tf.nn.sigmoid$self.alpha_high 273 273
+tensorflow.nn.sigmoid 269 269
+tensorflow.nn.sigmoid 273 273
 
 forward:
-tf.nn.relu 277 277
-tf.nn.relu 278 278
-tf.nn.relu 278 278
-self.alpha_high_constrained 278 278
-tf.nn.relu 279 279
+tensorflow.nn.relu 277 277
+tensorflow.nn.relu 278 278
+tensorflow.nn.relu 278 278
+tensorflow.nn.relu 279 279
 

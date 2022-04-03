@@ -1,111 +1,54 @@
 __init__:
-action_spec.type 35 35
-TensorSpec$shape=action_spec.shape 38 38
-TensorSpec$shape=action_spec.shape 39 39
-TensorSpec$shape=action_spec.shape 40 40
-TensorSpec$shape=action_spec.shape 41 41
-TensorsSpec 37 42
-TensorsSpec 43 43
-super 45 45
-super 45 48
-self.input_spec.rank 50 50
-util.product$xs=self.action_spec.shape 52 52
-self.submodule$input_spec=self.input_spec 53 56
-self.input_spec.rank 60 60
-self.input_spec.rank 60 60
-TensorforceError.value$value=self.input_spec.shape 61 64
-TensorforceError.value$value=self.input_spec.shape 70 73
-self.submodule$input_spec=self.input_spec 74 77
 
 get_architecture:
-self.logit.get_architecture 80 80
 
 initialize:
-super 83 83
-super 83 83
-self.name 85 85
-self.register_summary 86 86
-self.register_tracking 89 89
 
 parametrize:
-tf_util.constant 93 93
-tf_util.constant$value=util.epsilon 94 94
-self.action_spec.shape 95 95
-self.logit.apply 98 98
-self.input_spec.rank 99 99
-tf.reshape 100 100
-tf.sigmoid 106 106
-tf.math.log 109 109
-tf.math.log 110 110
-TensorDict 112 115
+tensorflow.reshape 100 100
+tensorflow.sigmoid 106 106
+tensorflow.math.log 109 109
+tensorflow.math.log 110 110
 
 fn_summary:
-list 122 122
-self.action_spec.rank 125 125
-range 125 125
-tf.math.reduce_mean 126 126
+tensorflow.math.reduce_mean 126 126
 
 mode:
-self.name 128 128
-self.summary 129 131
-dependencies.extend 129 131
-self.track 137 137
-dependencies.extend 137 137
-tf.control_dependencies 139 139
-tf_util.constant 140 140
-tf.greater_equal 140 140
+tensorflow.control_dependencies 139 139
+tensorflow.greater_equal 140 140
 
 fn_tracking:
-tf.math.reduce_mean 135 135
+tensorflow.math.reduce_mean 135 135
 
 fn_summary:
-parameters.get 144 146
-list 149 149
-self.action_spec.rank 152 152
-range 152 152
-tf.math.reduce_mean 153 153
+tensorflow.math.reduce_mean 153 153
 
 sample:
-self.name 155 155
-self.summary 156 158
-dependencies.extend 156 158
-self.track 164 164
-dependencies.extend 164 164
-tf_util.constant$value=util.epsilon 166 166
-tf.control_dependencies 184 184
-tf.cond 185 185
+tensorflow.control_dependencies 184 184
+tensorflow.cond 185 185
 
 fn_tracking:
-tf.math.reduce_mean 162 162
+tensorflow.math.reduce_mean 162 162
 
 fn_mode:
-tf_util.constant 170 170
-tf.greater_equal 171 171
+tensorflow.greater_equal 171 171
 
 fn_sample:
-tf.math.exp 176 176
-tf.math.exp 177 177
-tf.shape 180 180
-tf_util.get_dtype 180 180
-tf.random.uniform 179 181
-tf.greater_equal 182 182
+tensorflow.math.exp 176 176
+tensorflow.math.exp 177 177
+tensorflow.shape 180 180
+tensorflow.random.uniform 179 181
+tensorflow.greater_equal 182 182
 
 log_probability:
-parameters.get 189 189
-tf.where 191 191
+tensorflow.where 191 191
 
 entropy:
-parameters.get 195 197
-tf_util.constant 199 199
 
 kl_divergence:
-parameters1.get 205 207
-parameters2.get 208 208
-tf_util.constant 213 213
 
 action_value:
-parameters.get 219 221
-tf.where 223 223
+tensorflow.where 223 223
 
 state_value:
 

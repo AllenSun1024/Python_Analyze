@@ -1,47 +1,28 @@
 __init__:
-super 83 83
-super 83 89
 
 build:
-self.channels 97 97
-self.add_weight$initializer=self.kernel_initializer$regularizer=self.kernel_regularizer$constraint=self.kernel_constraint 100 106
-self.add_weight$initializer=self.kernel_initializer$regularizer=self.kernel_regularizer$constraint=self.kernel_constraint 108 114
-super 116 116
-super 116 116
 
 call:
-K.shape 121 121
-ops.autodetect_mode 123 123
-K.is_sparse 127 127
-tf.sparse.eye$dtype=A.dtype 128 128
-tf.sparse.add 129 129
-tf.eye$dtype=A.dtype 131 131
-ops.normalize_A 133 133
-K.dot$self.kernel_emb 136 136
-ops.modal_dot 137 137
-self.activation 138 138
-self.activation 139 139
-K.dot$self.kernel_pool 142 142
-ops.modal_dot 143 143
-activations.softmax 144 144
-ops.modal_dot 149 149
-tf.sparse.to_dense 151 151
-K.is_sparse 152 152
-tf.sparse.add 153 153
-tf.norm 156 156
-K.mean 158 158
-self.add_loss 159 159
-K.epsilon 163 163
-K.log 163 163
-tf.multiply 163 163
-tf.reduce_sum 163 163
-tf.negative 162 164
-K.mean 165 165
-K.mean 167 167
-self.add_loss 168 168
-ops.modal_dot 171 171
-ops.matmul_at_b_a 172 172
-output.append 177 177
+tensorflow.keras.backend.shape 121 121
+tensorflow.keras.backend.is_sparse 127 127
+tensorflow.sparse.eye 128 128
+tensorflow.sparse.add 129 129
+tensorflow.eye 131 131
+tensorflow.keras.backend.dot 136 136
+tensorflow.keras.backend.dot 142 142
+tensorflow.keras.activations.softmax 144 144
+tensorflow.sparse.to_dense 151 151
+tensorflow.keras.backend.is_sparse 152 152
+tensorflow.sparse.add 153 153
+tensorflow.norm 156 156
+tensorflow.keras.backend.mean 158 158
+tensorflow.keras.backend.epsilon 163 163
+tensorflow.keras.backend.log 163 163
+tensorflow.multiply 163 163
+tensorflow.reduce_sum 163 163
+tensorflow.negative 162 164
+tensorflow.keras.backend.mean 165 165
+tensorflow.keras.backend.mean 167 167
 
 config:
 

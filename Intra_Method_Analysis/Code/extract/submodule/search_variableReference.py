@@ -32,8 +32,6 @@ def get_references_by_lineno(funcStats, script):
                         if reference.name == check_item[0] and reference.line >= check_item[2]:
                             node_name = check_item[1]
                             break  # 因为查找表没有去重，所以这里需要跳出循环
-                        else:
-                            continue
                     if node_name is not None:
                         """
                         `reference.name = node_name(...)`
@@ -47,7 +45,11 @@ def get_references_by_lineno(funcStats, script):
                                 for name_seg in tmp:
                                     new_name += '.'
                                     new_name += name_seg
-                                new_name = node_name + '.#' + new_name  # new_name after `#` is API inner_func
+                                # TODO: bug may happen here. reason: new_name = node_name + '.#' + new_name modified into if/else
+                                if new_name != '':
+                                    new_name = node_name + '.#' + new_name  # new_name after `#` is API inner_func
+                                else:
+                                    new_name = node_name
                                 if check_item[1] == new_name:
                                     new_name = new_name + '.__call__'
                                 if '$' in APIs_inFunc[api_sub]:
@@ -55,10 +57,4 @@ def get_references_by_lineno(funcStats, script):
                                     paras = APIs_inFunc[api_sub][paraLoc:]
                                     new_name += paras
                                 funcStats["APIs"][i][api_sub] = new_name
-                            else:
-                                continue
-                    else:  # None of call nodes can match current variable
-                        continue
-                else:  # skip the definition of variable, what we need only is the references of variable defined
-                    continue
     return funcStats

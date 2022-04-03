@@ -1,118 +1,41 @@
 compute_length_after_conv:
-tf.multiply 65 66
-tf.cast$dtype=tf.float32 65 66
-tf.cast$dtype=tf.float32 68 68
-tf.math.floordiv 67 68
-tf.cast$dtype=tf.int32 67 68
+tensorflow.multiply 65 66
+tensorflow.cast$dtype=tensorflow.float32 65 66
+tensorflow.cast$dtype=tensorflow.float32 68 68
+tensorflow.math.floordiv 67 68
+tensorflow.cast$dtype=tensorflow.int32 67 68
 
 evaluate_model:
-estimator.predict 88 88
-len 93 93
-decoder.DeepSpeechDecoder 97 97
-range 98 98
-decoder.DeepSpeechDecoder.#.decode 100 100
-decoder.DeepSpeechDecoder.#.cer 102 102
-len 103 103
-float 102 103
-decoder.DeepSpeechDecoder.#.wer 105 105
-len 106 106
-float 105 106
-estimator.get_variable_value$tf.compat.v1.GraphKeys.GLOBAL_STEP 112 112
 
 model_fn:
-deep_speech_model.DeepSpeech2$flags_obj.rnn_hidden_layers$flags_obj.rnn_type$flags_obj.is_bidirectional$flags_obj.rnn_hidden_size$flags_obj.use_bias 143 146
-deep_speech_model.DeepSpeech2.# 149 149
-tf.argmax 151 151
-tf.estimator.EstimatorSpec 155 157
-deep_speech_model.DeepSpeech2.# 160 160
-tf.shape 162 162
-tf.shape 162 162
-compute_length_after_conv 161 162
-tf.keras.backend.ctc_batch_cost 164 165
-tf.reduce_mean 164 165
-tf.compat.v1.train.AdamOptimizer$learning_rate=flags_obj.learning_rate 167 167
-tf.compat.v1.train.get_or_create_global_step 168 168
-tf.compat.v1.train.AdamOptimizer.#.minimize 169 169
-tf.compat.v1.get_collection$tf.compat.v1.GraphKeys.UPDATE_OPS 170 170
-tf.group 172 172
-tf.estimator.EstimatorSpec 174 177
+tensorflow.argmax 151 151
+tensorflow.estimator.EstimatorSpec 155 157
+tensorflow.shape 162 162
+tensorflow.shape 162 162
+tensorflow.keras.backend.ctc_batch_cost 164 165
+tensorflow.reduce_mean 164 165
+tensorflow.compat.v1.train.AdamOptimizer 167 167
+tensorflow.compat.v1.train.get_or_create_global_step 168 168
+tensorflow.compat.v1.train.AdamOptimizer.minimize 169 169
+tensorflow.compat.v1.get_collection$tensorflow.compat.v1.GraphKeys.UPDATE_OPS 170 170
+tensorflow.group 172 172
+tensorflow.estimator.EstimatorSpec 174 177
 
 generate_dataset:
-dataset.AudioConfig$sample_rate=flags_obj.sample_rate$window_ms=flags_obj.window_ms$stride_ms=flags_obj.stride_ms 182 185
-dataset.DatasetConfig$flags_obj.vocabulary_file$flags_obj.sortagrad 186 191
-dataset.DeepSpeechDataset 192 192
 
 per_device_batch_size:
-ValueError 222 222
-int 223 223
 
 run_deep_speech:
-tf.compat.v1.set_random_seed$flags_obj.seed 227 227
-logging.info 229 229
-generate_dataset$flags_obj.train_data_dir 230 230
-generate_dataset$flags_obj.eval_data_dir 231 231
-len$train_speech_dataset.speech_labels 234 234
-flags_core.get_num_gpus 237 237
-distribution_utils.get_distribution_strategy 238 238
-tf.estimator.RunConfig 239 240
-tf.estimator.Estimator$model_dir=flags_obj.model_dir 242 249
-per_device_batch_size$flags_obj.batch_size 262 262
-flags_obj.train_epochs 272 272
-flags_obj.epochs_between_evals 273 273
-range 274 274
-logging.info 275 276
-dataset.batch_wise_dataset_shuffle$train_speech_dataset.entries$flags_obj.sortagrad$flags_obj.batch_size 279 281
-tf.estimator.Estimator.#.train 283 283
-logging.info 286 286
-evaluate_model$eval_speech_dataset.speech_labels$eval_speech_dataset.entries 288 290
-benchmark_logger.log_evaluation_result 293 293
-logging.info 294 296
-model_helpers.past_stop_threshold$flags_obj.wer_threshold 299 300
+tensorflow.compat.v1.set_random_seed 227 227
+tensorflow.estimator.RunConfig 239 240
+tensorflow.estimator.Estimator 242 249
+tensorflow.estimator.Estimator.train 283 283
 
 input_fn_train:
-dataset.input_fn 265 266
 
 input_fn_eval:
-dataset.input_fn 269 270
 
 define_deep_speech_flags:
-flags_core.define_base 307 314
-flags_core.define_performance 315 322
-flags_core.define_benchmark 323 323
-flags.adopt_module_key_flags 324 324
-flags_core.set_defaults 326 331
-flags_core.help_wrap 336 336
-flags.DEFINE_integer 334 336
-flags_core.help_wrap 341 341
-flags.DEFINE_string 338 341
-flags_core.help_wrap 346 346
-flags.DEFINE_string 343 346
-flags_core.help_wrap 350 352
-flags.DEFINE_bool 348 352
-flags_core.help_wrap 356 356
-flags.DEFINE_integer 354 356
-flags_core.help_wrap 360 360
-flags.DEFINE_integer 358 360
-flags_core.help_wrap 364 364
-flags.DEFINE_integer 362 364
-flags_core.help_wrap 368 368
-flags.DEFINE_string 366 368
-flags_core.help_wrap 373 373
-flags.DEFINE_integer 371 373
-flags_core.help_wrap 377 377
-flags.DEFINE_integer 375 377
-flags_core.help_wrap 381 381
-flags.DEFINE_bool 379 381
-flags_core.help_wrap 385 385
-flags.DEFINE_bool 383 385
-deep_speech_model.SUPPORTED_RNNS.keys 389 389
-flags_core.help_wrap 391 391
-flags.DEFINE_enum 387 391
-flags_core.help_wrap 396 396
-flags.DEFINE_float 394 396
-flags_core.help_wrap 401 405
-flags.DEFINE_float 399 405
 
 main:
-run_deep_speech 409 409
 

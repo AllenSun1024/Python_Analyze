@@ -1,102 +1,48 @@
 _data_aug:
-image.numpy.#.numpy.#.numpy.#.numpy.#.numpy.#.numpy.#.numpy.#.numpy.#.numpy.#.numpy.#.numpy.#.numpy.#.numpy 12 12
-cv2.resize 13 13
-np.transpose 15 15
 
 train_map_fn:
-tf.io.read_file 21 21
-tf.image.decode_jpeg 22 22
-tf.image.convert_image_dtype$dtype=tf.float32 23 23
-tf.py_function$tf.float32 24 24
-tf.image.random_brightness 26 26
-tf.image.random_contrast 27 27
-tf.clip_by_value 28 28
+tensorflow.io.read_file 21 21
+tensorflow.image.decode_jpeg 22 22
+tensorflow.image.convert_image_dtype$dtype=tensorflow.float32 23 23
+tensorflow.py_function$tensorflow.float32 24 24
+tensorflow.image.random_brightness 26 26
+tensorflow.image.random_contrast 27 27
+tensorflow.clip_by_value 28 28
 
 val_map_fn:
-tf.io.read_file 33 33
-tf.image.decode_jpeg 34 34
-tf.image.convert_image_dtype$dtype=tf.float32 35 35
-tf.py_function$tf.float32 36 36
+tensorflow.io.read_file 33 33
+tensorflow.image.decode_jpeg 34 34
+tensorflow.image.convert_image_dtype$dtype=tensorflow.float32 35 35
+tensorflow.py_function$tensorflow.float32 36 36
 
 single_pretrain:
-init_log 40 40
-print 51 51
-print 52 52
-dataset.get_train_dataset 54 54
-dataset.get_train_dataset.#.shuffle 55 55
-dataset.get_train_dataset.#.repeat 55 55
-partial$data_format=model.data_format 56 56
-partial 57 57
-multiprocessing.cpu_count 57 57
-max 57 57
-dataset.get_train_dataset.#.map 57 57
-dataset.get_train_dataset.#.batch 58 58
-dataset.get_train_dataset.#.prefetch 59 59
-tf.Variable 62 62
-tf.Variable 63 63
-tf.keras.optimizers.Adam 64 64
-tf.train.Checkpoint 65 65
-tf.train.CheckpointManager 66 66
-train_model.train 69 69
-tf.train.Checkpoint.#.restore$ckpt_manager.latest_checkpoint 72 72
-log 74 74
-os.path.join 76 76
-train_model.load_weights 76 76
-log 78 78
-image.numpy 101 101
-label.numpy 101 101
-one_step 101 101
-tf.Variable.#.numpy 114 114
-tf.Variable.#.numpy 114 114
-print 113 114
-tf.train.CheckpointManager.#.save 120 120
-log 121 121
-os.path.join 122 122
-train_model.save_weights 123 123
-log 124 124
-train_model.eval 128 128
-single_val 129 129
-print 130 130
-train_model.train 138 138
+tensorflow.Variable 62 62
+tensorflow.Variable 63 63
+tensorflow.keras.optimizers.Adam 64 64
+tensorflow.train.Checkpoint 65 65
+tensorflow.train.CheckpointManager 66 66
+tensorflow.group.restore 72 72
+tensorflow.Variable.numpy 114 114
+tensorflow.Variable.numpy 114 114
+tensorflow.train.CheckpointManager.save 120 120
 
 one_step:
-step.assign_add 87 87
-tf.GradientTape 88 88
-train_model.forward 89 89
-train_model.cal_loss 90 90
-regulize_loss 91 91
-tf.math.in_top_k 94 94
-tf.where 94 94
-tf.reduce_sum 94 94
-tf.math.in_top_k 95 95
-tf.where 95 95
-tf.reduce_sum 95 95
-tf.GradientTape.gradient$train_model.trainable_weights 96 96
-zip$train_model.trainable_weights 97 97
-opt.apply_gradients 97 97
+tensorflow.GradientTape 88 88
+tensorflow.math.in_top_k 94 94
+tensorflow.where 94 94
+tensorflow.reduce_sum 94 94
+tensorflow.math.in_top_k 95 95
+tensorflow.where 95 95
+tensorflow.reduce_sum 95 95
+tensorflow.GradientTape.gradient 96 96
 
 single_val:
-log 146 146
-dataset.get_eval_dataset 147 147
-dataset.get_eval_dataset.#.shuffle 148 148
-partial$data_format=val_model.data_format 149 149
-partial 150 150
-multiprocessing.cpu_count 150 150
-max 150 150
-dataset.get_eval_dataset.#.map 150 150
-dataset.get_eval_dataset.#.batch 151 151
-dataset.get_eval_dataset.#.prefetch 152 152
-image.numpy 163 163
-label.numpy 163 163
-one_step 163 163
-print 169 169
 
 one_step:
-val_model.forward 157 157
-tf.math.in_top_k 158 158
-tf.where 158 158
-tf.reduce_sum 158 158
-tf.math.in_top_k 159 159
-tf.where 159 159
-tf.reduce_sum 159 159
+tensorflow.math.in_top_k 158 158
+tensorflow.where 158 158
+tensorflow.reduce_sum 158 158
+tensorflow.math.in_top_k 159 159
+tensorflow.where 159 159
+tensorflow.reduce_sum 159 159
 

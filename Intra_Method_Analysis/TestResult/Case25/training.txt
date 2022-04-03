@@ -1,310 +1,143 @@
 __init__:
-tf.summary.create_file_writer$checkpoint.model_dir 30 30
-tf.summary.create_noop_writer 32 32
-optimizer_util.GradientAccumulator 34 34
-misc.mixed_precision_enabled 35 35
-ValueError 38 38
-isinstance$tf.keras.mixed_precision.LossScaleOptimizer 39 41
-tf.keras.mixed_precision.LossScaleOptimizer 42 42
+tensorflow.summary.create_file_writer 30 30
+tensorflow.summary.create_noop_writer 32 32
+tensorflow.keras.mixed_precision.LossScaleOptimizer 42 42
 
 is_master:
 
 num_replicas:
 
 __call__:
-self._optimizer.iterations.numpy 85 85
-RuntimeError 86 90
-evaluator.should_stop 91 91
-RuntimeError 92 96
-self._gradient_accumulator.reset 98 98
-self._summary_writer.as_default 100 100
-TrainingStats$self._model$self._optimizer$reduce_fn=self._all_reduce_sum 101 103
-tf.summary.experimental.set_step 105 105
-self._steps 110 110
-enumerate 109 111
-self._log_model_info 113 113
-MovingAverage$self._model.trainable_variables 117 121
-self._update_moving_average 122 122
-iterations.numpy 124 124
-self._training_stats.update_on_step 126 126
-self._training_stats.log$self.is_master 128 128
-self._save_checkpoint 131 131
-self._evaluate 134 136
-tf.get_logger 139 139
-tf.warning 139 141
-self._training_stats.reset_throughput 146 146
-RuntimeError 149 154
-self._training_stats.log_final$self.is_master 156 156
-self._training_stats.get_global_summary 157 157
-self._save_checkpoint 158 158
-self._evaluate 159 159
+tensorflow.summary.experimental.set_step 105 105
+tensorflow.get_logger 139 139
+tensorflow.warning 139 141
 
 _save_checkpoint:
-self._checkpoint 166 166
-moving_average.shadow_variables 171 171
-contextlib.suppress 173 173
-self._checkpoint.save 176 176
 
 _evaluate:
-moving_average.shadow_variables 187 187
-contextlib.suppress 189 189
-evaluator 192 192
-evaluator.should_stop 193 193
 
 _finalize_dataset:
-callable 205 205
-tf.distribute.InputContext 206 206
-dataset.#.# 206 206
+tensorflow.distribute.InputContext 206 206
 
 _steps:
-self._finalize_dataset 221 221
-iter 222 222
-tf.function 244 244
-tf.function 245 245
-itertools.count 248 248
-tf.function.# 250 250
-tf.math.is_nan 257 257
-RuntimeError 258 258
-float 260 260
-step_fn 262 262
-self._broadcast_variables 264 264
+tensorflow.function 244 244
+tensorflow.function 245 245
+tensorflow.function.__call__ 250 250
+tensorflow.math.is_nan 257 257
 
 _forward:
-next 232 232
-self._forward 233 238
 
 _step:
-self._step 241 241
 
 _log_model_info:
-self._checkpoint 272 272
-self._model.visualize$self._checkpoint.model_dir 273 273
-tf.get_logger 274 274
-self._model.count_params 275 275
-tf.info 274 276
-tf.get_logger 277 277
-len$self._model.weights 279 279
-len$self._model.trainable_weights 280 280
-len$self._model.non_trainable_weights 281 281
-tf.info 277 282
+tensorflow.get_logger 274 274
+tensorflow.info 274 276
+tensorflow.get_logger 277 277
+tensorflow.info 277 282
 
 _should_record_summaries:
-self._optimizer.iterations 288 288
-tf.equal 288 288
-tf.equal$self._gradient_accumulator.step 291 291
-tf.logical_and 290 292
+tensorflow.equal 288 288
+tensorflow.equal 291 291
+tensorflow.logical_and 290 292
 
 _compute_gradients:
-self._should_record_summaries 297 297
-tf.summary.record_if 298 298
-self.num_replicas 303 303
-self._model.compute_gradients$self._optimizer 299 304
-self._training_stats.update_on_example 305 305
-_summarize_gradients 306 306
+tensorflow.summary.record_if 298 298
 
 _apply_gradients:
-zip$self._model.trainable_variables 312 312
-list 312 312
-self._optimizer.apply_gradients 311 313
 
 _forward:
-self._compute_gradients 317 322
-self._gradient_accumulator 324 324
-self._apply_gradients 326 326
 
 _step:
-self._apply_gradients$self._gradient_accumulator.gradients 331 331
-self._gradient_accumulator.reset 332 332
 
 _update_moving_average:
-moving_average.update 336 336
 
 _broadcast_variables:
 
 _all_reduce_sum:
 
 __init__:
-super 360 360
-super 360 360
 
 is_master:
-self._hvd.rank 365 365
 
 num_replicas:
-self._hvd.size 369 369
 
 _finalize_dataset:
-callable 372 372
-self._hvd.size 375 375
-self._hvd.rank 376 376
-self._hvd.size 377 377
-tf.distribute.InputContext 374 378
-dataset.#.# 373 379
+tensorflow.distribute.InputContext 374 378
 
 _apply_gradients:
-super 383 383
-map$self._all_reduce_sum 383 383
-super 383 383
 
 _broadcast_variables:
-self._hvd.broadcast_variables$self._model.variables 386 386
-self._optimizer.variables 387 387
-self._hvd.broadcast_variables 387 387
 
 _all_reduce_sum:
-self._hvd.allreduce$op=self._hvd.Sum 390 390
 
 __init__:
-super 407 407
-super 407 407
-tf.distribute.MirroredStrategy 408 408
-self._strategy.scope 409 409
+tensorflow.distribute.MirroredStrategy 408 408
 
 num_replicas:
-self._strategy.num_replicas_in_sync 415 415
 
 _finalize_dataset:
-callable 420 420
-self._strategy.distribute_datasets_from_function 421 421
 
 _forward:
-super 425 425
-dict 427 427
-self._strategy.run 424 428
-self._strategy.reduce$tf.distribute.ReduceOp.SUM 430 430
 
 _step:
-super 433 433
-self._strategy.run 433 433
 
 _update_moving_average:
-self._strategy.scope 436 436
-super 437 437
-super 437 437
 
 _summarize_gradients:
-isinstance 442 442
-tf.cond 446 450
-tf.summary.scalar 444 451
+tensorflow.cond 446 450
+tensorflow.summary.scalar 444 451
 
 __init__:
-isinstance$tf.Variable 470 470
-TypeError 471 471
-tf.get_logger 473 473
-tf.warning 473 478
-tf.train.ExponentialMovingAverage 479 479
+tensorflow.get_logger 473 473
+tensorflow.warning 473 478
+tensorflow.train.ExponentialMovingAverage 479 479
 
 update:
-self._ema.apply$self._variables 485 485
 
 shadow_variables:
-variable.value 497 497
-previous_values.append 497 497
-self._ema.average 498 498
-variable.assign 498 498
-zip$self._variables 500 500
-variable.assign 501 501
 
 __init__:
-optimizer.iterations.numpy 526 526
-time.time 528 528
-collections.defaultdict 529 529
-collections.defaultdict 530 530
 
 update_on_example:
-self._update_words_counter 541 541
-self._record_oov_tokens$self._model.features_inputter 542 542
-self._update_words_counter 544 544
-self._record_oov_tokens$self._model.labels_inputter 545 545
 
 update_on_step:
-int 555 555
-float 556 556
-self._average_loss 560 560
-self._num_updates 560 560
-self._num_updates 561 561
-self._num_updates 564 564
-self._warmup_steps 564 564
-self.reset_throughput 565 565
 
 get_last_summary:
-time.time 574 574
-self._last_logged_time 574 574
-self._get_learning_rate 576 576
-self._last_step 579 579
-self._last_logged_step 579 579
-value.numpy 581 581
-int 581 581
-self._get_words_counters 582 582
-self.items 582 582
 
 get_global_summary:
-self._get_learning_rate 594 594
 
 log:
-self.get_last_summary 609 609
-tf.summary.scalar 614 618
-name.capitalize 626 626
-tf.summary.scalar 623 627
-words_per_sec_fmt.append 628 628
-tf.get_logger 630 630
-sorted 633 633
-list 633 633
-tf.info 630 636
-tf.summary.scalar 637 637
-tf.summary.scalar 638 640
+tensorflow.summary.scalar 614 618
+tensorflow.summary.scalar 623 627
+tensorflow.get_logger 630 630
+tensorflow.info 630 636
+tensorflow.summary.scalar 637 637
+tensorflow.summary.scalar 638 640
 
 log_final:
-self._oov_tokens.items 647 647
-oov_tokens.values 648 648
-sum 648 648
-tf.get_logger 651 651
-tf.warning 651 657
-oov_tokens.items 661 661
-sorted 660 664
-list 666 666
-tf.get_logger 667 667
-len 669 669
-tf.info 667 672
+tensorflow.get_logger 651 651
+tensorflow.warning 651 657
+tensorflow.get_logger 667 667
+tensorflow.info 667 672
 
 reset_throughput:
-self._reset_words_counters 676 676
-time.time 678 678
 
 _get_learning_rate:
-isinstance$tf.optimizers.schedules.LearningRateSchedule 682 682
-learning_rate.#.#$self._last_step 683 683
-float 684 684
 
 _record_oov_tokens:
-isinstance$text_inputter.WordEmbedder 687 687
-inputter.get_length 697 697
-tf.reduce_sum 696 698
-inputter.get_oov_tokens 699 699
-tf.numpy_function 701 701
+tensorflow.reduce_sum 696 698
+tensorflow.numpy_function 701 701
 
 _record:
-int 691 691
-oov_tokens.flatten 693 693
-oov_token.decode 694 694
 
 _update_words_counter:
-features.get 705 705
-tf.reduce_sum 708 708
-self._words_counters.get 709 709
-tf.constant$dtype=tf.int64 712 712
-tf.Variable$synchronization=tf.VariableSynchronization.ON_READ$aggregation=tf.VariableAggregation.SUM 711 716
-tf.cast$tf.int64 718 718
-self._words_counters.get.#.assign_add 718 718
+tensorflow.reduce_sum 708 708
+tensorflow.constant$dtype=tensorflow.int64 712 712
+tensorflow.Variable$synchronization=tensorflow.VariableSynchronization.ON_READ$aggregation=tensorflow.VariableAggregation.SUM 711 716
+tensorflow.cast$tensorflow.int64 718 718
 
 _get_words_counters:
-self._words_counters.items 728 728
-counter.read_value.#.read_value.#.read_value.#.read_value.#.read_value.#.read_value.#.read_value 729 729
-self._reduce_fn 730 730
-self._reduce_fn 731 731
 
 _reset_words_counters:
-self._words_counters.values 738 738
-tf.constant$dtype=tf.int64 739 739
-counter.assign 739 739
+tensorflow.constant$dtype=tensorflow.int64 739 739
 

@@ -1,50 +1,22 @@
 get_act:
-PReLU 18 18
-Activation 20 20
+tensorflow.keras.layers.PReLU 18 18
+tensorflow.keras.layers.Activation 20 20
 
 __init__:
-super 105 105
-super 105 105
-Add 125 125
-Concatenate 127 127
-ValueError 129 129
-global_pool.get 133 133
-global_pool.get.__call__ 133 133
-MLP 138 146
-GeneralConv 148 148
-range 149 149
-MLP 151 159
+tensorflow.keras.layers.Add 125 125
+tensorflow.keras.layers.Concatenate 127 127
 
 call:
-len 162 162
-self.pre 169 169
-layer 172 172
-self.connectivity 173 173
-self.connectivity 174 174
-self.pool 178 178
-self.pool 179 179
-self.post 181 181
 
 get_config:
-self.config 186 186
 
 __init__:
-super 200 200
-super 200 200
-Sequential 213 213
-range 214 214
-Dense 216 216
-self.mlp.add 216 216
-BatchNormalization 219 219
-self.mlp.add 219 219
-Dropout$self.dropout_rate 221 221
-self.mlp.add 221 221
-get_act 223 223
-self.mlp.add 223 223
+tensorflow.keras.Sequential 213 213
+tensorflow.keras.layers.Dense 216 216
+tensorflow.keras.layers.BatchNormalization 219 219
+tensorflow.keras.layers.Dropout 221 221
 
 call:
-self.mlp 226 226
 
 get_config:
-self.config 229 229
 

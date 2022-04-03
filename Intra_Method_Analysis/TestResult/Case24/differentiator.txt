@@ -1,96 +1,66 @@
 catch_empty_inputs:
 
 new_diff:
-tf.size 37 37
-tf.equal 37 37
-tf.size 38 38
-tf.equal 38 38
-tf.size 39 39
-tf.equal 39 39
-tf.logical_or 41 41
-tf.logical_or 42 42
-tf.cond 43 44
+tensorflow.size 37 37
+tensorflow.equal 37 37
+tensorflow.size 38 38
+tensorflow.equal 38 38
+tensorflow.size 39 39
+tensorflow.equal 39 39
+tensorflow.logical_or 41 41
+tensorflow.logical_or 42 42
+tensorflow.cond 43 44
 
 generate_differentiable_op:
-hasattr 89 89
-TypeError 90 93
-ValueError 96 100
-ValueError 103 109
-callable 111 111
-callable 111 111
-TypeError 112 113
-inspect.signature 121 121
-any 126 126
-str 128 128
-list 130 130
-list 131 131
-ValueError 127 132
-ValueError 135 138
-inspect.signature 141 141
-any 147 147
-str 149 149
-list 151 151
-ValueError 148 151
 
 op_wrapper_analytic:
-analytic_op 156 157
 
 gradient:
-self._differentiate_ana 160 162
 
 op_wrapper_sampled:
-sampled_op 169 171
 
 gradient:
-self._differentiate_sam 174 177
 
 _differentiate_ana:
-self.differentiate_analytic 191 193
 
 _differentiate_sam:
-self.differentiate_sampled 198 200
 
 refresh:
-hasattr 207 207
 
 get_gradient_circuits:
 
 differentiate_analytic:
-self.get_gradient_circuits 368 369
-tf.shape 370 370
-tf.expand_dims 371 371
-tf.tile 371 371
-tf.shape 372 372
-tf.reduce_prod 372 372
-tf.shape 373 373
-tf.shape 374 374
-tf.reshape 376 376
-tf.reshape 377 377
-tf.reshape 378 378
-self.expectation_op 375 378
-tf.shape 380 380
-tf.reshape 379 380
-tf.map_fn$fn_output_signature=tf.float32 383 386
-tf.einsum 389 389
+tensorflow.shape 370 370
+tensorflow.expand_dims 371 371
+tensorflow.tile 371 371
+tensorflow.shape 372 372
+tensorflow.reduce_prod 372 372
+tensorflow.shape 373 373
+tensorflow.shape 374 374
+tensorflow.reshape 376 376
+tensorflow.reshape 377 377
+tensorflow.reshape 378 378
+tensorflow.shape 380 380
+tensorflow.reshape 379 380
+tensorflow.map_fn$fn_output_signature=tensorflow.float32 383 386
+tensorflow.einsum 389 389
 
 differentiate_sampled:
-self.get_gradient_circuits 435 436
-tf.shape 437 437
-tf.expand_dims 438 438
-tf.tile 438 438
-tf.expand_dims 439 439
-tf.tile 439 439
-tf.shape 440 440
-tf.reduce_prod 440 440
-tf.shape 441 441
-tf.shape 442 442
-tf.reshape 444 444
-tf.reshape 445 445
-tf.reshape 446 446
-tf.reshape 447 447
-self.expectation_op 443 447
-tf.shape 449 449
-tf.reshape 448 449
-tf.map_fn$fn_output_signature=tf.float32 452 455
-tf.einsum 458 458
+tensorflow.shape 437 437
+tensorflow.expand_dims 438 438
+tensorflow.tile 438 438
+tensorflow.expand_dims 439 439
+tensorflow.tile 439 439
+tensorflow.shape 440 440
+tensorflow.reduce_prod 440 440
+tensorflow.shape 441 441
+tensorflow.shape 442 442
+tensorflow.reshape 444 444
+tensorflow.reshape 445 445
+tensorflow.reshape 446 446
+tensorflow.reshape 447 447
+tensorflow.shape 449 449
+tensorflow.reshape 448 449
+tensorflow.map_fn$fn_output_signature=tensorflow.float32 452 455
+tensorflow.einsum 458 458
 

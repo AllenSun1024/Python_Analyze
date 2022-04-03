@@ -1,56 +1,32 @@
 parse_line:
-line.split 51 51
-line.split.#.pop 52 52
-float 53 53
 
 load:
-tf.io.gfile.GFile 77 77
-enumerate 78 78
-parse_line_fn 80 80
-len 82 82
-len 83 83
-len 86 86
-ValueError 84 86
-vocabulary.append 87 87
-embeddings.append 88 88
-np.array 92 92
+tensorflow.io.gfile.GFile 77 77
 
 write_vocabulary_file:
-tempfile.mkdtemp 97 97
-os.path.join 98 98
-tf.io.gfile.GFile 99 99
-tf.io.gfile.GFile.write 101 101
+tensorflow.io.gfile.GFile 99 99
+tensorflow.io.gfile.GFile.write 101 101
 
 __init__:
-super 117 117
-super 117 117
-load 118 121
-write_vocabulary_file$self._vocabulary 126 126
-tf.lookup.TextFileInitializer$tf.string$tf.lookup.TextFileIndex.WHOLE_LINE$tf.int64$tf.lookup.TextFileIndex.LINE_NUMBER 125 128
-tf.lookup.StaticVocabularyTable$self._table_initializer 129 130
-np.zeros 131 131
-self._pretrained_vectors.resize 132 135
-tf.Variable$self._pretrained_vectors 138 138
+tensorflow.lookup.TextFileInitializer$tensorflow.string$tensorflow.lookup.TextFileIndex.WHOLE_LINE$tensorflow.int64$tensorflow.lookup.TextFileIndex.LINE_NUMBER 125 128
+tensorflow.lookup.StaticVocabularyTable 129 130
+tensorflow.Variable 138 138
 
 _tokenize:
-tf.strings.regex_replace 146 147
-tf.reshape 148 148
-tf.strings.split 149 149
-tf.strings.to_sparse 149 149
-tf.constant 152 152
-tf.sparse.fill_empty_rows 152 152
-tf.sparse.reset_shape 154 154
-self._table.lookup$sparse_tokens.values 155 155
+tensorflow.strings.regex_replace 146 147
+tensorflow.reshape 148 148
+tensorflow.strings.split 149 149
+tensorflow.strings.to_sparse 149 149
+tensorflow.constant 152 152
+tensorflow.sparse.fill_empty_rows 152 152
+tensorflow.sparse.reset_shape 154 154
 
 __call__:
-self._tokenize 161 161
-tf.SparseTensor 165 165
-tf.nn.safe_embedding_lookup_sparse$embedding_weights=self.embeddings 163 167
+tensorflow.SparseTensor 165 165
+tensorflow.nn.safe_embedding_lookup_sparse 163 167
 
 export_module_from_file:
-TextEmbeddingModel 175 176
-tf.saved_model.save 177 177
+tensorflow.saved_model.save 177 177
 
 main:
-export_module_from_file$FLAGS.embedding_file$FLAGS.num_oov_buckets$FLAGS.export_path$FLAGS.num_lines_to_ignore$FLAGS.num_lines_to_use 181 183
 

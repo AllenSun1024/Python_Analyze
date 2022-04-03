@@ -1,36 +1,22 @@
 register_module_for_export:
-tf.compat.v1.get_collection 52 52
-ValueError 54 56
-tf.compat.v1.add_to_collection 57 58
+tensorflow.compat.v1.get_collection 52 52
+tensorflow.compat.v1.add_to_collection 57 58
 
 __init__:
-ValueError 112 113
 
 name:
-self._name 117 117
 
 export:
-estimator.latest_checkpoint 153 153
-tf_utils.get_timestamped_export_dir 155 155
-tf_utils.get_temp_export_dir 156 156
-_make_estimator_serving_session$self._serving_input_fn 158 159
-tf.compat.v1.get_collection 161 161
-tf.compat.as_bytes 165 165
-os.path.join 164 165
-module.export 166 166
-tf.compat.v1.gfile.Rename 167 167
-tf_utils.garbage_collect_exports$self._exports_to_keep 168 168
-logging.warn 171 172
+tensorflow.compat.v1.get_collection 161 161
+tensorflow.compat.as_bytes 165 165
+tensorflow.compat.v1.gfile.Rename 167 167
 
 _make_estimator_serving_session:
-tf.Graph 195 195
-tf.as_default 195 195
-tf.compat.v1.train.create_global_step 197 197
-tf.compat.v1.set_random_seed$estimator.config.tf_random_seed 198 198
-serving_input_fn 199 199
-estimator.model_fn$features=serving_input_receiver.features$config=estimator.config 201 205
-tf.compat.v1.Session$config=estimator._session_config 211 211
-tf.compat.v1.Session.#.as_default 214 214
-tf.compat.v1.train.Saver 218 219
-saver_for_restore.restore 220 220
+tensorflow.Graph 195 195
+tensorflow.as_default 195 195
+tensorflow.compat.v1.train.create_global_step 197 197
+tensorflow.compat.v1.set_random_seed 198 198
+tensorflow.compat.v1.Session 211 211
+tensorflow.compat.v1.Session.as_default 214 214
+tensorflow.compat.v1.train.Saver 218 219
 

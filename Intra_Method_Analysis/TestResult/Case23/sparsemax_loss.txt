@@ -1,31 +1,23 @@
 sparsemax_loss:
-tf.convert_to_tensor 50 50
-tf.convert_to_tensor 51 51
-tf.convert_to_tensor 52 52
-tf.math.is_nan 65 65
-tf.math.logical_or 65 65
-tf.zeros_like 67 67
-tf.where 64 68
-tf.math.equal 79 79
-tf.math.is_inf 79 79
-tf.math.logical_and 79 79
-tf.zeros_like 80 80
-tf.where 78 82
-tf.math.reduce_sum 84 84
+tensorflow.convert_to_tensor 50 50
+tensorflow.convert_to_tensor 51 51
+tensorflow.convert_to_tensor 52 52
+tensorflow.math.is_nan 65 65
+tensorflow.math.logical_or 65 65
+tensorflow.zeros_like 67 67
+tensorflow.where 64 68
+tensorflow.math.equal 79 79
+tensorflow.math.is_inf 79 79
+tensorflow.math.logical_and 79 79
+tensorflow.zeros_like 80 80
+tensorflow.where 78 82
+tensorflow.math.reduce_sum 84 84
 
 sparsemax_loss_from_logits:
-sparsemax 92 92
-sparsemax_loss 93 93
 
 __init__:
-ValueError 126 126
-super 128 128
-super 128 128
 
 call:
-sparsemax_loss_from_logits 132 132
 
 get_config:
-super 138 138
-super 138 138
 

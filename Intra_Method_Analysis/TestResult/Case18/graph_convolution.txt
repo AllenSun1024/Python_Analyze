@@ -1,47 +1,31 @@
 feature_steered_convolution_layer:
-tf.compat.v1.variable_scope 87 89
-tf.convert_to_tensor 92 92
-tf.compat.dimension_value 94 94
-tf.compat.v1.get_variable$dtype=data.dtype 100 104
-tf.compat.v1.get_variable$dtype=data.dtype 108 112
-tf.compat.v1.get_variable$dtype=data.dtype 113 117
-tf.compat.v1.get_variable$dtype=data.dtype 118 122
-tf.compat.v1.get_variable$dtype=data.dtype 123 127
-gc.feature_steered_convolution 129 138
+tensorflow.compat.v1.variable_scope 87 89
+tensorflow.convert_to_tensor 92 92
+tensorflow.compat.dimension_value 94 94
+tensorflow.compat.v1.get_variable 100 104
+tensorflow.compat.v1.get_variable 108 112
+tensorflow.compat.v1.get_variable 113 117
+tensorflow.compat.v1.get_variable 118 122
+tensorflow.compat.v1.get_variable 123 127
 
 __init__:
-super 166 166
-super 166 167
-tf.keras.initializers.TruncatedNormal 172 172
+tensorflow.keras.initializers.TruncatedNormal 172 172
 
 build:
-tf.TensorShape 178 178
-tf.as_list 178 178
-self._num_output_channels 179 179
-self.add_weight 187 191
-self.add_weight 195 199
-self.add_weight 200 204
-self.add_weight 205 210
-self.add_weight 211 216
+tensorflow.TensorShape 178 178
+tensorflow.as_list 178 178
 
 call:
-kwargs.get 261 261
-gc.feature_steered_convolution$var_u=self.var_u$var_v=self.var_v$var_c=self.var_c$var_w=self.var_w$var_b=self.var_b 262 270
 
 __init__:
-super 332 332
-super 332 332
 
 build:
-tf.keras.layers.Conv1D$filters=self._num_output_channels$activation=self._activation$use_bias=self._use_bias$kernel_initializer=self._kernel_initializer$bias_initializer=self._bias_initializer$kernel_regularizer=self._kernel_regularizer$bias_regularizer=self._bias_regularizer$activity_regularizer=self._activity_regularizer$kernel_constraint=self._kernel_constraint$bias_constraint=self._bias_constraint 347 360
+tensorflow.keras.layers.Conv1D 347 360
 
 call:
-kwargs.get 424 424
-gc.edge_convolution_template$reduction=self._reduction 425 431
 
 _edge_convolution:
-tf.concat 417 418
-tf.expand_dims 419 419
-conv1d_layer 420 420
-tf.squeeze 421 421
+tensorflow.concat 417 418
+tensorflow.expand_dims 419 419
+tensorflow.squeeze 421 421
 

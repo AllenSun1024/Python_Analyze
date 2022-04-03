@@ -1,144 +1,83 @@
 compute_mean:
-metrics_impl.ARPMetric 97 97
-metrics_impl.MRRMetric 98 98
-metrics_impl.NDCGMetric 99 99
-metrics_impl.DCGMetric 100 100
-metrics_impl.PrecisionMetric 101 101
-metrics_impl.RecallMetric 102 102
-metrics_impl.MeanAveragePrecisionMetric 103 103
-metrics_impl.OPAMetric 104 104
-metrics_impl.BPrefMetric 105 105
-tf.reduce_sum 112 112
-tf.reduce_sum 113 113
-tf.compat.v1.div_no_nan 111 113
+tensorflow.reduce_sum 112 112
+tensorflow.reduce_sum 113 113
+tensorflow.compat.v1.div_no_nan 111 113
 
 make_ranking_metric_fn:
 
 _get_weights:
-tf.convert_to_tensor 155 155
-utils.reshape_to_2d 157 157
+tensorflow.convert_to_tensor 155 155
 
 _average_relevance_position_fn:
-_get_weights 163 163
-average_relevance_position 162 163
 
 _mean_reciprocal_rank_fn:
-_get_weights 170 170
-mean_reciprocal_rank 167 172
 
 _normalized_discounted_cumulative_gain_fn:
-_get_weights 179 179
-normalized_discounted_cumulative_gain 176 183
 
 _discounted_cumulative_gain_fn:
-_get_weights 190 190
-discounted_cumulative_gain 187 194
 
 _precision_fn:
-_get_weights 201 201
-precision 198 203
 
 _recall_fn:
-_get_weights 210 210
-recall 207 212
 
 _mean_average_precision_fn:
-_get_weights 219 219
-mean_average_precision 216 221
 
 _precision_ia_fn:
-_get_weights 228 228
-precision_ia 225 230
 
 _ordered_pair_accuracy_fn:
-_get_weights 235 235
-ordered_pair_accuracy 234 235
 
 _alpha_discounted_cumulative_gain_fn:
-_get_weights 242 242
-alpha_discounted_cumulative_gain 239 246
 
 _binary_preference_fn:
-_get_weights 253 253
-binary_preference 250 256
 
 mean_reciprocal_rank:
-metrics_impl.MRRMetric 297 297
-tf.compat.v1.name_scope$metric.name 298 299
-metrics_impl.MRRMetric.#.compute 301 301
-tf.compat.v1.metrics.mean 302 302
+tensorflow.compat.v1.name_scope 298 299
+tensorflow.compat.v1.metrics.mean 302 302
 
 average_relevance_position:
-metrics_impl.ARPMetric 323 323
-tf.compat.v1.name_scope$metric.name 324 325
-metrics_impl.ARPMetric.#.compute 327 328
-tf.compat.v1.metrics.mean 329 329
+tensorflow.compat.v1.name_scope 324 325
+tensorflow.compat.v1.metrics.mean 329 329
 
 precision:
-metrics_impl.PrecisionMetric 348 348
-tf.compat.v1.name_scope$metric.name 349 350
-metrics_impl.PrecisionMetric.#.compute 352 353
-tf.compat.v1.metrics.mean 354 354
+tensorflow.compat.v1.name_scope 349 350
+tensorflow.compat.v1.metrics.mean 354 354
 
 recall:
-metrics_impl.RecallMetric 373 373
-tf.compat.v1.name_scope$metric.name 374 375
-metrics_impl.RecallMetric.#.compute 377 377
-tf.compat.v1.metrics.mean 378 378
+tensorflow.compat.v1.name_scope 374 375
+tensorflow.compat.v1.metrics.mean 378 378
 
 mean_average_precision:
-metrics_impl.MeanAveragePrecisionMetric 405 405
-tf.compat.v1.name_scope$metric.name 406 407
-metrics_impl.MeanAveragePrecisionMetric.#.compute 409 410
-tf.compat.v1.metrics.mean 411 411
+tensorflow.compat.v1.name_scope 406 407
+tensorflow.compat.v1.metrics.mean 411 411
 
 precision_ia:
-metrics_impl.PrecisionIAMetric 430 430
-tf.compat.v1.name_scope$metric.name 431 432
-metrics_impl.PrecisionIAMetric.#.compute 434 435
-tf.compat.v1.metrics.mean 436 436
+tensorflow.compat.v1.name_scope 431 432
+tensorflow.compat.v1.metrics.mean 436 436
 
 normalized_discounted_cumulative_gain:
-metrics_impl.NDCGMetric 468 468
-tf.compat.v1.name_scope$metric.name 469 471
-metrics_impl.NDCGMetric.#.compute 473 474
-tf.compat.v1.metrics.mean 475 475
+tensorflow.compat.v1.name_scope 469 471
+tensorflow.compat.v1.metrics.mean 475 475
 
 discounted_cumulative_gain:
-metrics_impl.DCGMetric 501 501
-tf.compat.v1.name_scope 502 503
-metrics_impl.DCGMetric.#.compute 505 505
-tf.compat.v1.metrics.mean 506 506
+tensorflow.compat.v1.name_scope 502 503
+tensorflow.compat.v1.metrics.mean 506 506
 
 alpha_discounted_cumulative_gain:
-metrics_impl.AlphaDCGMetric 545 547
-tf.compat.v1.name_scope 548 549
-metrics_impl.AlphaDCGMetric.#.compute 551 551
-tf.compat.v1.metrics.mean 552 552
+tensorflow.compat.v1.name_scope 548 549
+tensorflow.compat.v1.metrics.mean 552 552
 
 ordered_pair_accuracy:
-metrics_impl.OPAMetric 574 574
-tf.compat.v1.name_scope$metric.name 575 576
-metrics_impl.OPAMetric.#.compute 578 579
-tf.compat.v1.metrics.mean 580 580
+tensorflow.compat.v1.name_scope 575 576
+tensorflow.compat.v1.metrics.mean 580 580
 
 binary_preference:
-metrics_impl.BPrefMetric 612 613
-tf.compat.v1.name_scope$metric.name 614 615
-metrics_impl.BPrefMetric.#.compute 617 618
-tf.compat.v1.metrics.mean 619 619
+tensorflow.compat.v1.name_scope 614 615
+tensorflow.compat.v1.metrics.mean 619 619
 
 eval_metric:
-inspect.getargspec 655 655
-len$metric_spec.defaults 657 657
-metric_fn.__name__ 661 661
-ValueError 660 661
-metric_fn.__name__ 666 666
-ValueError 665 666
-tf.compat.v1.Session 669 669
-metric_fn 670 670
-tf.compat.v1.local_variables_initializer 671 671
-tf.compat.v1.Session.run 671 671
-tf.compat.v1.Session.run 672 672
-tf.compat.v1.Session.run 673 673
+tensorflow.compat.v1.Session 669 669
+tensorflow.compat.v1.local_variables_initializer 671 671
+tensorflow.compat.v1.Session.run 671 671
+tensorflow.compat.v1.Session.run 672 672
+tensorflow.compat.v1.Session.run 673 673
 

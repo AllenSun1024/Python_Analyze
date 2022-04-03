@@ -1,60 +1,36 @@
 _downsample:
-tf.nn.conv2d 51 52
+tensorflow.nn.conv2d 51 52
 
 _binomial_kernel:
-np.array$dtype=dtype.as_numpy_dtype 66 66
-np.outer 67 67
-np.sum 68 68
-tf.constant 70 70
-tf.eye 70 70
+tensorflow.constant 70 70
+tensorflow.eye 70 70
 
 _build_pyramid:
-tf.shape 89 89
-_binomial_kernel$dtype=image.dtype 89 89
-range 91 91
-sampler 92 92
-levels.append 93 93
+tensorflow.shape 89 89
 
 _split:
-_downsample 118 118
-tf.shape 119 119
-_upsample 119 119
+tensorflow.shape 119 119
 
 _upsample:
-tf.shape 142 142
-tf.nn.conv2d_transpose 145 150
+tensorflow.shape 142 142
+tensorflow.nn.conv2d_transpose 145 150
 
 downsample:
-tf.name_scope 173 173
-tf.convert_to_tensor 174 174
-shape.check_static 176 176
-_build_pyramid 178 178
+tensorflow.name_scope 173 173
+tensorflow.convert_to_tensor 174 174
 
 merge:
-tf.name_scope 199 199
-tf.convert_to_tensor 200 200
-enumerate 202 202
-shape.check_static 203 204
-tf.shape 207 207
-_binomial_kernel$dtype=image.dtype 207 207
-reversed 208 208
-tf.shape 209 209
-_upsample 209 209
+tensorflow.name_scope 199 199
+tensorflow.convert_to_tensor 200 200
+tensorflow.shape 207 207
+tensorflow.shape 209 209
 
 split:
-tf.name_scope 232 232
-tf.convert_to_tensor 233 233
-shape.check_static 235 235
-tf.shape 237 237
-_binomial_kernel$dtype=image.dtype 237 237
-range 240 240
-_split 241 241
-levels.append 242 242
-levels.append 243 243
+tensorflow.name_scope 232 232
+tensorflow.convert_to_tensor 233 233
+tensorflow.shape 237 237
 
 upsample:
-tf.name_scope 267 267
-tf.convert_to_tensor 268 268
-shape.check_static 270 270
-_build_pyramid 272 272
+tensorflow.name_scope 267 267
+tensorflow.convert_to_tensor 268 268
 

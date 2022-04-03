@@ -1,143 +1,65 @@
 create_ranking_head:
-callable 78 78
-ValueError 79 79
-_RankingHead 81 86
 
 create_multi_ranking_head:
-_MultiRankingHead 99 99
 
 name:
-NotImplementedError 110 110
 
 create_estimator_spec:
-NotImplementedError 142 142
 
 _get_train_op:
-ValueError 149 149
-tf.compat.v1.train.get_global_step 151 151
-optimizer.minimize 150 151
-train_op_fn 153 153
-ValueError 155 155
+tensorflow.compat.v1.train.get_global_step 151 151
 
 __init__:
 
 name:
-self._name 177 177
 
 create_loss:
-tf.convert_to_tensor 197 197
-isinstance 198 198
-six.iteritems 199 199
-tf.cast$dtype=tf.float32 200 200
-tf.cast$dtype=tf.float32 202 202
-self._loss_fn 204 204
+tensorflow.convert_to_tensor 197 197
+tensorflow.cast$dtype=tensorflow.float32 200 200
+tensorflow.cast$dtype=tensorflow.float32 202 202
 
 _labels_and_logits_metrics:
-tf.greater_equal 210 210
-tf.reshape 210 210
-tf.reshape 214 214
-tf.boolean_mask 214 214
-tf.compat.v1.metrics.mean 213 214
+tensorflow.greater_equal 210 210
+tensorflow.reshape 210 210
+tensorflow.reshape 214 214
+tensorflow.boolean_mask 214 214
+tensorflow.compat.v1.metrics.mean 213 214
 
 create_estimator_spec:
-tf.convert_to_tensor 224 224
-tf.compat.v1.name_scope$self._name 226 226
-tf.estimator.export.RegressionOutput 233 233
-tf.estimator.export.RegressionOutput 235 235
-tf.estimator.export.PredictOutput 237 237
-tf.estimator.EstimatorSpec 228 238
-self.create_loss 240 241
-tf.add_n 243 243
-tf.add 244 244
-metric_fn 252 252
-six.iteritems$self._eval_metric_fns 253 253
-self._labels_and_logits_metrics 255 255
-eval_metric_ops.update 255 255
-tf.estimator.EstimatorSpec 256 260
-_get_train_op$self._train_op_fn$self._optimizer 267 268
-tf.estimator.EstimatorSpec 264 269
-ValueError 270 270
+tensorflow.convert_to_tensor 224 224
+tensorflow.compat.v1.name_scope 226 226
+tensorflow.estimator.export.RegressionOutput 233 233
+tensorflow.estimator.export.RegressionOutput 235 235
+tensorflow.estimator.export.PredictOutput 237 237
+tensorflow.estimator.EstimatorSpec 228 238
+tensorflow.add_n 243 243
+tensorflow.add 244 244
+tensorflow.estimator.EstimatorSpec 256 260
+tensorflow.estimator.EstimatorSpec 264 269
 
 _default_export_output:
-len 275 275
-six.itervalues 276 276
-next 276 276
-ValueError 280 285
 
 __init__:
-ValueError 305 305
-len 307 307
-len 307 307
-len 311 311
-len 311 311
-ValueError 308 311
-head.name 313 313
-ValueError 314 315
-tuple 316 316
-tuple 317 317
-tuple 317 317
-tf.compat.v1.logging.info 321 322
+tensorflow.compat.v1.logging.info 321 322
 
 name:
 
 _check_logits_and_labels:
-head_names.append$head.name 336 336
-len 338 338
-set 338 338
-len 338 338
-ValueError 339 339
-isinstance 342 342
-ValueError 343 343
-set 344 344
-list 344 344
-set 344 344
-list 344 344
-ValueError 346 347
-isinstance 351 351
-ValueError 352 352
-set 353 353
-list 353 353
-set 353 353
-list 353 353
-ValueError 355 356
 
 _merge_predict_export_outputs:
-_default_export_output 374 375
-zip$self._heads 378 378
-six.iteritems$spec.export_outputs 379 379
-isinstance$tf.estimator.export.PredictOutput 387 387
-six.iteritems$v.outputs 388 388
-tf.estimator.export.PredictOutput 391 391
+tensorflow.estimator.export.PredictOutput 391 391
 
 _merge_loss:
-self._check_logits_and_labels 401 401
-head.create_loss 404 408
-tuple.#.append 409 409
-tuple 410 410
-tuple 414 414
-tf.compat.v1.name_scope 412 414
-zip$self._head_weights 417 418
-tf.math.multiply 420 420
-head_weighted_training_losses.append 419 420
-tf.math.add_n 422 422
-tf.math.add_n 423 424
+tensorflow.compat.v1.name_scope 412 414
+tensorflow.math.multiply 420 420
+tensorflow.math.add_n 422 422
+tensorflow.math.add_n 423 424
 
 _merge_metrics:
-zip$self._heads 434 434
-six.iteritems$spec.eval_metric_ops 437 437
-eval_metric_ops.update 435 438
 
 create_estimator_spec:
-tf.compat.v1.name_scope$self.name 448 448
-self._check_logits_and_labels 449 449
-head.create_estimator_spec 454 458
-all_estimator_spec.append 453 458
-self._merge_predict_export_outputs 461 461
-tf.estimator.EstimatorSpec 462 463
-self._merge_loss 466 467
-self._merge_metrics 468 468
-tf.estimator.EstimatorSpec 472 476
-_get_train_op$self._train_op_fn$self._optimizer 482 482
-tf.estimator.EstimatorSpec 479 484
-ValueError 485 485
+tensorflow.compat.v1.name_scope 448 448
+tensorflow.estimator.EstimatorSpec 462 463
+tensorflow.estimator.EstimatorSpec 472 476
+tensorflow.estimator.EstimatorSpec 479 484
 

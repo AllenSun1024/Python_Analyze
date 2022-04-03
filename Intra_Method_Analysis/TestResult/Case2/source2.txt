@@ -1,11 +1,7 @@
 main:
-tf.random.uniform 9 9
-range 11 11
-range 12 12
-backend.sum 13 13
-y.append 13 13
-tf.convert_to_tensor$dtype=tf.float32 14 14
-group.append 14 14
-backend.stack 16 16
-backend.reshape 17 17
+tensorflow.random.uniform 9 9
+keras.backend.sum 13 13
+tensorflow.convert_to_tensor$dtype=tensorflow.float32 14 14
+keras.backend.stack 16 16
+keras.backend.reshape 17 17
 

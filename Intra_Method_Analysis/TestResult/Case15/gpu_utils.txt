@@ -1,32 +1,17 @@
 assign_to_gpu:
 
 _assign:
-isinstance$tf.NodeDef 10 10
-node_def.op 11 11
 
 average_grads_and_vars:
-zip 42 42
-isinstance$tf.IndexedSlices 45 45
-average_sparse 46 46
-average_dense 48 48
-average_grads_and_vars.append 54 54
 
 average_dense:
-len 20 20
-len 26 26
 
 average_sparse:
-len 29 29
-tf.concat 37 37
-tf.concat 38 38
-len 38 38
-tf.IndexedSlices 39 39
+tensorflow.concat 37 37
+tensorflow.concat 38 38
+tensorflow.IndexedSlices 39 39
 
 load_from_checkpoint:
-tf.get_default_session 59 59
-tf.train.get_checkpoint_state 60 60
-os.path.isabs$ckpt.model_checkpoint_path 62 62
-saver.restore$ckpt.model_checkpoint_path 64 64
-os.path.join$ckpt.model_checkpoint_path 67 67
-saver.restore 67 67
+tensorflow.get_default_session 59 59
+tensorflow.train.get_checkpoint_state 60 60
 

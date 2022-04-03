@@ -1,96 +1,45 @@
 __init__:
-super 57 57
-super 57 57
-self.name 63 63
-logging.info 63 63
-tuple 66 66
-self.build 66 66
-self.depth 69 69
-self.__class__.__name__ 70 70
-RuntimeError 70 70
 
 __repr__:
-self.on_value 74 74
-self.off_value 76 76
-self.axis 78 78
-self.name 80 80
-s.format$classname=self.__class__.__name__ 83 83
 
 build:
 
 forward:
-tf.one_hot$self.depth$on_value=self.on_value$off_value=self.off_value$axis=self.axis$dtype=self.dtype 96 98
+tensorflow.one_hot 96 98
 
 __init__:
-super 201 201
-super 201 201
-tuple 214 214
-self.build 214 214
-self.name 217 217
-self.vocabulary_size 217 217
-self.embedding_size 217 217
-logging.info 217 217
 
 __repr__:
-s.format$classname=self.__class__.__name__ 228 228
 
 build:
-self._get_weights$init=self.E_init 245 249
-tf.nn.l2_normalize$self.embeddings 251 251
-self._get_weights$init=self.nce_W_init 255 259
-self._get_weights$init=self.nce_b_init 261 265
+tensorflow.nn.l2_normalize 251 251
 
 forward:
-isinstance 287 287
-tf.nn.embedding_lookup$params=self.embeddings 288 288
-self.__class__.__name__ 293 293
-AttributeError 291 294
-isinstance 297 297
-ValueError 298 298
-tf.nn.nce_loss$weights=self.nce_weights$biases=self.nce_biases$num_sampled=self.num_sampled$num_classes=self.vocabulary_size 301 304
-tf.reduce_mean 300 305
+tensorflow.nn.embedding_lookup 288 288
+tensorflow.nn.nce_loss 301 304
+tensorflow.reduce_mean 300 305
 
 __init__:
-super 359 359
-super 359 359
-tuple 365 365
-self.build 365 365
-self.name 368 368
-self.vocabulary_size 368 368
-self.embedding_size 368 368
-logging.info 368 368
 
 __repr__:
-s.format$classname=self.__class__.__name__ 375 375
 
 build:
-self._get_weights$init=self.E_init 385 389
 
 forward:
-tf.nn.embedding_lookup$params=self.embeddings 399 399
+tensorflow.nn.embedding_lookup 399 399
 
 __init__:
-super 455 455
-super 455 455
-tuple 462 462
-self.build 462 462
-self.name 465 465
-self.vocabulary_size 465 465
-self.embedding_size 465 465
-logging.info 465 465
 
 __repr__:
-s.format$classname=self.__class__.__name__ 473 473
 
 build:
-self._get_weights$init=self.E_init 485 489
 
 forward:
-tf.nn.embedding_lookup$params=self.embeddings 500 504
-tf.not_equal$self.pad_value 507 507
-tf.expand_dims 508 508
-tf.cast$dtype=tf.float32 508 508
-tf.reduce_sum 509 509
-tf.math.count_nonzero$dtype=tf.float32 512 518
-tf.divide 520 524
+tensorflow.nn.embedding_lookup 500 504
+tensorflow.not_equal 507 507
+tensorflow.expand_dims 508 508
+tensorflow.cast$dtype=tensorflow.float32 508 508
+tensorflow.reduce_sum 509 509
+tensorflow.math.count_nonzero$dtype=tensorflow.float32 512 518
+tensorflow.divide 520 524
 

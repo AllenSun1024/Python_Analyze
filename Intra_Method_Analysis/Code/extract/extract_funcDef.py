@@ -7,7 +7,7 @@ from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule
 class FuncDefExtractor(ast.NodeVisitor):
     def __init__(self, script, resultPath):
         self.funcStats = {
-            "name": [],  # 当前文件内定义的函数名列表, [name1, name2, ...]
+            "name": [],  # 当前文件内定义的函数名列表, [f1, f2, ...], f means function
             "args": [],  # 函数参数, [[1's arg], [2's arg], ...]
             "APIs": [],  # 函数中调用的API列表, [[f1_api_1, f1_api_2, ...], [f2_api_1, f2_api_2, ...], ...]
             "lineNo": [],  # 每个被调用API的起始行号, [[f1_line_1, f1_line_2, ...], [f2_line_1, f2_line_2, ...], ...]

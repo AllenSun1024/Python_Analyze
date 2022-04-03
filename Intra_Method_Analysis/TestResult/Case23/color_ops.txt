@@ -1,44 +1,35 @@
 _scale_channel:
-tf.cast$tf.int32 33 33
-tf.histogram_fixed_width 36 36
-tf.boolean_mask 39 39
-tf.reduce_sum 40 40
-tf.cumsum 47 47
-tf.clip_by_value 48 48
-tf.gather 49 49
-tf.cast 51 51
+tensorflow.cast$tensorflow.int32 33 33
+tensorflow.histogram_fixed_width 36 36
+tensorflow.boolean_mask 39 39
+tensorflow.reduce_sum 40 40
+tensorflow.cumsum 47 47
+tensorflow.clip_by_value 48 48
+tensorflow.gather 49 49
+tensorflow.cast 51 51
 
 _equalize_image:
-_scale_channel 57 57
-range 57 57
-tf.stack 56 58
+tensorflow.stack 56 58
 
 equalize:
-tf.name_scope 79 79
-tf.rank 80 80
-to_4D_image 81 81
-partial 82 82
-tf.map_fn 83 83
-from_4D_image 84 84
+tensorflow.name_scope 79 79
+tensorflow.rank 80 80
+tensorflow.map_fn 83 83
 
 _sharpness_image:
-tf.cast$tf.float32 92 92
-tf.constant$dtype=tf.float32 96 98
-tf.tile 101 101
-tf.nn.depthwise_conv2d 104 106
-tf.cast 107 107
-tf.ones_like 110 110
-tf.pad 111 111
-tf.pad 112 112
-tf.equal 113 113
-tf.where 113 113
-blend 116 116
-tf.cast 117 117
+tensorflow.cast$tensorflow.float32 92 92
+tensorflow.constant$dtype=tensorflow.float32 96 98
+tensorflow.tile 101 101
+tensorflow.nn.depthwise_conv2d 104 106
+tensorflow.cast 107 107
+tensorflow.ones_like 110 110
+tensorflow.pad 111 111
+tensorflow.pad 112 112
+tensorflow.equal 113 113
+tensorflow.where 113 113
+tensorflow.cast 117 117
 
 sharpness:
-tf.name_scope 135 135
-tf.rank 136 136
-to_4D_image 137 137
-_sharpness_image 138 138
-from_4D_image 139 139
+tensorflow.name_scope 135 135
+tensorflow.rank 136 136
 

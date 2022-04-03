@@ -3,196 +3,117 @@ in_graph:
 export_assets:
 
 tokenize_stream:
-line.strip.#.strip.#.strip 49 49
-self.tokenize 50 50
-delimiter.join 51 51
-misc.print_as_bytes 52 52
 
 detokenize_stream:
-line.strip 68 68
-line.split 68 68
-self.detokenize 69 69
-misc.print_as_bytes 70 70
 
 tokenize:
-tf.device 90 90
-self._tokenize 91 91
+tensorflow.device 90 90
 
 _tokenize:
-tf.is_tensor 94 94
-self._tokenize_tensor 95 95
-isinstance 96 96
-map 97 97
-list 97 97
-tf.compat.as_text 99 99
-self._tokenize_string 100 100
+tensorflow.is_tensor 94 94
+tensorflow.compat.as_text 99 99
 
 detokenize:
-tf.device 124 124
-self._detokenize 125 125
+tensorflow.device 124 124
 
 _detokenize:
-isinstance$tf.RaggedTensor 128 128
-self._detokenize_tensor 129 129
-tf.is_tensor 130 130
-len$tokens.shape 131 131
-self._detokenize_tensor 133 133
-ValueError 136 138
-tf.RaggedTensor.from_tensor 139 139
-self._detokenize_tensor 140 140
-ValueError 142 142
-isinstance 143 143
-isinstance 143 143
-map$self.detokenize 144 144
-list 144 144
-tf.compat.as_text 146 146
-self._detokenize_string 147 147
+tensorflow.is_tensor 130 130
+tensorflow.RaggedTensor.from_tensor 139 139
+tensorflow.compat.as_text 146 146
 
 _tokenize_tensor:
-tf.py_function$tf.string 178 178
-tf.py_function.#.set_shape 179 179
-tf.py_function$tf.string$tf.int32 182 184
-flat_tokens.set_shape 185 185
-lengths.set_shape 186 186
-tf.RaggedTensor.from_row_lengths 187 187
-ValueError 189 189
+tensorflow.py_function$tensorflow.string 178 178
+tensorflow.py_function.set_shape 179 179
+tensorflow.py_function$tensorflow.string$tensorflow.int32 182 184
+tensorflow.RaggedTensor.from_row_lengths 187 187
 
 _python_wrapper:
-string_t.numpy 165 165
-tf.compat.as_text 165 165
-self._tokenize_string 166 166
-tf.constant$dtype=tf.string 167 167
+tensorflow.compat.as_text 165 165
+tensorflow.constant$dtype=tensorflow.string 167 167
 
 _python_wrapper_batch:
-list.#.numpy 170 170
-map$tf.compat.as_text 170 170
-list 170 170
-self._tokenize_string_batch 171 171
-tf.nest.flatten 172 172
-tf.constant$dtype=tf.string 172 172
-map 173 173
-list 173 173
-tf.constant$dtype=tf.int32 173 173
+tensorflow.nest.flatten 172 172
+tensorflow.constant$dtype=tensorflow.string 172 172
+tensorflow.constant$dtype=tensorflow.int32 173 173
 
 _detokenize_tensor:
-tf.py_function$tf.string 212 212
-tf.py_function.#.set_shape 213 213
-tf.map_fn$self._detokenize_tensor$dtype=tf.string 216 216
-ValueError 218 218
+tensorflow.py_function$tensorflow.string 212 212
+tensorflow.py_function.set_shape 213 213
+tensorflow.map_fn$dtype=tensorflow.string 216 216
 
 _python_wrapper:
-tf.compat.as_text 206 206
-tokens_t.numpy 206 206
-self._detokenize_string 207 207
-tf.constant 208 208
+tensorflow.compat.as_text 206 206
+tensorflow.constant 208 208
 
 _tokenize_string:
-NotImplementedError 233 233
 
 _tokenize_string_batch:
-self._tokenize_string 245 245
 
 _detokenize_string:
-NotImplementedError 257 257
 
 make_tokenizer:
-misc.ClassRegistry 260 260
-isinstance 279 279
-tf.io.gfile.exists 280 280
-tf.io.gfile.GFile 281 281
-yaml.safe_load 282 282
-json.loads 285 285
-isinstance 288 288
-yaml.safe_load.#.get 289 289
-yaml.safe_load.#.get 294 294
-misc.ClassRegistry.#.get 295 295
-sorted$_TOKENIZERS_REGISTRY.class_names 301 301
-ValueError 297 303
-_TOKENIZERS_REGISTRY.get.# 304 304
-str 306 306
-ValueError 306 306
-SpaceTokenizer 310 310
+tensorflow.io.gfile.exists 280 280
+tensorflow.io.gfile.GFile 281 281
 
 _process_stream_as_dataset:
-tf.TensorShape 324 324
-tf.data.Dataset.from_generator$output_types=tf.string 321 325
-tf.data.Dataset.from_generator.#.batch 326 326
-tf.data.Dataset.from_generator.#.map 327 327
-tf.TensorSpec$dtype=tf.string 329 329
-tf.data.Dataset.from_generator.#.element_spec 330 330
-tf.data.Dataset.from_generator.#.element_spec 333 333
-TypeError 331 334
-tf.data.Dataset.from_generator.#.as_numpy_iterator 336 336
-misc.print_as_bytes 338 338
+tensorflow.TensorShape 324 324
+tensorflow.data.Dataset.from_generator$output_types=tensorflow.string 321 325
+tensorflow.data.Dataset.batch 326 326
+tensorflow.data.Dataset.map 327 327
+tensorflow.TensorSpec$dtype=tensorflow.string 329 329
+tensorflow.data.Dataset.element_spec 330 330
+tensorflow.data.Dataset.element_spec 333 333
+tensorflow.data.Dataset.as_numpy_iterator 336 336
 
 in_graph:
 
 tokenize_stream:
-_process_stream_as_dataset 362 362
 
 _map_func:
-tf.strings.strip 356 356
-self._tokenize_tensor 357 357
-self._tokenize_tensor.#.shape.rank 359 359
-tf.strings.reduce_join 358 360
+tensorflow.strings.strip 356 356
+tensorflow.strings.reduce_join 358 360
 
 detokenize_stream:
-_process_stream_as_dataset 375 375
 
 _map_func:
-tf.strings.strip 371 371
-tf.strings.split 372 372
-self._detokenize_tensor 373 373
+tensorflow.strings.strip 371 371
+tensorflow.strings.split 372 372
 
 _tokenize_tensor:
-NotImplementedError 379 379
 
 _detokenize_tensor:
-NotImplementedError 383 383
 
 _tokenize_string:
-tf.constant$dtype=tf.string 386 386
-self._tokenize_tensor 386 386
-token.decode 387 387
-self._tokenize_tensor.#.numpy 387 387
+tensorflow.constant$dtype=tensorflow.string 386 386
 
 _detokenize_string:
-tf.constant$dtype=tf.string 390 390
-self._detokenize_tensor 390 390
-self._detokenize_tensor.#.numpy 391 391
-self._detokenize_tensor.#.decode 391 391
+tensorflow.constant$dtype=tensorflow.string 390 390
 
 __init__:
 
 in_graph:
-self._in_graph 408 408
 
 _tokenize_tensor:
-tf.strings.split 411 411
+tensorflow.strings.split 411 411
 
 _detokenize_tensor:
-tokens.shape.rank 414 414
-tf.strings.reduce_join 414 414
+tensorflow.strings.reduce_join 414 414
 
 _tokenize_string:
-text.split 417 417
 
 _detokenize_string:
 
 in_graph:
 
 _tokenize_tensor:
-tf.strings.regex_replace 432 432
-tf.strings.unicode_split 433 433
+tensorflow.strings.regex_replace 432 432
+tensorflow.strings.unicode_split 433 433
 
 _detokenize_tensor:
-tokens.shape.rank 436 436
-tf.strings.reduce_join 436 436
-tf.strings.regex_replace 437 437
+tensorflow.strings.reduce_join 436 436
+tensorflow.strings.regex_replace 437 437
 
 _tokenize_string:
-text.replace 440 440
-list 440 440
 
 _detokenize_string:
 

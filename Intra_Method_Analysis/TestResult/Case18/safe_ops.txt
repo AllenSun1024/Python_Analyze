@@ -1,60 +1,42 @@
 nonzero_sign:
-tf.name_scope 41 41
-tf.convert_to_tensor 42 42
-tf.ones_like 44 44
-tf.greater_equal 45 45
-tf.where 45 45
+tensorflow.name_scope 41 41
+tensorflow.convert_to_tensor 42 42
+tensorflow.ones_like 44 44
+tensorflow.greater_equal 45 45
+tensorflow.where 45 45
 
 safe_cospx_div_cosx:
-tf.name_scope 79 79
-tf.convert_to_tensor 80 80
-tf.convert_to_tensor$dtype=theta.dtype 81 81
-asserts.select_eps_for_division$theta.dtype 83 83
-tf.convert_to_tensor$dtype=theta.dtype 84 84
-tf.clip_by_value 89 89
-np.pi 90 90
-np.pi 90 90
-np.pi 90 90
-nonzero_sign 90 90
-tf.cos 92 92
-tf.cos 92 92
-asserts.assert_no_infs_or_nans 93 93
+tensorflow.name_scope 79 79
+tensorflow.convert_to_tensor 80 80
+tensorflow.convert_to_tensor 81 81
+tensorflow.convert_to_tensor 84 84
+tensorflow.clip_by_value 89 89
+tensorflow.cos 92 92
+tensorflow.cos 92 92
 
 safe_shrink:
-tf.name_scope 141 141
-tf.convert_to_tensor 142 142
-asserts.select_eps_for_addition$vector.dtype 144 144
-tf.convert_to_tensor$dtype=vector.dtype 145 145
-asserts.assert_all_in_range 149 150
+tensorflow.name_scope 141 141
+tensorflow.convert_to_tensor 142 142
+tensorflow.convert_to_tensor 145 145
 
 safe_signed_div:
-tf.name_scope 184 184
-tf.convert_to_tensor 185 185
-tf.convert_to_tensor 186 186
-asserts.select_eps_for_division$b.dtype 188 188
-tf.convert_to_tensor$dtype=b.dtype 189 189
-nonzero_sign 191 191
-asserts.assert_no_infs_or_nans 191 191
+tensorflow.name_scope 184 184
+tensorflow.convert_to_tensor 185 185
+tensorflow.convert_to_tensor 186 186
+tensorflow.convert_to_tensor 189 189
 
 safe_sinpx_div_sinx:
-tf.name_scope 225 225
-tf.convert_to_tensor 226 226
-tf.convert_to_tensor$dtype=theta.dtype 227 227
-asserts.select_eps_for_division$theta.dtype 229 229
-tf.convert_to_tensor$dtype=theta.dtype 230 230
-tf.clip_by_value 235 235
-np.pi 236 236
-np.pi 236 236
-nonzero_sign 236 236
-tf.sin 238 238
-tf.sin 238 238
-asserts.assert_no_infs_or_nans 239 239
+tensorflow.name_scope 225 225
+tensorflow.convert_to_tensor 226 226
+tensorflow.convert_to_tensor 227 227
+tensorflow.convert_to_tensor 230 230
+tensorflow.clip_by_value 235 235
+tensorflow.sin 238 238
+tensorflow.sin 238 238
 
 safe_unsigned_div:
-tf.name_scope 267 267
-tf.convert_to_tensor 268 268
-tf.convert_to_tensor 269 269
-asserts.select_eps_for_division$b.dtype 271 271
-tf.convert_to_tensor$dtype=b.dtype 272 272
-asserts.assert_no_infs_or_nans 274 274
+tensorflow.name_scope 267 267
+tensorflow.convert_to_tensor 268 268
+tensorflow.convert_to_tensor 269 269
+tensorflow.convert_to_tensor 272 272
 

@@ -1,37 +1,24 @@
 __init__:
-super 41 41
-super 41 41
 
 build:
-self.add_weight$initializer=self.kernel_initializer$regularizer=self.kernel_regularizer$constraint=self.kernel_constraint 50 56
 
 call:
-tf.unstack$self.kernel 64 64
-tf.math.polyval 64 64
-tf.matmul 68 68
-tf.math.reduce_sum 72 72
-tf.expand_dims 76 76
+tensorflow.unstack 64 64
+tensorflow.math.polyval 64 64
+tensorflow.matmul 68 68
+tensorflow.math.reduce_sum 72 72
+tensorflow.expand_dims 76 76
 
 __init__:
-super 129 129
-super 129 135
 
 build:
-DiffuseFeatures$num_diffusion_steps=self.K$kernel_initializer=self.kernel_initializer$kernel_regularizer=self.kernel_regularizer$kernel_constraint=self.kernel_constraint 142 147
-range$self.channels 148 148
 
 apply_filters:
-diffusion 160 160
-diffused_features.append 161 161
-tf.concat 163 163
+tensorflow.concat 163 163
 
 call:
-self.apply_filters 167 167
-self.activation 171 171
 
 config:
-self.K 177 177
 
 preprocess:
-gcn_filter 181 181
 

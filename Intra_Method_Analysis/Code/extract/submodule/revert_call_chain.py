@@ -12,17 +12,15 @@ def chain_def_use(funcStats):
     """
     revert_table = open('/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/call_return.json', 'r+')
     revert_table = json.load(revert_table)
-    for i in range(len(funcStats["name"])):
+    for i in range(len(funcStats["APIs"])):
         for j in range(len(funcStats['APIs'][i])):
+            if funcStats["APIs"][i][j] is None:
+                continue
             cur_API = funcStats['APIs'][i][j]
-            pureAPI = None
-            paras = ''
-            if cur_API is not None:
-                pureAPI = cur_API.split('$')[0]
-                paraLoc = cur_API.find('$')
-                paras = cur_API[paraLoc:]
-            if pureAPI is not None and '#' in pureAPI:
-
+            pureAPI = cur_API.split('$')[0]  # pureAPI may contain `#`
+            paraLoc = cur_API.find('$')
+            paras = cur_API[paraLoc:]
+            if '#' in pureAPI:
                 head = pureAPI.split('#')[0][:-1]  # `API` or `API + Inner Func`
                 rear = pureAPI.split('#')[1][1:]
                 possibleInnerFromHead = head.split('.')[-1]

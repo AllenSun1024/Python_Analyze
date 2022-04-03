@@ -1,59 +1,29 @@
 lambada_create_tokens_data:
-open 23 23
-requests.get 24 24
-requests.get.#.raise_for_status 25 25
-json.loads 26 26
-requests.get.#.iter_lines 26 26
-ftfy.fix_text 27 27
-fetch_encoder 28 28
-encode 29 29
-json.dump 30 30
 
 lambada_read_or_create_tokens_data:
-os.path.exists 36 36
-lambada_create_tokens_data 37 37
-open 38 38
-json.load 39 39
 
 bin_pack:
-len 49 49
-len 49 49
-len 49 49
-bins.append 50 50
-len 53 53
-bins.append 54 54
-len 55 55
-np.full$dtype=np.uint16 55 55
-enumerate 56 56
-len 57 57
 
 lambada_init:
-len 67 67
-lt_path.endswith 69 69
-lambada_read_or_create_tokens_data 71 71
-bin_pack 72 72
-len 74 74
 
 lambada_get_task_info:
 
 lambada_input:
-lambada_read_or_create_tokens_data 88 88
-bin_pack 89 89
-tf.data.Dataset.from_tensor_slices 90 90
-tf.data.Dataset.from_tensor_slices.#.map$num_parallel_calls=tf.data.AUTOTUNE 104 104
-tf.data.Dataset.from_tensor_slices.#.batch 105 105
-tf.data.Dataset.from_tensor_slices.#.repeat 106 106
+tensorflow.data.Dataset.from_tensor_slices 90 90
+tensorflow.data.Dataset.map$num_parallel_calls=tensorflow.data.AUTOTUNE 104 104
+tensorflow.data.Dataset.batch 105 105
+tensorflow.data.Dataset.repeat 106 106
 
 _get_output:
-tf.cast$dtype=tf.int32 93 93
-tf.range 94 94
-tf.gather 95 95
-tf.gather 96 96
-tf.math.equal 96 96
-tf.constant 97 97
-tf.where 97 97
-tf.reshape 98 98
-tf.cast$dtype=tf.int32 99 99
-tf.reshape 100 100
-tf.cast$dtype=tf.int32 101 101
+tensorflow.cast$dtype=tensorflow.int32 93 93
+tensorflow.range 94 94
+tensorflow.gather 95 95
+tensorflow.gather 96 96
+tensorflow.math.equal 96 96
+tensorflow.constant 97 97
+tensorflow.where 97 97
+tensorflow.reshape 98 98
+tensorflow.cast$dtype=tensorflow.int32 99 99
+tensorflow.reshape 100 100
+tensorflow.cast$dtype=tensorflow.int32 101 101
 

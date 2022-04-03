@@ -35,7 +35,7 @@ def parse_tree_script(tree, script, resultPath):
     funcStats = get_references_by_lineno(funcStats=funcStats, script=script)
     # TODO: repair to revert paras' name
     function_extractor.funcStats = revert_import_name(validPackages, funcStats)
-    # function_extractor.funcStats = chain_def_use(funcStats=function_extractor.funcStats)
+    function_extractor.funcStats = chain_def_use(funcStats=function_extractor.funcStats)
     function_extractor.report()
 
 

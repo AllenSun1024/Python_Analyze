@@ -1,5 +1,8 @@
+Case1  source1.txt
 Case10  source10.txt
 Case11  optimizers.txt
+Case11  tasks.txt
+Case12  model.txt
 Case12  train.txt
 Case13  resnet.txt
 Case14  deep_speech.txt
@@ -22,6 +25,7 @@ Case19  padding.txt
 Case19  recurrent.txt
 Case19  seq2seq_with_attention.txt
 Case19  spatial_transformer.txt
+Case2  source2.txt
 Case20  bernoulli.txt
 Case20  constant.txt
 Case20  gaussian.txt
@@ -41,6 +45,7 @@ Case23  max_unpooling_2d_v2.txt
 Case23  sparsemax.txt
 Case23  sparsemax_loss.txt
 Case24  differentiator.txt
+Case24  linear_combination.txt
 Case24  rotosolve_minimizer.txt
 Case25  dataset.txt
 Case25  tokenizer.txt
@@ -50,10 +55,8 @@ Case26  pretrain.txt
 Case26  train.txt
 Case27  cnn.txt
 Case27  gnn.txt
-Case3  source3.txt
 Case4  source4.txt
 Case5  source5.txt
 Case6  source6.txt
 Case7  source7.txt
 Case8  source8.txt
-Case9  source9.txt

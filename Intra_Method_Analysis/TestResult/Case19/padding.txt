@@ -1,80 +1,36 @@
 __init__:
-super 49 49
-super 49 49
-list$self.padding 53 53
-self.name 53 53
-self.mode 53 53
-logging.info 53 53
-self.padding 55 55
-Exception 56 58
-self.build 60 60
 
 __repr__:
-self.name 65 65
-s.format$classname=self.__class__.__name__ 68 68
 
 build:
 
 forward:
-tf.pad$paddings=self.padding$mode=self.mode$name=self.name 74 74
+tensorflow.pad 74 74
 
 __init__:
-super 106 106
-super 106 106
-str 108 108
-self.name 108 108
-logging.info 108 108
-isinstance$self.padding 110 110
-AssertionError 111 111
-self.build 113 113
 
 __repr__:
-self.name 118 118
-s.format$classname=self.__class__.__name__ 121 121
 
 build:
-tf.keras.layers.ZeroPadding1D$padding=self.padding$name=self.name 124 124
+tensorflow.keras.layers.ZeroPadding1D 124 124
 
 forward:
-self.layer 127 127
 
 __init__:
-super 160 160
-super 160 160
-str$self.padding 163 163
-self.name 163 163
-logging.info 163 163
-isinstance$self.padding 165 165
-AssertionError 166 166
-self.build 168 168
 
 __repr__:
-self.name 173 173
-s.format$classname=self.__class__.__name__ 176 176
 
 build:
-tf.keras.layers.ZeroPadding2D$padding=self.padding$name=self.name 179 179
+tensorflow.keras.layers.ZeroPadding2D 179 179
 
 forward:
-self.layer 182 182
 
 __init__:
-super 215 215
-super 215 215
-str$self.padding 218 218
-self.name 218 218
-logging.info 218 218
-isinstance$self.padding 220 220
-AssertionError 221 221
-self.build 223 223
 
 __repr__:
-self.name 228 228
-s.format$classname=self.__class__.__name__ 231 231
 
 build:
-tf.keras.layers.ZeroPadding3D$padding=self.padding$name=self.name 234 234
+tensorflow.keras.layers.ZeroPadding3D 234 234
 
 forward:
-self.layer 237 237
 

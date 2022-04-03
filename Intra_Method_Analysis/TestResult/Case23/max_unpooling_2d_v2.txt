@@ -1,28 +1,21 @@
 _max_unpooling_2d_v2:
-tf.cast 27 27
-tf.shape 28 28
-range 29 29
-tf.ones_like 33 33
-tf.concat 34 34
-tf.range 36 36
-tf.reshape 35 37
-tf.range 41 41
-tf.size 45 45
-tf.stack 46 46
-tf.reshape 46 46
-tf.transpose 46 46
-tf.reshape 47 47
-tf.scatter_nd 48 48
+tensorflow.cast 27 27
+tensorflow.shape 28 28
+tensorflow.ones_like 33 33
+tensorflow.concat 34 34
+tensorflow.range 36 36
+tensorflow.reshape 35 37
+tensorflow.range 41 41
+tensorflow.size 45 45
+tensorflow.stack 46 46
+tensorflow.reshape 46 46
+tensorflow.transpose 46 46
+tensorflow.reshape 47 47
+tensorflow.scatter_nd 48 48
 
 __init__:
-super 83 83
-super 83 83
-normalize_tuple 85 85
 
 call:
-_max_unpooling_2d_v2$output_size=self.output_size 88 88
 
 get_config:
-super 91 91
-super 91 91
 

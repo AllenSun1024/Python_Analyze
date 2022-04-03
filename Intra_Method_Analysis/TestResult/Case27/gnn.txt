@@ -1,132 +1,73 @@
 _make_ragged:
-tf.RaggedTensor.from_row_lengths 29 29
+tensorflow.RaggedTensor.from_row_lengths 29 29
 
 pack_nodes_and_edges:
-neighbor_config.max_neighbors 36 36
-features.items 37 37
-tf.ones$dtype=tf.int64 38 38
-tf.zeros$dtype=tf.int64 39 39
-tf.zeros$dtype=tf.float32 40 40
-tf.zeros$dtype=tf.int64 41 41
-tf.zeros$tf.float32 42 42
-functools.partial$neighbor_config.max_neighbors 44 45
-keras.layers.NeighborFeatures 47 47
-keras.layers.NeighborFeatures.__call__ 47 47
-tf.squeeze 48 48
-functools.partial.# 48 48
-neighbor_config.max_neighbors 50 50
-ragged_fn.#.flat_values.set_shape 49 50
-ragged_fn.#.flat_values 51 51
-ragged_fn.#.with_flat_values 51 51
-tf.nest.map_structure 52 53
-tf.ragged.boolean_mask 54 54
-features.items 56 56
-tf.range$dtype=tf.int64 60 60
-tf.RaggedTensor.from_row_splits 59 60
-tf.concat 57 61
-graph.values 63 63
-list 63 63
-graph.values 64 64
-list 64 64
-tf.reshape$neighbor_weights.flat_values 65 65
-tf.shape$neighbor_weights.flat_values 67 67
-tf.range$dtype=tf.int64 67 67
-ragged_fn.#.value_rowids 68 68
-ragged_fn.#.value_rowids 70 70
-tf.gather 69 70
-ragged_fn.#.row_lengths 71 71
-tf.zeros$tf.float32 73 73
-isinstance$tf.RaggedTensor 75 75
-graph.items 76 76
+tensorflow.ones$dtype=tensorflow.int64 38 38
+tensorflow.zeros$dtype=tensorflow.int64 39 39
+tensorflow.zeros$dtype=tensorflow.float32 40 40
+tensorflow.zeros$dtype=tensorflow.int64 41 41
+tensorflow.zeros$tensorflow.float32 42 42
+tensorflow.squeeze 48 48
+tensorflow.nest.map_structure 52 53
+tensorflow.ragged.boolean_mask 54 54
+tensorflow.range$dtype=tensorflow.int64 60 60
+tensorflow.RaggedTensor.from_row_splits 59 60
+tensorflow.concat 57 61
+tensorflow.reshape 65 65
+tensorflow.shape 67 67
+tensorflow.range$dtype=tensorflow.int64 67 67
+tensorflow.gather 69 70
+tensorflow.zeros$tensorflow.float32 73 73
 
 make_cora_dataset:
-configs.GraphNeighborConfig 90 90
-tf.constant$dtype=tf.int64 95 96
-tf.io.FixedLenFeature$tf.int64 93 96
-tf.io.FixedLenFeature$tf.int64 98 98
-range$neighbor_config.max_neighbors 100 100
-tf.constant$dtype=tf.int64 107 107
-tf.io.FixedLenFeature$tf.int64 104 107
-tf.constant 110 111
-tf.io.FixedLenFeature$tf.float32 108 111
-tf.data.experimental.make_batched_features_dataset 112 119
-functools.partial 121 121
-tf.data.experimental.make_batched_features_dataset.#.map 120 122
-tf.data.experimental.make_batched_features_dataset.#.prefetch 123 123
+tensorflow.constant$dtype=tensorflow.int64 95 96
+tensorflow.io.FixedLenFeature$tensorflow.int64 93 96
+tensorflow.io.FixedLenFeature$tensorflow.int64 98 98
+tensorflow.constant$dtype=tensorflow.int64 107 107
+tensorflow.io.FixedLenFeature$tensorflow.int64 104 107
+tensorflow.constant 110 111
+tensorflow.io.FixedLenFeature$tensorflow.float32 108 111
+tensorflow.data.experimental.make_batched_features_dataset 112 119
+tensorflow.data.experimental.make_batched_features_dataset.map 120 122
+tensorflow.data.experimental.make_batched_features_dataset.prefetch 123 123
 
 graph_call:
-NotImplementedError 130 130
 
 call:
-inputs.pop 135 135
-tf.reshape 135 135
-inputs.pop 136 136
-tf.reshape 136 136
-inputs.pop 137 137
-inputs.pop 138 138
-inputs.pop 140 140
-tf.reshape 139 140
-inputs.pop 142 142
-tf.reshape 141 142
-graph_nets.graphs.GraphsTuple 134 143
-self.graph_call 145 145
-tf.cumsum$graph.n_node 147 147
-tf.nest.map_structure$graph.nodes 148 148
+tensorflow.reshape 135 135
+tensorflow.reshape 136 136
+tensorflow.reshape 139 140
+tensorflow.reshape 141 142
+tensorflow.cumsum 147 147
+tensorflow.nest.map_structure 148 148
 
 __init__:
-super 154 154
-super 154 154
 
 call:
-tf.split 159 159
-lib.pairwise_distance_wrapper$self._config 161 161
-tf.math.reduce_sum 160 162
+tensorflow.split 159 159
+tensorflow.math.reduce_sum 160 162
 
 __init__:
-super 170 170
-super 170 170
 
 __init__:
-super 178 178
-super 178 178
-graph_nets.blocks.EdgesToGlobalsAggregator$tf.math.unsorted_segment_sum 181 182
-node_model_fn 183 183
-GraphRegularizationEdgeModel$config.distance_config 184 184
 
 graph_call:
-self._example_weights_fn 188 188
-tf.reshape 188 188
-snt.allow_empty_variables$self._example_weights_fn 189 189
-graph_nets.modules.GraphIndependent 190 191
-graph_nets.modules.GraphIndependent.__call__ 190 192
-EdgeRelationNetwork 193 195
-EdgeRelationNetwork.__call__ 193 196
-tf.math.divide_no_nan$graph.globals 198 198
-tf.math.reduce_mean 197 199
-self.add_metric 200 200
-self._graph_loss_multiplier 201 201
-self.add_loss 201 201
+tensorflow.reshape 188 188
+tensorflow.math.divide_no_nan 198 198
+tensorflow.math.reduce_mean 197 199
 
 __init__:
-super 214 214
-super 214 214
-tf.feature_column.numeric_column 216 216
-tf.keras.layers.DenseFeatures 215 217
-tf.keras.layers.Dense 219 219
-tf.keras.layers.Dropout 222 222
-tf.keras.layers.Dense$activation=tf.keras.activations.relu 223 224
-tf.keras.Sequential 221 225
-tf.keras.layers.Dense$activation=tf.keras.activations.relu 227 228
-tf.keras.layers.Dense$activation=tf.keras.activations.relu 229 230
-tf.keras.layers.Dropout 232 232
-tf.keras.layers.Dense 233 233
-tf.keras.Sequential 231 234
+tensorflow.feature_column.numeric_column 216 216
+tensorflow.keras.layers.DenseFeatures 215 217
+tensorflow.keras.layers.Dense 219 219
+tensorflow.keras.layers.Dropout 222 222
+tensorflow.keras.layers.Dense$activation=tensorflow.keras.activations.relu 223 224
+tensorflow.keras.Sequential 221 225
+tensorflow.keras.layers.Dense$activation=tensorflow.keras.activations.relu 227 228
+tensorflow.keras.layers.Dense$activation=tensorflow.keras.activations.relu 229 230
+tensorflow.keras.layers.Dropout 232 232
+tensorflow.keras.layers.Dense 233 233
+tensorflow.keras.Sequential 231 234
 
 graph_call:
-graph_nets.modules.GraphIndependent 237 238
-graph_nets.modules.GraphIndependent.__call__ 237 239
-graph_nets.modules.CommNet 240 243
-graph_nets.modules.CommNet.__call__ 240 244
-graph_nets.modules.CommNet 245 248
-graph_nets.modules.CommNet.__call__ 245 249
 

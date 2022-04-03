@@ -1,8 +1,6 @@
 get_padding_mask:
-tf.map_fn 5 14
+tensorflow.map_fn 5 14
 
 main:
-np.random.randint 18 18
-tf.constant$dtype=tf.int32 18 18
-get_padding_mask 20 20
+tensorflow.constant$dtype=tensorflow.int32 18 18
 
