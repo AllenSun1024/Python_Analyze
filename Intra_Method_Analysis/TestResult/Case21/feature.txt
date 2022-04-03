@@ -7,9 +7,9 @@ _is_sequence_column_v2:
 encode_features:
 tensorflow.python.feature_column.feature_column_lib.is_feature_column_v2 106 106
 tensorflow.compat.v1.keras.layers.DenseFeatures 115 118
-tensorflow.compat.v1.keras.layers.DenseFeatures.__call__ 119 119
+tensorflow.compat.v1.keras.layers.DenseFeatures 119 119
 tensorflow.keras.experimental.SequenceFeatures 122 122
-tensorflow.keras.experimental.SequenceFeatures.__call__ 123 123
+tensorflow.keras.experimental.SequenceFeatures 123 123
 tensorflow.compat.v1.feature_column.input_layer 126 130
 
 encode_listwise_features:

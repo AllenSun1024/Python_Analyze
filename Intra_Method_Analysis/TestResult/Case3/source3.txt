@@ -19,9 +19,9 @@ tensorflow.keras.layers.Dense.__call__ 18 18
 tensorflow.keras.Model 19 19
 tensorflow.keras.Input 22 22
 tensorflow.keras.Input 23 23
-tensorflow.keras.Model.__call__ 24 24
-tensorflow.keras.Model.__call__ 25 25
-tensorflow.keras.Model.__call__ 26 26
+tensorflow.keras.Model 24 24
+tensorflow.keras.Model 25 25
+tensorflow.keras.Model 26 26
 tensorflow.keras.Model 27 27
 tensorflow.keras.Model.compile 28 28
 tensorflow.keras.Model.predict 33 33

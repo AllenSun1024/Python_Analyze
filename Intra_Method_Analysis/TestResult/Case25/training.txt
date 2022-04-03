@@ -22,7 +22,7 @@ tensorflow.distribute.InputContext 206 206
 _steps:
 tensorflow.function 244 244
 tensorflow.function 245 245
-tensorflow.function.__call__ 250 250
+tensorflow.function 250 250
 tensorflow.math.is_nan 257 257
 
 _forward:

@@ -107,7 +107,7 @@ forward:
 
 loss:
 tensorflow.keras.losses.MeanSquaredError 386 386
-tensorflow.keras.losses.MeanSquaredError.__call__ 387 387
+tensorflow.keras.losses.MeanSquaredError 387 387
 
 configure_optimizers:
 tensorflow.keras.optimizers.SGD 391 391
@@ -135,7 +135,7 @@ accuracy:
 
 loss:
 tensorflow.keras.losses.SparseCategoricalCrossentropy 455 455
-tensorflow.keras.losses.SparseCategoricalCrossentropy.__call__ 456 456
+tensorflow.keras.losses.SparseCategoricalCrossentropy 456 456
 
 layer_summary:
 
@@ -404,8 +404,8 @@ tensorflow.keras.layers.Dense 1257 1258
 tensorflow.keras.Sequential.add 1257 1258
 tensorflow.keras.losses.MeanSquaredError 1260 1260
 tensorflow.GradientTape 1266 1266
-tensorflow.keras.Sequential.__call__ 1267 1267
-tensorflow.keras.losses.MeanSquaredError.__call__ 1268 1268
+tensorflow.keras.Sequential 1267 1267
+tensorflow.keras.losses.MeanSquaredError 1268 1268
 tensorflow.GradientTape.gradient 1270 1270
 tensorflow.data.experimental.cardinality 1276 1276
 tensorflow.data.experimental.numpy 1276 1276

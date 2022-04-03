@@ -55,6 +55,7 @@ Case26  pretrain.txt
 Case26  train.txt
 Case27  cnn.txt
 Case27  gnn.txt
+Case3  source3.txt
 Case4  source4.txt
 Case5  source5.txt
 Case6  source6.txt

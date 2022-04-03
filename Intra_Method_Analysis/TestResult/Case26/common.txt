@@ -33,7 +33,7 @@ decode_mask:
 
 regulize_loss:
 tensorflow.keras.regularizers.l2 170 170
-tensorflow.keras.regularizers.l2.__call__ 172 172
+tensorflow.keras.regularizers.l2 172 172
 
 pad_image:
 
@@ -48,7 +48,7 @@ tensorflow.keras.optimizers.SGD 212 212
 
 regulize_loss:
 tensorflow.keras.regularizers.l2 218 218
-tensorflow.keras.regularizers.l2.__call__ 220 220
+tensorflow.keras.regularizers.l2 220 220
 
 resize_CHW:
 

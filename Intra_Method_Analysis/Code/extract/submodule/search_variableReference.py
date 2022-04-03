@@ -45,11 +45,7 @@ def get_references_by_lineno(funcStats, script):
                                 for name_seg in tmp:
                                     new_name += '.'
                                     new_name += name_seg
-                                # TODO: bug may happen here. reason: new_name = node_name + '.#' + new_name modified into if/else
-                                if new_name != '':
-                                    new_name = node_name + '.#' + new_name  # new_name after `#` is API inner_func
-                                else:
-                                    new_name = node_name
+                                new_name = node_name + '.#' + new_name
                                 if check_item[1] == new_name:
                                     new_name = new_name + '.__call__'
                                 if '$' in APIs_inFunc[api_sub]:
