@@ -2,6 +2,7 @@ import ast
 from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.get_nodeNames import get_Call_Name, get_Attribute_Name
 from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.get_funcArgs import \
     parse_function_arguments
+import pymongo
 
 
 class FuncDefExtractor(ast.NodeVisitor):
@@ -286,19 +287,55 @@ class FuncDefExtractor(ast.NodeVisitor):
                     else:
                         continue
 
+    def visit_Dict(self, node):
+        if self.isInFunc:
+            self.generic_visit(node)
+            for key in node.keys:
+                if isinstance(key, ast.Attribute):
+                    keyName = get_Attribute_Name(key, '')
+                    if keyName is not None:
+                        self.APIs.append(keyName)
+                        self.lines.append(key.lineno)
+                        self.end_lines.append(key.end_lineno)
+            for value in node.values:
+                if isinstance(value, ast.Attribute):
+                    valueName = get_Attribute_Name(value, '')
+                    if valueName is not None:
+                        self.APIs.append(valueName)
+                        self.lines.append(value.lineno)
+                        self.end_lines.append(value.end_lineno)
+
     def report(self):
-        with open(self.resultPath, 'w') as f:
-            for i in range(len(self.funcStats["name"])):  # 一个源文件中可能定义多个函数
-                f.write(self.funcStats["name"][i])  # 第i个函数的名字
-                f.write(':\n')
-                for subs in range(len(self.funcStats["APIs"][i])):  # 第i个函数中有若干API调用
-                    if self.funcStats["APIs"][i][subs] is not None:
-                        f.write(self.funcStats["APIs"][i][subs])
-                        f.write(' ')
-                        f.write(str(self.funcStats["lineNo"][i][subs]))
-                        f.write(' ')
-                        f.write(str(self.funcStats["end_lineNo"][i][subs]))
-                        f.write('\n')
-                    else:
-                        continue
-                f.write('\n')
+        # with open(self.resultPath, 'w') as f:
+        for i in range(len(self.funcStats["name"])):  # 一个源文件中可能定义多个函数
+                # f.write(self.funcStats["name"][i])  # 第i个函数的名字
+                # f.write(':\n')
+
+            curName = self.resultPath[:-4] + '.py/' + self.funcStats["name"][i]
+            curResult = []
+
+            for subs in range(len(self.funcStats["APIs"][i])):  # 第i个函数中有若干API调用
+                if self.funcStats["APIs"][i][subs] is not None:
+                        # f.write(self.funcStats["APIs"][i][subs])
+
+                    curResult.append(self.funcStats["APIs"][i][subs])
+
+                        # f.write(' ')
+                        # f.write(str(self.funcStats["lineNo"][i][subs]))
+                        # f.write(' ')
+                        # f.write(str(self.funcStats["end_lineNo"][i][subs]))
+                        # f.write('\n')
+                else:
+                    continue
+                # f.write('\n')
+
+            if curResult:
+                client = pymongo.MongoClient()
+                    # db = client['TestSet']  # name of database -> TestSet
+                db = client['PopularProjects']
+                collection = db['APIs']  # name of collection -> APIs
+                cur_dict = {   # item in the collection
+                    'method_name': curName,
+                    'API_seq': curResult
+                }
+                collection.insert_one(cur_dict)

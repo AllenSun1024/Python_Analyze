@@ -6,6 +6,7 @@ tensorflow.math.floordiv 67 68
 tensorflow.cast$dtype=tensorflow.int32 67 68
 
 evaluate_model:
+tensorflow.compat.v1.GraphKeys.GLOBAL_STEP 116 116
 
 model_fn:
 tensorflow.argmax 151 151

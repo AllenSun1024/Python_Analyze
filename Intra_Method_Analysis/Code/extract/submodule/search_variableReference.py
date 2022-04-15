@@ -38,6 +38,8 @@ def get_references_by_lineno(funcStats, script):
                         The variable 'reference.name' is defined and the corresponding call 'node_name' is assigned to it
                         """
                         for api_sub in range(len(APIs_inFunc)):
+                            if APIs_inFunc[api_sub] is None:
+                                continue
                             targetStr = APIs_inFunc[api_sub].split('$')[0]  # obtain pure API without paras
                             if reference.name == targetStr.split('.')[0]:
                                 tmp = targetStr.split('.')[1:]
