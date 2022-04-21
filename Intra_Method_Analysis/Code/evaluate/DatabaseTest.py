@@ -11,9 +11,9 @@ client = pymongo.MongoClient()
 # print(counter)
 db = client["PopularProjects"]
 collection = db["APIs"]
-# counter = 0
-# for x in collection.find({}, {'_id': 0}):
-#     counter += 1
-# print(counter)
-#     pprint(x)
+counter = 0
+for x in collection.find({}, {'_id': 0}):
+    counter += 1
+print(counter)
+    # pprint(x)
 collection.drop()

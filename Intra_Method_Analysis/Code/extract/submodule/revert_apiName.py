@@ -95,6 +95,7 @@ def _revert_para_name(validPackages, paraList):
                     with open(
                             '/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/module_check.json') as json_file:
                         module_check_table = json.load(json_file)
+                        json_file.close()
                     if A in module_check_table.keys() and paraHead in module_check_table[A]:
                         paraName = A + '.' + para
                         if leftArg != '':
@@ -164,6 +165,7 @@ def _revert_pureAPI_name(validPackages, pureAPI):  # pureAPI means `API which do
                 with open(
                         '/home/allen/DL_API/Static_Analysis/Python_Analyze/Intra_Method_Analysis/Resource/module_check.json') as json_file:
                     module_check_table = json.load(json_file)
+                    json_file.close()
                 if A in module_check_table.keys() and apiHead in module_check_table[A]:
                     apiName = A + '.' + pureAPI
                     finalName = apiName

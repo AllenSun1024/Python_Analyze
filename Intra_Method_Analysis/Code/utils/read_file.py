@@ -20,6 +20,7 @@ class GetProject:
                 os.system("futurize --stage1 -w %s" % path)
                 with open(path) as f:
                     data = f.read()
+                    f.close()
                 self.tree = ast.parse(data, path)
                 self.script = jedi.Script(data, path=path, project=project)
             except Exception as e:

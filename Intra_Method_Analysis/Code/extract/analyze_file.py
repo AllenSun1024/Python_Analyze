@@ -1,14 +1,18 @@
-import jedi
 from pathlib import Path
-from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.utils.read_file import scan_one_file
-from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.extract_import import ImportExtractor
+
+import jedi
+
 from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.extract_funcDef import FuncDefExtractor
-from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.search_variableReference import get_references_by_lineno
-from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.revert_apiName import revert_import_name
+from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.extract_import import ImportExtractor
+from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.revert_apiName import \
+    revert_import_name
 from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.revert_call_chain import chain_def_use
+from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.search_variableReference import \
+    get_references_by_lineno
+from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.utils.read_file import scan_one_file
 
 
-def parse_tree_script(tree, script, resultPath):
+def parse_tree_script(tree, script, resultPath, collection):
     """
     方法内API解析
     :param tree: Python AST
@@ -36,10 +40,10 @@ def parse_tree_script(tree, script, resultPath):
     # TODO: repair to revert paras' name
     function_extractor.funcStats = revert_import_name(validPackages, funcStats)
     function_extractor.funcStats = chain_def_use(funcStats=function_extractor.funcStats)
-    function_extractor.report()
+    function_extractor.report(collection=collection)
 
 
-def extract_one_repo(project_path):
+def extract_one_repo(project_path, collection):
     """
     解析一个项目
     :param project_path: 当前项目路径
@@ -51,4 +55,4 @@ def extract_one_repo(project_path):
             print("[Error] Failed to parse file: %s" % str(f))
             continue
         else:
-            parse_tree_script(tree, script, resultPath)
+            parse_tree_script(tree, script, resultPath, collection=collection)

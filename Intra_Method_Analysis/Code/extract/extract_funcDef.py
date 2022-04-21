@@ -2,7 +2,7 @@ import ast
 from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.get_nodeNames import get_Call_Name, get_Attribute_Name
 from Static_Analysis.Python_Analyze.Intra_Method_Analysis.Code.extract.submodule.get_funcArgs import \
     parse_function_arguments
-import pymongo
+# import pymongo
 
 
 class FuncDefExtractor(ast.NodeVisitor):
@@ -305,7 +305,7 @@ class FuncDefExtractor(ast.NodeVisitor):
                         self.lines.append(value.lineno)
                         self.end_lines.append(value.end_lineno)
 
-    def report(self):
+    def report(self, collection):
         # with open(self.resultPath, 'w') as f:
         for i in range(len(self.funcStats["name"])):  # 一个源文件中可能定义多个函数
                 # f.write(self.funcStats["name"][i])  # 第i个函数的名字
@@ -330,10 +330,10 @@ class FuncDefExtractor(ast.NodeVisitor):
                 # f.write('\n')
 
             if curResult:
-                client = pymongo.MongoClient()
-                    # db = client['TestSet']  # name of database -> TestSet
-                db = client['PopularProjects']
-                collection = db['APIs']  # name of collection -> APIs
+                # client = pymongo.MongoClient()
+                #     # db = client['TestSet']  # name of database -> TestSet
+                # db = client['PopularProjects']
+                # collection = db['APIs']  # name of collection -> APIs
                 cur_dict = {   # item in the collection
                     'method_name': curName,
                     'API_seq': curResult
